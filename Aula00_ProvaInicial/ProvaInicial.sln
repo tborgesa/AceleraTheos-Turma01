@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-AlteracaoSenhaDia", "01-AlteracaoSenhaDia", "{A8DEF28E-AA16-4A9B-95ED-0E8688D05311}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProvaInicial.AlteracaoSenhaDia", "ProvaInicial.AlteracaoSenhaDia\ProvaInicial.AlteracaoSenhaDia.csproj", "{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-ReajusteSalarial", "02-ReajusteSalarial", "{0A6CEF23-8AD8-42AA-B93B-1F8E22179EAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProvaInicial.ReajusteSalarial", "ProvaInicial.ReajusteSalarial\ProvaInicial.ReajusteSalarial.csproj", "{64ACAEF2-552C-4721-98FC-F64179492652}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Frete", "03-Frete", "{FE236133-F564-4EF4-84A5-FE98179F31AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaInicial.Frete", "ProvaInicial.Frete\ProvaInicial.Frete.csproj", "{C469883B-E395-47B9-AC48-CDAF332AC621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04-Trapezio", "04-Trapezio", "{647701FB-780A-4134-AAA4-50FE3017E42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaInicial.Trapezio", "ProvaInicial.Trapezio\ProvaInicial.Trapezio.csproj", "{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-Calculadora", "05-Calculadora", "{6E022541-3B06-4A8D-AF16-BE7BA1ECE6EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProvaInicial.Calculadora", "ProvaInicial.Calculadora\ProvaInicial.Calculadora.csproj", "{F89DDF36-C7FF-45B1-9120-6F08F4C8F334}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64ACAEF2-552C-4721-98FC-F64179492652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64ACAEF2-552C-4721-98FC-F64179492652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64ACAEF2-552C-4721-98FC-F64179492652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64ACAEF2-552C-4721-98FC-F64179492652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C469883B-E395-47B9-AC48-CDAF332AC621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C469883B-E395-47B9-AC48-CDAF332AC621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C469883B-E395-47B9-AC48-CDAF332AC621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C469883B-E395-47B9-AC48-CDAF332AC621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89DDF36-C7FF-45B1-9120-6F08F4C8F334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89DDF36-C7FF-45B1-9120-6F08F4C8F334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89DDF36-C7FF-45B1-9120-6F08F4C8F334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89DDF36-C7FF-45B1-9120-6F08F4C8F334}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1E439B39-B50F-4FF5-8CC4-AD7AC628B4C0} = {A8DEF28E-AA16-4A9B-95ED-0E8688D05311}
+		{64ACAEF2-552C-4721-98FC-F64179492652} = {0A6CEF23-8AD8-42AA-B93B-1F8E22179EAC}
+		{C469883B-E395-47B9-AC48-CDAF332AC621} = {FE236133-F564-4EF4-84A5-FE98179F31AA}
+		{81BFBB1A-E0AE-4C26-B2C8-82EB70DD7D73} = {647701FB-780A-4134-AAA4-50FE3017E42E}
+		{F89DDF36-C7FF-45B1-9120-6F08F4C8F334} = {6E022541-3B06-4A8D-AF16-BE7BA1ECE6EE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06364DE2-EE75-4D84-A7D3-E3778A26D0BF}
+	EndGlobalSection
+EndGlobal

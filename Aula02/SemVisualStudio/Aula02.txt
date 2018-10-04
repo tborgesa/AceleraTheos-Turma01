@@ -1,0 +1,7 @@
+public class Programa
+{
+	static void Main (string[] args)
+	{
+		System.Console.WriteLine("Hallo Word sem Visual Studio");
+	}
+}

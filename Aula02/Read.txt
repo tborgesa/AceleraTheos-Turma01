@@ -4,3 +4,6 @@
 	* Debuggando código;
 	* Captura de texto [ReadLine() e ReadKey()]
 	* Interpolação de string [WriteLine($"texto {variavel} texto")];
+* Váriaveis
+	* Por Referência (ref num = ref numero) x Por Valor (num = numero);
+	* Capturar número como string (Console.ReadLine()) e conversão para int (Convert.ToInt32());

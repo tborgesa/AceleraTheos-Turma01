@@ -1,0 +1,11 @@
+using System;
+
+public class Programa
+{
+	static void Main (string[] args)
+	{
+		Console.WriteLine("Hello Mundo :)");
+		Console.ReadKey();
+	}
+
+}

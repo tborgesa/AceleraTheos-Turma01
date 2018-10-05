@@ -1,0 +1,6 @@
+* Conceito .Net
+* Criando programa no editor de texto e copilando direto no cmd;
+* Criando programa com Visual Studio
+	* Debuggando código;
+	* Captura de texto [ReadLine() e ReadKey()]
+	* Interpolação de string [WriteLine($"texto {variavel} texto")];

@@ -1,0 +1,9 @@
+using System;
+
+class teste
+{
+	static void Main(string[] args)
+	{
+		Console.WriteLine("Hello Word! Just do!");
+	}
+}

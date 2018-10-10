@@ -11,15 +11,15 @@ namespace Exercicio05
         static void Main(string[] args)
         {
             //5. Calcule o novo salario de um funcionario, sabendo que o reajuste dado para todos na empresa foi de 5%.
-            double salarioAntigo;
-            double salarioNovo;
-            
+            decimal salarioAntigo;
+            decimal salarioNovo;
+            decimal porcentagem = 0.05m;
 
             Console.WriteLine("Calculo de reajuste de salario\n");
             Console.WriteLine("Digite o salário atual");
-            salarioAntigo = double.Parse(Console.ReadLine());
+            salarioAntigo = decimal.Parse(Console.ReadLine());
 
-            salarioNovo = salarioAntigo + (salarioAntigo * 0.05);
+            salarioNovo = salarioAntigo + (salarioAntigo * porcentagem);
             
             Console.WriteLine($"Com o reajuste de 5% o salário passará a ser {Math.Round(salarioNovo,2)}");
             Console.ReadKey();

@@ -34,7 +34,7 @@ namespace Exercicio04
 
             media = (prova1 + prova2 + prova3 + prova4) / 4; 
 
-            Console.WriteLine($"a media é {Math.Round(media,2)}");
+            Console.WriteLine($"a media é {Math.Round(media)}");
             Console.ReadKey();
 
         }

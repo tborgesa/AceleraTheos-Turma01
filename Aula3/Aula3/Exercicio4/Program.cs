@@ -28,8 +28,7 @@ namespace Exercicio4
             double quartaProva = Convert.ToDouble(Console.ReadLine());
 
 
-            double totalProvas = primeiraProva + segundaProva + terceiraProva + quartaProva;
-            double mediaFinal = totalProvas / 4;
+            double mediaFinal = (primeiraProva + segundaProva + terceiraProva + quartaProva) / 4;
             mediaFinal = Math.Round(mediaFinal);
 
 

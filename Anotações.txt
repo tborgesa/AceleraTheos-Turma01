@@ -1,0 +1,7 @@
+Comando para limpar os arquivos ignorados pelo gitgnore:
+
+git clean -d -x -f
+
+ele apaga aquelas pastinhas que ficam com o x vermelho quando muda de branch, porque são do meu computador e não do branch.
+
+**************

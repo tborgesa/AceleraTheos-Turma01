@@ -31,6 +31,9 @@ namespace OperacoesTiposNumericos
 
             /*---------------------------------------------------------------*/
             //Biblioteca MATH
+            //https://docs.microsoft.com/pt-br/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.7.2
+            Console.WriteLine();
+            Console.WriteLine("biblioteca math.");
             double bibliotecaMath = Math.Round(56.87);
             Console.WriteLine($"Arredondamento: {bibliotecaMath}");
 

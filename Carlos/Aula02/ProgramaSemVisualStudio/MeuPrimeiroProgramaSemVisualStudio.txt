@@ -1,0 +1,20 @@
+/*
+
+01 - Abra o "CMD", vá no diretorio aonte esta o compilador de C#.
+Ex. CD C:\Windows\Microsoft.NET\Framework64\v4.0.30319\
+
+02 - Execute o comando para compliar e criar um executavel do seu programa:
+EX: CSC "Caminho do seu programa"
+CSC C:\Users\carlos.paula\Desktop\Carlos Curso C#\Aula02\ProgramaSemVisualStudio\MeuPrimeiroProgramaSemVisualStudio.txt
+
+03 - Abra o executavel que foi criado MeuPrimeiroProgramaSemVisualStudio.exe
+
+*/
+
+public class Program 
+{
+	static void Main(string[] args)
+	{
+		System.Console.WriteLine("Hello World!");
+	}
+}

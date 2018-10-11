@@ -1,0 +1,20 @@
+EXERCICIOS:
+
+Todos os exercicios devem ser solicitado a entrada de dados ao usuario e retornar a saida via Console.
+
+1. O sistema de passorte sempre obriga que o ultimo nome sempre venha primeiro nos documentos.
+Solicite o nome completo do usuario e apresente para ele "UltimoNome, PrimeiroNome" como é apresentado no passaporte.
+
+2. Peça para o usuário digitar o endereço completo (Rua, Bairro e Cidade) separados por ',' e apresente para ele cada item separado.
+
+3. Volte ao exercicio 2 da aula anterior e formate a temperatura apresentando sempre 2 casas decimais.
+
+4. Volte ao exercicio 5 da aula anterior e formate o salário apresentando sempre 2 casas decimais.
+
+5. Solicite ao usuário:
+   - Filme Favorito?
+   - Livro de Cabeceira?
+   - Hobby Preferido?
+
+Crie uma string que junte todas as informações e apresente para o usuário, colocando a identificação sempre maiuscula
+Ex: FILME: Esqueceram de mim 2, LIBRO: Biblia, Hobby: Dormir

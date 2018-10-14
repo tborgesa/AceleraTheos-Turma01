@@ -22,8 +22,9 @@ namespace Exercicio05
 
         static void Main(string[] args)
         {
-            string teste = "filme: Esqueceram de mim 2, livro: Biblia, hobby: Dormir";
-
+//            string teste = "filme: Esqueceram de mim 2, livro: Biblia, hobby: Dormir";
+            Console.WriteLine("Repita a a frase com os campos em * preenchidos com seu favorito:");
+            string teste = Console.ReadLine();
 
             var aux = teste.Split(',');
 

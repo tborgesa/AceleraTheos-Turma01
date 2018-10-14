@@ -55,7 +55,7 @@ namespace ManipulacaoString
             decimal numero = 92;
 
 
-            Console.WriteLine($"Numero:{numero.ToString("d2")}");
+            //Console.WriteLine($"Numero:{numero.ToString("d2")}");
 
             Console.WriteLine($"Valor :{valor.ToString("c")}");
             Console.WriteLine($"Valor :{valor.ToString("n2", new CultureInfo("en-US"))}");

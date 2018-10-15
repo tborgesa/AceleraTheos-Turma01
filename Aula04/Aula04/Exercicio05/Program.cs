@@ -14,15 +14,10 @@ namespace Exercicio05
 {
     class Program
     {
-        public static string caixaAlta(string text)
-        {
-            return text.Substring(0, text.IndexOf(":")).ToUpper();
-
-        }
 
         static void Main(string[] args)
         {
-//            string teste = "filme: Esqueceram de mim 2, livro: Biblia, hobby: Dormir";
+ //           string teste = "filme: Esqueceram de mim 2, livro: Biblia, hobby: Dormir";
             Console.WriteLine("Repita a a frase com os campos em * preenchidos com seu favorito:");
             string teste = Console.ReadLine();
 
@@ -30,8 +25,8 @@ namespace Exercicio05
 
             for (int i = 0; i < aux.Length; i++)
             {
-                aux[i].Substring(0, aux[i].IndexOf(":")).ToUpper();
-                Console.WriteLine($"{caixaAlta(aux[i])}{aux[i].Substring(aux[i].IndexOf(":"))}");
+                aux[i].Substring(0, aux[i].IndexOf(":"));
+                Console.WriteLine($"{aux[i].Substring(0,aux[i].IndexOf(":"))} {(aux[i].Substring(aux[i].IndexOf(":"))).ToUpper()}");
             }
                        
             Console.ReadKey();

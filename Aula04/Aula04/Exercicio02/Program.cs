@@ -24,12 +24,11 @@ namespace Exercicio02
 
             Console.WriteLine("Digite o endereço completo (Rua, Bairro e Cidade) separados por ',' ");
             string endereco = Console.ReadLine();
+//            string endereco = "Rua José Clemente, Zona 07, Maringá";
 
-            Console.WriteLine(
-                $"Sua rua é {endereco.Substring(0,endereco.IndexOf(','))}, " +
-                $"no bairro {endereco.Substring(endereco.IndexOf(',')+2, endereco.LastIndexOf(',')-5)}, " +
-                $"na cidade de {endereco.Substring(endereco.LastIndexOf(',')+2)}");
-
+            Console.WriteLine($"Sua rua é {endereco.Substring(0, endereco.IndexOf(','))}");
+            Console.WriteLine($"Seu bairo é {endereco.Substring(endereco.IndexOf(",")+2,(endereco.LastIndexOf(",") - endereco.IndexOf(",")) - 2)}");
+            Console.WriteLine($"Sua cidade é {endereco.Substring(endereco.LastIndexOf(",")+2)}");
             Console.ReadKey();
         }
     }

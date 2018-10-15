@@ -37,6 +37,7 @@ namespace ManupulacaoString
             Console.WriteLine($"Sobrenome: {sobrenome}");
 
             //https://docs.microsoft.com/pt-br/dotnet/standard/base-types/standard-numeric-format-strings
+            Console.WriteLine();
             Console.WriteLine("TO STRING - FORMATAÇÃO");
 
             decimal valor = 100_000_000_000;
@@ -51,6 +52,14 @@ namespace ManupulacaoString
             Console.WriteLine($"Valor: {valor:c}");
             Console.WriteLine($"Numero: {numero:d2}");
             Console.WriteLine($"Valor: {valor:n2}");
+
+            Console.WriteLine();
+            Console.WriteLine("EXEMPLO DE DUVIDA DO SKYPE");
+            string endereco = "Rua 19 de dezembro, Zona 04, Maringá";
+
+            Console.WriteLine(endereco.IndexOf(',')); // retornará o indice da primeira ',', no exemplo acima 18.
+            Console.WriteLine(endereco.Substring(endereco.IndexOf(',') + 1)); // retornará do índice(18 + 1 = 19) até o fim. Retorno: " Zona 04, Maringá".
+            Console.WriteLine(endereco.Substring(0, endereco.IndexOf(',') + 1)); // retornará do inicio da string e contará 19 caracteres.Retorno: "Rua 19 de dezembro,".
 
             Console.ReadKey();
         }

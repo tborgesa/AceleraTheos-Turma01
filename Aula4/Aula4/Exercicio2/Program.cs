@@ -11,11 +11,10 @@ namespace Exercicio2
             Console.WriteLine("Por favor, informe seu endereço completo separado por vírgula (Rua, Bairro, Cidade).");
             string enderecoCompleto = Console.ReadLine();
 
-
-            string rua = enderecoCompleto.Substring(0, enderecoCompleto.IndexOf(","));
+            int i = enderecoCompleto.IndexOf(",");
+            string rua = enderecoCompleto.Substring(0, i);
             Console.WriteLine($"Rua: {rua}");
 
-            int i = enderecoCompleto.IndexOf(",");
             string bairroCidade = enderecoCompleto.Substring(i + 1);
             string bairro = bairroCidade.Substring(0, bairroCidade.LastIndexOf(","));
             Console.WriteLine($"Bairro: {bairro}");

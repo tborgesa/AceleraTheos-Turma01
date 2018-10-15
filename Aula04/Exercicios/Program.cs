@@ -79,21 +79,17 @@ namespace Exercicios
                     Crie uma string que junte todas as informações e apresente para o usuário, colocando a identificação sempre maiuscula
                     Ex: FILME: Esqueceram de mim 2, LIBRO: Biblia, Hobby: Dormir*/
                     Console.WriteLine("Qual é seu filme favorito?");
-                    string filme = Console.ReadLine().ToLower();
-                    var filmetratado = char.ToUpper(filme[0]) + filme.Substring(1);
-                    Console.WriteLine(filmetratado);
-
+                    string filme = Console.ReadLine().ToUpper();
+                    
                     Console.WriteLine("Qual é seu livro de Cabeceira?");
-                    string livro = Console.ReadLine().ToLower();
-                    string livrotratado = char.ToUpper(livro[0]) + livro.Substring(1);
+                    string livro = Console.ReadLine().ToUpper();
 
                     Console.WriteLine("Qual é seu hobby predileto?");
-                    string hobby = Console.ReadLine().ToLower();
-                    string hobbytratado = char.ToUpper(livro[0]) + livro.Substring(1);
+                    string hobby = Console.ReadLine().ToUpper();
 
-                    Console.WriteLine($"FILME: {filmetratado}");
-                    Console.WriteLine($"LIVRO: {livrotratado}");
-                    Console.WriteLine($"HOBBY: {hobbytratado}");
+                    Console.WriteLine($"FILME: {filme}");
+                    Console.WriteLine($"LIVRO: {livro}");
+                    Console.WriteLine($"HOBBY: {hobby}");
                     break;
             }
 

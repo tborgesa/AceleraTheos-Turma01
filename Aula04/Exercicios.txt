@@ -16,5 +16,5 @@ Solicite o nome completo do usuario e apresente para ele "UltimoNome, PrimeiroNo
    - Livro de Cabeceira?
    - Hobby Preferido?
 
-Crie uma string que junte todas as informações e apresente para o usuário, colocando a identificação sempre maiuscula
-Ex: FILME: Esqueceram de mim 2, LIBRO: Biblia, Hobby: Dormir
+Crie uma string que junte todas as informações e apresente para o usuário, colocando a escolha sempre maiuscula.
+Ex: FILME: Filme: ESQUECERAM DE MIM 2, Livro: BIBLIA, Hobby: DORMIR

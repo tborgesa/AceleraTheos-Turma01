@@ -54,8 +54,8 @@ namespace Exercicios
                     //3.Volte ao exercicio 2 da aula anterior e formate a temperatura apresentando sempre 2 casas decimais.
                     Console.WriteLine("Informe a temperatura em °F");
 
-                    double temperaturaF = Convert.ToDouble(Console.ReadLine());
-                    double temperaturaC = (temperaturaF - 32) / 1.8;
+                    double tempF = Convert.ToDouble(Console.ReadLine());
+                    double tempC = (tempF - 32) / 1.8;
 
                     Console.WriteLine($"{tempF.ToString("n2", new CultureInfo("en-us"))}°F equivale a {tempC.ToString("n2", new CultureInfo("en-us"))}°C");
 
@@ -80,16 +80,16 @@ namespace Exercicios
                     Ex: FILME: Esqueceram de mim 2, LIBRO: Biblia, Hobby: Dormir*/
                     Console.WriteLine("Qual é seu filme favorito?");
                     string filme = Console.ReadLine().ToUpper();
-                    
+
                     Console.WriteLine("Qual é seu livro de Cabeceira?");
                     string livro = Console.ReadLine().ToUpper();
 
                     Console.WriteLine("Qual é seu hobby predileto?");
                     string hobby = Console.ReadLine().ToUpper();
 
-                    Console.WriteLine($"FILME: {filme}");
-                    Console.WriteLine($"LIVRO: {livro}");
-                    Console.WriteLine($"HOBBY: {hobby}");
+                    Console.WriteLine();
+                    Console.WriteLine("Preferências do usuário");
+                    Console.Write($"Filme: {filme}, Livro: {livro} e Hobby: {hobby}.");
                     break;
             }
 

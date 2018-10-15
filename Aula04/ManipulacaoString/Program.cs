@@ -22,6 +22,9 @@ namespace ManipulacaoString
             //substring
             var sobrenome = nome.Substring(6);//mesma coisa que a proxima linha/ pega um pedaço de string
             Console.WriteLine($"Sobrenome: {nome.Substring(6)}");
+            string cor = "grafite";
+            cor.Substring(3);//: Começará no f e será cortado até o fim. Retorno: "fite". Indice começar na posição 3 e corta até o final da string pois nao tem um parametro de parada
+            cor.Substring(0, 4);//: Comecará no g(primeiro caracter = posiçao 0) e cortará até a posição 4 (caracteres).Retorno: "grafi".
 
             //isNullOrEmpty verificar se tem espaços em branco ou vazia
             bool vazia = string.IsNullOrEmpty(nome.Trim());//trim corta os espaço em branco

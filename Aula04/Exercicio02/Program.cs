@@ -17,7 +17,7 @@ namespace Exercicio02
 
             endereco = Console.ReadLine();
 
-            string rua = endereco.Substring(0,endereco.IndexOf(",")+1);
+            string rua =           endereco.Substring(0,endereco.IndexOf(",")+1);
             string restoEndereco = endereco.Substring(endereco.IndexOf(',')+1);
             //string bairro = restoEndereco.Substring(0, restoEndereco.IndexOf(','),restoEndereco.LastIndexOf(','));
             string bairro = restoEndereco.Substring(0,restoEndereco.IndexOf(','));           

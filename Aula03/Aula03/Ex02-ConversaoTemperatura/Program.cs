@@ -19,7 +19,7 @@ namespace Ex02_ConversaoTemperatura
 
             celsius = (fahrenheit - 32) * 5 / 9;
 
-            Console.WriteLine($"Temperatura em graus celsius Cº: {celsius}");
+            Console.WriteLine($"Temperatura em graus celsius Cº: {celsius:n2}");
 
             Console.ReadLine();
         }

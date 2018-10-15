@@ -17,7 +17,7 @@ namespace Ex05_SalarioFuncionario
 
             salario += salario * 0.05;
 
-            Console.WriteLine($"O reajuste do salário foi de 5%, salário atual: {salario}");
+            Console.WriteLine($"O reajuste do salário foi de 5%, salário atual: {salario:n2}");
 
             Console.ReadKey();
 

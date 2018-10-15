@@ -53,10 +53,11 @@ namespace Exercicios
                 case 3:
                     //3.Volte ao exercicio 2 da aula anterior e formate a temperatura apresentando sempre 2 casas decimais.
                     Console.WriteLine("Informe a temperatura em °F");
-                    double temperaturaF = Convert.ToDouble(Console.ReadLine());
 
+                    double temperaturaF = Convert.ToDouble(Console.ReadLine());
                     double temperaturaC = (temperaturaF - 32) / 1.8;
-                    Console.WriteLine($"{Math.Round(temperaturaF, 2)}°F é igual a {Math.Round(temperaturaC, 2)}°C.");
+
+                    Console.WriteLine($"{tempF.ToString("n2", new CultureInfo("en-us"))}°F equivale a {tempC.ToString("n2", new CultureInfo("en-us"))}°C");
 
                     break;
                 case 4:
@@ -70,7 +71,7 @@ namespace Exercicios
                     double ajuste = (salario * 5) / 100;
                     salario = salario + ajuste;
 
-                    Console.WriteLine($"O salário do(a) {funcionario} recebeu um ajuste de R${Math.Round(ajuste, 2)} e agora corresponde a R${Math.Round(salario, 2)}");
+                    Console.WriteLine($"O salário do(a) {funcionario} recebeu um ajuste de {ajuste.ToString("c")} e agora corresponde a {salario.ToString("c")}");
 
                     break;
                 case 5:

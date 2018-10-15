@@ -26,8 +26,8 @@ namespace Exercicio01
             ultimoNome = nomeCompleto.Substring(nomeCompleto.LastIndexOf(" "));
             primeiroNome = nomeCompleto.Remove(nomeCompleto.LastIndexOf(" "));
 
-
-            Console.WriteLine($"{ultimoNome.Trim()}, {primeiroNome}");
+            
+            Console.WriteLine($"\n{ultimoNome.Trim()}, {primeiroNome}");
         
 
             Console.ReadKey();

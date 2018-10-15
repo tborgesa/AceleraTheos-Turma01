@@ -22,6 +22,7 @@ namespace Exercicio04
             salarioNovo = salarioAntigo + (salarioAntigo * porcentagem);
 
             Console.WriteLine($"Com o reajuste de 5% o salário passará a ser {salarioNovo.ToString("c")}");
+
             Console.ReadKey();
         }
     }

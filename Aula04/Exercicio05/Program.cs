@@ -26,7 +26,7 @@ namespace Exercicio05
             Console.WriteLine("Qual seu hobby favorito ?");
             hobby = Console.ReadLine();
 
-            Console.WriteLine($"FILME: {filme.ToUpper()}, LIVRO: {livro.ToUpper()} e HOBBY: {hobby.ToUpper()}");
+            Console.WriteLine($"Filme: {filme.ToUpper()}, Livro: {livro.ToUpper()} e Hobby: {hobby.ToUpper()}");
 
             Console.ReadKey();
         }

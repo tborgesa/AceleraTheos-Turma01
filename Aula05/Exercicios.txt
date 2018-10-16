@@ -1,0 +1,14 @@
+1. A contabilização de uma determinada "Conta a Pagar" é feita sempre no primeiro dia do mês da data de emissão.
+	Solicite a data de emissão da conta a Pagar e retorne o primeiro dia do mês da emissão.
+	
+2. O fechamento contábil anual sempre acontece no ultimo dia do ano.
+	Solicite ao usuário o ano de fechamento e retorne a data que será feito o fechamento Contábil.
+	
+3. Os impostos federais sempre são pagos no dia 15 no mês seguinte ao pagamento da Nota Fiscal.
+	Solicite ao usuário a data de emissão da Nota Fiscal e retorne a data que será paga o imposto.
+	
+4. Novamente a Senha do dia foi alterada.
+	A nova regra diz que deverá somar o dia ao ano e do resultado multiplicar no mês. Do resultado ainda deverá ser dividido pelo dia semana acrescido de 1 (para evitar divisão por zero)
+	
+5. As transações de cartão do banco de dados armazenam a data e hora da transação.
+	Solicite a data de filtro para o usuário e retorno a data de inicio e data de fim que é capaz de buscar todas as transações da data solicitada.

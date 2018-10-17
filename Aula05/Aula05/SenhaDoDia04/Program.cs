@@ -10,16 +10,14 @@ namespace SenhaDoDia04
     {
         static void Main(string[] args)
         {
-            DateTime dia = new DateTime();
-            DateTime mes = new DateTime();
-            DateTime ano = new DateTime();
-            DateTime diaSemana = new DateTime();
+            DateTime dataHoje = DateTime.Today;
 
-            dia = new DateTime(dia.Day);
-            mes = new DateTime(mes.Month);
-            ano = new DateTime(ano.Year);
+             int senha = ((dataHoje.Year + dataHoje.Day) * dataHoje.Month) / (int)(dataHoje.DayOfWeek + 1);
 
+             Console.WriteLine($"Senha do dia: {senha}");
 
+             Console.ReadKey();
+             
         }
     }
 }

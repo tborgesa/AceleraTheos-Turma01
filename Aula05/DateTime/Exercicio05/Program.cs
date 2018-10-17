@@ -12,6 +12,18 @@ namespace Exercicio05
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Digite a data do para o filtro:");
+            var use = Console.ReadLine();
+
+            DateTime data = DateTime.Parse(use);
+            Console.WriteLine($"O periodo incial e de {(data.AddMinutes(1)):dd/MM/yyyy HH:mm}");
+            Console.WriteLine($"O periodo final e de {(data.AddDays(1).AddMilliseconds(-1)):dd/MM/yyyy HH:mm}");
+
+            //Boa praticas? fazer os processos antes do retorno ou no retorno?
+
+
+
+            Console.ReadKey();
         }
     }
 }

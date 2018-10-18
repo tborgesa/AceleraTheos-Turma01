@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpostosEx03", "ImpostosEx0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SenhaDoDia04", "SenhaDoDia04\SenhaDoDia04.csproj", "{8D7D41AA-C9E9-4193-AE30-ACB276FD8BA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransacaoCartaoEx05", "TransacaoCartaoEx05\TransacaoCartaoEx05.csproj", "{87A0D3F9-A073-4A6F-9FC4-18A74E57D0CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8D7D41AA-C9E9-4193-AE30-ACB276FD8BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7D41AA-C9E9-4193-AE30-ACB276FD8BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7D41AA-C9E9-4193-AE30-ACB276FD8BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87A0D3F9-A073-4A6F-9FC4-18A74E57D0CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87A0D3F9-A073-4A6F-9FC4-18A74E57D0CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87A0D3F9-A073-4A6F-9FC4-18A74E57D0CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87A0D3F9-A073-4A6F-9FC4-18A74E57D0CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

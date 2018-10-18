@@ -10,7 +10,7 @@ namespace SenhaDoDia04
     {
         static void Main(string[] args)
         {
-            DateTime dataHoje = DateTime.Today;
+             DateTime dataHoje = DateTime.Today;
 
              int senha = ((dataHoje.Year + dataHoje.Day) * dataHoje.Month) / (int)(dataHoje.DayOfWeek + 1);
 

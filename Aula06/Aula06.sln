@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFluxo", "ControleFluxo\ControleFluxo.csproj", "{34903B59-5669-431D-A363-1DB63CB06D8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicios", "Exercicios\Exercicios.csproj", "{EA47CEFD-362F-46BD-B8AA-A5F8143EBE8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{F543A79E-97E8-4548-A4B8-EA544CF38A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EA47CEFD-362F-46BD-B8AA-A5F8143EBE8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA47CEFD-362F-46BD-B8AA-A5F8143EBE8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA47CEFD-362F-46BD-B8AA-A5F8143EBE8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F543A79E-97E8-4548-A4B8-EA544CF38A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F543A79E-97E8-4548-A4B8-EA544CF38A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F543A79E-97E8-4548-A4B8-EA544CF38A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F543A79E-97E8-4548-A4B8-EA544CF38A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

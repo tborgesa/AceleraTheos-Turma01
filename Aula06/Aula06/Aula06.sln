@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleFluxo", "ControleFluxo\ControleFluxo.csproj", "{5EF0AF18-6F9F-449A-BFFC-C396A1EF1017}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tabuada02", "Tabuada02\Tabuada02.csproj", "{040AA459-09B2-43EE-AA10-F338D6765746}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio03", "Exercicio03\Exercicio03.csproj", "{C4F6446D-BAF6-4235-97AB-D9BFB513DAA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Urna05", "Urna05\Urna05.csproj", "{2768C896-E942-4FCD-A783-F1BA67651B0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C4F6446D-BAF6-4235-97AB-D9BFB513DAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F6446D-BAF6-4235-97AB-D9BFB513DAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F6446D-BAF6-4235-97AB-D9BFB513DAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2768C896-E942-4FCD-A783-F1BA67651B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2768C896-E942-4FCD-A783-F1BA67651B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2768C896-E942-4FCD-A783-F1BA67651B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2768C896-E942-4FCD-A783-F1BA67651B0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

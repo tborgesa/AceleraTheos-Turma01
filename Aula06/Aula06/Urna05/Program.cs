@@ -22,9 +22,14 @@ namespace Urna05
             int votosBolsonaro = 0;
             int votosBrancos = 0;
             int votosNulos = 0;
+
+            //todo thiago: essas duas variaveis devem ser calculadas toda vez que quiser apurar os votos
+            //ja que se no momento que vc esta somando aqui é tudo zerado.
+            //lembre -se que os votos totais tambem compreendem os nulos
             int votosTotal = votosHaddad + votosBolsonaro + votosBrancos;
             int votosValidos = votosTotal - (votosBrancos + votosNulos);
 
+            //todo thiago: em nenhum momento vc coloca essa variavel como true. o sistema nunca sera fechado.
             bool saiu = false;
             while (!saiu)
             {
@@ -72,10 +77,15 @@ Votos Bolsonado: {(votosBolsonaro + votosTotal) * 100}%";
 
                         Console.WriteLine("Resultado da apuração eleições 2018");
                         Console.WriteLine(apuracao);
+
+                        //todo thiago: esse passo de pedir essa opção para o usuário nao precisa
+                        //deixe apenas o break e volta para o menu inicial e o usuário escolhe novamente. que nem vc fez na opção 1.
                         Console.WriteLine("Digite 1 para votar novamente ou qualquer tecla para sair");
                         string fim = Console.ReadLine();
 
                         if (fim == "1")
+                            //todo thiago: nunca use goto.... repito nunca use goto.... ele serve para linguagem procedural
+                            //é totalmente desaconselhado em linguagens orientada a objeto.
                             goto case 1;
                         else
                             Console.WriteLine("Saindo da votação!");

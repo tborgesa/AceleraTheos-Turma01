@@ -29,17 +29,22 @@ namespace Exercicio01
                 
             }
 
-            else if (salario = 4145.01m)
+            else if (salario>=4145.01m && salario<=5678.34m)
             {
-
+                Console.WriteLine($"O valor que pagará é : {salario * 0.2m:c2}");
             }
 
+            else if (salario >= 5678.35m && salario <= 7838.21m)
+            {
+                Console.WriteLine($"O valor que pagará é : {salario * 0.25m:c2}");
+            }
+
+            else
+            {
+                Console.WriteLine($"O valor que pagará é : {salario * 0.275m:c2}");
+            }
             Console.ReadKey();
 
-            void ValorPagara()
-            {
-                Console.WriteLine($"O valor que pagará é : {salario * }");
-            }
 
 
         }

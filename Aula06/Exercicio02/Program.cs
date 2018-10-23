@@ -32,36 +32,9 @@ namespace Exercicio02
                 }
             }
 
-            //Tabuada();
-
             Console.ReadKey();
         }
 
-        
+    }   
 }
 
-        /*private static void Tabuada()
-        {
-            int numero;
-            var _mensagemErrado = "Numero errado";
-            Console.WriteLine("Digite um numero de 1 a 10");
-            numero = Convert.ToInt32(Console.ReadLine());
-
-            if (numero < 0 && numero > 10)
-            {
-                Console.WriteLine(_mensagemErrado);
-
-            }
-            else
-            {
-                for (int i = 1; i < 11; i++)
-                {
-                    Console.WriteLine($"{numero} x {i} = {numero * i}");
-                }
-            }
-
-
-        }*/
-
-    }
-}

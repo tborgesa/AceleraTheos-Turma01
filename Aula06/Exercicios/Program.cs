@@ -19,6 +19,7 @@ namespace Exercicios
 02 - Imprime a tabuada.
 03 - Comparar números.
 04 - Pesquisa eleitoral.
+05 - SAIR.
 ";
 
                 Console.WriteLine(menu);
@@ -28,7 +29,7 @@ namespace Exercicios
                 Console.WriteLine();
 
                 //encerra o sistema se o usuário digitar texto no lugar de números
-                if (!int.TryParse(captura, out var opcao))
+                if (!int.TryParse(captura, out int opc))
                 {
                     Console.WriteLine("Você não digitou um número válido. Execute o sistema e tente novamente");
                     Console.ReadKey();
@@ -37,7 +38,7 @@ namespace Exercicios
 
                 Console.Clear();
 
-                switch (opcao)
+                switch (opc)
                 {
                     case 1:
                         /*1.A tabela de aliquota do IRRF foi alterada.
@@ -53,7 +54,7 @@ namespace Exercicios
                         Console.WriteLine("Digite o valor do seu salário atual.");
                         string salariodigitado = Console.ReadLine();
 
-                        if (!double.TryParse(salariodigitado, out var salario))
+                        if (!double.TryParse(salariodigitado, out double salario))
                         {
                             Console.WriteLine($"'{salariodigitado}' não é um valor inválido.");
                             Console.ReadKey();
@@ -88,7 +89,7 @@ namespace Exercicios
                         Console.WriteLine("Digite um número entre 1 e 10.");
                         string numerodigitado = Console.ReadLine();
 
-                        if (!int.TryParse(numerodigitado, out var numero))
+                        if (!int.TryParse(numerodigitado, out int numero))
                         {
                             Console.WriteLine($"'{numerodigitado}' não é um número válido.");
                             Console.ReadKey();
@@ -99,6 +100,12 @@ namespace Exercicios
                         {
                             for (int i = 0; i <= 10; i++)
                                 Console.WriteLine($"{numero} x {i} = {numero * i}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Você digitou um número maior do que 10. Tente denovo");
+                            Console.ReadKey();
+                            continue;
                         }
 
                         Console.ReadKey();
@@ -118,7 +125,7 @@ namespace Exercicios
                             Console.Write("Digite um número: ");
                             string numDigitado = Console.ReadLine();
 
-                            if (!int.TryParse(numDigitado, out var num))
+                            if (!int.TryParse(numDigitado, out int num))
                             {
                                 Console.WriteLine($"'{numDigitado}' não é um número válido.");
                                 Console.ReadKey();
@@ -151,12 +158,10 @@ namespace Exercicios
 
                         bool saindo = false;
 
-                        int hadddad = 0;
-                        int ciro = 0;
-                        int brancos = 0;
-                        int nulos = 0;
-                        int total = hadddad + ciro + brancos;
-                        int validos = total - (brancos + nulos);
+                        double haddad = 0;
+                        double bolsonaro = 0;
+                        double brancos = 0;
+                        double nulos = 0;
 
                         while (saindo == false)
                         {
@@ -166,11 +171,13 @@ ESCOLHA UMA OPÇÃO:
 
 01 - REGISTRAR VOTAÇÃO;
 02 - APURAR VOTOS;
+
 ";
                             Console.WriteLine(menuvotacao);
+                            Console.Write("Digite sua escolha: ");
                             string opcaomenu = Console.ReadLine();
 
-                            if (!int.TryParse(opcaomenu, int var saida))
+                            if (!int.TryParse(opcaomenu, out int saida))
                             {
                                 Console.WriteLine("Você escolheu uma opção inválida");
                                 Console.ReadKey();
@@ -186,20 +193,24 @@ ESCOLHA UMA OPÇÃO:
                                     string opcaovoto = @"
 OPÇÕES DE VOTO - ELEIÇÕES 2018
 
-12 - CIRO GOMES (PDT)
 13 - HADDAD (PT)
+17 - BOLSONARO (PSL)
 00 - BRANCO
 
 ATENÇÃO: A escolha de qualquer outro número anulará seu voto.
 ";
+                                    Console.WriteLine(opcaovoto);
                                     Console.Write("Digite sua opção de voto: ");
                                     string voto = Console.ReadLine();
 
-                                    if (voto == "12")
-                                        ciro += 1;
-                                    if (voto == "13")
-                                        hadddad += 1;
-                                    if (voto == "00")
+                                    if (!int.TryParse(voto, out int votacao))
+                                        nulos += 1;
+
+                                    if (votacao == 17)
+                                        bolsonaro += 1;
+                                    else if (votacao == 13)
+                                        haddad += 1;
+                                    else if (votacao == 0)
                                         brancos += 1;
                                     else
                                         nulos += 1;
@@ -208,12 +219,19 @@ ATENÇÃO: A escolha de qualquer outro número anulará seu voto.
 
                                 case 2:
                                     //apurar votos
+                                    double total = haddad + bolsonaro + nulos + brancos;
+                                    double validos = total - (brancos + nulos);
+                                    double bolsonaro_percent = (bolsonaro / validos) * 100;
+                                    double haddad_percent = (haddad / validos) * 100;
+
+                                    Console.WriteLine($"Bolsonaro: {bolsonaro_percent} / {bolsonaro} - Haddad: {haddad_percent} / {haddad}");
+
                                     string resultado = $@"
 
 VOTOS TOTAIS ---------- {total}
 VOTOS VÁLIDOS --------- {validos}
-CIRO GOMES (PDT) ------ {(ciro / total) * 100}%
-HADDAD (PT) ----------- {(hadddad / total) * 100}%
+HADDAD (PT) ----------- {haddad_percent: d}%
+BOLSONARO (PSL) ------- {bolsonaro_percent: d}%
 ";
                                     Console.WriteLine("RESULTADO DA ELEIÇÃO PRESIDENCIAL DE 2018");
                                     Console.WriteLine(resultado);
@@ -225,7 +243,7 @@ HADDAD (PT) ----------- {(hadddad / total) * 100}%
                                         goto case 1;
                                     else
                                         Console.WriteLine("Fim da aplicação.");
-
+                                    saindo = true;
                                     break;
 
                                 default:
@@ -233,6 +251,9 @@ HADDAD (PT) ----------- {(hadddad / total) * 100}%
                                     continue;
                             }
                         }
+                        break;
+                    case 5:
+                        sair = true;
                         break;
 
                     default:
@@ -243,6 +264,7 @@ HADDAD (PT) ----------- {(hadddad / total) * 100}%
             }
 
             Console.ReadLine();
+
         }
 
     }

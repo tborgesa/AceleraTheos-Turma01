@@ -81,8 +81,8 @@ namespace Exercicio04
                 Console.Clear();
 
                 Console.WriteLine("Percentual dos candidatos:");
-                Console.WriteLine($"Quantidade Hadadd: {((double)cont13 / (double)total) * 100.00}%");
-                Console.WriteLine($"Quantidade Bolsonaro: {(double)(cont17 / (double)total) * 100.00}%");
+                Console.WriteLine($"Quantidade Hadadd: {Math.Round((((double)cont13 / (double)total) * 100.00),2)}%");
+                Console.WriteLine($"Quantidade Bolsonaro: {Math.Round(((double)(cont17 / (double)total) * 100.00),2)}%");
                 Console.WriteLine($"Quantidade de Votos: {total}");
 
                 Console.ReadKey();

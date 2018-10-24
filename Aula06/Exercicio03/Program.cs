@@ -8,8 +8,6 @@ namespace Exercicio03
         static string _mensagemInvalido = "Entrada inválida, execute o sistema e tente novamente!";
         static void Main(string[] args)
         {
-            /*3. Solicite ao usuário 10 números e no final diga quantos números são menores que 100, quantos estão entre 100 e 200 e quantos são maiores que 200.*/
-
             VerificaNumero();
             Console.ReadKey();
         }

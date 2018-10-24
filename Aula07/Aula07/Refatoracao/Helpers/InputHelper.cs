@@ -15,12 +15,17 @@ namespace Refatoracao.Helpers
 
                 if (!int.TryParse(numeroDigitado, out var numero))
                 {
-                    Console.WriteLine(mensagemInvalido);
-                    Console.ReadKey();
+                    MensagemUsuario(mensagemInvalido);
                 }
                 else
                     return numero;
             }
+        }
+
+        public static void MensagemUsuario(string mensagem)
+        {
+            Console.WriteLine(mensagem);
+            Console.ReadKey();
         }
     }
 }

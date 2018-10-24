@@ -173,6 +173,8 @@ ESCOLHA UMA OPÇÃO:
 02 - APURAR VOTOS;
 
 ";
+                            Console.Clear();
+
                             Console.WriteLine(menuvotacao);
                             Console.Write("Digite sua escolha: ");
                             string opcaomenu = Console.ReadLine();
@@ -195,7 +197,6 @@ OPÇÕES DE VOTO - ELEIÇÕES 2018
 
 13 - HADDAD (PT)
 17 - BOLSONARO (PSL)
-00 - BRANCO
 
 ATENÇÃO: A escolha de qualquer outro número anulará seu voto.
 ";
@@ -230,8 +231,8 @@ ATENÇÃO: A escolha de qualquer outro número anulará seu voto.
 
 VOTOS TOTAIS ---------- {total}
 VOTOS VÁLIDOS --------- {validos}
-HADDAD (PT) ----------- {haddad_percent: d}%
-BOLSONARO (PSL) ------- {bolsonaro_percent: d}%
+HADDAD (PT) ----------- {haddad_percent.ToString("n2")}%
+BOLSONARO (PSL) ------- {bolsonaro_percent.ToString("n2")}%
 ";
                                     Console.WriteLine("RESULTADO DA ELEIÇÃO PRESIDENCIAL DE 2018");
                                     Console.WriteLine(resultado);

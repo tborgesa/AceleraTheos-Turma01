@@ -4,11 +4,13 @@ namespace Refatoracao.Helpers
 {
     public static class InputHelper
     {
-        public static int GetInputInt(string texto, string mensagemInvalido)
+        public static int GetInputInt(string texto, string mensagemInvalido, bool limparTela = true)
         {
-            while(true)
+            while (true)
             {
-                Console.Clear();
+                if (limparTela)
+                    Console.Clear();
+
                 Console.WriteLine(texto);
 
                 string numeroDigitado = Console.ReadLine();

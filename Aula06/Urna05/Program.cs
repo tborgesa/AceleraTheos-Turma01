@@ -26,11 +26,12 @@ namespace Urna05
                     case 2:
                         Apuracao();
                         break;
-
                     case 3:
                         Console.WriteLine("Você escolheu sair");
                         Console.ReadKey();
                         return;
+                    default:
+                        break;
                 }
             }
 
@@ -38,7 +39,7 @@ namespace Urna05
 
         private static int MenuPrincipal()
         {
-            while(true)
+            while (true)
             {
                 string menu = @"Escolha uma das opções
 01 - Digite 1 para votar
@@ -48,8 +49,7 @@ namespace Urna05
                 Console.Clear();
                 Console.WriteLine(menu);
 
-                string opcao = Console.ReadLine();
-                if (int.TryParse(opcao, out int opcaoMenu) && opcaoMenu >= 1 && opcaoMenu <= 3)
+                if (int.TryParse(Console.ReadLine(), out int opcaoMenu) && opcaoMenu >= 1 && opcaoMenu <= 3)
                 {
                     return opcaoMenu;
                 }
@@ -67,10 +67,7 @@ namespace Urna05
 
         private static void Votar()
         {
-            //todo thiago: essas duas variaveis devem ser calculadas toda vez que quiser apurar os votos
-            //ja que se no momento que vc esta somando aqui é tudo zerado.
-            //lembre -se que os votos totais tambem compreendem os nulos
-
+            Console.Clear();
             Console.WriteLine(@"Escolha uma opção para votar: 
  13 - Haddad
  17 - Bolsonaro
@@ -91,8 +88,8 @@ namespace Urna05
 
         private static void Apuracao()
         {
-            double votosTotal = _votosHaddad + _votosBolsonaro + _votosNulos + _votosBrancos;
-            double votosValidos = _votosHaddad + _votosBolsonaro;
+            int votosTotal = _votosHaddad + _votosBolsonaro + _votosNulos + _votosBrancos;
+            int votosValidos = _votosHaddad + _votosBolsonaro;
 
             if (votosValidos == 0)
             {
@@ -100,15 +97,19 @@ namespace Urna05
                 Console.ReadKey();
                 return;
             }
-            string apuracao = $@"Votos totais: {votosTotal}
- Votos brancos: {_votosBrancos}
+
+            double resultadoHaddad = ((double)_votosHaddad / (double)votosValidos) * 100;
+            double resultadoBolsonaro = ((double)_votosBolsonaro / (double)votosValidos) * 100;
+            string apuracao = $@" Votos totais: {votosTotal}
+ Votos brancos: {_votosBrancos} 
  Votos nulos: {_votosNulos}
- Votos Haddad: {(_votosHaddad + votosTotal) * 100}%
- Votos Bolsonado: {(_votosBolsonaro + votosTotal) * 100}%";
+ Votos Haddad: {resultadoHaddad:N2}% ({_votosHaddad})
+ Votos Bolsonado: {resultadoBolsonaro:N2}% ({_votosBolsonaro})";
 
             Console.WriteLine("Resultado da apuração eleições 2018");
             Console.WriteLine(apuracao);
+            Console.ReadKey();
         }
-        
+
     }
 }

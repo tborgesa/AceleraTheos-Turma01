@@ -72,6 +72,7 @@ namespace Exercicio01
                 _matriculaMenorAltura = matricula;
             }
 
+            _alturaAcumulado += altura;
         }
         private static void CalcularMedia()
         {
@@ -83,10 +84,10 @@ namespace Exercicio01
         {
             Console.WriteLine($@"{_matriculaMaiorPeso} - {_nomeMaiorPeso} possui maior peso: {_maiorPeso}kg 
 {_matriculaMenorPeso} - {_nomeMenorPeso} possui menor peso: {_menorPeso}kg
-{_matriculaMaiorAltura} - {_nomeMaiorAltura} possui maior altura: {_maiorAltura} 
-{_matriculaMenorAltura} - {_nomeMenorAltura} possui menor altura: {_menorAltura}
-Média de peso: {_mediaPeso}
-Média de altura: {_mediaAltura}");
+{_matriculaMaiorAltura} - {_nomeMaiorAltura} possui maior altura: {_maiorAltura:N2}cm 
+{_matriculaMenorAltura} - {_nomeMenorAltura} possui menor altura: {_menorAltura:N2}cm
+Média de peso: {_mediaPeso:N2}kg
+Média de altura: {_mediaAltura:N2}cm");
             Console.ReadKey();
         }
     }

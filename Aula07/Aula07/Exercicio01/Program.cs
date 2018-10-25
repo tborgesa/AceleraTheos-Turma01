@@ -5,71 +5,86 @@ namespace Exercicio01
 {
     class Program
     {
-        static string nome, matricula = "";
-        static double peso, altura = 0.0;
-        private static string _mensagemInvalida = "Entrada inválida, tente novamente.";
-        static double _pesoGuardado = 0.0;
-        static double _alturaGuardada = 0.0;
+        static string _nomeMaiorAltura, _matriculaMaiorAltura, _nomeMenorAltura, _matriculaMenorAltura = "";
+        static string _nomeMaiorPeso, _matriculaMaiorPeso, _nomeMenorPeso, _matriculaMenorPeso = "";
+        static double _pesoAcumulado, _alturaAcumulado = 0.0;
         static double _maiorPeso = 0.0;
-        static double _menorPeso = 0.0;
+        static double? _menorPeso;
         static double _maiorAltura = 0.0;
-        static double _menorAltura = 0.0;
+        static double? _menorAltura;
         static double _mediaAltura = 0.0;
         static double _mediaPeso = 0.0;
+        private static string _mensagemInvalida = "Entrada inválida, tente novamente.";
 
         static void Main(string[] args)
         {
             InserirAluno();
-            CalcularAltura();
+            CalcularMedia();
+            ImprimirResultado();
         }
 
         private static void InserirAluno()
         {
-            for (int i = 0; i <= 10; i++)
+            for (int i = 0; i < 3; i++)
             {
 
-                nome = InputHelper.GetInputString("Digite o nome: ", _mensagemInvalida);
-                matricula = InputHelper.GetInputString("Digite a matricula: ", _mensagemInvalida);
-                peso = InputHelper.GetInputDouble("Digite o peso: ", _mensagemInvalida);
-                altura = InputHelper.GetInputDouble("Digite a altura: ", _mensagemInvalida);
+                string nome = InputHelper.GetInputString("Digite o nome: ", _mensagemInvalida);
+                string matricula = InputHelper.GetInputString("Digite a matricula: ", _mensagemInvalida);
+                double peso = InputHelper.GetInputDouble("Digite o peso: ", _mensagemInvalida);
+                double altura = InputHelper.GetInputDouble("Digite a altura: ", _mensagemInvalida);
                 Console.WriteLine();
 
-                ValidarPeso();
-                ValidarAltura();
+                ValidarPeso(peso, nome, matricula);
+                ValidarAltura(altura, nome, matricula);
+            }
+        }
+
+        private static void ValidarPeso(double peso, string nome, string matricula)
+        {
+            if (peso > _maiorPeso)
+            {
+                _maiorPeso = peso;
+                _nomeMaiorPeso = nome;
+                _matriculaMaiorPeso = matricula;
+            }
+            if (_menorPeso == null || peso < _menorPeso.Value)
+            {
+                _menorPeso = peso;
+                _nomeMenorPeso = nome;
+                _matriculaMenorPeso = matricula;
             }
 
-            
+            _pesoAcumulado += peso;
         }
 
-        private static void ValidarPeso()
+        private static void ValidarAltura(double altura, string nome, string matricula)
         {
-            if (_pesoGuardado < peso)
-                _pesoGuardado += peso;
+            if (altura > _maiorAltura)
+            {
+                _maiorAltura = altura;
+                _nomeMaiorAltura = nome;
+                _matriculaMaiorAltura = matricula;
+            }
+            if (_menorAltura == null || altura < _menorAltura.Value)
+            {
+                _menorAltura = altura;
+                _nomeMenorAltura = nome;
+                _matriculaMenorAltura = matricula;
+            }
+
         }
-
-        private static void ValidarAltura()
+        private static void CalcularMedia()
         {
-            if (_alturaGuardada < altura)
-                _alturaGuardada += peso;
-        }
-        private static void CalcularAltura()
-        {
-           
-            if(_alturaGuardada )
-
-
-            Console.WriteLine($"Resultado: {_pesoGuardado} e {_alturaGuardada}");
-            Console.ReadKey();
+            _mediaPeso += _pesoAcumulado / 3;
+            _mediaAltura += _alturaAcumulado / 3;
         }
 
         private static void ImprimirResultado()
         {
-            Console.WriteLine($@"Nome: {nome}
-Matrícula: {matricula}
-Maior peso: {_maiorPeso}kg
-Menor peso: {_menorPeso}kg
-Maior altura: {_maiorAltura}
-Menor altura: {_menorAltura}
+            Console.WriteLine($@"{_matriculaMaiorPeso} - {_nomeMaiorPeso} possui maior peso: {_maiorPeso}kg 
+{_matriculaMenorPeso} - {_nomeMenorPeso} possui menor peso: {_menorPeso}kg
+{_matriculaMaiorAltura} - {_nomeMaiorAltura} possui maior altura: {_maiorAltura} 
+{_matriculaMenorAltura} - {_nomeMenorAltura} possui menor altura: {_menorAltura}
 Média de peso: {_mediaPeso}
 Média de altura: {_mediaAltura}");
             Console.ReadKey();

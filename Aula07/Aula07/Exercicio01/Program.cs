@@ -10,6 +10,13 @@ namespace Exercicio01
         private static string _mensagemInvalida = "Entrada inválida, tente novamente.";
         static double _pesoGuardado = 0.0;
         static double _alturaGuardada = 0.0;
+        static double _maiorPeso = 0.0;
+        static double _menorPeso = 0.0;
+        static double _maiorAltura = 0.0;
+        static double _menorAltura = 0.0;
+        static double _mediaAltura = 0.0;
+        static double _mediaPeso = 0.0;
+
         static void Main(string[] args)
         {
             InserirAluno();
@@ -29,14 +36,9 @@ namespace Exercicio01
 
                 ValidarPeso();
                 ValidarAltura();
-
             }
 
-            Console.WriteLine($@"Nome: {nome}
-Matrícula: {matricula}
-Peso: {peso:N2}kg
-Altura: {altura}");
-            Console.ReadKey();
+            
         }
 
         private static void ValidarPeso()
@@ -52,11 +54,24 @@ Altura: {altura}");
         }
         private static void CalcularAltura()
         {
-            double resultadoAltura = 0.0;
-            ValidarAltura();
+           
+            if(_alturaGuardada )
 
 
             Console.WriteLine($"Resultado: {_pesoGuardado} e {_alturaGuardada}");
+            Console.ReadKey();
+        }
+
+        private static void ImprimirResultado()
+        {
+            Console.WriteLine($@"Nome: {nome}
+Matrícula: {matricula}
+Maior peso: {_maiorPeso}kg
+Menor peso: {_menorPeso}kg
+Maior altura: {_maiorAltura}
+Menor altura: {_menorAltura}
+Média de peso: {_mediaPeso}
+Média de altura: {_mediaAltura}");
             Console.ReadKey();
         }
     }

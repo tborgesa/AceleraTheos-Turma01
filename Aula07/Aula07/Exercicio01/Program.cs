@@ -25,7 +25,7 @@ namespace Exercicio01
 
         private static void InserirAluno()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
 
                 string nome = InputHelper.GetInputString("Digite o nome: ", _mensagemInvalida);
@@ -76,8 +76,8 @@ namespace Exercicio01
         }
         private static void CalcularMedia()
         {
-            _mediaPeso += _pesoAcumulado / 3;
-            _mediaAltura += _alturaAcumulado / 3;
+            _mediaPeso += _pesoAcumulado / 10;
+            _mediaAltura += _alturaAcumulado / 10;
         }
 
         private static void ImprimirResultado()

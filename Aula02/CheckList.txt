@@ -1,0 +1,44 @@
+ESQUEMA DA AULA 02:
+
+- Verificar se todos estão com acesso ao repositório do Git
+- Explicar os slides de .NET Framework
+- Mostrar os compiladores
+	C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+	csc.exe / vbc.exe / jsc.exe
+- Escrever um programa no notepad
+
+class Programa
+{
+	static void Main (string[] args)
+	{
+		Console.WriteLine("Hello World sem Visual Studio."); 
+	}
+}
+
+- C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe (Compilar)
+
+- Abrir o VS2017
+	Mostrar o ambiente
+	
+- Criar um Console App .Net Framework
+     - Explicar diferença de .sln para .csproj
+	 - Explicar que cada um pode fazer a maneira que quiser (criar um projeto para o curso inteiro ou um projeto pra cada aula)
+	 - Explicar o Console.ReadLine();
+	 
+- Rodar o primeiro programa no VS
+
+- Valor x Referência
+	- Stack x Heap
+	- 1MB / 4MB
+
+	Exercício 01 - Faça um projeto (Console Aplication) com as seguintes atribuições: 
+	1. Receba um número inteiro do usuário em uma variável "numero".
+	2. Faça uma cópia dessa variável para a variável "numeroCopiado". (Passando a váriavel "numero" por valor)
+	3. Calcule o dobro da variável "numeroCopiado" e guarde nele mesmo (Lembre-se que qualquer operação entre inteiros precisa ser guardada em uma varíavel)
+	4. Imprima as duas varíaveis na tela.
+
+	Exercício 02 - Faça segundo projeto (Console Aplication) com as seguintes atribuições: 
+	1. Receba um número inteiro do usuário em uma variável "numero".
+	2. Faça uma cópia dessa variável para a variável "numeroCopiado". (Passando a váriavel "numero" por referência)
+	3. Calcule o dobro da variável "numeroCopiado" e guarde nele mesmo (Lembre-se que qualquer operação entre inteiros precisa ser guardada em uma varíavel)
+	4. Imprima as duas varíaveis na tela.

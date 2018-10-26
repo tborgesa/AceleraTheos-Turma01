@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercicio02
+namespace ValorReferencia
 {
     class Program
     {

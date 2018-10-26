@@ -6,11 +6,12 @@ namespace Exercicio02
     class Program
     {
         static double _saldo = 0.0;
+        static double _valor;
         private static string _mensagemInvalida = "Entrada inválida, tente novamente.";
         static void Main(string[] args)
         {
             MenuPrincipal();
-           }
+        }
 
         private static void MenuPrincipal()
         {
@@ -30,10 +31,10 @@ Escolha uma opção abaixo:
                         ConsultaSaldo();
                         break;
                     case 02:
-                        Sacar();
+                        Sacar(_valor);
                         break;
                     case 03:
-                        Depositar();
+                        Depositar(_valor);
                         break;
                     case 04:
                         InputHelper.MensagemUsuario("Saindo do sistema!");
@@ -46,25 +47,39 @@ Escolha uma opção abaixo:
 
         }
 
-        private static void Depositar()
+        private static void Depositar(double valor)
         {
             Console.Clear();
-            InputHelper.MensagemUsuario("Você está no menu depositar!");
-      
+            valor = InputHelper.GetInputDouble("Digite um valor para depósito", _mensagemInvalida);
+            _saldo += valor;
+
+            InputHelper.MensagemUsuario($"Saldo atual: {_saldo:N2}");
         }
 
-        private static void Sacar()
+        private static void Sacar(double valor)
         {
             Console.Clear();
-            InputHelper.MensagemUsuario("Você está no menu sacar!");
-       
+            valor = InputHelper.GetInputDouble("Digite um valor para saque", _mensagemInvalida);
+
+            if (_saldo >= valor)
+            {
+                _saldo -= valor;
+                InputHelper.MensagemUsuario($@"Saque efetuado com sucesso!
+Valor sacado: {valor:N2}
+saldo atual: {_saldo:N2}!");
+            }
+            else
+            {
+                InputHelper.MensagemUsuario($@"Saldo insuficiente para saque.
+Valor solicitado: {valor:N2}
+saldo atual: {_saldo:N2}"); 
+            }     
         }
 
         private static void ConsultaSaldo()
         {
             Console.Clear();
-            InputHelper.MensagemUsuario("Você está no menu consultar saldo!");
-         
+            InputHelper.MensagemUsuario($"Saldo atual: {_saldo:N2}");
         }
     }
 }

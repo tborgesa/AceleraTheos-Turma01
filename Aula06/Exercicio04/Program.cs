@@ -36,6 +36,8 @@ namespace Exercicio04
                 switch (escolha)
                 {
                     case 1:
+                        Console.Clear();
+                        Console.WriteLine("Você escolheu Votar");
                         Console.WriteLine(candidatos);
                         int voto = Convert.ToInt32(Console.ReadLine());
                         if (voto == 17)
@@ -51,6 +53,7 @@ namespace Exercicio04
                         escolha = Convert.ToInt32(Console.ReadLine());
                         break;
                     case 2:
+                        Console.Clear();
                         double votosTotais = (haddad + bolso + branco + nulo), votosValidos = (haddad + bolso);
                         double porcHa = (haddad / votosValidos) * 100;
                         double porcBo = (bolso / votosValidos) * 100;
@@ -58,8 +61,9 @@ namespace Exercicio04
                         Console.ReadKey();
                         Console.Clear();
                         Console.WriteLine(menu);
-                        Console.ReadKey();
+
                         escolha = Convert.ToInt32(Console.ReadLine());
+                         
                         break;
                         
                     case 3:

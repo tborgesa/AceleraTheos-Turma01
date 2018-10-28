@@ -14,21 +14,21 @@ namespace Exercicio04
 
         static void Main(string[] args)
         {
-            int coelhosInicial = InputHelper.GetInputInt("Informe a quantidade de coelhos que você possuí: ", _mensagemInvalida);
-            int coelhos = InputHelper.GetInputInt("Informe a quantidade de pares de coelhos você deseja: ", _mensagemInvalida);
-            int coelhosFinal = coelhos;
+            int coelhosFerteis = InputHelper.GetInputInt("Informe a quantidade de par(es) de coelho(s) que você possuí: ", _mensagemInvalida);
+            int coelhosDesejados = InputHelper.GetInputInt("Informe a quantidade de pares de coelhos você deseja: ", _mensagemInvalida);
+            int coelhosInferteis=0;
 
-
-            while (coelhos > coelhosInicial)
+            while (coelhosFerteis + coelhosInferteis < coelhosDesejados)
             {
-                coelhos = coelhos / 2;
+                coelhosInferteis = coelhosFerteis;
+                coelhosFerteis = coelhosFerteis + coelhosInferteis;
                 mes++;
             }
 
             if(mes > 1)
-                Console.WriteLine($"Serão necessários {mes} meses para chegar a quantidade de {coelhosFinal} coelhos");
+                Console.WriteLine($"Serão necessários {mes} meses para chegar a quantidade de {coelhosInferteis+coelhosFerteis} pares de coelhos");
             else
-                Console.WriteLine($"Será necessário {mes} mês para chegar a quantidade de {coelhosFinal} coelhos");
+                Console.WriteLine($"Será necessário {mes} mês para chegar a quantidade de {coelhosInferteis + coelhosFerteis} pares de coelhos");
 
             Console.ReadKey();
         }

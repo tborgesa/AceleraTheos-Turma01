@@ -17,8 +17,22 @@ namespace Exercicio04
             //Calcule para ele quantos meses são necessários para chegar na quantidade de par de coelho desejado.
             //OBS: Considere que todos os coelhos iniciais já estão fertil.
 
+            int inicial = 20, mesAnterior =0, mesCria = 0, qtdedecoelhos = 0, desejo = 200, meses = 0;
 
+            mesAnterior = inicial;
+            qtdedecoelhos = inicial;
+            mesCria = qtdedecoelhos;
 
+            while (desejo> qtdedecoelhos)
+            {
+                qtdedecoelhos = mesAnterior + mesCria;
+                mesAnterior = mesCria;
+                mesCria = qtdedecoelhos;
+                meses++;
+            }
+            
+            Console.WriteLine($"qtde de coelhos{qtdedecoelhos}\n qtde de meses{meses}");
+            Console.ReadKey();
         }
     }
 }

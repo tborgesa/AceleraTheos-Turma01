@@ -8,24 +8,38 @@ namespace Exercico03
 {
     class Program
     {
-        static int fatorial = 1;
-        static int resultado = 1;
+        static int total = 1;
+        static int numero;
 
         static void Main(string[] args)
         {
-            if (fatorial == 0 | fatorial == 1 )
+            telaMenu();
+        }
+
+        private static void telaMenu()
+        {
+            Console.WriteLine("Digite um valor inteiro para ver o valor do fatorial:");
+
+            if (!int.TryParse(Console.ReadLine(), out int numero))
             {
-                Console.WriteLine("Resultado 1");
+                Console.WriteLine("Valor errado");
+                Console.ReadKey();
+                Console.Clear();
             }
 
-            for (int i = fatorial; i >= 1 ; i--)
-            {
-                resultado = resultado * fatorial;
-            }
 
-            Console.WriteLine($"Resultado {resultado}");
+            fatorial(numero);
+            Console.WriteLine($"Valor de {numero}: {total}");
 
             Console.ReadKey();
+        }
+
+        private static void fatorial(int numero)
+        {
+            for (int n = 1; n <= numero; n++)
+            {
+                total *= n;
+            }
         }
     }
 }

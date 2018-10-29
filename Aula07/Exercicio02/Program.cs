@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+
 /*2) Escreva um programa que apresente quatro opções: 
 - consulta saldo
 - saque

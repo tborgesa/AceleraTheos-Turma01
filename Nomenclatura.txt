@@ -1,0 +1,25 @@
+1) Padrões:
+	1.1 - Namespace - PascalCase - Ex: Theos.Contabilidade.CentroCusto
+	1.2 - Classes - PascalCase - Ex: LancamentoCaixa
+	1.3 - Parametros - camelCase - Ex: nome
+	1.4 - Veriáveis internas (metodos, if,for) - camelCase - numero
+	1.5 - Variaveis de classe private - _camelCase - _memsagemInvalido
+	
+2) Dar nomes aos identificadores de forma clara, sem abreviações.
+Exemplo: "MultiplicarNumeros" é melhor que "MultNum"
+
+3) Quanto ao uso do português ou inglês, depende muito do projeto ou empresa. Porém sempre tente use apenas um idioma.
+Exemplo: "ObterPorDiocese" é melhor que "GetByDiocese"
+
+4) Evite notação hungara:
+Exemplo: "quantidade" é melhor que "iQuantidade" (i representa que é inteiro)
+
+5) Criar nomes de namespaces que ficam fácil identificar, sempre usando NomeEmpresa.Funcionalidade
+Exemplo: Theos.Contabilidade.CentroCusto
+
+6) Cada linha deve ter apenas uma declaração ou comando.
+
+
+
+
+

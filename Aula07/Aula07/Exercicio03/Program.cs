@@ -24,6 +24,5 @@ namespace Exercicio03
             else
                 return numero * CalcularFatorial(numero - 1);
         }
-
     }
 }

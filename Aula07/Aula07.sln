@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refatoracao", "Refatoracao\Refatoracao.csproj", "{283572CD-38E4-410E-A871-E84DE42E386F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio04-Coelhos", "Exercicio04-Coelhos\Exercicio04-Coelhos.csproj", "{925A221D-5D36-4EA8-A8CF-97B892F4E2EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{283572CD-38E4-410E-A871-E84DE42E386F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{283572CD-38E4-410E-A871-E84DE42E386F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{283572CD-38E4-410E-A871-E84DE42E386F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925A221D-5D36-4EA8-A8CF-97B892F4E2EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925A221D-5D36-4EA8-A8CF-97B892F4E2EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925A221D-5D36-4EA8-A8CF-97B892F4E2EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925A221D-5D36-4EA8-A8CF-97B892F4E2EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

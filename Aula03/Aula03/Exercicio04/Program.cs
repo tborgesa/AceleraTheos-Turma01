@@ -23,6 +23,8 @@ namespace Exercicio04
             Console.WriteLine("Digite o valor nota 4");
             double nota4 = Convert.ToDouble(Console.ReadLine());
 
+            //todo Thiago: Não é necessário a conversão para double
+            //(O .Net consegue fazer operações entre double e inteiro e o retorno sempre será inteiro.)
             double media = (nota1 + nota2 + nota3 + nota4)/(double)4;
 
             Console.Clear();

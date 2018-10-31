@@ -10,6 +10,7 @@ namespace Exercicio01
     {
         static void Main(string[] args)
         {
+            //todo Thiago: Observar as abreviações de varíaveis, usar base ao invés de b
             Console.WriteLine("Digite o valor de base");
             double b = Double.Parse(Console.ReadLine());
             Console.WriteLine("Digite o valor de altura");

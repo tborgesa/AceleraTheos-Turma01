@@ -14,10 +14,14 @@ namespace Exercicio03
 
         static void Main(string[] args)
         {
+            //todo Thiago: É mais recomendado usar a declaração direto na atribuição.
+            
+            //todo Thiago: Caso decida usar inglês, faça todo o programa em inglês.
             double  start, 
                     end, 
                     gas;
 
+            //todo Thiago: Não usar _ e sim padrão PascalCase: consumoMedio ao inves de consumo_medio
             int consumo_medio;
 
             Console.WriteLine("Digite o valor do Kilometro Inicial");

@@ -55,6 +55,8 @@ namespace _01Exercicios
                     case 2:
                         //2. Converter a temperatura em graus Fahrenheit para graus Celsius. *** (°C = (°F − 32) ÷ 1, 8)
                         Console.WriteLine("Informe a temperatura em °F");
+
+                        //todo Thiago: Cuidado com a abreviação de varíavel, usar temperaturaFahrenheit ao inves de temperaturaF.
                         double temperaturaF = Convert.ToDouble(Console.ReadLine());
 
                         double temperaturaC = (temperaturaF - 32) / 1.8;
@@ -82,6 +84,8 @@ namespace _01Exercicios
                         int combustivel = Convert.ToInt32(Console.ReadLine());
 
                         int totalGasto = (kmfinal - kminicial) / combustivel;
+
+                        //todo Thiago: na verdade ó gasto calculado não é no percurso e sim por kilometro.
                         Console.WriteLine($"Foram gastos {totalGasto} litros de combustível no percurso informado.");
                         Console.ReadKey();
 

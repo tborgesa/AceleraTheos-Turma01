@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Exercicio3
 {
@@ -12,7 +12,7 @@ namespace Exercicio3
             //3.Solicitar quantidade de litros gasto.
             //OBS: Deve ser considerado apenas a parte inteira do valor.
 
-            //todo Thiago: Observar a abreviação de variável. usar kilometragemInicial ao invés de kmInicial
+            //todo Thiago: Observar a abreviação de variável, usar kilometragemInicial ao invés de kmInicial
             Console.WriteLine("por favor, Informe a Kilometragem inicial");
             double kmInicial = Convert.ToDouble(Console.ReadLine());
 

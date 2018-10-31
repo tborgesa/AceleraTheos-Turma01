@@ -1,22 +1,22 @@
 EXERCICIOS:
 
-Todos os exercicios devem ser solicitado a entrada de dados ao usu�rio e retornar a sa�da via Console.
+Todos os exercicios devem ser solicitado a entrada de dados ao usuário e retornar a saída via Console.
 	
 1. Calcular o volume de uma caixa retangular.
 
 2. Converter a temperatura em graus Fahrenheit para graus Celsius.
 
-3. Calcular o consumo de combust�vel numa determinada dist�ncia. (Km/l)
+3. Calcular o consumo de combustível numa determinada distância. (Km/l)
 	1. Solicitar Kilometragem inicial.
 	2. Solicitar Kilometragem final.
 	3. Solicitar quantidade de litros gasto.
 	
 	OBS: Deve ser considerado apenas a parte inteira do valor.
 	
-4. Calcular a m�dia final de um aluno, sabendo que ele realizou quatro provas no ano.
+4. Calcular a média final de um aluno, sabendo que ele realizou quatro provas no ano.
 	1. Solicitar a nota de cada prova.
 	2. Solicitar o nome do aluno para apresentar na mensagem final.
 
 	OBS: Deve ser arredondado (Math.Round) e apresentar apenas a parte inteira da nota.
 	
-5. Calcule o novo sal�rio de um funcion�rio, sabendo que o reajuste dado para todos na empresa foi de 5%.
+5. Calcule o novo salário de um funcion�rio, sabendo que o reajuste dado para todos na empresa foi de 5%.

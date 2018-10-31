@@ -12,7 +12,7 @@ namespace Exercicio3
             //3.Solicitar quantidade de litros gasto.
             //OBS: Deve ser considerado apenas a parte inteira do valor.
 
-
+            //todo Thiago: Observar a abreviação de variável. usar kilometragemInicial ao invés de kmInicial
             Console.WriteLine("por favor, Informe a Kilometragem inicial");
             double kmInicial = Convert.ToDouble(Console.ReadLine());
 
@@ -25,10 +25,12 @@ namespace Exercicio3
             double kmTotal = kmFinal - kmInicial;
 
             double consumoCombustivel = kmTotal / litrosGastos;
+
+            //todo Thiago: Deve ser considerada a parte inteira do valor e não o valor arredondado, usar a convertão para int
+            // (int) consumoCombustivel
             consumoCombustivel = Math.Round(consumoCombustivel);
             Console.WriteLine($"O consumo médio é de {consumoCombustivel} Km/l.");
-
-
+            
             Console.ReadKey();
         }
     }

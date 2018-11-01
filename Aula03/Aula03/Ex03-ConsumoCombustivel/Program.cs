@@ -14,6 +14,7 @@ namespace Ex03_ConsumoCombustivel
 
             double kilometragemInicial;
             double kilometragemFinal;
+            //todo Thiago: Observar as abreviações de variaveis, usar quantidade ao invés de qtd
             double qtdLitrosGastos;
             double consumo;
 

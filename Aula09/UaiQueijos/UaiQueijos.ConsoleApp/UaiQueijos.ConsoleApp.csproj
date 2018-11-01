@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63BFD749-595F-4088-8567-3773BCC4F6F4}</ProjectGuid>
+    <ProjectGuid>{AB0A5D53-6234-4522-ABE1-A214D7A6547D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Exercicio04</RootNamespace>
-    <AssemblyName>Exercicio04</AssemblyName>
+    <RootNamespace>UaiQueijos.ConsoleApp</RootNamespace>
+    <AssemblyName>UaiQueijos.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\Input.cs" />
-    <Compile Include="Helpers\ReproHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UaiQueijos.Comum\UaiQueijos.Comum.csproj">
+      <Project>{8467804e-f834-4fdb-b093-bc3a4f09ae38}</Project>
+      <Name>UaiQueijos.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UaiQueijos.Dominio\UaiQueijos.Dominio.csproj">
+      <Project>{95b02c30-e925-41b6-ba67-92ee0af76201}</Project>
+      <Name>UaiQueijos.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

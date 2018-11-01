@@ -5,6 +5,7 @@
 	1.4 - Veriáveis internas (metodos, if,for) - camelCase - numero
 	1.5 - Variaveis de classe private - _camelCase - _memsagemInvalido
 	1.6 - Variaveis de classe publicas - PascalCase - Cpf
+	1.7 - Propriedades - PascalCase - Endereco
 	
 2) Dar nomes aos identificadores de forma clara, sem abreviações.
 Exemplo: "MultiplicarNumeros" é melhor que "MultNum"

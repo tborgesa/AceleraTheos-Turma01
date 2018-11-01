@@ -1,6 +1,4 @@
-﻿using UaiQueijos.Comum.Helpers;
-using UaiQueijos.Dominio;
-using System;
+﻿using System;
 using ClienteAlias = UaiQueijos.Dominio.Cliente.Cliente;
 
 namespace UaiQueijos.ConsoleApp

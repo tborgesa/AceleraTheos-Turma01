@@ -9,7 +9,7 @@ namespace Theos.Biblioteca.Dominio.Livro
             Nome = nome;
         }
 
-        private string Nome { get; }
+        public string Nome { get; }
         public string Assunto { get; private set; }
         public string Editora { get; private set; }
         public string Autor { get; set; }

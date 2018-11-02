@@ -11,7 +11,6 @@ namespace UaiQueijos.Dominio.Cliente
             Nome = nome;
         }
 
-        {
         public Cliente(DateTime dataNascimento, string cpf, string nome, string endereco)
         {
             DataNascimento = dataNascimento;

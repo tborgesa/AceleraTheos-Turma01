@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Theos.Biblioteca.Domininio.Livro
+namespace Theos.Biblioteca.Dominio.Livro
 {
     public class Livro
     {

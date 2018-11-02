@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Theos.Biblioteca.Domininio.Funcionario
+namespace Theos.Biblioteca.Dominio.Funcionario
 {
    public class Funcionario
     {
@@ -12,8 +12,8 @@ namespace Theos.Biblioteca.Domininio.Funcionario
             Setor = setor;
         }
 
-        private string Nome { get; }
-        private string Cpf { get; }
-        private string Setor { get; }
+        public string Nome { get; }
+        public string Cpf { get; }
+        public string Setor { get; }
     }
 }

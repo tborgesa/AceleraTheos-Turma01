@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Theos.Biblioteca.Domininio.Editora
+namespace Theos.Biblioteca.Dominio.Editora
 {
     public class Editora
     {
@@ -11,13 +11,13 @@ namespace Theos.Biblioteca.Domininio.Editora
             Cep = cep;
         }
 
-        private string Nome { get; }
-        private string Cnpj { get; }
+        public string Nome { get; }
+        public string Cnpj { get; }
         public string Logradouro { get; private set; }
         public string Numero { get; private set; }
         public string Bairro { get; private set; }
         public string Cidade { get; private set; }
-        private string Cep { get; }
+        public string Cep { get; }
 
         public void AlteraLogradouro(string logradouro)
         {

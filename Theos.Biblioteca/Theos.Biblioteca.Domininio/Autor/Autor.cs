@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Theos.Biblioteca.Domininio.Autor
+namespace Theos.Biblioteca.Dominio.Autor
 {
     public class Autor
     {
@@ -9,6 +9,6 @@ namespace Theos.Biblioteca.Domininio.Autor
             Nome = nome;
         }
 
-        private string Nome { get; }
+        public string Nome { get; }
     }
 }

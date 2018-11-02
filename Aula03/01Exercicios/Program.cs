@@ -57,10 +57,10 @@ namespace _01Exercicios
                         Console.WriteLine("Informe a temperatura em °F");
 
                         //todo Thiago: Cuidado com a abreviação de varíavel, usar temperaturaFahrenheit ao inves de temperaturaF.
-                        double temperaturaF = Convert.ToDouble(Console.ReadLine());
+                        double temperaturaFahrenheit = Convert.ToDouble(Console.ReadLine());
 
-                        double temperaturaC = (temperaturaF - 32) / 1.8;
-                        Console.WriteLine($"{Math.Round(temperaturaF, 2)}°F é igual a {Math.Round(temperaturaC, 1)}°C.");
+                        double temperaturaCelsius = (temperaturaFahrenheit - 32) / 1.8;
+                        Console.WriteLine($"{Math.Round(temperaturaFahrenheit, 2)}°F é igual a {Math.Round(temperaturaCelsius, 1)}°C.");
 
                         Console.ReadKey();
 
@@ -86,7 +86,7 @@ namespace _01Exercicios
                         int totalGasto = (kmfinal - kminicial) / combustivel;
 
                         //todo Thiago: na verdade ó gasto calculado não é no percurso e sim por kilometro.
-                        Console.WriteLine($"Foram gastos {totalGasto} litros de combustível no percurso informado.");
+                        Console.WriteLine($"Foram gastos {totalGasto} litros de combustível por quilômetro rodado no percurso informado.");
                         Console.ReadKey();
 
                         break;

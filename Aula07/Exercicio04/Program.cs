@@ -23,7 +23,11 @@ namespace Exercicio04
                 mes++;
                 int ferteisMesAnterior = coelhosFerteis;
                 int inferteisMesAnterior = coelhosFerteis;
+                coelhosInferteis = ferteisMesAnterior;
+                coelhosFerteis = coelhosInferteis + inferteisMesAnterior;
             }
+
+            InputHelper.MensagemUsuario($"Você terá que esperar {mes} mes(es) para obter a quantidade de coelhos desejada.");
         }
     }
 }

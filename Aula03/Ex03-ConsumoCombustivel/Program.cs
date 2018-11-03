@@ -14,8 +14,7 @@ namespace Ex03_ConsumoCombustivel
 
             double kilometragemInicial;
             double kilometragemFinal;
-            //todo Thiago: Observar as abreviações de variaveis, usar quantidade ao invés de qtd
-            double qtdLitrosGastos;
+            double quantidadeLitrosGastos;
             double consumo;
 
             Console.WriteLine("Digite a kilometragem inicial");
@@ -25,9 +24,9 @@ namespace Ex03_ConsumoCombustivel
             kilometragemFinal = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Digite quantos litros gastou");
-            qtdLitrosGastos = double.Parse(Console.ReadLine());
+            quantidadeLitrosGastos = double.Parse(Console.ReadLine());
 
-            consumo = (kilometragemFinal - kilometragemInicial) / qtdLitrosGastos;
+            consumo = (kilometragemFinal - kilometragemInicial) / quantidadeLitrosGastos;
 
             Console.WriteLine($"Consumo: {(int)consumo}");
 

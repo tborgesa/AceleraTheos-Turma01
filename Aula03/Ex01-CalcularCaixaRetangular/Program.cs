@@ -12,8 +12,10 @@ namespace Ex01_CalcularCaixaRetangular
         {
             Console.WriteLine("Calcular volume de uma caixa retangular");
 
-            //todo Thiago: Declarar uma varíavel em cada linha. Neste caso até pode declara a varíavel direto em cada atribuição.
-            double volume, altura, comprimento, largura;
+            double volume;
+            double altura;
+            double comprimento;
+            double largura;
 
             Console.WriteLine("Digite a altura: ");
             altura = double.Parse(Console.ReadLine());

@@ -44,8 +44,8 @@
       <Project>{e7d6e6c3-0954-4af0-9572-01122d5cd4e9}</Project>
       <Name>Theos.Biblioteca.Comum</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Theos.Biblioteca.Domininio\Theos.Biblioteca.Dominio.csproj">
-      <Project>{a8270cf0-0b92-4ff1-ab62-b0b428b31829}</Project>
+    <ProjectReference Include="..\Theos.Biblioteca.Dominio\Theos.Biblioteca.Dominio.csproj">
+      <Project>{3ee8424b-39b2-485d-98d1-304c2a60c4b8}</Project>
       <Name>Theos.Biblioteca.Dominio</Name>
     </ProjectReference>
   </ItemGroup>

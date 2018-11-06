@@ -1,11 +1,11 @@
 ﻿using System;
-
+using SetorAlias = Theos.Biblioteca.Dominio.Setor.Setor;
 
 namespace Theos.Biblioteca.Dominio.Funcionario
 {
    public class Funcionario
     {
-        public Funcionario(string nome, string cpf, string setor)
+        public Funcionario(string nome, string cpf, SetorAlias setor)
         {
             Nome = nome;
             Cpf = cpf;
@@ -14,6 +14,6 @@ namespace Theos.Biblioteca.Dominio.Funcionario
 
         public string Nome { get; }
         public string Cpf { get; }
-        public string Setor { get; }
+        public SetorAlias Setor { get; }
     }
 }

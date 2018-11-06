@@ -4,7 +4,7 @@ using Theos.Biblioteca.Comum;
 
 namespace Theos.Biblioteca.ConsoleApp
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

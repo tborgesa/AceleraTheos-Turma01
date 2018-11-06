@@ -41,11 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autor.cs" />
-    <Compile Include="Editora.cs" />
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="Livro.cs" />
+    <Compile Include="Livro\Autor.cs" />
+    <Compile Include="Funcionario\Diretor.cs" />
+    <Compile Include="Livro\Editora.cs" />
+    <Compile Include="Funcionario\Funcionario.cs" />
+    <Compile Include="Funcionario\Lider.cs" />
+    <Compile Include="Livro\Livro.cs" />
+    <Compile Include="Permissao\Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setor\Marketing.cs" />
+    <Compile Include="Setor\Contabilidade.cs" />
+    <Compile Include="Setor\Comercial.cs" />
+    <Compile Include="Setor\Desenvolvimento.cs" />
+    <Compile Include="Setor\Setor.cs" />
+    <Compile Include="Setor\Implantacao.cs" />
+    <Compile Include="Setor\Suporte.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Theos.Biblioteca.Comum\Theos.Biblioteca.Comum.csproj">

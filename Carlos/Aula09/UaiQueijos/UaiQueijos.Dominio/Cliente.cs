@@ -2,31 +2,24 @@
 
 namespace UaiQueijos.Dominio
 {
-    public class Cliente
+    public class Cliente : Pessoa
     {
         public Cliente(DateTime dataNascimento, string cpf, string nome)
+        : base(dataNascimento, cpf, nome)
         {
-            DataNascimento = dataNascimento;
-            Cpf = cpf;
-            Nome = nome;
+
         }
 
         public Cliente(DateTime dataNascimento, string cpf, string nome, string endereco)
+        : base(dataNascimento, cpf, nome, endereco)
         {
-            DataNascimento = dataNascimento;
-            Cpf = cpf;
-            Nome = nome;
-            Endereco = endereco;
+
         }
 
-        public string Nome { get; }
-        public string Cpf { get; }
-        public DateTime DataNascimento { get; }
-        public string Endereco { get; private set; }
-
-        public void AlterarEndereco(string endereco)
+        // virtual : todo mundo que herda pode alterar
+        public virtual double ObterDesconto(double descontoPadrao)
         {
-            Endereco = endereco;
+            return descontoPadrao;
         }
     }
 }

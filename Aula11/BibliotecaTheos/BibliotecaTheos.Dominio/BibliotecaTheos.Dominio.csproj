@@ -39,9 +39,7 @@
     <Compile Include="Editoras\Editora.cs" />
     <Compile Include="Funcionarios\Funcionario.cs" />
     <Compile Include="Livros\Livro.cs" />
-    <Compile Include="Permissoes\Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setores\Setor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaTheos.Comum\BibliotecaTheos.Comum.csproj">

@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BibliotecaTheos.Dominio</RootNamespace>
-    <AssemblyName>BibliotecaTheos.Dominio</AssemblyName>
+    <ProjectGuid>{A4D02207-DC0E-4081-8689-58528E3D3456}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BibliotecaTheos.ConsoleApp</RootNamespace>
+    <AssemblyName>BibliotecaTheos.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,18 +37,20 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autores\Autor.cs" />
-    <Compile Include="Editoras\Editora.cs" />
-    <Compile Include="Funcionarios\Funcionario.cs" />
-    <Compile Include="Livros\Livro.cs" />
-    <Compile Include="Permissoes\Permissao.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setores\Setor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaTheos.Comum\BibliotecaTheos.Comum.csproj">
       <Project>{0fbe45fb-aa78-4820-868d-a9eb828dbf02}</Project>
       <Name>BibliotecaTheos.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BibliotecaTheos.Dominio\BibliotecaTheos.Dominio.csproj">
+      <Project>{5a8d5c5a-0d9a-4536-a50e-e5a892d73661}</Project>
+      <Name>BibliotecaTheos.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

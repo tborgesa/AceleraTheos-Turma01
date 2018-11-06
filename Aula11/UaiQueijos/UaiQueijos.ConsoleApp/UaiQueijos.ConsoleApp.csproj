@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BibliotecaTheos.Dominio</RootNamespace>
-    <AssemblyName>BibliotecaTheos.Dominio</AssemblyName>
+    <ProjectGuid>{4A5BB89B-C7D6-41FB-BCC6-8A045C3DB9C7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UaiQueijos.ConsoleApp</RootNamespace>
+    <AssemblyName>UaiQueijos.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,18 +37,20 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Autores\Autor.cs" />
-    <Compile Include="Editoras\Editora.cs" />
-    <Compile Include="Funcionarios\Funcionario.cs" />
-    <Compile Include="Livros\Livro.cs" />
-    <Compile Include="Permissoes\Permissao.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setores\Setor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BibliotecaTheos.Comum\BibliotecaTheos.Comum.csproj">
-      <Project>{0fbe45fb-aa78-4820-868d-a9eb828dbf02}</Project>
-      <Name>BibliotecaTheos.Comum</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UaiQueijos.Comum\UaiQueijos.Comum.csproj">
+      <Project>{059c70b4-aa31-4499-918f-4c2ee4cdd87e}</Project>
+      <Name>UaiQueijos.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UaiQueijos.Dominio\UaiQueijos.Dominio.csproj">
+      <Project>{95af78d8-e651-48f5-9809-7d4186557f88}</Project>
+      <Name>UaiQueijos.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

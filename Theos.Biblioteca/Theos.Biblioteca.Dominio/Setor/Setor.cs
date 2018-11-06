@@ -12,7 +12,9 @@ namespace Theos.Biblioteca.Dominio.Setor
 
         public virtual Permissao GetPermissao()
         {
+            var permissao = new Permissao();
 
+            permissao.AlterarLivro
         }
     }
 }

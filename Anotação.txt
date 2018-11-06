@@ -1,0 +1,3 @@
+Quando o pai tem um método "virtual" significa que a filha com "override" poderá sobreescrever o metódo.
+
+

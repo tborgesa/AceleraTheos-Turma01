@@ -2,7 +2,7 @@
 using BibliotecaTheos.Dominio.Setores;
 using BibliotecaTheos.Dominio.Permissoes;
 
-namespace BibliotecaTheos.Dominio.Funcionarios.Funcionario
+namespace BibliotecaTheos.Dominio.Funcionarios
 {
     public class Funcionario
     {

@@ -37,11 +37,21 @@
   <ItemGroup>
     <Compile Include="Autores\Autor.cs" />
     <Compile Include="Editoras\Editora.cs" />
+    <Compile Include="Funcionarios\Diretor.cs" />
     <Compile Include="Funcionarios\Funcionario.cs" />
+    <Compile Include="Funcionarios\Lider.cs" />
     <Compile Include="Livros\Livro.cs" />
     <Compile Include="Permissoes\Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setores\Administrativo.cs" />
+    <Compile Include="Setores\Contabil.cs" />
+    <Compile Include="Setores\Dba.cs" />
+    <Compile Include="Setores\Desenvolvimento.cs" />
+    <Compile Include="Setores\Implantacao.cs" />
+    <Compile Include="Setores\Marketing.cs" />
+    <Compile Include="Setores\QA.cs" />
     <Compile Include="Setores\Setor.cs" />
+    <Compile Include="Setores\Suporte.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaTheos.Comum\BibliotecaTheos.Comum.csproj">

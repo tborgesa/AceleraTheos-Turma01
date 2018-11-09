@@ -21,7 +21,7 @@ namespace UaiQueijos.Dominio.Cliente
             Endereco = endereco;
         }
 
-        public string Nome { get; }
+        private string Nome { get; }
         public DateTime DataNascimento { get; }
         public string Cpf { get; }
         public string Endereco { get; private set; }
@@ -31,15 +31,6 @@ namespace UaiQueijos.Dominio.Cliente
             Endereco = endereco;
         }
 
-        public virtual double ObterDesconto(double descontopadrao)
-        {
-            return descontopadrao * 1.1;
-        }
-
-        public override string ToString()
-        {
-            return $"{Nome} - {Cpf}";
-        }
     }
 
 }

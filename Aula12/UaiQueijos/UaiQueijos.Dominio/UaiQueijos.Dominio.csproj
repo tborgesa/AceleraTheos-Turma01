@@ -35,10 +35,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente\ClienteGold.cs" />
     <Compile Include="Cliente\Cliente.cs" />
-    <Compile Include="Cliente\ClienteSilver.cs" />
-    <Compile Include="Produto\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

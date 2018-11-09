@@ -43,6 +43,7 @@
     <Compile Include="Setor\Comercial.cs" />
     <Compile Include="Setor\Contabilidade.cs" />
     <Compile Include="Setor\Desenvolvimento.cs" />
+    <Compile Include="Setor\Enumerador\ESetor.cs" />
     <Compile Include="Setor\Financeiro.cs" />
     <Compile Include="Setor\Implantacao.cs" />
     <Compile Include="Setor\Qualidade.cs" />

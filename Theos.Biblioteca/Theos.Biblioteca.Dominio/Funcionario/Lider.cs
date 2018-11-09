@@ -8,10 +8,6 @@ namespace Theos.Biblioteca.Dominio.Funcionario
 {
     public class Lider : Funcionario
     {
-        public Lider()
-        {
-
-        }
 
         public string Nome { get; set; }
     }

@@ -8,13 +8,19 @@ namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Setor
     {
-        public string Nome { get; set; }
+        public Setor(string nome)
+        {
+            Nome = nome;
+        }
+        public string Nome { get; }
 
         public virtual Permissao GetPermissao()
         {
             var permissao = new Permissao();
 
-            permissao.AlterarLivro
+            permissao.PodeDevolver();
+
+            return permissao;
         }
     }
 }

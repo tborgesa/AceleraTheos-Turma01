@@ -8,5 +8,6 @@ namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Contabilidade : Setor
     {
+
     }
 }

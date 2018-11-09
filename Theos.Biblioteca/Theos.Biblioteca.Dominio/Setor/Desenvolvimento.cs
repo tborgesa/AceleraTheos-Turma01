@@ -8,5 +8,20 @@ namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Desenvolvimento : Setor
     {
+        public Desenvolvimento()
+            :base("Desenvolvimento") 
+
+        {
+
+        }
+
+
+        public override Permissao GetPermissao()
+        {
+            Permissao permissao = new Permissao();
+            permissao.PodeAlterar();
+
+            return permissao;
+        }
     }
 }

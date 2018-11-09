@@ -84,6 +84,8 @@ namespace Exercicio01
                     Console.WriteLine("OPÇÃO ESCOLHIDA:\n(2) - Converter a temperatura em graus Fahrenheit para graus Celsius.");
 
                     Console.WriteLine("\nInforme a temperatura em Fahrenheit:");
+
+                    //todo Thiago: Observar a abreviação de variável, usar temperaturaFahrenheit ao invés de temperaturaF
                     float temperaturaF = float.Parse(Console.ReadLine());
 
                     var temperaturaC = ((temperaturaF - 32) / 1.8);

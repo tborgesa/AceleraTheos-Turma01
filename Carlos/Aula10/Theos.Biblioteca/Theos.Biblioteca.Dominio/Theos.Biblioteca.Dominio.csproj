@@ -49,6 +49,9 @@
     <Compile Include="Livro\Livro.cs" />
     <Compile Include="Permissao\Permissao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setor\Financeiro.cs" />
+    <Compile Include="Setor\Qualidade.cs" />
+    <Compile Include="Setor\Administrativo.cs" />
     <Compile Include="Setor\Marketing.cs" />
     <Compile Include="Setor\Contabilidade.cs" />
     <Compile Include="Setor\Comercial.cs" />

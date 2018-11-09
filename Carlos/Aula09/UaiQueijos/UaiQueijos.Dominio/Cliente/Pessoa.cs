@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace UaiQueijos.Dominio
+namespace UaiQueijos.Dominio.Cliente
 {
     public class Pessoa
     {
@@ -27,12 +31,12 @@ namespace UaiQueijos.Dominio
         public void AlterarEndereco(string endereco)
         {
             Endereco = endereco;
+            Console.WriteLine("Alterar Endereco Cliente");
         }
 
-        // virtual : todo mundo que herda pode alterar
-        public virtual double ObeterDesconto(double descontoPadrao)
+        public override string ToString()
         {
-            return descontoPadrao;
+            return $"{Nome} - {Cpf}";
         }
     }
 }

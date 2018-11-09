@@ -9,6 +9,11 @@ namespace Theos.Biblioteca.Dominio.Setor
             Nome = nome;
         }
 
-        public string Nome { get; }
+        public string Nome { get; private set; }
+
+        public void AlterarNome(string nome)
+        {
+            Nome = nome;
+        }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
-using UaiQueijos.Comum.Helpers;
-using UaiQueijos.Dominio;
-using ClienteAlias = UaiQueijos.Dominio.Cliente;
-using ClienteGoldAlias = UaiQueijos.Dominio.Cliente;
+using ClienteAlias = UaiQueijos.Dominio.Cliente.Cliente;
+using ClienteGoldAlias = UaiQueijos.Dominio.Cliente.ClienteGold;
+using ClienteSilverAlias = UaiQueijos.Dominio.Cliente.ClienteSilver;
+using ProdutoAlias = UaiQueijos.Dominio.Produto.Produto;
 
 namespace UaiQueijos.ConsoleApp
 {
@@ -10,25 +10,29 @@ namespace UaiQueijos.ConsoleApp
     {
         static void Main(string[] args)
         {
-            ClienteAlias cliente = new ClienteAlias(new DateTime(187, 7, 8), "9876543210", "Alexandre", "Av 19 de dezembro, 369. Maringá - PR");
+            ClienteAlias cliente = new ClienteAlias(
+                new DateTime(1987, 7, 8),
+                "07346153618",
+                "Thiago");
 
-            ClienteAlias clienteGold = new ClienteGoldAlias(new DateTime(187, 7, 8), "012345789", "Carlos", "Rua Castro Alvez, 1390. Maringá - PR");
+            ClienteSilverAlias clienteSilver = new ClienteSilverAlias(new DateTime(1987, 7, 8),
+                "07346153618",
+                "Thiago Silver");
 
-            cliente.AlterarEndereco("end cliente");
-            clienteGold.AlterarEndereco("end cliente Gold");
+            ClienteGoldAlias clienteGold = new ClienteGoldAlias(new DateTime(1987, 7, 8),
+                "07346153618",
+                "Thiago Gold");
 
-            var teste = cliente.Nome;
+            ProdutoAlias produto = new ProdutoAlias("Pão de Queijo", 100, 10);
 
-            Console.WriteLine($"Preço do produto para Cliente: {CalculaPrecoFinalProduto(100,cliente)}");
-            Console.WriteLine($"Preço do produto para Cliente Gold: {CalculaPrecoFinalProduto(100, clienteGold)}");
 
-            Console.ReadKey();            
+            Console.WriteLine($"Preço do produto para Cliente: {produto.CalculaPrecoFinalProduto(cliente)}");
+            Console.WriteLine($"Preço do produto para Cliente Silver: {produto.CalculaPrecoFinalProduto(clienteSilver)}");
+            Console.WriteLine($"Preço do produto para Cliente Gold: {produto.CalculaPrecoFinalProduto(clienteGold)}");
+
+            Console.ReadKey();
         }
 
-        public static double CalculaPrecoFinalProduto(double precoBase, ClienteAlias cliente)
-        {
-            var desconto = precoBase * (cliente.ObterDesconto(10) / 100);
-            return precoBase - desconto;
-        }
+
     }
 }

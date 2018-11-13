@@ -1,19 +1,15 @@
 ﻿using System;
-using BibliotecaTheos.Dominio;
-using BibliotecaTheos.Comum.Helpers;
-using BibliotecaTheos.Dominio.Permissoes;
-using BibliotecaTheos.Dominio.Setores;
-using BibliotecaTheos.Dominio.Setores.Enumerador;
-using BibliotecaTheos.Dominio.Funcionarios;
+using Theos.Biblioteca.Dominio.Funcionario;
+using Theos.Biblioteca.Dominio.Permissao;
+using Theos.Biblioteca.Dominio.Setor;
+using Theos.Biblioteca.Dominio.Setor.Enumerador;
 
-namespace BibliotecaTheos.ConsoleApp
+namespace Theos.Biblioteca.Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Biblioteca Theòs");
-
             Permissao permissao = new Permissao();
 
             permissao.PodeCadastrar();
@@ -31,17 +27,21 @@ namespace BibliotecaTheos.ConsoleApp
             ESetor eSetor = (ESetor)byteExemplo;
             var booleano = Enum.IsDefined(typeof(ESetor), eSetor);
 
-            Lider lider = new Lider("Lider", "45645645688", (ESetor)45);
+            ESetor setorTeste = (ESetor)45;
+            booleano = Enum.IsDefined(typeof(ESetor), setorTeste);
+
+            Lider lider = new Lider("Lider", "45654345678", (ESetor)45);
 
             if (!string.IsNullOrWhiteSpace(lider.erro))
             {
-                Console.WriteLine(lider.erro);
-                Console.ReadKey();
-                return
+                System.Console.WriteLine(lider.erro);
+                System.Console.ReadKey();
+                return;
             }
 
             permissoes = lider.GetPermissao();
-            Console.ReadKey();
+
+            System.Console.ReadKey();
         }
     }
 }

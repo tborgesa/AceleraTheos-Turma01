@@ -1,7 +1,6 @@
-﻿using System;
-using BibliotecaTheos.Dominio.Permissoes;
+﻿using PermissaoAlias = Theos.Biblioteca.Dominio.Permissao.Permissao;
 
-namespace BibliotecaTheos.Dominio.Setores
+namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Desenvolvimento : Setor
     {
@@ -11,9 +10,9 @@ namespace BibliotecaTheos.Dominio.Setores
 
         }
 
-        public override Permissao GetPermissao()
+        public override PermissaoAlias GetPermissao()
         {
-            Permissao permissao = base.GetPermissao();
+            PermissaoAlias permissao = base.GetPermissao();
             permissao.PodeAlterar();
             return permissao;
         }

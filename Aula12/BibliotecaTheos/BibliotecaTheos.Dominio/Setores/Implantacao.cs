@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BibliotecaTheos.Dominio.Permissoes;
+using System;
 
 namespace BibliotecaTheos.Dominio.Setores
 {
@@ -8,6 +9,13 @@ namespace BibliotecaTheos.Dominio.Setores
             :base("Implantação")
         {
 
+        }
+
+        public override Permissao GetPermissao()
+        {
+            Permissao permissao = base.GetPermissao();
+            permissao.PodeAlterar();
+            return permissao;
         }
     }
 }

@@ -1,9 +1,10 @@
-﻿using System;
-using BibliotecaTheos.Dominio.Setores;
-using BibliotecaTheos.Dominio.Permissoes;
-using BibliotecaTheos.Dominio.Setores.Enumerador;
+﻿using Theos.Biblioteca.Dominio.Setor;
+using Theos.Biblioteca.Dominio.Setor.Enumerador;
+using SetorAlias = Theos.Biblioteca.Dominio.Setor.Setor;
+using PermissaoAlias = Theos.Biblioteca.Dominio.Permissao.Permissao;
+using System;
 
-namespace BibliotecaTheos.Dominio.Funcionarios
+namespace Theos.Biblioteca.Dominio.Funcionario
 {
     public class Funcionario
     {
@@ -30,8 +31,8 @@ namespace BibliotecaTheos.Dominio.Funcionarios
                 case ESetor.Desenvolvimento:
                     Setor = new Desenvolvimento();
                     break;
-                case ESetor.QA:
-                    Setor = new QA();
+                case ESetor.Teste:
+                    Setor = new Teste();
                     break;
                 case ESetor.Suporte:
                     Setor = new Suporte();
@@ -43,14 +44,12 @@ namespace BibliotecaTheos.Dominio.Funcionarios
 
         public string Nome { get; }
         public string Cpf { get; }
-        public Setor Setor { get; private set; }
+        public SetorAlias Setor { get; private set; }
 
-        public virtual Permissao GetPermissao()
+        public virtual PermissaoAlias GetPermissao()
         {
-            Permissao permissao = new Permissao();
-            permissao.PodeDevolver();
+            PermissaoAlias permissao = Setor.GetPermissao();
             return permissao;
         }
-
     }
 }

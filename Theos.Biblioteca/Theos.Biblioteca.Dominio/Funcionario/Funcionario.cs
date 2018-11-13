@@ -1,6 +1,7 @@
 ﻿using Theos.Biblioteca.Dominio.Setor;
 using Theos.Biblioteca.Dominio.Setor.Enumerador;
 using SetorAlias = Theos.Biblioteca.Dominio.Setor.Setor;
+using PermissaoAlias = Theos.Biblioteca.Dominio.Permissao;
 
 namespace Theos.Biblioteca.Dominio.Funcionario
 {
@@ -11,7 +12,6 @@ namespace Theos.Biblioteca.Dominio.Funcionario
             Nome = nome;
             Cpf = cpf;
             InstanciarSetor(setor);
-           
         }
 
         private void InstanciarSetor(ESetor setor)
@@ -50,5 +50,12 @@ namespace Theos.Biblioteca.Dominio.Funcionario
         public string Nome { get; private set; }
         public string Cpf { get; private set; }
         public SetorAlias Setor { get; private set; }
+
+        public virtual PermissaoAlias GetPermissao()
+        {
+            PermissaoAlias permissao = Setor.GetPermissao();
+            return permissao;
+        }
     }
+
 }

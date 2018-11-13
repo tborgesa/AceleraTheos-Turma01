@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Theos.Biblioteca.Dominio
+﻿namespace Theos.Biblioteca.Dominio
 {
     public class Permissao
     {
@@ -23,5 +17,14 @@ namespace Theos.Biblioteca.Dominio
         public void PodeFazerEmprestimo() => FazerEmprestimo = true;
         
         public void PodeDevolver() => DevolverLivro = true;
+
+        public void PermissaoTotal()
+        {
+            CadastrarLivro = true;
+            AlterarLivro = true;
+            ExcluirLivro = true;
+            FazerEmprestimo = true;
+            DevolverLivro = true;
+        }
     }
 }

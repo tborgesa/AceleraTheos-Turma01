@@ -1,14 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PermissaoAlias = Theos.Biblioteca.Dominio.Permissao;
+using Theos.Biblioteca.Dominio.Setor.Enumerador;
 
 namespace Theos.Biblioteca.Dominio.Funcionario
 {
     public class Lider : Funcionario
     {
 
-        public string Nome { get; set; }
+        public Lider(string nome, string cpf, ESetor setor)
+            : base(nome, cpf, setor)
+        {
+            
+        }
+
+        public override PermissaoAlias GetPermissao()
+        {
+            PermissaoAlias permissao = base.GetPermissao();
+
+            permissao.PermissaoTotal();
+
+            return permissao;
+        }
     }
 }

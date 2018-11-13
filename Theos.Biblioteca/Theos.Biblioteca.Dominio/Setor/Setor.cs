@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PermissaoAlias = Theos.Biblioteca.Dominio.Permissao;
 
 namespace Theos.Biblioteca.Dominio.Setor
 {
@@ -14,9 +10,9 @@ namespace Theos.Biblioteca.Dominio.Setor
         }
         public string Nome { get; }
 
-        public virtual Permissao GetPermissao()
+        public virtual PermissaoAlias GetPermissao()
         {
-            var permissao = new Permissao();
+            var permissao = new PermissaoAlias();
 
             permissao.PodeDevolver();
 

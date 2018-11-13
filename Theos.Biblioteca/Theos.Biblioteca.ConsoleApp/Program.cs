@@ -2,6 +2,7 @@
 using Theos.Biblioteca.Comum.Helpers;
 using SetorAlias = Theos.Biblioteca.Dominio.Setor.Setor;
 using FuncionarioAlias = Theos.Biblioteca.Dominio.Funcionario.Funcionario;
+using Theos.Biblioteca.Dominio.Setor.Enumerador;
 
 namespace Theos.Biblioteca.ConsoleApp
 {
@@ -14,10 +15,17 @@ namespace Theos.Biblioteca.ConsoleApp
             var permissoes = setor.GetPermissao();
 
             Console.WriteLine("Digite um nome: ");
-            FuncionarioAlias funcionarioTeste = new FuncionarioAlias(Console.ReadLine(), "421.207.688-89", setor);
+            FuncionarioAlias funcionarioTeste = new FuncionarioAlias(Console.ReadLine(), "421.207.688-89", (ESetor)7);
 
-            InputHelper.MensagemUsuario($"Nome do funcionário: {funcionarioTeste.Nome}");
+           
+           
+            InputHelper.MensagemUsuario($@"Nome do funcionário: {funcionarioTeste.Nome}
+CPF: {funcionarioTeste.Cpf}
+Setor: {funcionarioTeste.Setor.Nome}
+Setor pode alterar? {funcionarioTeste.GetPermissao().AlterarLivro}");
 
+
+         
         }
     }
 }

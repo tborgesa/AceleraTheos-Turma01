@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Theos.Biblioteca.Dominio.Setor
+﻿namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Setor
     {
@@ -9,11 +7,13 @@ namespace Theos.Biblioteca.Dominio.Setor
             Nome = nome;
         }
 
-        public string Nome { get; private set; }
+        public string Nome { get; }
 
-        public void AlterarNome(string nome)
+        public virtual Permissao GetPermissao()
         {
-            Nome = nome;
+            Permissao permissao = new Permissao();
+            permissao.PermissaoDevolver();
+            return permissao;
         }
     }
 }

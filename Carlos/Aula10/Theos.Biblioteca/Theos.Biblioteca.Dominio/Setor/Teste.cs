@@ -2,10 +2,10 @@
 
 namespace Theos.Biblioteca.Dominio.Setor
 {
-    public class Desenvolvimento : Setor
+    public class Teste : Setor
     {
-        public Desenvolvimento()
-            : base ("Desenvolvimento")
+        public Teste()
+            : base ("Teste")
         {
 
         }
@@ -13,7 +13,7 @@ namespace Theos.Biblioteca.Dominio.Setor
         public override Permissao GetPermissao()
         {
             Permissao permissao = base.GetPermissao();
-            permissao.PermissaoAlterar();
+            permissao.PermissaoExcluir();
             return permissao;
         }
     }

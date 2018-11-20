@@ -4,8 +4,8 @@ namespace Theos.Biblioteca.Dominio.Setor
 {
     public class Financeiro : Setor
     {
-        public Financeiro(string nome)
-            : base (nome)
+        public Financeiro()
+            : base ("Financeiro")
         {
 
         }

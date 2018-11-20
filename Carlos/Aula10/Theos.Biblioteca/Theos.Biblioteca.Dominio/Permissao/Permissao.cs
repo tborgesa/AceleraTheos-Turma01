@@ -10,29 +10,32 @@ namespace Theos.Biblioteca.Dominio
         public bool EmprestarLivro { get; private set; }
         public bool DevolverLivro { get; private set; }
 
-        public void PermissaoCadastrarLivro(bool cadastrarLivro)
+        // Quando o metodo tiver somente uma linha pode fazer assim:
+        // public void PermissaoCadastrar() => PermissaoCadastrar = true;
+
+        public void PermissaoCadastrar()
         {
-            CadastrarLivro = cadastrarLivro;
+            CadastrarLivro = true;
         }
 
-        public void PermissaoExcluirLivro(bool excluirLivro)
+        public void PermissaoExcluir()
         {
-            ExcluirLivro = excluirLivro;
+            ExcluirLivro = true;
         }
 
-        public void PermissaoAlterarLivro(bool alterarLivro)
+        public void PermissaoAlterar()
         {
-            AlterarLivro = alterarLivro;
+            AlterarLivro = true;
         }
 
-        public void PermissaoEmprestarLivro(bool emprestarLivro)
+        public void PermissaoEmprestar()
         {
-            EmprestarLivro = emprestarLivro;
+            EmprestarLivro = true;
         }
 
-        public void PermissaoDevolverLivro(bool devolverLivro)
+        public void PermissaoDevolver()
         {
-            DevolverLivro = devolverLivro;
+            DevolverLivro = true;
         }
     }
 }

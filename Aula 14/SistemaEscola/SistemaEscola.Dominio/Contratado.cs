@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaEscola.Dominio
 {
-    class Contratado
+    class Contratado : Funcionario
     {
+        public Contratado(string nome,double salario)
+        {
+
+        }
     }
 }

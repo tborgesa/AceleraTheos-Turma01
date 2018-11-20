@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaEscola.Dominio.Escolaridade.Enumerador
+﻿namespace SistemaEscola.Dominio.Escolaridade.Enumerador
 {
-    class EEscolaridade
+    public enum EEscolaridade : byte
     {
+        Doutorado = 1,
+        EnsinoSuperior = 2,
+        Mestrado = 3,
+        SegudundoGrau = 4
     }
 }

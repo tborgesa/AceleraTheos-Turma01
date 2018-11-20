@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaEscola.Dominio
 {
-    class Horaista
+    class Horaista : Funcionario
     {
     }
 }

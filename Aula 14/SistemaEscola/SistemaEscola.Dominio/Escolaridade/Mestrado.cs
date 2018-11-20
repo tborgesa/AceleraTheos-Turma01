@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace SistemaEscola.Dominio.Escolaridade
 {
-    class Mestrado
+    public class Mestrado : Escolaridade
     {
+        public Mestrado(double salario) : base(salario)
+        {
+
+        }
+
+        public virtual double GetSalario()
+        {
+            double salario = 3000;
+            return salario;
+        }
     }
 }

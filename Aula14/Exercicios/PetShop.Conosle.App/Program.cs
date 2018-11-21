@@ -35,9 +35,9 @@ namespace PetShop.Conosle.App
             Console.ReadKey();
         }
 
-        private void InstanciarAnimal(EnumAnimal animal)
+        private void InstanciarAnimal(EnumEspecie animal)
         {
-            if (!Enum.IsDefined(typeof(EnumAnimal), animal))
+            if (!Enum.IsDefined(typeof(EnumEspecie), animal))
             {
                 _erro = "Tipo de animal inválido";
                 return;
@@ -45,12 +45,12 @@ namespace PetShop.Conosle.App
 
             switch (animal)
             {
-                case EnumAnimal.Peixe:
+                case EnumEspecie.Peixe:
                     Animal = new Peixe();
                     break;
-                case EnumAnimal.Gato:
+                case EnumEspecie.Gato:
                     break;
-                case EnumAnimal.Cachorro:
+                case EnumEspecie.Cachorro:
                     break;
                 default:
                     break;

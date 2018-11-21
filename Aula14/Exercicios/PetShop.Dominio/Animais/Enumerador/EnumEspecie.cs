@@ -2,7 +2,7 @@
 
 namespace PetShop.Dominio.Animais.Enumerador
 {
-    public enum EnumAnimal
+    public enum EnumEspecie
     {
         Peixe = 1,
         Gato = 2,

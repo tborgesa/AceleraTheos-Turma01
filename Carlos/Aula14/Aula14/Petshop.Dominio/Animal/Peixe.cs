@@ -16,9 +16,9 @@ namespace Petshop.Dominio
 			Comprimento = comprimento;
 		}
 
-		public override double CalcularValorServico(double valorServico)
+		public override double CalcularValorServico()
 		{
-			return (Altura * Largura * Comprimento) * 1.5;
+			return ((Altura * Largura * Comprimento) / 1000) * 1.5;
 		}
 	}
 }

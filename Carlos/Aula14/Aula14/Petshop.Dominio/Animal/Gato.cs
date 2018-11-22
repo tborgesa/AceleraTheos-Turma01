@@ -10,7 +10,7 @@ namespace Petshop.Dominio
 
 		}
 
-		public override double CalcularValorServico(double valorServico)
+		public override double CalcularValorServico()
 		{
 			return Peso * 1.6;
 		}

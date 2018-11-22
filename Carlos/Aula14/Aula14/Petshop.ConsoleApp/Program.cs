@@ -20,6 +20,7 @@ namespace Petshop.ConsoleApp
 		  Peixe: (altura x largura x comprimento) (dimensões do aquario em litros) x 1.5
 		  
 		  3. Não existe nenhuma valor possível para um animal genéríco.*/
+
 		static void Main(string[] args)
 		{
 			while (true)
@@ -30,63 +31,26 @@ namespace Petshop.ConsoleApp
 				{
 					case 1:
 
-						Console.Clear();
+                        OpcaoCachorro();
 
-						AnimalCachorroAlias cachorro = new AnimalCachorroAlias();
-
-						Console.WriteLine($"Digite o nome do cachorro:");
-						cachorro.Nome = Console.ReadLine();
-
-						Console.WriteLine($"Digite o peso do cachorro:");
-						cachorro.Peso = double.Parse(Console.ReadLine());
-
-						Console.WriteLine($"O valor da limpeza do {cachorro.Nome} é {cachorro.CalcularValorServico(cachorro.Peso)}");
-
-						Console.ReadKey();
-						break;
+                        break;
 
 					case 2:
 
-						Console.Clear();
-
-						AnimalGatoAlias gato = new AnimalGatoAlias();
-
-						Console.WriteLine($"Digite o nome do gato:");
-						gato.Nome = Console.ReadLine();
-
-						Console.WriteLine($"Digite o peso do gato:");
-						gato.Peso = double.Parse(Console.ReadLine());
-
-						Console.WriteLine($"O valor da limpeza do {gato.Nome} é {gato.CalcularValorServico(gato.Peso)}");
-
-						Console.ReadKey();
+                        OpcaoGato();
+						
 						break;
 
 					case 3:
 
-						Console.Clear();
-
-						AnimalPeixeAlias peixe = new AnimalPeixeAlias();
-
-						Console.WriteLine($"Digite a altura do aquário:");
-						peixe.Altura = double.Parse(Console.ReadLine());
-
-						Console.WriteLine($"Digite a largura do aquário:");
-						peixe.Largura = double.Parse(Console.ReadLine());
-
-						Console.WriteLine($"Digite a comprimento do aquário:");
-						peixe.Comprimento = double.Parse(Console.ReadLine());
-
-						Console.WriteLine($"O valor de limpeza do aquário é {peixe.CalcularValorServico(peixe.Peso)}");
-
-						Console.ReadKey();
+                        OpcaoPeixe();
 
 						break;
 
 					case 4:
-						Console.Clear();
-						Console.WriteLine("Você escolheu sair!");
-						Console.ReadKey();
+
+                        OpcaoSair();
+
 						return;
 
 					default:
@@ -116,5 +80,66 @@ namespace Petshop.ConsoleApp
 				}
 			}
 		}
-	}
+
+        private static void OpcaoCachorro()
+        {
+            Console.Clear();
+
+            AnimalCachorroAlias cachorro = new AnimalCachorroAlias(null, 0);
+
+            Console.WriteLine($"Digite o nome do cachorro:");
+            cachorro.Nome = Console.ReadLine();
+
+            Console.WriteLine($"Digite o peso do cachorro:");
+            cachorro.Peso = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"O valor da limpeza do {cachorro.Nome} é {cachorro.CalcularValorServico()}");
+
+            Console.ReadKey();
+        }
+
+        private static void OpcaoGato()
+        {
+            Console.Clear();
+
+            AnimalGatoAlias gato = new AnimalGatoAlias(null, 0);
+
+            Console.WriteLine($"Digite o nome do gato:");
+            gato.Nome = Console.ReadLine();
+
+            Console.WriteLine($"Digite o peso do gato:");
+            gato.Peso = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"O valor da limpeza do {gato.Nome} é {gato.CalcularValorServico()}");
+
+            Console.ReadKey();
+        }
+
+        private static void OpcaoPeixe()
+        {
+            Console.Clear();
+
+            AnimalPeixeAlias peixe = new AnimalPeixeAlias(null, 0, 0, 0, 0);
+
+            Console.WriteLine($"Digite a altura do aquário em centímetros:");
+            peixe.Altura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Digite a largura do aquário em centímetros:");
+            peixe.Largura = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Digite a comprimento do aquário em centímetros:");
+            peixe.Comprimento = double.Parse(Console.ReadLine());
+
+            Console.WriteLine($"O valor de limpeza do aquário é {peixe.CalcularValorServico()}");
+
+            Console.ReadKey();
+        }
+
+        private static void OpcaoSair()
+        {
+            Console.Clear();
+            Console.WriteLine("Você escolheu sair!");
+            Console.ReadKey();
+        }
+    }
 }

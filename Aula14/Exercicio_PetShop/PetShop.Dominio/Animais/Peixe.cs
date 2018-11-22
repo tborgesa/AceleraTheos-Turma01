@@ -19,5 +19,10 @@ namespace PetShop.Dominio.Animais
             Comprimento = comprimento;
         }
 
+        public override double CalcularLimpeza()
+        {
+            return (Altura * Largura * Comprimento) * 1.5;
+        }
+
     }
 }

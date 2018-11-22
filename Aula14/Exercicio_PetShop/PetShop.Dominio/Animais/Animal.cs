@@ -4,10 +4,9 @@ using System;
 
 namespace PetShop.Dominio.Animais
 {
-    public class Animal
+    public abstract class Animal
     {
         public string Nome { get; }
-        public DateTime  DataNascimento { get; }
         public Cliente Dono { get; private set; }
         public Enum Especie { get; }
         public string erro { get; private set; }
@@ -18,6 +17,8 @@ namespace PetShop.Dominio.Animais
             Dono = dono;
             Especie = especie;
         }
+
+        public abstract double CalcularLimpeza();
 
     }
 }

@@ -17,7 +17,7 @@ namespace PetShop.Dominio.Animais
             Peso = peso;
         }
 
-        public double CalcularLimpeza()
+        public override double CalcularLimpeza()
         {
             return Peso*2;
         }

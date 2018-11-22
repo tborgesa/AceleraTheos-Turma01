@@ -13,7 +13,6 @@ namespace PetShop.Conosle.App
         static Cliente _dono;
         static Animal _animal;
         static double _valorLimpeza;
-        //static EnumEspecie _especie;
 
         static void Main(string[] args)
         {
@@ -24,23 +23,25 @@ namespace PetShop.Conosle.App
 
             while (menu)
             {
+
                 switch (_opcao)
                 {
                     case 1:
                         _dono = CadastrarCliente();
                         Animal animal = CadastrarAnimal(_dono);
+                        _valorLimpeza = animal.CalcularLimpeza();
 
                         Console.WriteLine($"Cadastro Realizado com Sucesso...\nDADOS CADASTRAIS DO DONO" +
                             $"\nNome: {_dono.Nome}" +
-                            $"\nCPF: {_dono.CPF}" +
                             $"\nTelefone: {_dono.Telefone}" +
                             $"\n\nDADOS CADASTRAIS DO ANIMAL" +
                             $"\nNome: {_animal.Nome}" +
-                            $"\nData de Nascimento: {_animal.DataNascimento}" +
                             $"\nEspécie: {_animal.Especie}" +
                             $"\nDono: {_animal.Dono.Nome}" +
                             $"\n\nValor da Limpeza: R${_valorLimpeza}");
-                        break;
+
+                        Console.ReadKey();
+                        return;
 
                     case 2:
                         Console.WriteLine("Aperte qualquer tecla para encerrar o sistema... ");
@@ -81,13 +82,10 @@ Digite sua escolha abaixo: ", "Opção inválida!");
             Console.Write("Informe o nome do Dono do animal: ");
             string nome = Console.ReadLine();
 
-            Console.Write("Informe o CPF do Dono do animal: ");
-            string CPF = Console.ReadLine();
-
             Console.Write("Informe o telefone do Dono do animal: ");
             string telefone = Console.ReadLine();
 
-            Cliente cliente = new Cliente(nome, CPF, telefone);
+            Cliente cliente = new Cliente(nome, telefone);
 
             return cliente;
         }
@@ -104,15 +102,11 @@ Digite sua escolha abaixo: ", "Opção inválida!");
                     Console.Write("Informe o nome do cachorro: ");
                     string nomeCachorro = Console.ReadLine();
 
-                    Console.Write("Informe a data de nascimento do animal, ou aperte ENTER para continuar: ");
-                    string dataNascimentoCachorro = Console.ReadLine();
-
                     double pesoCachorro = (double)InputHelper.GetInputDouble("Informe o peso(kg) do cachorro: ", "Você digitou um valor inválido");
 
-                    Cachorro cachorro = new Cachorro(nomeCachorro, _dono, especie, pesoCachorro);
-                    _valorLimpeza = cachorro.CalcularLimpeza();
-                    _animal = cachorro;
-
+                    _animal = new Cachorro(nomeCachorro, _dono, especie, pesoCachorro);
+                   
+                    Console.Clear();
                     break;
 
                 case EnumEspecie.Gato:
@@ -120,23 +114,16 @@ Digite sua escolha abaixo: ", "Opção inválida!");
                     Console.Write("Informe o nome do gato: ");
                     string nomeGato = Console.ReadLine();
 
-                    Console.Write($"Informe a data de nascimento do {nomeGato}, ou aperte ENTER para continuar: ");
-                    string dataNascimentoGAto = Console.ReadLine();
-
                     double pesoGato = (double)InputHelper.GetInputDouble("Informe o peso(kg) do gato: ", "Você digitou um valor inválido");
 
-                    Gato gato = new Gato(nomeGato, _dono, especie, pesoGato);
+                    _animal = new Gato(nomeGato, _dono, especie, pesoGato);
 
-                    _animal = gato;
-
+                    Console.Clear();
                     break;
 
                 case EnumEspecie.Peixe:
                     Console.Write("Informe o nome do peixe: ");
                     string nomePeixe = Console.ReadLine();
-
-                    Console.Write($"Informe a data de nascimento do {nomePeixe}, ou aperte ENTER para continuar: ");
-                    string dataNascimentoPeixe = Console.ReadLine();
 
                     double alturaPeixe = (double)InputHelper.GetInputDouble("Informe a altura do aquário: ", "Você digitou um valor inválido");
 
@@ -144,9 +131,9 @@ Digite sua escolha abaixo: ", "Opção inválida!");
 
                     double comprimentoPeixe = (double)InputHelper.GetInputDouble("Informe o comprimento do aquário: ", "Você digitou um valor inválido");
 
-                    Peixe peixe = new Peixe(nomePeixe, dono, especie, alturaPeixe, larguraPeixe, comprimentoPeixe);
-                    _animal = peixe;
+                    _animal = new Peixe(nomePeixe, dono, especie, alturaPeixe, larguraPeixe, comprimentoPeixe);
 
+                    Console.Clear();
                     break;
 
                 default:
@@ -159,10 +146,13 @@ Digite sua escolha abaixo: ", "Opção inválida!");
 
         private static EnumEspecie InstanciarEspecie()
         {
-            EnumEspecie _especie = (EnumEspecie)InputHelper.GetInputInt("\n\nEscolha uma das opções para cadastrar o animal:" +
+            EnumEspecie _especie = (EnumEspecie)InputHelper.GetInputInt("Escolha uma das opções para cadastrar o animal:" +
                "\n1 - Cachorro;" +
                "\n2 - Gato;" +
-               "\n3 - Peixe", "Opção Inválida!");
+               "\n3 - Peixe;" +
+               "\n\nInforme a espécie do animal abaixo: ", "Opção Inválida!");
+
+            Console.Clear();
 
             return _especie;
         }

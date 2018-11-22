@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PetShop.Comum\PetShop.Comum.csproj">
+      <Project>{66cc79e2-8ae0-4b05-a78c-e6028ed32ac6}</Project>
+      <Name>PetShop.Comum</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PetShop.Dominio\PetShop.Dominio.csproj">
       <Project>{1bdbb502-c5b0-4e4c-9bce-4e912759a719}</Project>
       <Name>PetShop.Dominio</Name>

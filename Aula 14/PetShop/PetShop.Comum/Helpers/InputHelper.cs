@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Petshop.Comum.Helpers
+namespace PetShop.Comum.Helpers
 {
     public static class InputHelper
     {

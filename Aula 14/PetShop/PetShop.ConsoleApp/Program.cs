@@ -12,6 +12,7 @@ using AnimalAlias = PetShop.Dominio.Animal.Animal;
 using CachorroAlias = PetShop.Dominio.Animal.Cachorro;
 using GatoAlias = PetShop.Dominio.Animal.Gato;
 using PeixeAlias = PetShop.Dominio.Animal.Peixe;
+using HelpersAlias = PetShop.Comum.Helpers.InputHelper;
 
 namespace PetShop.ConsoleApp
 {
@@ -21,15 +22,11 @@ namespace PetShop.ConsoleApp
         {
             int opcao = 1;
 
-            CachorroAlias cachorro = new CachorroAlias(100,1,2,0);
-            Console.WriteLine(cachorro.ServicoLimpeza(cachorro.Peso));
-            Console.ReadLine();
-
             Console.WriteLine("Cadastre o seu animal");
             switch (opcao)
             {
                 case 1:
-                    
+                    ValorFinalServicoCachorro();
                     break;
                 case 2:
                     Console.WriteLine("Case 2");
@@ -38,6 +35,16 @@ namespace PetShop.ConsoleApp
                     Console.WriteLine("Valor");
                     break;
             }
+            Console.ReadKey();
         }
+
+        private static void ValorFinalServicoCachorro()
+        {
+            Console.WriteLine("Informe o peso do cahorro");
+            var entrada = Console.ReadLine();
+            CachorroAlias cachorro = new CachorroAlias(double.Parse(entrada));
+            Console.WriteLine($"Valor do servico e {cachorro}");
+        }
+
     }
 }

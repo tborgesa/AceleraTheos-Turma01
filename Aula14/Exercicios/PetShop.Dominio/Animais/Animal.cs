@@ -12,16 +12,12 @@ namespace PetShop.Dominio.Animais
         public Enum Especie { get; }
         public string erro { get; private set; }
 
-        public Animal(string nome, Cliente dono, EnumEspecie especie)
+        public Animal(string nome, Cliente dono, Enum especie)
         {
             Nome = nome;
             Dono = dono;
             Especie = especie;
         }
 
-        public void AlterarDono(Cliente dono)
-        {
-            Dono = dono;
-        }
     }
 }

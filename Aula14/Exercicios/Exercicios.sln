@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Dominio", "02 - Domini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Dominio", "PetShop.Dominio\PetShop.Dominio.csproj", "{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Comum", "03 - Comum", "{40553CD8-1A6C-46A0-A65F-F756F6E1FCC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Comum", "PetShop.Comum\PetShop.Comum.csproj", "{37B51F4C-BE98-4936-9F64-22156C572A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B51F4C-BE98-4936-9F64-22156C572A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B51F4C-BE98-4936-9F64-22156C572A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B51F4C-BE98-4936-9F64-22156C572A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B51F4C-BE98-4936-9F64-22156C572A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{375748AA-3CFD-4C57-A5D8-F75729986474} = {00DCDA85-5B70-4DAE-BCD3-FF043673F336}
 		{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E} = {7C3026E9-4021-4B0E-B20B-ED2B460450CD}
+		{37B51F4C-BE98-4936-9F64-22156C572A4F} = {40553CD8-1A6C-46A0-A65F-F756F6E1FCC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE58CC70-F23B-416B-933A-CD9077E9144A}

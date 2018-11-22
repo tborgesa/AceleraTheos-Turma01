@@ -4,8 +4,8 @@ namespace PetShop.Dominio.Animais.Enumerador
 {
     public enum EnumEspecie
     {
-        Peixe = 1,
+        Cachorro = 1,
         Gato = 2,
-        Cachorro = 3,
+        Peixe = 3,
     }
 }

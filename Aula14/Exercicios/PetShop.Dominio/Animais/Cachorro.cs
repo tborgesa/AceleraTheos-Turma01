@@ -1,4 +1,5 @@
 ﻿using PetShop.Dominio.Pessoas;
+using PetShop.Dominio.Animais.Enumerador;
 using System;
 
 namespace PetShop.Dominio.Animais
@@ -8,16 +9,17 @@ namespace PetShop.Dominio.Animais
         public string Raca { get; }
         public double Peso { get; private set; }
 
-        public Cachorro(string nome, Cliente dono, string raca, double peso)
-            : base (nome, dono)
+        public double _multiplicador = 2;
+
+        public Cachorro(string nome, Cliente dono, EnumEspecie especie, double peso)
+            : base(nome, dono, especie)
         {
-            Raca = raca;
             Peso = peso;
         }
 
-        public double CalcularLimpeza(double peso, double multiplicador)
+        public double CalcularLimpeza()
         {
-            return peso * multiplicador;
+            return Peso*2;
         }
     }
 }

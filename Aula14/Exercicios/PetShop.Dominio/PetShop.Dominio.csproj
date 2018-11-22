@@ -43,5 +43,11 @@
     <Compile Include="Pessoas\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PetShop.Comum\PetShop.Comum.csproj">
+      <Project>{37b51f4c-be98-4936-9f64-22156c572a4f}</Project>
+      <Name>PetShop.Comum</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

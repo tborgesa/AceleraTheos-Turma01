@@ -1,4 +1,5 @@
 ﻿using PetShop.Dominio.Pessoas;
+using PetShop.Dominio.Animais.Enumerador;
 using System;
 
 namespace PetShop.Dominio.Animais
@@ -9,14 +10,13 @@ namespace PetShop.Dominio.Animais
         public double Largura { get; private set; }
         public double Comprimento { get; private set; }
 
-        public Peixe()
-            :base("Peixe")
-        {
-        }
 
-        public double CalcularLimpeza(double altura, double largura, double comprimento)
+        public Peixe(string nome, Cliente dono, EnumEspecie especie, double altura, double largura, double comprimento)
+            : base (nome, dono, especie)
         {
-            return (altura * largura * comprimento) * 1.5;
+            Altura = altura;
+            Largura = largura;
+            Comprimento = comprimento;
         }
 
     }

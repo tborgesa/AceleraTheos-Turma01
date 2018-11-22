@@ -2,7 +2,7 @@
 
 namespace Petshop.Dominio
 {
-	public class Cachorro : Animal
+	public class Cachorro : AnimalTerrestre
 	{
 		public Cachorro(string nome, double peso)
 			: base(nome, peso)

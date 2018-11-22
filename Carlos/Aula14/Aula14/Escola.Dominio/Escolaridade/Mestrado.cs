@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Escola.Dominio.Escolaridade
+namespace Escola.Dominio
 {
-    class Mestrado
+    public class Mestrado : Contratado
     {
-    }
+		public Mestrado(double valorSalario)
+			: base(valorSalario)
+		{
+
+		}
+
+		public override double CalcularSalario()
+		{
+			return ValorSalario = 3000;
+		}
+	}
 }

@@ -1,12 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Escola.Dominio.Escolaridade
+namespace Escola.Dominio
 {
-    class EnsinoMedio
+    public class EnsinoMedio : Contratado
     {
-    }
+		public EnsinoMedio(double valorSalario)
+			: base(valorSalario)
+		{
+
+		}
+
+		public override double CalcularSalario()
+		{
+			return ValorSalario = 1000;
+		}
+	}
 }

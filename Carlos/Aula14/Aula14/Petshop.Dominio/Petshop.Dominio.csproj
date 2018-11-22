@@ -31,10 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Animal\Animal.cs" />
-    <Compile Include="Animal\Cachorro.cs" />
-    <Compile Include="Animal\Gato.cs" />
-    <Compile Include="Animal\Peixe.cs" />
+    <Compile Include="TipoAnimal\Animal.cs" />
+    <Compile Include="TipoAnimal\AnimalAquatico.cs" />
+    <Compile Include="TipoAnimal\AnimalTerrestre.cs" />
+    <Compile Include="AnimalTerrestre\Cachorro.cs" />
+    <Compile Include="AnimalTerrestre\Gato.cs" />
+    <Compile Include="AnimalAquatico\Peixe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,14 @@
 ﻿using System;
 
-namespace Escola.Dominio.Professor
-{
-    public class Contratado : Professor
+namespace Escola.Dominio
+{ 
+    public abstract class Contratado : Professor
     {
+		public double ValorSalario { get; set; }
 
-    }
+		public Contratado(double valorSalario)
+		{
+			ValorSalario = valorSalario;
+		}
+	}
 }

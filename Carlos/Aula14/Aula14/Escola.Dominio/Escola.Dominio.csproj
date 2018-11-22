@@ -34,7 +34,6 @@
     <Compile Include="Escolaridade\Doutorado.cs" />
     <Compile Include="Escolaridade\EnsinoMedio.cs" />
     <Compile Include="Escolaridade\EnsinoSuperior.cs" />
-    <Compile Include="Escolaridade\Escolaridade.cs" />
     <Compile Include="Escolaridade\Mestrado.cs" />
     <Compile Include="Professor\Contratado.cs" />
     <Compile Include="Professor\Horista.cs" />

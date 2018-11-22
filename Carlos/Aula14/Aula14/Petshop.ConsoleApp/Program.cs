@@ -93,7 +93,7 @@ namespace Petshop.ConsoleApp
             Console.WriteLine($"Digite o peso do cachorro:");
             cachorro.Peso = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"O valor da limpeza do {cachorro.Nome} é {cachorro.CalcularValorServico()}");
+            Console.WriteLine($"O valor da limpeza do {cachorro.Nome} é R${cachorro.CalcularValorServico():N2}");
 
             Console.ReadKey();
         }
@@ -110,7 +110,7 @@ namespace Petshop.ConsoleApp
             Console.WriteLine($"Digite o peso do gato:");
             gato.Peso = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"O valor da limpeza do {gato.Nome} é {gato.CalcularValorServico()}");
+            Console.WriteLine($"O valor da limpeza do {gato.Nome} é R${gato.CalcularValorServico():N2}");
 
             Console.ReadKey();
         }
@@ -119,7 +119,7 @@ namespace Petshop.ConsoleApp
         {
             Console.Clear();
 
-            AnimalPeixeAlias peixe = new AnimalPeixeAlias(null, 0, 0, 0, 0);
+            AnimalPeixeAlias peixe = new AnimalPeixeAlias(0, 0, 0);
 
             Console.WriteLine($"Digite a altura do aquário em centímetros:");
             peixe.Altura = double.Parse(Console.ReadLine());
@@ -130,7 +130,7 @@ namespace Petshop.ConsoleApp
             Console.WriteLine($"Digite a comprimento do aquário em centímetros:");
             peixe.Comprimento = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"O valor de limpeza do aquário é {peixe.CalcularValorServico()}");
+            Console.WriteLine($"O valor de limpeza do aquário é R${peixe.CalcularValorServico():N2}");
 
             Console.ReadKey();
         }

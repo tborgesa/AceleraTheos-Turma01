@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Escola.Dominio.Professor
+namespace Escola.Dominio
 {
     public abstract class Professor
     {
-
+		public abstract double CalcularSalario();
     }
 }

@@ -35,6 +35,7 @@
     <Compile Include="Animais\Cachorro.cs" />
     <Compile Include="Animais\Gato.cs" />
     <Compile Include="Animais\Peixe.cs" />
+    <Compile Include="Animais\AnimalComPeso.cs" />
     <Compile Include="Enumerador\EAnimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,7 +6,6 @@ namespace Theos.PetShop.Dominio.Animais
         public double Altura { get; private set; }
         public double Largura { get; private set; }
         public double Comprimento { get; private set; }
-        public string Nome { get; private set; }
         double resultado = 0.0;
 
         public Peixe(string nome, double altura, double largura, double comprimento)
@@ -15,7 +14,6 @@ namespace Theos.PetShop.Dominio.Animais
             Altura = altura;
             Largura = largura;
             Comprimento = comprimento;
-            Nome = nome;
         }
 
         public override double CalculaLimpeza()

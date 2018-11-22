@@ -5,6 +5,7 @@ namespace Theos.PetShop.Dominio.Enumerador
     {
         Cachorro = 1,
         Gato = 2,
-        Peixe = 3
+        Peixe = 3,
+        Sair = 4
     }
 }

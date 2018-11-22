@@ -5,6 +5,16 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar", "Theos.SistemaEscolar\Theos.SistemaEscolar.csproj", "{3DE573AB-773D-4BB7-97C2-3079866FC773}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - ConsoleApp", "01 - ConsoleApp", "{1C73DDD0-BC9F-4546-92E9-7C089D7E16FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Dominio", "02 - Dominio", "{7C8FB0EF-64FF-490A-B0D1-23B1E98EC3C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Comum", "03 - Comum", "{572E8EA6-38CF-454A-997C-67C65DBFFF90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Dominio", "Theos.SistemaEscolar.Dominio\Theos.SistemaEscolar.Dominio.csproj", "{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Comum", "Theos.SistemaEscolar.Comum\Theos.SistemaEscolar.Comum.csproj", "{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,22 @@ Global
 		{3DE573AB-773D-4BB7-97C2-3079866FC773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE573AB-773D-4BB7-97C2-3079866FC773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE573AB-773D-4BB7-97C2-3079866FC773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DE573AB-773D-4BB7-97C2-3079866FC773} = {1C73DDD0-BC9F-4546-92E9-7C089D7E16FD}
+		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838} = {7C8FB0EF-64FF-490A-B0D1-23B1E98EC3C3}
+		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8} = {572E8EA6-38CF-454A-997C-67C65DBFFF90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5F29D3E-980D-4F5C-AE11-FAFF7992EDF3}

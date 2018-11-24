@@ -6,10 +6,10 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         decimal salarioFinal = 0;
 
         public int HorasTrabalhadas { get; private set; }
-        public ProfessorHorista(string nome, decimal salario, string cpf)
-            : base(nome, salario, cpf)
+        public ProfessorHorista(string nome, string cpf, int horasTrabalhadas)
+            : base(nome, cpf)
         {
-
+            HorasTrabalhadas = horasTrabalhadas;
         }
 
      

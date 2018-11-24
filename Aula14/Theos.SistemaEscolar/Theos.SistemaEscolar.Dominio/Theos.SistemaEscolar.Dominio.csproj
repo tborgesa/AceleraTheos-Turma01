@@ -37,5 +37,11 @@
     <Compile Include="Professor\ProfessorHorista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Theos.SistemaEscolar.Comum\Theos.SistemaEscolar.Comum.csproj">
+      <Project>{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}</Project>
+      <Name>Theos.SistemaEscolar.Comum</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

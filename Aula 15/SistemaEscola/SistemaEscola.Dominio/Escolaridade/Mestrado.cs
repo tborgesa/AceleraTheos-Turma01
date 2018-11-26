@@ -8,15 +8,9 @@ namespace SistemaEscola.Dominio.Escolaridade
 {
     public class Mestrado : Escolaridade
     {
-        public Mestrado(double salario) : base(salario)
+        public Mestrado() : base("Mestrado",3000)
         {
 
-        }
-
-        public virtual double GetSalario()
-        {
-            double salario = 3000;
-            return salario;
         }
     }
 }

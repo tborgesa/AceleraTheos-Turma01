@@ -8,15 +8,9 @@ namespace SistemaEscola.Dominio.Escolaridade
 {
     public class EnsinoSuperior : Escolaridade
     {
-        public EnsinoSuperior(double salario) : base(salario)
+        public EnsinoSuperior() : base("Ensino Superior", 1000)
         {
 
-        }
-
-        public virtual double GetSalario()
-        {
-            double salario = 1800;
-            return salario;
         }
     }
 }

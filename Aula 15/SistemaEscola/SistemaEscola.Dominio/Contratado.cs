@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SistemaEscola.Dominio
+﻿namespace SistemaEscola.Dominio.Funcionario
 {
-    class Contratado : Funcionario
+    public abstract class Contratado : Funcionario
     {
-        public Contratado(string nome,double salario)
+        public Contratado(string nome, decimal salario) : base (nome,salario)
         {
-
         }
+
+        public abstract override void Gravar();
+
+        public abstract override decimal SalarioFuncionario();
     }
 }

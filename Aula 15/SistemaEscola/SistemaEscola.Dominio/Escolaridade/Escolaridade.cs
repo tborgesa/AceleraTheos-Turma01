@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace SistemaEscola.Dominio.Escolaridade
 {
-    public class Escolaridade
+    public abstract class Escolaridade
     {
-        public Escolaridade(double salario)
+        protected Escolaridade(string propEscolaridade, decimal salario)
         {
+            PropEscolaridade = propEscolaridade;
             Salario = salario;
         }
 
-        public double Salario { get; }
+        public string PropEscolaridade { get; }
+        public decimal Salario { get; }
 
-        public virtual double GetSalario()
+        public virtual decimal GetSalario()
         {
-            double salario = 0;
-            return salario;
+            return Salario;
         }
     }
 }

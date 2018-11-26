@@ -8,11 +8,11 @@ Considere um sistema para um petshop:
 using System;
 //NAME SPACE
 using AnimalAlias = PetShop.Dominio.Animal.Animal;
-using AnimalTerrestreAlias = PetShop.Dominio.Animal.AnimalTerrestre;
 using CachorroAlias = PetShop.Dominio.Animal.Cachorro;
 using GatoAlias = PetShop.Dominio.Animal.Gato;
 using PeixeAlias = PetShop.Dominio.Animal.Peixe;
 using HelpersAlias = PetShop.Comum.Helpers.InputHelper;
+using System.Globalization;
 
 namespace PetShop.ConsoleApp
 {
@@ -79,7 +79,7 @@ namespace PetShop.ConsoleApp
                 $"\nNome do Animal:\n" +
                 $"{animal.Nome}\n" +
                 $"\nValor:\n" +
-                $"{animal.ServicoLimpeza()}");
+                $"{string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}",animal.ServicoLimpeza())}");
             Console.ReadKey();
         }
     }

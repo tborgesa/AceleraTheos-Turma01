@@ -1,4 +1,5 @@
 ﻿using System;
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
 
 /*
 Considere um sistema para escola:
@@ -23,6 +24,34 @@ namespace SistemaEscola.ConsoleApp
         static void Main(string[] args)
         {
             int opcao = 1;
+
+        }
+
+        private void InstanciarEscolaridade(EEscolaridade Escolaridade)
+        {
+            if (!Enum.IsDefined(typeof(EEscolaridade), Escolaridade))
+            {
+                Console.WriteLine("Valor Invalido!");
+            }
+
+
+            switch (opcao)
+            {
+                case EEscolaridade.SegudundoGrau:
+                    Escolaridade = new EEscolaridade();
+                    break;
+                case EEscolaridade.EnsinoSuperior:
+                    Escolaridade = new EnsinoSuperior();
+                    break;
+                case EEscolaridade.Mestrado:
+                    Escolaridade = new Mestrado();
+                    break;
+                case EEscolaridade.Doutorado:
+                    Escolaridade = new Doutorado();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

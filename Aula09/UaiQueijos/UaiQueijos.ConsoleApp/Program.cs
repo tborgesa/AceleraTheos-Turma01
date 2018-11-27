@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UaiQueijos.Comum.Helpers;
 using UaiQueijos.Dominio;
+using ClienteAlias = UaiQueijos.Dominio.Cliente.Cliente;
+using ClienteGoldAlias = UaiQueijos.Dominio.Cliente.ClienteGold;
+using ClienteSilverAlias = UaiQueijos.Dominio.Cliente.ClienteSilver;
+using ProdutoAlias = UaiQueijos.Dominio.Produto.Produto;
 
 namespace UaiQueijos.ConsoleApp
 {
@@ -14,15 +18,32 @@ namespace UaiQueijos.ConsoleApp
         {
             InputHelper.mensagemUsuario("Projeto comum");
 
-            var cliente = new Cliente(new System.DateTime(1987, 7, 8), 
+            ClienteAlias cliente = new ClienteAlias(new System.DateTime(1987, 7, 8), 
                 "012345678", 
-                "Rafael");
-            cliente.Endereco = "19 de dezembro, 369. Maringá - PR";
+                "RafaelNormal");
 
-            var cliente1 = cliente;
-            //cliente1.Nome = "thiago";nao pode pq nome é privado e só é usado no construtor
+            ClienteAlias clienteSilver = new ClienteSilverAlias(new System.DateTime(1987, 7, 8),
+                 "012345678",
+                  "RafaelSilver");
+
+            //((ClienteSilverAlias)clienteSilver).;
+
+            ClienteGoldAlias clienteGold = new ClienteGoldAlias(new System.DateTime(1987, 7, 8), 
+                "012345678", 
+                "RafaelGold");
+
+            ProdutoAlias produto = new ProdutoAlias("Pao de Queijo",100,5);
+
+            Pessoa sdadsa = new Pessoa();
+
+            Console.WriteLine($"o preco é{produto.CalculaPrecoFinalProduto(cliente)}");
+            Console.WriteLine($"o preco é{produto.CalculaPrecoFinalProduto(clienteSilver)}");
+            Console.WriteLine($"o preco é{produto.CalculaPrecoFinalProduto(clienteGold)}");
+
 
             Console.ReadKey();
         }
+
+
     }
 }

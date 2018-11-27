@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{95B02C30-E925-41B6-BA67-92EE0AF76201}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UaiQueijos.Dominio</RootNamespace>
-    <AssemblyName>UaiQueijos.Dominio</AssemblyName>
+    <ProjectGuid>{BBC4A0A1-B254-4A87-9431-43471CF788CA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Exercicio01</RootNamespace>
+    <AssemblyName>Exercicio01</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,21 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente\Cliente.cs" />
-    <Compile Include="Cliente\ClienteGold.cs" />
-    <Compile Include="Cliente\ClienteSilver.cs" />
-    <Compile Include="Fornecedor\Fornecedor.cs" />
-    <Compile Include="Funcionario\Funcionario.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="Produto\Produto.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UaiQueijos.Comum\UaiQueijos.Comum.csproj">
-      <Project>{8467804e-f834-4fdb-b093-bc3a4f09ae38}</Project>
-      <Name>UaiQueijos.Comum</Name>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exercicio01.Comum\Exercicio01.Comum.csproj">
+      <Project>{9d6acafe-2fea-4dcd-92b7-b6ced7cfd3de}</Project>
+      <Name>Exercicio01.Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exercicio01.Dominio\Exercicio01.Dominio.csproj">
+      <Project>{58588ed4-e3db-4c56-ad6c-4e7968d4361f}</Project>
+      <Name>Exercicio01.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UaiQueijos.Dominio", "UaiQu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UaiQueijos.Comum", "UaiQueijos.Comum\UaiQueijos.Comum.csproj", "{8467804E-F834-4FDB-B093-BC3A4F09AE38}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - ConsoleApp", "01 - ConsoleApp", "{95D60AE8-64A0-437D-A494-216997027004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Dominio", "02 - Dominio", "{C3EBC758-6DC8-48B3-8C8C-90661835BFF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Comum", "03 - Comum", "{3C6D2172-BDEF-4F47-A97B-0B9D42E4289B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB0A5D53-6234-4522-ABE1-A214D7A6547D} = {95D60AE8-64A0-437D-A494-216997027004}
+		{95B02C30-E925-41B6-BA67-92EE0AF76201} = {C3EBC758-6DC8-48B3-8C8C-90661835BFF4}
+		{8467804E-F834-4FDB-B093-BC3A4F09AE38} = {3C6D2172-BDEF-4F47-A97B-0B9D42E4289B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27240CC2-4DFB-4DE6-98EA-E9136B44C09A}

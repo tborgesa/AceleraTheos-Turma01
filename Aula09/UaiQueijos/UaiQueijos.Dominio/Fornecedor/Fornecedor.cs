@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UaiQueijos.Dominio
+namespace UaiQueijos.Dominio.Fornecedor
 {
-    public class Class1
+    class Fornecedor
     {
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using SistemaEscola.Dominio.Escolaridade.Enumerador;
-
+using HelpersAlias = SistemaEscola.Comum.Helpers.InputHelper;
 /*
 Considere um sistema para escola:
 
@@ -21,37 +21,30 @@ namespace SistemaEscola.ConsoleApp
 {
     class Program
     {
+        public static string erro = "Valor Invalido!";
+        public static string texto = "Digite uma opcao";
+
         static void Main(string[] args)
         {
-            int opcao = 1;
-
+            HoraistaVoid();
+            Console.ReadKey();
         }
 
-        private void InstanciarEscolaridade(EEscolaridade Escolaridade)
+        private static void HoraistaVoid()
         {
-            if (!Enum.IsDefined(typeof(EEscolaridade), Escolaridade))
-            {
-                Console.WriteLine("Valor Invalido!");
-            }
+            var entrada = HelpersAlias.GetInputDouble("Digite as horas do funcionario",erro);
+            Console.WriteLine($"Professor receber :{HoraMinuto(entrada)}");
+        }
 
-
-            switch (opcao)
+        private static double HoraMinuto(double ent)
+        {
+            if (ent > 1)
             {
-                case EEscolaridade.SegudundoGrau:
-                    Escolaridade = new EEscolaridade();
-                    break;
-                case EEscolaridade.EnsinoSuperior:
-                    Escolaridade = new EnsinoSuperior();
-                    break;
-                case EEscolaridade.Mestrado:
-                    Escolaridade = new Mestrado();
-                    break;
-                case EEscolaridade.Doutorado:
-                    Escolaridade = new Doutorado();
-                    break;
-                default:
-                    break;
+                var aux = (int)ent;
+                ent = ent - aux;
+                return (aux * 60) + (ent * 60);
             }
+            return ent * 60;
         }
     }
 }

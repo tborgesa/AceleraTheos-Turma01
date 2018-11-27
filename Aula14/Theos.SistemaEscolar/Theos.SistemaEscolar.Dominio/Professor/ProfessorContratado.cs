@@ -5,46 +5,37 @@ namespace Theos.SistemaEscolar.Dominio.Professor
 {
     public class ProfessorContratado : Professor
     {
+        public EEscolaridade Escolaridade { get; private set; }
+
         public ProfessorContratado()
         {
 
         }
 
-        public ProfessorContratado(string nome, string cpf)
+        public ProfessorContratado(string nome, string cpf, EEscolaridade escolaridade)
              : base(nome, cpf)
         {
-
+            Escolaridade = escolaridade;
         }
 
 
         public override decimal CalcularSalario()
         {
-            EEscolaridade opcao = (EEscolaridade)InputHelper.GetInputInt(@"Escolha a escolaridade do professor contratado: 
-Segundo Grau = 1,
-Ensino Superior = 2,
-Mestrado = 3,
-Doutorado = 4 ", "Entrada inválida");
+       
 
-            switch (opcao)
+            switch (Escolaridade)
             {
                 case EEscolaridade.SegundoGrau:
-                    InputHelper.MensagemUsuario("Salário de R$ 1.000,00 para professor do Segundo Grau");
-                    break;
+                    return 1000;
                 case EEscolaridade.EnsinoSuperior:
-                    InputHelper.MensagemUsuario("Salário de R$ 1.800,00 para professor do Ensino Superior");
-                    break;
+                    return 1800;
                 case EEscolaridade.Mestrado:
-                    InputHelper.MensagemUsuario("Salário de R$ 3.000,00 para professor do Mestrado");
-                    break;
+                    return 3000;
                 case EEscolaridade.Doutorado:
-                    InputHelper.MensagemUsuario("Salário de R$ 5.000,00 para professor do Doutorado");
-                    break;
+                    return 5000;
                 default:
-                    InputHelper.MensagemUsuario("Escolaridade incorreta. Tente novamente");
-                    break;
-
+                    return 0;
             }
-            return 0;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Theos.SistemaEscolar
         private static string _nome;
         private static string _cpf;
         private static int _horasTrabalhadas;
+        private static EEscolaridade _escolaridade;
 
         static void Main(string[] args)
         {
@@ -24,7 +25,8 @@ Digite 3 para sair", "Entrada inválida");
             {
                 case 1:
                     SolicitarInformacoesProfessorContratado();
-                    professor = new ProfessorContratado(_nome, _cpf);
+                    MenuProfessorContratado();
+                    professor = new ProfessorContratado(_nome, _cpf, _escolaridade);
                     break;
                 case 2:
                     SolicitarInformacoesProfessorHorista();
@@ -43,12 +45,23 @@ Digite 3 para sair", "Entrada inválida");
             }
 
             decimal valorSalario = professor.CalcularSalario();
+
+            Console.Clear();
             InputHelper.MensagemUsuario($@"Nome do professor(a): {_nome} 
 CPF: {_cpf} 
 Salário: {valorSalario:c}");
 
            
             Console.ReadKey();
+        }
+
+        private static void MenuProfessorContratado()
+        {
+            _escolaridade = (EEscolaridade)InputHelper.GetInputInt(@"Escolha a escolaridade do professor contratado: 
+Segundo Grau = 1,
+Ensino Superior = 2,
+Mestrado = 3,
+Doutorado = 4 ", "Entrada inválida");
         }
 
         private static void SolicitarInformacoesProfessorContratado()

@@ -1,6 +1,7 @@
 ﻿using System;
-using SistemaEscola.Dominio.Escolaridade.Enumerador;
 using HelpersAlias = SistemaEscola.Comum.Helpers.InputHelper;
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
+using SistemaEscola.Dominio.Funcionario;
 /*
 Considere um sistema para escola:
 
@@ -26,25 +27,16 @@ namespace SistemaEscola.ConsoleApp
 
         static void Main(string[] args)
         {
-            HoraistaVoid();
+            //A variavel pode ser abastar
+            Funcionario professor = new Contratado("Nome",EEscolaridade.SegudundoGrau);
+            Console.WriteLine(professor);
+
+            Funcionario professorHorista = new Horaista("NOME", 1.5);
+            Console.WriteLine(professorHorista);
+
+            Console.WriteLine();
             Console.ReadKey();
         }
 
-        private static void HoraistaVoid()
-        {
-            var entrada = HelpersAlias.GetInputDouble("Digite as horas do funcionario",erro);
-            Console.WriteLine($"Professor receber :{HoraMinuto(entrada)}");
-        }
-
-        private static double HoraMinuto(double ent)
-        {
-            if (ent > 1)
-            {
-                var aux = (int)ent;
-                ent = ent - aux;
-                return (aux * 60) + (ent * 60);
-            }
-            return ent * 60;
-        }
     }
 }

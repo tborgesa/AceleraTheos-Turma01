@@ -1,17 +1,11 @@
-﻿using SistemaEscola.Dominio.Escolaridade;
-using SistemaEscola.Dominio.Escolaridade.Enumerador;
-using System;
-
-namespace SistemaEscola.Dominio.Funcionario
+﻿namespace SistemaEscola.Dominio.Funcionario
 {
     public abstract class Funcionario
     {
         public string Nome { get; }
-        public decimal Salario { get; }
 
-        protected Funcionario(string nome, decimal salario)
+        protected Funcionario(string nome)
         {
-            Salario = salario;
             Nome = nome;
 
         }

@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace Theos.SistemaEscolar.Dominio.Professor
 {
     public abstract class Professor
@@ -18,6 +20,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
 
         }
         public abstract decimal CalcularSalario();
+
 
     }
 }

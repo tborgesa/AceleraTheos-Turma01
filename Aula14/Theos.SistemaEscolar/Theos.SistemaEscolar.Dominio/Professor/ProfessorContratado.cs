@@ -22,7 +22,6 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         public override decimal CalcularSalario()
         {
        
-
             switch (Escolaridade)
             {
                 case EEscolaridade.SegundoGrau:

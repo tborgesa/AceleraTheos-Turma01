@@ -15,6 +15,7 @@ namespace Escola.ConsoleApp
         public static List<Professor> _professores = new List<Professor>();
 
         static void Main(string[] args)
+
         {
 
             while (true)
@@ -23,15 +24,12 @@ namespace Escola.ConsoleApp
 
                 if (opcao == 1)
                 {
-                    //Cadastrar Professor
                     _professor = CadastrarProfessor();
                     _professores.Add(_professor);
-
                 }
 
                 else if (opcao == 2)
                 {
-                    //Pesquisar cadastro de professor;
                     Console.Clear();
 
                     PesquisarProfessor();
@@ -40,9 +38,9 @@ namespace Escola.ConsoleApp
 
                 else if (opcao == 3)
                 {
-                    //Consultar Salário;
                     Console.Clear();
                     ConsultarSalario();
+                    Console.ReadKey();
 
                 }
 
@@ -213,10 +211,15 @@ Digite sua escolha abaixo: ";
             {
                 if(professor.Nome == nomeProfessor)
                 {
-                    professor.CalcularSalario();
-                    Console.ReadKey();
+                    professor.Salario = professor.CalcularSalario();
+
+                    Console.Clear();
+
+                    Console.WriteLine($"Nome do professor: {professor.Nome}" +
+                        $"\nRegime de Trabalho: {professor.RegimeTrabalho}" +
+                        $"\nSalário: R${professor.Salario}");
                 }
-            }
+            }   
         }
     }
 }

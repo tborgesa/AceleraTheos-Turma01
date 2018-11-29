@@ -35,7 +35,7 @@ namespace Exercicio01.Comum.Helpers
                 Console.WriteLine(texto);
 
                 string numeroDigitado = Console.ReadLine();
-                if (!int.TryParse(numeroDigitado, out var numero))
+                if (!double.TryParse(numeroDigitado, out var numero))
                 {
                     mensagemUsuario(mensagemInvalido);
                 }

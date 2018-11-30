@@ -13,84 +13,118 @@ using PeixeAlias = Exercicio01.Dominio.Animais.Peixe;
 namespace Exercicio01
 {
     class Program
-    {
+    {      
         static double _peso;
         static double _altura;
         static double _largura;
         static double _comprimento;
         static string _nome;
+        static bool _sair = false;
         static List<AnimalAlias> _listaAnimais = new List<AnimalAlias>();
-        static AnimalAlias _animal = null;
+        static AnimalAlias _animal;
         static int _escolhaAnimal;
-
+        static int _escolhaMenu;
 
         public static void Main(string[] args)
         {
             Menu();
+            while (_sair == false)
+            {
+                switch (_escolhaMenu)
+                {
+                    case 1:
+                        CadastrarAnimais();
+                        break;
+                    case 2:
+                        Listagem();
+                        break;
+                    case 3:
+                        Sair();
+                        break;
+                    default:
+                        InputHelper.GetInputString("Opçao invalida, tente novamente");
+                        break;
+
+                }
+                if (_escolhaMenu ==1)
+                {
+                    decimal precoLimpeza = _animal.CalculaPreco();
+                    Console.WriteLine($"O preço da limpeza do {_nome} é R${precoLimpeza:c}");
+                }
+                Console.ReadKey();
+                Menu();
+            }
+        }
+        
+        static void CriarGatoInserirLista()
+        {
+            _animal = ValoresAnimalTerrestre();
+            _listaAnimais.Add(_animal);
+
+        }
+        static void CadastrarAnimais()
+        {
+            Console.WriteLine("o que tu quer cadastrar ? \n1 - Cadastrar Gato \n2 - Cadastrar Cachorro \n3 - Cadastrar Peixe");
+            _escolhaAnimal = Convert.ToInt32(Console.ReadLine());
             switch (_escolhaAnimal)
             {
                 case 1:
-                    ValoresAnimalTerrestre();
-                    _animal = new GatoAlias(_nome, _peso);
-                    _listaAnimais.Add(_animal);
+                    CriarGatoInserirLista();
                     break;
                 case 2:
                     ValoresAnimalTerrestre();
-                    _animal = new CachorroAlias(_nome, _peso);
+                    CriarCachorroInserirLista();
                     break;
                 case 3:
                     ValoresAnimalAquatico();
-                    _animal = new PeixeAlias(_nome, _largura, _comprimento, _altura);
-                    break;
-                case 4:
-                    Listagem();
-                    break;
-                case 5:
-                    Sair();
+                    CriarPeixeInserirLista();
                     break;
                 default:
-                    InputHelper.GetInputString("Opçao invalida, tente novamente");
                     return;
-
             }
-
-            decimal precoLimpeza = _animal.CalculaPreco();
-            Console.WriteLine($"O preço da limpeza do {_nome} é R${precoLimpeza:c}");
-            Menu();
-            Console.ReadKey();
         }
-
+        static void CriarCachorroInserirLista()
+        {
+            _animal = new CachorroAlias(_nome, _peso);
+            _listaAnimais.Add(_animal);
+        }
+        static void CriarPeixeInserirLista()
+        {
+            _animal = new PeixeAlias(_nome, _largura, _comprimento, _altura);
+            _listaAnimais.Add(_animal);
+        }
         static void Menu()
         {
             Console.Clear();
-            Console.WriteLine("Menu PET SHOP \n1 - Cadastrar Gato \n2 - Cadastrar Cachorro \n3 - Cadastrar Peixe \n4 - Listar animais \n5 - Sair");
-            _escolhaAnimal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Menu PET SHOP \n1 - Cadastrar Animais \n2 - Listar animais \n3 - Sair");
+            _escolhaMenu = Convert.ToInt32(Console.ReadLine());
         }
-
         static void Listagem()
         {
+            
             Console.Clear();
-            foreach (var animall in _listaAnimais)
+            foreach (var animal in _listaAnimais)
             {
-                Console.WriteLine(_animal.Nome + "aqui é a lista");
+                Console.WriteLine($"{_animal.Nome} ");
             }
         }
-
         static void Sair()
         {
             Console.Clear();
             InputHelper.mensagemUsuario("vc saiu");
-            Environment.Exit(0);
+            _sair = false;
+            //Environment.Exit(0);
         }
-
-        static void ValoresAnimalTerrestre()
+        static AnimalAlias ValoresAnimalTerrestre()
         {
             Console.Clear();
             _nome = InputHelper.GetInputString("Digite o nome do Animal");           
             _peso = InputHelper.GetInputDouble("Digite o peso do seu Animal", "Digite um peso valido");
-        }
+            AnimalAlias animal = new GatoAlias(_nome, _peso);
 
-        private static void ValoresAnimalAquatico()
+            return animal;
+        }
+        static void ValoresAnimalAquatico()
         {
             Console.Clear();
             _nome = InputHelper.GetInputString("Digite o nome do Animal");

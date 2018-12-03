@@ -4,9 +4,9 @@ namespace SistemaEscola.Dominio.Funcionario
 {
     public class Horaista : Funcionario
     {
-        public string Horas;
+        public int Horas;
 
-        public Horaista(string nome, string horas):base(nome)
+        public Horaista(string nome, int horas):base(nome)
         {
             Horas = horas;
         }
@@ -18,7 +18,7 @@ namespace SistemaEscola.Dominio.Funcionario
         public override decimal SalarioFuncionario()
         {
 
-            return 90 * 17;
+            return Horas * 17;
         }
     }
 }

@@ -3,10 +3,12 @@
     public abstract class Funcionario
     {
         public string Nome { get; }
+        public string Cpf { get; }
 
-        protected Funcionario(string nome)
+        protected Funcionario(string nome, string cpf)
         {
             Nome = nome;
+            Cpf = cpf;
 
         }
 

@@ -23,6 +23,29 @@ namespace SistemaEscola.Comum.Helpers
             }
         }
 
+        public static int GetInputSwicth(string texto, string mensagemInvalido, int menor, int maior, bool limparTela = true)
+        {
+            while (true)
+            {
+                if (limparTela)
+                    Console.Clear();
+
+                Console.WriteLine(texto);
+
+                string numeroDigitado = Console.ReadLine();
+                if (!int.TryParse(numeroDigitado, out var numero))
+                {
+                    MensagemUsuario(mensagemInvalido);
+                }
+                if(numero < menor || numero > maior)
+                {
+                    MensagemUsuario(mensagemInvalido);
+                }
+                else
+                    return numero;
+            }
+        }
+
         public static double GetInputDouble(string texto, string mensagemInvalido, bool limparTela = true)
         {
             while (true)

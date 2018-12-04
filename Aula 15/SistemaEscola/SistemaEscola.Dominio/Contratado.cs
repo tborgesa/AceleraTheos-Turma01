@@ -9,7 +9,7 @@ namespace SistemaEscola.Dominio.Funcionario
         public EscolaridadeALias Escolaridade { get; private set; }
         public string erro = "Escolaridade Invalida!";
 
-        public Contratado(string nome, EEscolaridade escolaridade) : base (nome)
+        public Contratado(string nome, string cpf, EEscolaridade escolaridade) : base (nome, cpf)
         {
             InstanciarEscolaridade(escolaridade);
         }

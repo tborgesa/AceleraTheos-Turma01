@@ -25,55 +25,155 @@ namespace SistemaEscola.ConsoleApp
 {
     class Program
     {
-        public static List<Funcionario> professores = new List<Funcionario>();
+        public static List<Funcionario> funcionarios = new List<Funcionario>();
         public static string erro = "Valor Invalido!";
         public static string texto = "Digite uma opcao";
         public static string informeNome = "Informe o nome do professor:";
 
         static void Main(string[] args)
         {
-            var opcao = 0;
-            //A variavel pode ser abastar
-            Funcionario professor = new Contratado("Nome",EEscolaridade.SegudundoGrau);
-            //Console.WriteLine(professor);
+            telaMenu();
+            Console.ReadKey();
+        }
 
-            Funcionario professorHorista = new Horaista("NOME", 1);
-            //Console.WriteLine(professorHorista);
-
-            Console.WriteLine(texto);
-
-            switch (2)
+        private static void telaMenu()
+        {
+            var opcao = HelpersAlias.GetInputInt(texto + "\n01 - Tipo funcionario\n" +
+                "02 - Alterar\n" +
+                "03 - Consulta\n" +
+                "04 - Excluir\n" +
+                "05 - Sair",erro);
+            switch (opcao)
             {
                 case 1:
-                    professores.Add(new Contratado("Nome",EEscolaridade.Doutorado));
+                    TipoFuncionario();
                     break;
                 case 2:
-                    var queryProfessor = from Funcionario in professores
-                                         where professor.Nome == "NOME DESESJADO"
-                                         select professor.Nome;
-                    Console.WriteLine(queryProfessor);
-                        break;
+                    AlterarFuncionario();
+                    break;
                 case 3:
-                    //altera
+                    ConsultarFuncionario();
                     break;
                 case 4:
-                    //exclui
+                    ExcluirFuncionario();
+                    break;
+                case 5:
+                    return;
                     break;
                 default:
                     break;
             }
 
+            telaMenu();
+        }
+
+        private static void ExcluirFuncionario()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void ConsultarFuncionario()
+        {
+            var nome = HelpersAlias.GetInputString("Digite o nome do professor:","Nome invalido");
+            var funcionarioConsultado = funcionarios.FirstOrDefault(aluno => aluno.Nome == nome);
+            if (funcionarioConsultado == null)
+            {
+                Console.WriteLine("Nome inválido");
+            }
+            else
+            {
+                Console.WriteLine($"Dados funcionário:\n" +
+                    $"Nome: {funcionarioConsultado.Nome}\n" +
+                    $"Cpf: {funcionarioConsultado.Cpf}" +
+                    $"Salario: {funcionarioConsultado.SalarioFuncionario()}");
+            }
             Console.ReadKey();
         }
 
+        private static void TipoFuncionario()
+        {
+            var opcao = HelpersAlias.GetInputSwicth("Selecionar o tipo de professor \n" +
+                "01 - Contratado \n" +
+                "02 - Horista", erro, 1, 2);
+            Console.WriteLine();
+            switch (opcao)
+            {
+                case 1:
+                    ProfessorContratado();
+                    break;
+                case 2:
+                    ProfessorHorista();
+                    break;
+            }
+        }
 
+        private static void AlterarFuncionario()
+        {
+            var nomeFuncionario = HelpersAlias.GetInputString("Digite o nome do professor",erro);
 
-        //private static Contratado ContratadoProfessor(EEscolaridade escolaridade)
-        //{
-        //    Console.WriteLine(informeNome);
-        //    var nome = Console.ReadLine();
-        //    Contratado professor = new Contratado(nome, escolaridade);
-        //    return professor;
-        //}
+            var funcionarioEncontrado = funcionarios.FirstOrDefault(aluno => aluno.Nome == "asdas");
+
+            funcionarios.Remove(funcionarioEncontrado);
+        }
+
+        private static void ProfessorHorista()
+        {
+            var nome = HelpersAlias.GetInputString("Insira o Nome do professor", erro);
+            var cpf = HelpersAlias.GetInputString("Insira o Cpf do professor", erro);
+            var horas = HelpersAlias.GetInputInt("Insira as horas do professor",erro);
+
+            funcionarios.Add(new Horaista(nome, cpf, horas));
+            foreach (Funcionario professor in funcionarios)
+            {
+                var horistaProfessor = professor as Horaista;
+                Console.WriteLine($"{horistaProfessor.Nome} " +
+                    $"- {horistaProfessor.Cpf} " +
+                    $"- {horistaProfessor.SalarioFuncionario()}");
+            }
+        }
+        private static void ProfessorContratado()
+        {
+            var nome = HelpersAlias.GetInputString("Insira o Nome do professor", erro);
+                EEscolaridade escolaridadeEscolhe;
+            var cpf = HelpersAlias.GetInputString("Insira o Cpf do professor", erro);
+
+            var opcao = HelpersAlias.GetInputSwicth("Insira o grau de escolariedade do professor\n" +
+                    "1 - Doutorado\n" +
+                    "2 - Ensino Superior\n" +
+                    "3- Mestrado\n" +
+                    "4- Segundo Grau\n", erro, 1, 4);
+
+                switch (opcao)
+                {
+                    case 1:
+                        escolaridadeEscolhe = EEscolaridade.Doutorado;
+                        funcionarios.Add(new Contratado(nome, cpf, escolaridadeEscolhe));
+                        break;
+                    case 2:
+                        escolaridadeEscolhe = EEscolaridade.EnsinoSuperior;
+                        funcionarios.Add(new Contratado(nome, cpf, escolaridadeEscolhe));
+                        break;
+                    case 3:
+                        escolaridadeEscolhe = EEscolaridade.Mestrado;
+                        funcionarios.Add(new Contratado(nome, cpf, escolaridadeEscolhe));
+                        break;
+                    case 4:
+                        escolaridadeEscolhe = EEscolaridade.SegudundoGrau;
+                        funcionarios.Add(new Contratado(nome, cpf, escolaridadeEscolhe));
+                        break;
+                    default:
+                        Console.WriteLine(erro);
+                        break;
+
+                }
+                foreach (Funcionario professor in funcionarios)
+                {
+                    var contratadoProfessor = professor as Contratado;
+                    Console.WriteLine($"{contratadoProfessor.Nome} " +
+                        $"- {contratadoProfessor.Escolaridade.EscolariadadeDescricao} " +
+                        $"- {contratadoProfessor.Escolaridade.Salario}");
+                }
+            }
+
     }
 }

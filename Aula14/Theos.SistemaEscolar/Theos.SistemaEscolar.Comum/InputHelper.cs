@@ -51,6 +51,19 @@ namespace Theos.SistemaEscolar.Comum
                     return numero;
             }
         }
+
+        public static string GetInputString(string texto, bool limparTela = true)
+        {
+            while (true)
+            {
+                if (limparTela)
+                    Console.Clear();
+
+                Console.WriteLine(texto);
+
+                return Console.ReadLine();
+            }
+        }
     }
 
 }

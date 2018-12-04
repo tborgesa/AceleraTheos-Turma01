@@ -3,76 +3,88 @@ using PetShop.Dominio.Animais.Enumerador;
 using PetShop.Dominio.Pessoas;
 using PetShop.Comum.Helpers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PetShop.Conosle.App
 {
     class Program
     {
         static string _MensagemErro { get; set; }
-        static int _opcao;
         static Cliente _dono;
         static Animal _animal;
         static double _valorLimpeza;
+        static List<Animal> _animais = new List<Animal>();
+
 
         static void Main(string[] args)
         {
-
-            _opcao = menuPrincipal();
-
-            bool menu = true;
-
-            while (menu)
+            while (true)
             {
+                int opcao = MenuPrincipal();
 
-                switch (_opcao)
+                switch (opcao)
                 {
                     case 1:
                         _dono = CadastrarCliente();
-                        Animal animal = CadastrarAnimal(_dono);
-                        _valorLimpeza = animal.CalcularLimpeza();
-
-                        Console.WriteLine($"Cadastro Realizado com Sucesso...\nDADOS CADASTRAIS DO DONO" +
-                            $"\nNome: {_dono.Nome}" +
-                            $"\nTelefone: {_dono.Telefone}" +
-                            $"\n\nDADOS CADASTRAIS DO ANIMAL" +
-                            $"\nNome: {_animal.Nome}" +
-                            $"\nEspécie: {_animal.Especie}" +
-                            $"\nDono: {_animal.Dono.Nome}" +
-                            $"\n\nValor da Limpeza: R${_valorLimpeza}");
+                        _animal = CadastrarAnimal(_dono);
+                        _animais.Add(_animal);
+                        _valorLimpeza = _animal.CalcularLimpeza();
 
                         Console.ReadKey();
-                        return;
+
+                        break;
 
                     case 2:
-                        Console.WriteLine("Aperte qualquer tecla para encerrar o sistema... ");
-                        menu = false;
+                        int menuLista = InputHelper.GetInputInt(@"ESCOLHA UMA OPÇÃO:
+1 - Procurar animal pelo nome;
+2 - Listar todos os animais;", "Opção inválida!");
+
+                        ListarAnimais(menuLista);
+
+                        Console.ReadKey();
+
                         break;
 
                     default:
                         Console.WriteLine("Você digitou uma opção inválida, o sistema será finalizado. ");
-                        menu = false;
                         break;
                 }
+                
+                
             }
-            
-            Console.ReadKey();
+
+
         }
 
-        private static int menuPrincipal()
+        private static int MenuPrincipal()
         {
             while (true)
             {
-
-                int opcao = InputHelper.GetInputInt(@"##### PET SHOP #####
+                string menu = @"##### PET SHOP #####
 
 Escolha a opção desejada:
-1 - Calcular Limpreza;
-2 - SAIR;
+1 - Calcular Limpeza;
+2 - Listar Animais;
+0 - SAIR;
 
-Digite sua escolha abaixo: ", "Opção inválida!");
+Digite sua escolha abaixo: ";
 
-                Console.Clear();
-                return opcao;
+                int opcao = InputHelper.GetInputInt(menu, "Opção Inválida!");
+                if(opcao > 2)
+                {
+                    Console.WriteLine("Opção Inválida, tente novamente.");
+                    Console.ReadKey();
+                }
+                else if(opcao == 0)
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.Clear();
+                    return opcao;
+                }
             }
 
         }
@@ -155,6 +167,55 @@ Digite sua escolha abaixo: ", "Opção inválida!");
             Console.Clear();
 
             return _especie;
+        }
+
+        public static void ListarAnimais(int opcao)
+        {
+
+            if(opcao == 2)
+            {
+                int i = 0;
+                
+                foreach (var item in _animais)
+                {
+                    Console.WriteLine($"{i+1} - {item.Nome}");
+                    i++;
+                }
+            }
+            else if(opcao == 1)
+            {
+                Console.Write("Digite o nome do animal: ");
+                string nome = Console.ReadLine();
+
+                Animal animalEncontrado = null;
+
+                foreach (var item in _animais)
+                {
+                    if(item.Nome == nome)
+                    {
+                         animalEncontrado = item;
+                    }
+                }
+
+                if(animalEncontrado is null)
+                {
+                    Console.WriteLine("Animal não encontrado.");
+                }
+                else
+                {
+                    string resultadoBusca = @"REGISTRO ENCONTRADO
+Nome do Animal: " + animalEncontrado.Nome
++ "Dono do Animal: " + animalEncontrado.Dono.Nome
++ "Telefone de Contato: " + animalEncontrado.Dono.Telefone;
+                }
+
+                
+
+
+                Console.ReadKey();
+            }
+
+            
         }
     }
 }

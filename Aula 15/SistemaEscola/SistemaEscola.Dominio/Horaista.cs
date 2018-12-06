@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SistemaEscola.Dominio.Funcionario
+﻿namespace SistemaEscola.Dominio.Funcionario
 {
     public class Horaista : Funcionario
     {

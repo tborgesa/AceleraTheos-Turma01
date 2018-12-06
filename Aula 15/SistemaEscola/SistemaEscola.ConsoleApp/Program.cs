@@ -4,6 +4,7 @@ using SistemaEscola.Dominio.Escolaridade.Enumerador;
 using SistemaEscola.Dominio.Funcionario;
 using System.Collections.Generic;
 using System.Linq;
+using System.Globalization;
 
 /*
 Considere um sistema para escola:
@@ -26,23 +27,24 @@ namespace SistemaEscola.ConsoleApp
     class Program
     {
         public static List<Funcionario> funcionarios = new List<Funcionario>();
-        public static string erro = "Valor Invalido!";
+        public static string erro = "Dado Invalido!";
+        public static string removidoSucesso = "Removido com Sucesso!";
         public static string texto = "Digite uma opcao";
         public static string informeNome = "Informe o nome do professor:";
 
         static void Main(string[] args)
         {
             telaMenu();
-            Console.ReadKey();
         }
 
         private static void telaMenu()
         {
-            var opcao = HelpersAlias.GetInputInt(texto + "\n01 - Tipo funcionario\n" +
+            var opcao = HelpersAlias.GetInputInt(texto + "\n01 - Cadastro\n" +
                 "02 - Alterar\n" +
                 "03 - Consulta\n" +
                 "04 - Excluir\n" +
-                "05 - Sair",erro);
+                "05 - Listar\n" +
+                "06 - Sair",erro);
             switch (opcao)
             {
                 case 1:
@@ -58,8 +60,10 @@ namespace SistemaEscola.ConsoleApp
                     ExcluirFuncionario();
                     break;
                 case 5:
-                    return;
+                    ListaFuncionarios();
                     break;
+                case 6:
+                    return;
                 default:
                     break;
             }
@@ -67,27 +71,80 @@ namespace SistemaEscola.ConsoleApp
             telaMenu();
         }
 
+        private static void ListaFuncionarios()
+        {
+            Console.Clear();
+            if (funcionarios.Count==0)
+            {
+                HelpersAlias.PostString("Lista Vazia!");
+                return;
+            }
+            else
+            {
+                foreach (Funcionario professor in funcionarios)
+                {
+                    var horistaProfessor = professor as Horaista;
+
+                    if (horistaProfessor == null)
+                    {
+                        var contratadoProfessor = professor as Contratado;
+                    }
+                    ExibeDados(professor, false, false);
+                    Console.WriteLine();
+                }
+                Console.ReadKey();
+            }
+        }
+
         private static void ExcluirFuncionario()
         {
-            throw new NotImplementedException();
+            var nome = HelpersAlias.GetInputString(informeNome, erro);
+            var funcionarioConsultado = funcionarios.FirstOrDefault(aluno => aluno.Nome == nome);
+            Console.Clear();
+
+            if (funcionarioConsultado == null)
+            {
+                HelpersAlias.PostString(erro);
+            }
+            else
+            {
+                ExibeDados(funcionarioConsultado);
+                funcionarios.Remove(funcionarioConsultado);
+                HelpersAlias.PostString(removidoSucesso);
+            }
+        }
+
+        private static void ExibeDados(Funcionario funcionarioConsultado, bool ReadKey = true, bool limparTela = true)
+        {
+            var salarioFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"),
+                "{0:C}", funcionarioConsultado.SalarioFuncionario());
+            HelpersAlias.PostString($"Dados funcionário:\n" +
+                        $"Nome: {funcionarioConsultado.Nome}\n" +
+                        $"Cpf: {funcionarioConsultado.Cpf}\n" +
+                        $"Salario: {salarioFormatado}",ReadKey,limparTela);
         }
 
         private static void ConsultarFuncionario()
         {
-            var nome = HelpersAlias.GetInputString("Digite o nome do professor:","Nome invalido");
+            var nome = HelpersAlias.GetInputString(informeNome, erro);
             var funcionarioConsultado = funcionarios.FirstOrDefault(aluno => aluno.Nome == nome);
+            Console.Clear();
+
             if (funcionarioConsultado == null)
             {
-                Console.WriteLine("Nome inválido");
+                HelpersAlias.PostString(erro);
             }
-            else
-            {
-                Console.WriteLine($"Dados funcionário:\n" +
-                    $"Nome: {funcionarioConsultado.Nome}\n" +
-                    $"Cpf: {funcionarioConsultado.Cpf}" +
-                    $"Salario: {funcionarioConsultado.SalarioFuncionario()}");
-            }
-            Console.ReadKey();
+                else
+                {
+                    var horistaProfessor = funcionarioConsultado as Horaista;
+                    funcionarios.Remove(funcionarioConsultado);
+
+                    if (horistaProfessor == null)
+                    {
+                        funcionarioConsultado = funcionarioConsultado as Contratado;
+                    }
+                    ExibeDados(funcionarioConsultado);
+                }
         }
 
         private static void TipoFuncionario()
@@ -109,11 +166,28 @@ namespace SistemaEscola.ConsoleApp
 
         private static void AlterarFuncionario()
         {
-            var nomeFuncionario = HelpersAlias.GetInputString("Digite o nome do professor",erro);
+            var nome = HelpersAlias.GetInputString("Digite o nome do professor:", "Nome invalido");
+            var funcionarioConsultado = funcionarios.FirstOrDefault(aluno => aluno.Nome == nome);
 
-            var funcionarioEncontrado = funcionarios.FirstOrDefault(aluno => aluno.Nome == "asdas");
+            if (funcionarioConsultado == null)
+            {
+                HelpersAlias.PostString(erro);
+            }
+            else
+            {
+                var horistaProfessor = funcionarioConsultado as Horaista;
+                funcionarios.Remove(funcionarioConsultado);
 
-            funcionarios.Remove(funcionarioEncontrado);
+                if (horistaProfessor == null)
+                {
+                    ProfessorContratado();
+                }
+                else
+                {
+                    ProfessorHorista();
+                }
+            }
+            HelpersAlias.PostString("Alterado com Sucesso!");
         }
 
         private static void ProfessorHorista()
@@ -123,14 +197,8 @@ namespace SistemaEscola.ConsoleApp
             var horas = HelpersAlias.GetInputInt("Insira as horas do professor",erro);
 
             funcionarios.Add(new Horaista(nome, cpf, horas));
-            foreach (Funcionario professor in funcionarios)
-            {
-                var horistaProfessor = professor as Horaista;
-                Console.WriteLine($"{horistaProfessor.Nome} " +
-                    $"- {horistaProfessor.Cpf} " +
-                    $"- {horistaProfessor.SalarioFuncionario()}");
-            }
         }
+
         private static void ProfessorContratado()
         {
             var nome = HelpersAlias.GetInputString("Insira o Nome do professor", erro);
@@ -142,8 +210,7 @@ namespace SistemaEscola.ConsoleApp
                     "2 - Ensino Superior\n" +
                     "3- Mestrado\n" +
                     "4- Segundo Grau\n", erro, 1, 4);
-
-                switch (opcao)
+            switch (opcao)
                 {
                     case 1:
                         escolaridadeEscolhe = EEscolaridade.Doutorado;
@@ -162,18 +229,9 @@ namespace SistemaEscola.ConsoleApp
                         funcionarios.Add(new Contratado(nome, cpf, escolaridadeEscolhe));
                         break;
                     default:
-                        Console.WriteLine(erro);
+                    HelpersAlias.PostString(erro);
                         break;
-
-                }
-                foreach (Funcionario professor in funcionarios)
-                {
-                    var contratadoProfessor = professor as Contratado;
-                    Console.WriteLine($"{contratadoProfessor.Nome} " +
-                        $"- {contratadoProfessor.Escolaridade.EscolariadadeDescricao} " +
-                        $"- {contratadoProfessor.Escolaridade.Salario}");
                 }
             }
-
     }
 }

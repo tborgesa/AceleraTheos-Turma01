@@ -4,6 +4,16 @@ namespace SistemaEscola.Comum.Helpers
 {
     public static class InputHelper
     {
+        public static void PostString(string texto, bool ReadKey = true,  bool limparTela = true)
+        {
+                if (limparTela)
+                    Console.Clear();
+
+                Console.WriteLine(texto);
+            if (ReadKey)
+                Console.ReadKey();
+        }
+
         public static int GetInputInt(string texto, string mensagemInvalido, bool limparTela = true)
         {
             while (true)

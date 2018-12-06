@@ -21,7 +21,8 @@ namespace PetShop.Dominio.Animais
 
         public override double CalcularLimpeza()
         {
-            return (Altura * Largura * Comprimento) * 1.5;
+            ValorLimpeza = (Altura * Largura * Comprimento) * 1.5;
+            return ValorLimpeza;
         }
 
     }

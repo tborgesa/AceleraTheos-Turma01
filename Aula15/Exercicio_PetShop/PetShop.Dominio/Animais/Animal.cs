@@ -10,6 +10,7 @@ namespace PetShop.Dominio.Animais
         public Cliente Dono { get; private set; }
         public Enum Especie { get; }
         public string erro { get; private set; }
+        public double ValorLimpeza { get; set; }
 
         public Animal(string nome, Cliente dono, Enum especie)
         {

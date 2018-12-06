@@ -32,9 +32,9 @@ namespace Escola.ConsoleApp
 		public static string _nome;
 		public static double _hora;
 		public static double _valorSalario;
+        public static List<HoristaAlias> _horistas = new List<HoristaAlias>();
 
-
-		static void Main(string[] args)
+        static void Main(string[] args)
 		{
 			while (true)
 			{
@@ -108,11 +108,9 @@ namespace Escola.ConsoleApp
 			}
 		}
 
-		private static void MenuCadastrarProfessorHorista()
+		private static void CadastrarProfessorHorista()
 		{
-			Console.Clear();
-
-			List<HoristaAlias> horistas = new List<HoristaAlias>();
+			Console.Clear();			
 
 			HoristaAlias horista = new HoristaAlias(_hora, _codigo, _nome);
 
@@ -125,7 +123,7 @@ namespace Escola.ConsoleApp
 			Console.WriteLine("Digite a quantidade de horas trabalhadas:");
 			_hora = double.Parse(Console.ReadLine());					   	
 
-			horistas.Add(new HoristaAlias(_hora, _codigo, _nome));
+			_horistas.Add(new HoristaAlias(_hora, _codigo, _nome));
 
 
 			Console.ReadKey();
@@ -135,18 +133,23 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();
 
-			List<HoristaAlias> horistas = new List<HoristaAlias>();
+            if (_horistas.Count == 0)
+            {
+                Console.WriteLine("Não existe professores horistas cadastrados.");
+                Console.ReadLine();
+            }
+            else
+            {
+                _horistas = _horistas.OrderBy(a => a.Codigo).ToList();
 
-			horistas = horistas.OrderBy(a => a.Codigo).ToList();
+                foreach (HoristaAlias horista in _horistas)
+                {
+                    Console.WriteLine($"Código: {horista.Codigo} - Nome: {horista.Nome} - Horas Trabalhadas: {horista.Hora}");
+                }
 
-			foreach (HoristaAlias horista in horistas)
-			{
-				Console.WriteLine($"Código: {horista.Codigo} - Nome: {horista.Nome} - Horas: {horista.Hora}");
-			}
-
-			Console.ReadKey();
+                Console.ReadKey();
+            }            
 		}
-
 
 		private static void OpcaoHorista()
 		{
@@ -165,7 +168,7 @@ namespace Escola.ConsoleApp
 			{
 				case 1:
 
-					MenuCadastrarProfessorHorista();
+					CadastrarProfessorHorista();
 
 					break;
 

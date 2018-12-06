@@ -4,19 +4,21 @@ namespace Escola.Dominio
 {
     public class Horista : Professor
     {
-		public double Hora { get; set; }
+		public double HoraTrabalhada { get; set; }
+        public double ValorSalarioHoraTrabalhada { get; set; }
 
-		public Horista(double hora, int codigo, string nome)
+        public Horista(int codigo, string nome, double horaTrabalhada, double valorSalarioHoraTrabalhada)
 			: base (codigo, nome)
 		{
 			Codigo = codigo;
 			Nome = nome;
-			Hora = hora;
-		}
+			HoraTrabalhada = horaTrabalhada;
+            ValorSalarioHoraTrabalhada = valorSalarioHoraTrabalhada;
+        }
 
 		public override double CalcularSalario()
 		{
-			return Hora * 17;
+			return HoraTrabalhada * 17;
 		}
 	}
 }

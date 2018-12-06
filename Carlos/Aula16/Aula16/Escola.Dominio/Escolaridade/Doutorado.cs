@@ -4,8 +4,8 @@ namespace Escola.Dominio
 {
     public class Doutorado : Contratado
     {
-		public Doutorado(double valorSalario, int codigo, string nome)
-			: base(valorSalario, codigo, nome)
+		public Doutorado(int codigo, string nome, double valorSalario)
+			: base(codigo, nome, valorSalario)
 		{
 
 		}

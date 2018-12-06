@@ -6,7 +6,7 @@ namespace Escola.Dominio
     {
 		public double ValorSalario { get; set; }
 
-		public Contratado(double valorSalario, int codigo, string nome)
+		public Contratado(int codigo, string nome, double valorSalario)
 			: base(codigo, nome)
 		{
 			Codigo = codigo;

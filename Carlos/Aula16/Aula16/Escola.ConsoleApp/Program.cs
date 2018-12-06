@@ -30,9 +30,15 @@ namespace Escola.ConsoleApp
 
 		public static int _codigo;
 		public static string _nome;
-		public static double _hora;
-		public static double _valorSalario;
+		public static double _horaTrabalhada;
+        public static double _valorSalarioHoraTrabalhada;
+        public static double _valorSalario;
         public static List<HoristaAlias> _horistas = new List<HoristaAlias>();
+        public static List<EnsinoMedioAlias> _ensinoMedio = new List<EnsinoMedioAlias>();
+        public static List<EnsinoSuperiorAlias> _ensinoSuperior = new List<EnsinoSuperiorAlias>();
+        public static List<MestradoAlias> _mestrado = new List<MestradoAlias>();
+        public static List<DoutoradoAlias> _doutorado = new List<DoutoradoAlias>();
+
 
         static void Main(string[] args)
 		{
@@ -112,7 +118,7 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();			
 
-			HoristaAlias horista = new HoristaAlias(_hora, _codigo, _nome);
+			HoristaAlias horista = new HoristaAlias(_codigo, _nome, _horaTrabalhada, _valorSalarioHoraTrabalhada);
 
 			Console.WriteLine("Digite o código:");
 			_codigo = int.Parse(Console.ReadLine());
@@ -121,9 +127,9 @@ namespace Escola.ConsoleApp
 			_nome = Console.ReadLine();
 
 			Console.WriteLine("Digite a quantidade de horas trabalhadas:");
-			_hora = double.Parse(Console.ReadLine());					   	
+			_horaTrabalhada = double.Parse(Console.ReadLine());					   	
 
-			_horistas.Add(new HoristaAlias(_hora, _codigo, _nome));
+			_horistas.Add(new HoristaAlias(_codigo, _nome, _horaTrabalhada, horista.CalcularSalario()));
 
 
 			Console.ReadKey();
@@ -135,7 +141,7 @@ namespace Escola.ConsoleApp
 
             if (_horistas.Count == 0)
             {
-                Console.WriteLine("Não existe professores horistas cadastrados.");
+                Console.WriteLine("Não existem professores horistas cadastrados.");
                 Console.ReadLine();
             }
             else
@@ -144,12 +150,17 @@ namespace Escola.ConsoleApp
 
                 foreach (HoristaAlias horista in _horistas)
                 {
-                    Console.WriteLine($"Código: {horista.Codigo} - Nome: {horista.Nome} - Horas Trabalhadas: {horista.Hora}");
+                    Console.WriteLine($"Código: {horista.Codigo} - Nome: {horista.Nome} - Horas Trabalhadas: {horista.HoraTrabalhada} - Valor Salário: {horista.ValorSalarioHoraTrabalhada}");
                 }
 
                 Console.ReadKey();
             }            
 		}
+
+        private static void ExcluirProfessorHorista()
+        {
+            
+        }
 
 		private static void OpcaoHorista()
 		{
@@ -157,7 +168,7 @@ namespace Escola.ConsoleApp
 
 			string menu = @"Qual dessas opções deseja?
 1 - Cadastrar
-2 - Listar
+2 - Listar por código
 3 - Excluir";
 
 			Console.WriteLine(menu);
@@ -180,7 +191,9 @@ namespace Escola.ConsoleApp
 
 				case 3:
 
-					break;
+                    ExcluirProfessorHorista();
+
+                    break;
 
 				default:
 
@@ -192,7 +205,7 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();
 
-			EnsinoMedioAlias ensinoMedio = new EnsinoMedioAlias(_valorSalario, _codigo, _nome);
+			EnsinoMedioAlias ensinoMedio = new EnsinoMedioAlias(_codigo, _nome, _valorSalario);
 
 			Console.WriteLine($"O salário do professor com ensino médio é de R${ensinoMedio.CalcularSalario():N2}");
 
@@ -203,7 +216,7 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();
 
-			EnsinoSuperiorAlias ensinoSuperior = new EnsinoSuperiorAlias(_valorSalario, _codigo, _nome);
+			EnsinoSuperiorAlias ensinoSuperior = new EnsinoSuperiorAlias(_codigo, _nome, _valorSalario);
 
 			Console.WriteLine($"O salário do professor com ensino superior é de R${ensinoSuperior.CalcularSalario():N2}");
 
@@ -214,7 +227,7 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();
 
-			MestradoAlias mestrado = new MestradoAlias(_valorSalario, _codigo, _nome);
+			MestradoAlias mestrado = new MestradoAlias(_codigo, _nome, _valorSalario);
 
 			Console.WriteLine($"O salário do professor com metrado é de R${mestrado.CalcularSalario():N2}");
 
@@ -225,7 +238,7 @@ namespace Escola.ConsoleApp
 		{
 			Console.Clear();
 
-			DoutoradoAlias doutorado = new DoutoradoAlias(_valorSalario, _codigo, _nome);
+			DoutoradoAlias doutorado = new DoutoradoAlias(_codigo, _nome, _valorSalario);
 
 			Console.WriteLine($"O salário do professor com doutorado é de R${doutorado.CalcularSalario():N2}");
 

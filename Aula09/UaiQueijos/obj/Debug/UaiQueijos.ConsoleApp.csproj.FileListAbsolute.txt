@@ -1,0 +1,12 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.exe.config
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\bin\Debug\UaiQueijos.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\obj\Debug\UaiQueijos.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\obj\Debug\UaiQueijos.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\obj\Debug\UaiQueijos.ConsoleApp.csproj.CopyComplete
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\obj\Debug\UaiQueijos.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos\obj\Debug\UaiQueijos.pdb

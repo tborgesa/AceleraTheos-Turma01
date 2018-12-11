@@ -71,26 +71,12 @@ namespace SistemaEscola.ConsoleApp
             telaMenu();
         }
 
-        private static void ProfessorHorista(string nome,string cpf)
+        private static void ProfessorHorista(string nome, string cpf)
         {
             var horas = HelpersAlias.GetInputInt("Insira as horas do professor", erro);
 
-            if (VerificaExisteCpf(cpf) == null)
-            {
                 funcionarios.Add(new Horaista(nome, cpf, horas));
-            }
-
-        }
-
-        private static Funcionario VerificaExisteCpf(string cpf)
-        {
-            var cpfConsulta = funcionarios.FirstOrDefault(professor => professor.Nome == cpf);
-            if (cpfConsulta != null)
-            {
-                HelpersAlias.PostString("Erro - Cpf existente!");
-                telaMenu();
-            }
-                return cpfConsulta;
+                HelpersAlias.PostString("Cadastrado com Sucesso!");
         }
 
         private static void ProfessorContratado(string nome, string cpf)
@@ -123,6 +109,7 @@ namespace SistemaEscola.ConsoleApp
                     HelpersAlias.PostString(erro);
                     break;
             }
+            HelpersAlias.PostString("Professor Registrado com Sucesso!");
         }
 
         private static void ConsultarFuncionario()
@@ -192,10 +179,6 @@ namespace SistemaEscola.ConsoleApp
             }
         }
 
-        private static string GetCpf()
-        {
-            return HelpersAlias.GetInputString("Insira o Cpf do professor", erro);
-        }
 
         private static string GetNome()
         {
@@ -228,6 +211,26 @@ namespace SistemaEscola.ConsoleApp
             }
         }
 
+        private static string GetCpf()
+        {
+            return HelpersAlias.GetInputString("Insira o Cpf do professor", erro);
+        }
+        private static string VerificaExisteCpf()
+        {
+            var cpf = "";
+            while (true)
+            {
+                cpf = GetCpf();
+                Funcionario cpfConsulta = funcionarios.FirstOrDefault(professor => professor.Cpf == cpf);
+                if(cpfConsulta != null)
+                {
+                    HelpersAlias.PostString("Erro - Cpf existente!");
+                    return VerificaExisteCpf();
+                }
+                    return cpf;
+            }
+        }
+
         private static void TipoFuncionario()
         {
             var opcao = HelpersAlias.GetInputSwicth("Selecionar o tipo de professor \n" +
@@ -235,8 +238,7 @@ namespace SistemaEscola.ConsoleApp
                 "02 - Horista", erro, 1, 2);
             Console.WriteLine();
 
-            var cpf = GetCpf();            
-            VerificaExisteCpf(cpf);
+            string cpf = VerificaExisteCpf();
 
 
             switch (opcao)

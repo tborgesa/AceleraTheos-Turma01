@@ -1,0 +1,7 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\bin\Debug\Exercico03.exe.config
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\bin\Debug\Exercico03.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\bin\Debug\Exercico03.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\obj\Debug\Exercico03.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\obj\Debug\Exercico03.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\obj\Debug\Exercico03.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula07\Exercico03\obj\Debug\Exercico03.pdb

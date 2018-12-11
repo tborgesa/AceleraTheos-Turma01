@@ -1,0 +1,24 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.exe.config
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csproj.CopyComplete
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.exe.config
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.ConsoleApp.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.csproj.CopyComplete
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.exe
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\SistemaEscola\SistemaEscola.ConsoleApp\obj\Debug\SistemaEscola.ConsoleApp.pdb

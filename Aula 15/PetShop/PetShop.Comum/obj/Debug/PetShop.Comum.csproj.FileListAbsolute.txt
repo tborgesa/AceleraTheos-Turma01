@@ -1,0 +1,6 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\bin\Debug\PetShop.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\bin\Debug\PetShop.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\obj\Debug\PetShop.Comum.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\obj\Debug\PetShop.Comum.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\obj\Debug\PetShop.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Comum\obj\Debug\PetShop.Comum.pdb

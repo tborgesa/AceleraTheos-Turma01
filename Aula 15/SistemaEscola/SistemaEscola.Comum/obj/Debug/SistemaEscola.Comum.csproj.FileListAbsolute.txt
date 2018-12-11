@@ -1,0 +1,6 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csprojAssemblyReference.cache

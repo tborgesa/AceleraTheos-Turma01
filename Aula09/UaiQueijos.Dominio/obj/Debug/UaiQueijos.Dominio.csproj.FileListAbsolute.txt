@@ -1,0 +1,9 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\bin\Debug\UaiQueijos.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\bin\Debug\UaiQueijos.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\bin\Debug\UaiQueijos.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\bin\Debug\UaiQueijos.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\obj\Debug\UaiQueijos.Dominio.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\obj\Debug\UaiQueijos.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\obj\Debug\UaiQueijos.Dominio.csproj.CopyComplete
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\obj\Debug\UaiQueijos.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Dominio\obj\Debug\UaiQueijos.Dominio.pdb

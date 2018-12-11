@@ -1,0 +1,6 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\bin\Debug\UaiQueijos.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\bin\Debug\UaiQueijos.Comum.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\obj\Debug\UaiQueijos.Comum.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\obj\Debug\UaiQueijos.Comum.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\obj\Debug\UaiQueijos.Comum.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula09\UaiQueijos.Comum\obj\Debug\UaiQueijos.Comum.pdb

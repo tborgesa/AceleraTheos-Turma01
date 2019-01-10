@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{965FD5FA-4089-4F1E-BD21-A42EFF6D89BC}</ProjectGuid>
+    <ProjectGuid>{C7AE0E72-50A7-4C2F-887B-9A8E4014993D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SistemaEscola.Repositorio</RootNamespace>
-    <AssemblyName>SistemaEscola.Repositorio</AssemblyName>
+    <RootNamespace>SistemaEscola.Service</RootNamespace>
+    <AssemblyName>SistemaEscola.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContratadoRepositorio.cs" />
-    <Compile Include="SistemaEscolaRepositorio.cs" />
+    <Compile Include="ContratadoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SistemaEscola.Dominio\SistemaEscola.Dominio.csproj">
       <Project>{868fc139-9f05-460a-9d29-eb2ebcc7a019}</Project>
       <Name>SistemaEscola.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaEscola.Repositorio\SistemaEscola.Repositorio.csproj">
+      <Project>{965fd5fa-4089-4f1e-bd21-a42eff6d89bc}</Project>
+      <Name>SistemaEscola.Repositorio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

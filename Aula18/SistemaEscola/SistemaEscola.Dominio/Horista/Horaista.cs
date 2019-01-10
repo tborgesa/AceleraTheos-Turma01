@@ -1,10 +1,12 @@
-﻿namespace SistemaEscola.Dominio.Funcionario
+﻿using System;
+
+namespace SistemaEscola.Dominio.Funcionario
 {
     public class Horaista : Funcionario
     {
         public int Horas;
 
-        public Horaista(string nome, string cpf, int horas):base(nome, cpf)
+        public Horaista(DateTime dataNascimento, string nome, string cpf, int horas):base(nome, cpf, dataNascimento)
         {
             Horas = horas;
         }

@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contratado.cs" />
+    <Compile Include="Contratado\Contratado.cs" />
+    <Compile Include="Contratado\ContratadoAtualizarViewModel.cs" />
+    <Compile Include="Contratado\ContratadoDto.cs" />
+    <Compile Include="Contratado\ContratadoInserirViewModel.cs" />
     <Compile Include="Entidade.cs" />
     <Compile Include="Escolaridade\Doutorado.cs" />
     <Compile Include="Escolaridade\EnsinoSuperior.cs" />
@@ -49,7 +52,11 @@
     <Compile Include="Escolaridade\Escolaridade.cs" />
     <Compile Include="Escolaridade\Mestrado.cs" />
     <Compile Include="Funcionario.cs" />
-    <Compile Include="Horaista.cs" />
+    <Compile Include="FuncionarioSearch.cs" />
+    <Compile Include="Horista\HoristaAtualizarViewModel.cs" />
+    <Compile Include="Horista\HoristaDto.cs" />
+    <Compile Include="Horista\HoristaInserirViewModel.cs" />
+    <Compile Include="Horista\Horaista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Escolaridade\SegundoGrau.cs" />
   </ItemGroup>

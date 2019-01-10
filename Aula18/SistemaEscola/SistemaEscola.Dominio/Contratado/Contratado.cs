@@ -1,4 +1,5 @@
-﻿using SistemaEscola.Dominio.Escolaridade.Enumerador;
+﻿using System;
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
 using EscolaridadeALias = SistemaEscola.Dominio.Escolaridade.Escolaridade;
 using EscolaridadeALiasAux = SistemaEscola.Dominio.Escolaridade;
 
@@ -9,7 +10,8 @@ namespace SistemaEscola.Dominio.Funcionario
         public EscolaridadeALias Escolaridade { get; private set; }
         public string erro = "Escolaridade Invalida!";
 
-        public Contratado(string nome, string cpf, EEscolaridade escolaridade) : base (nome, cpf)
+        public Contratado(DateTime dataNascimento, string nome, string cpf, string endereco,  EEscolaridade escolaridade) :
+            base (nome, cpf, dataNascimento)
         {
             InstanciarEscolaridade(escolaridade);
         }

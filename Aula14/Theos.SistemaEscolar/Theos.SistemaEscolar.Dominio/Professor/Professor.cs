@@ -1,9 +1,10 @@
 ﻿
 using System.Collections.Generic;
+using Theos.SistemaEscolar.Dominio.Enumerador;
 
 namespace Theos.SistemaEscolar.Dominio.Professor
 {
-    public abstract class Professor
+    public abstract class Professor : Entidade
     {
 
         public string Nome { get; private set; }
@@ -19,8 +20,13 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         {
 
         }
+
         public abstract decimal CalcularSalario();
 
-
+        public void Alterar(string nome, string cpf)
+        {
+            Cpf = cpf;
+            Nome = nome;
+        }
     }
 }

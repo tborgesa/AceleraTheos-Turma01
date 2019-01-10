@@ -15,6 +15,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Domini
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Comum", "Theos.SistemaEscolar.Comum\Theos.SistemaEscolar.Comum.csproj", "{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Swagger", "00 - Swagger", "{D94F8DF9-86A6-43FB-B6E2-3AC059839701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Swagger", "Theos.SistemaEscolar.Swagger\Theos.SistemaEscolar.Swagger.csproj", "{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Repositorio", "04 - Repositorio", "{CA659C1B-FF7B-468B-9D78-7AA4EB63153F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Repositorio", "Theos.SistemaEscolar.Repositorio\Theos.SistemaEscolar.Repositorio.csproj", "{A1E90F6B-6E97-488C-845C-E352E472DE1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Service", "05 - Service", "{A6BCF28C-3A7D-4B61-A451-F4837073ECF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theos.SistemaEscolar.Service", "Theos.SistemaEscolar.Service\Theos.SistemaEscolar.Service.csproj", "{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +45,18 @@ Global
 		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E90F6B-6E97-488C-845C-E352E472DE1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E90F6B-6E97-488C-845C-E352E472DE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E90F6B-6E97-488C-845C-E352E472DE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E90F6B-6E97-488C-845C-E352E472DE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +65,9 @@ Global
 		{3DE573AB-773D-4BB7-97C2-3079866FC773} = {1C73DDD0-BC9F-4546-92E9-7C089D7E16FD}
 		{9E0E0F06-0AB0-4D88-89DF-EA5815FF2838} = {7C8FB0EF-64FF-490A-B0D1-23B1E98EC3C3}
 		{9E452FEF-FE1A-4279-8EF7-483BC9E79AE8} = {572E8EA6-38CF-454A-997C-67C65DBFFF90}
+		{32C2E43B-E2F5-46B8-A0BE-22E1BFFAA5D0} = {D94F8DF9-86A6-43FB-B6E2-3AC059839701}
+		{A1E90F6B-6E97-488C-845C-E352E472DE1C} = {CA659C1B-FF7B-468B-9D78-7AA4EB63153F}
+		{171E0EBF-2F93-4B92-A3EA-CDFD1FB3649D} = {A6BCF28C-3A7D-4B61-A451-F4837073ECF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5F29D3E-980D-4F5C-AE11-FAFF7992EDF3}

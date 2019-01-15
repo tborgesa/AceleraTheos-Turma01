@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using SistemaEscola.Dominio.Horista;
+using SistemaEscola.Dominio.Contratado;
 using SistemaEscola.Service;
 
 namespace SistemaEscola.Swagger
 {
-    public partial class FormHorista : Form
+    public partial class FormContratado : Form
     {
-        private HoristaService _service = new HoristaService();
+        private ContratadoService _service = new ContratadoService();
 
-        public FormHorista()
+        public FormContratado()
         {
             InitializeComponent();
         }
@@ -19,31 +19,31 @@ namespace SistemaEscola.Swagger
         #region Inserir
         private void CarregarExemploInserir()
         {
-            HoristaInserirViewModel HoristaViewModel = new HoristaInserirViewModel();
-            string texto = JsonConvert.SerializeObject(HoristaViewModel);
-            textBoxHoristaExemploInserir.Text = texto;
-            textBoxHoristaEntradaInserir.Text = texto;
+            ContratadoInserirViewModel contratadoViewModel = new ContratadoInserirViewModel();
+            string texto = JsonConvert.SerializeObject(contratadoViewModel);
+            textBoxContratadoExemploInserir.Text = texto;
+            textBoxContratadoEntradaInserir.Text = texto;
         }
 
         private void buttonExecutarInserir_Click(object sender, EventArgs e)
         {
             try
             {
-                var HoristaViewModel = JsonConvert.DeserializeObject<HoristaInserirViewModel>(textBoxHoristaEntradaInserir.Text);
+                var contratadoViewModel = JsonConvert.DeserializeObject<ContratadoInserirViewModel>(textBoxContratadoEntradaInserir.Text);
 
-                if (HoristaViewModel == null)
+                if (contratadoViewModel == null)
                 {
-                    textBoxHoristaSaidaInserir.Text = $"Json inválido.";
+                    textBoxContratadoSaidaInserir.Text = $"Json inválido.";
                     return;
                 }
 
-                var HoristaDto = _service.Inserir(HoristaViewModel);
+                var contratadoDto = _service.Inserir(contratadoViewModel);
 
-                textBoxHoristaSaidaInserir.Text = JsonConvert.SerializeObject(HoristaDto);
+                textBoxContratadoSaidaInserir.Text = JsonConvert.SerializeObject(contratadoDto);
             }
             catch (Exception ex)
             {
-                textBoxHoristaSaidaInserir.Text = $"{Environment.NewLine} {ex.ToString()}";
+                textBoxContratadoSaidaInserir.Text = $"{Environment.NewLine} {ex.ToString()}";
             }
         }
         #endregion
@@ -53,12 +53,12 @@ namespace SistemaEscola.Swagger
         {
             try
             {
-                var Horistaes = _service.BuscarTodos();
-                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(Horistaes);
+                var contratadoes = _service.BuscarTodos();
+                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(contratadoes);
             }
             catch (Exception ex)
             {
-                textBoxHoristaSaidaInserir.Text = $"{ex.ToString()}";
+                textBoxContratadoSaidaInserir.Text = $"{ex.ToString()}";
             }
         }
         #endregion
@@ -89,8 +89,8 @@ namespace SistemaEscola.Swagger
                 }
 
 
-                var HoristaDto = _service.BuscarPorId(guid);
-                textBoxSaidaBuscarId.Text = JsonConvert.SerializeObject(HoristaDto);
+                var contratadoDto = _service.BuscarPorId(guid);
+                textBoxSaidaBuscarId.Text = JsonConvert.SerializeObject(contratadoDto);
             }
             catch (Exception ex)
             {
@@ -102,31 +102,31 @@ namespace SistemaEscola.Swagger
         #region Atualizar
         private void CarregarExemploAtualizar()
         {
-            HoristaAtualizarViewModel HoristaViewModel = new HoristaAtualizarViewModel();
-            string texto = JsonConvert.SerializeObject(HoristaViewModel);
-            textBoxHoristaExemploAtualizar.Text = texto;
-            textBoxHoristaEntradaAtualizar.Text = texto;
+            ContratadoAtualizarViewModel contratadoViewModel = new ContratadoAtualizarViewModel();
+            string texto = JsonConvert.SerializeObject(contratadoViewModel);
+            textBoxContratadoExemploAtualizar.Text = texto;
+            textBoxContratadoEntradaAtualizar.Text = texto;
         }
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
             try
             {
-                var HoristaViewModel = JsonConvert.DeserializeObject<HoristaAtualizarViewModel>(textBoxHoristaEntradaAtualizar.Text);
+                var contratadoViewModel = JsonConvert.DeserializeObject<ContratadoAtualizarViewModel>(textBoxContratadoEntradaAtualizar.Text);
 
-                if (HoristaViewModel == null)
+                if (contratadoViewModel == null)
                 {
-                    textBoxHoristaSaidaAtualizar.Text = $"Json inválido.";
+                    textBoxContratadoSaidaAtualizar.Text = $"Json inválido.";
                     return;
                 }
 
-                var HoristaDto = _service.Atualizar(HoristaViewModel);
+                var contratadoDto = _service.Atualizar(contratadoViewModel);
 
-                textBoxHoristaSaidaAtualizar.Text = JsonConvert.SerializeObject(HoristaDto);
+                textBoxContratadoSaidaAtualizar.Text = JsonConvert.SerializeObject(contratadoDto);
             }
             catch (Exception ex)
             {
-                textBoxHoristaSaidaAtualizar.Text = $"{ex.ToString()}";
+                textBoxContratadoSaidaAtualizar.Text = $"{ex.ToString()}";
             }
         }
         #endregion
@@ -170,12 +170,12 @@ namespace SistemaEscola.Swagger
         }
         #endregion
 
-        private void textBoxHoristaEntradaInserir_TextChanged(object sender, EventArgs e)
+        private void textBoxContratadoEntradaInserir_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBoxHoristaEntradaAtualizar_TextChanged(object sender, EventArgs e)
+        private void textBoxContratadoEntradaAtualizar_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -185,7 +185,7 @@ namespace SistemaEscola.Swagger
 
         }
 
-        private void FormHorista_Load(object sender, EventArgs e)
+        private void FormContratado_Load(object sender, EventArgs e)
         {
             CarregarExemploAtualizar();
             CarregarExemploBuscarId();

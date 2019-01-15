@@ -1,6 +1,5 @@
 ﻿using System;
-using EscolaridadeALias = SistemaEscola.Dominio.Escolaridade.Escolaridade;
-
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
 
 namespace SistemaEscola.Dominio.Contratado
 {
@@ -8,6 +7,6 @@ namespace SistemaEscola.Dominio.Contratado
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Endereco { get; set; } = "";
-        public EscolaridadeALias Escolaridade { get; set; }
+        public  EEscolaridade Escolaridade{ get; set; }
     }
 }

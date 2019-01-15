@@ -25,13 +25,23 @@ namespace SistemaEscola.Swagger
             formContratado.ShowDialog();
         }
 
-        private void ButtonContratado_Click(object sender, EventArgs e)
+        private void buttonHorista_Click(object sender, EventArgs e)
         {
-            FormContratado formContratado = new FormContratado();
-            formContratado.ShowDialog();
+            FormHorista formHorista = new FormHorista();
+            formHorista.ShowDialog();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                Formatting = Formatting.Indented,
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                DateFormatString = "dd/MM/yyyy"
+            };
+        }
+
+        private void FormSistemaEscola_Load(object sender, EventArgs e)
         {
             JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             {

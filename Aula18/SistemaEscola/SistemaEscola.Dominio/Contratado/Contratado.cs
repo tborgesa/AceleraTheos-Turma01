@@ -11,18 +11,27 @@ namespace SistemaEscola.Dominio.Funcionario
         public string erro = "Escolaridade Invalida!";
 
         public Contratado(DateTime dataNascimento, string nome, string cpf, string endereco,  EEscolaridade escolaridade) :
-            base (nome, cpf, dataNascimento)
+            base (nome, cpf, dataNascimento, endereco)
         {
             InstanciarEscolaridade(escolaridade);
         }
 
-        public Contratado(DateTime dataNascimento, string cpf, string nome, string endereco, EscolaridadeALias escolaridade) :
-            base(nome, cpf, dataNascimento)
-        {
-            Escolaridade = escolaridade;
+        public EEscolaridade GetEEscolaridade() {
+            var tipo = Escolaridade as EscolaridadeALiasAux.SegundoGrau;
+            if (tipo != null) return EEscolaridade.SegudundoGrau;
+
+            var tipo1 = Escolaridade as EscolaridadeALiasAux.EnsinoSuperior;
+            if (tipo1 != null) return EEscolaridade.EnsinoSuperior;
+
+            var tipo2 = Escolaridade as EscolaridadeALiasAux.Mestrado;
+            if (tipo2 != null) return EEscolaridade.Mestrado;
+
+            return EEscolaridade.Doutorado;
+
+
         }
 
-        private void InstanciarEscolaridade(EEscolaridade eEscolaridade)
+        public void InstanciarEscolaridade(EEscolaridade eEscolaridade)
         {
             if (!EEscolaridade.IsDefined(typeof(EEscolaridade), eEscolaridade))
             {

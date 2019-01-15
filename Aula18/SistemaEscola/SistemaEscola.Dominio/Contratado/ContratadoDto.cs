@@ -1,5 +1,5 @@
 ﻿using System;
-using EscolaridadeALias = SistemaEscola.Dominio.Escolaridade.Escolaridade;
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
 
 namespace SistemaEscola.Dominio.Contratado
 {
@@ -11,6 +11,6 @@ namespace SistemaEscola.Dominio.Contratado
         public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Endereco { get; set; }
-        public EscolaridadeALias Escolaridade { get; set; }
+        public EEscolaridade Escolaridade{ get; set; }
     }
 }

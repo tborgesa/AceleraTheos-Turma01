@@ -14,8 +14,12 @@ namespace SistemaEscola.Service
 
         public  ContratadoDto Inserir(ContratadoInserirViewModel contratadoViewModel)
         {
-            var contratado = new Contratado(contratadoViewModel.DataNascimento, contratadoViewModel.Cpf, contratadoViewModel.Nome
-                    , contratadoViewModel.Endereco, contratadoViewModel.Escolaridade);
+            var contratado = new Contratado(
+                contratadoViewModel.DataNascimento, 
+                contratadoViewModel.Nome, 
+                contratadoViewModel.Cpf, 
+                contratadoViewModel.Endereco, 
+                contratadoViewModel.Escolaridade);
 
             _repositorio.Inserir(contratado);
 
@@ -34,7 +38,7 @@ namespace SistemaEscola.Service
                 DataNascimento = contratado.DataNascimento,
                 Endereco = contratado.Endereco,
                 Nome = contratado.Nome,
-                Escolaridade = contratado.Escolaridade
+                Escolaridade = contratado.GetEEscolaridade()
             };
         }
 

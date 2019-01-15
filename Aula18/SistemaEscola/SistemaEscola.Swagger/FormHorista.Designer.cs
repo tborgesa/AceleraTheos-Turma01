@@ -1,6 +1,6 @@
 ﻿namespace SistemaEscola.Swagger
 {
-    partial class FormContratado
+    partial class FormHorista
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControlContratado = new System.Windows.Forms.TabControl();
+            this.tabControlHorista = new System.Windows.Forms.TabControl();
             this.tabPageBuscarTodos = new System.Windows.Forms.TabPage();
             this.textBoxBuscarTodos = new System.Windows.Forms.TextBox();
             this.buttonBuscarTodos = new System.Windows.Forms.Button();
@@ -37,41 +37,41 @@
             this.textBoxSaidaBuscarId = new System.Windows.Forms.TextBox();
             this.textBoxExemploId = new System.Windows.Forms.TextBox();
             this.textBoxEntradaBuscarId = new System.Windows.Forms.TextBox();
-            this.tabContratadoInserir = new System.Windows.Forms.TabPage();
-            this.buttonContratadoExecutarInserir = new System.Windows.Forms.Button();
-            this.textBoxContratadoSaidaInserir = new System.Windows.Forms.TextBox();
-            this.textBoxContratadoExemploInserir = new System.Windows.Forms.TextBox();
-            this.textBoxContratadoEntradaInserir = new System.Windows.Forms.TextBox();
-            this.tabContratadoAtualizar = new System.Windows.Forms.TabPage();
-            this.buttonContratadoAtualizar = new System.Windows.Forms.Button();
-            this.textBoxContratadoSaidaAtualizar = new System.Windows.Forms.TextBox();
-            this.textBoxContratadoExemploAtualizar = new System.Windows.Forms.TextBox();
-            this.textBoxContratadoEntradaAtualizar = new System.Windows.Forms.TextBox();
+            this.tabHoristaInserir = new System.Windows.Forms.TabPage();
+            this.buttonHoristaExecutarInserir = new System.Windows.Forms.Button();
+            this.textBoxHoristaSaidaInserir = new System.Windows.Forms.TextBox();
+            this.textBoxHoristaExemploInserir = new System.Windows.Forms.TextBox();
+            this.textBoxHoristaEntradaInserir = new System.Windows.Forms.TextBox();
+            this.tabHoristaAtualizar = new System.Windows.Forms.TabPage();
+            this.buttonHoristaAtualizar = new System.Windows.Forms.Button();
+            this.textBoxHoristaSaidaAtualizar = new System.Windows.Forms.TextBox();
+            this.textBoxHoristaExemploAtualizar = new System.Windows.Forms.TextBox();
+            this.textBoxHoristaEntradaAtualizar = new System.Windows.Forms.TextBox();
             this.tabPageExcluir = new System.Windows.Forms.TabPage();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.textBoxExemploExcluir = new System.Windows.Forms.TextBox();
             this.textBoxEntradaExcluir = new System.Windows.Forms.TextBox();
             this.textBoxSaidaExcluir = new System.Windows.Forms.TextBox();
-            this.tabControlContratado.SuspendLayout();
+            this.tabControlHorista.SuspendLayout();
             this.tabPageBuscarTodos.SuspendLayout();
             this.tabPageBuscarById.SuspendLayout();
-            this.tabContratadoInserir.SuspendLayout();
-            this.tabContratadoAtualizar.SuspendLayout();
+            this.tabHoristaInserir.SuspendLayout();
+            this.tabHoristaAtualizar.SuspendLayout();
             this.tabPageExcluir.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlContratado
+            // tabControlHorista
             // 
-            this.tabControlContratado.Controls.Add(this.tabPageBuscarTodos);
-            this.tabControlContratado.Controls.Add(this.tabPageBuscarById);
-            this.tabControlContratado.Controls.Add(this.tabContratadoInserir);
-            this.tabControlContratado.Controls.Add(this.tabContratadoAtualizar);
-            this.tabControlContratado.Controls.Add(this.tabPageExcluir);
-            this.tabControlContratado.Location = new System.Drawing.Point(12, 12);
-            this.tabControlContratado.Name = "tabControlContratado";
-            this.tabControlContratado.SelectedIndex = 0;
-            this.tabControlContratado.Size = new System.Drawing.Size(904, 623);
-            this.tabControlContratado.TabIndex = 0;
+            this.tabControlHorista.Controls.Add(this.tabPageBuscarTodos);
+            this.tabControlHorista.Controls.Add(this.tabPageBuscarById);
+            this.tabControlHorista.Controls.Add(this.tabHoristaInserir);
+            this.tabControlHorista.Controls.Add(this.tabHoristaAtualizar);
+            this.tabControlHorista.Controls.Add(this.tabPageExcluir);
+            this.tabControlHorista.Location = new System.Drawing.Point(12, 12);
+            this.tabControlHorista.Name = "tabControlHorista";
+            this.tabControlHorista.SelectedIndex = 0;
+            this.tabControlHorista.Size = new System.Drawing.Size(904, 623);
+            this.tabControlHorista.TabIndex = 0;
             // 
             // tabPageBuscarTodos
             // 
@@ -157,111 +157,111 @@
             this.textBoxEntradaBuscarId.TabIndex = 8;
             this.textBoxEntradaBuscarId.TextChanged += new System.EventHandler(this.textBoxEntradaBuscarId_TextChanged);
             // 
-            // tabContratadoInserir
+            // tabHoristaInserir
             // 
-            this.tabContratadoInserir.Controls.Add(this.buttonContratadoExecutarInserir);
-            this.tabContratadoInserir.Controls.Add(this.textBoxContratadoSaidaInserir);
-            this.tabContratadoInserir.Controls.Add(this.textBoxContratadoExemploInserir);
-            this.tabContratadoInserir.Controls.Add(this.textBoxContratadoEntradaInserir);
-            this.tabContratadoInserir.Location = new System.Drawing.Point(4, 22);
-            this.tabContratadoInserir.Name = "tabContratadoInserir";
-            this.tabContratadoInserir.Size = new System.Drawing.Size(896, 597);
-            this.tabContratadoInserir.TabIndex = 2;
-            this.tabContratadoInserir.Text = "Inserir";
-            this.tabContratadoInserir.UseVisualStyleBackColor = true;
+            this.tabHoristaInserir.Controls.Add(this.buttonHoristaExecutarInserir);
+            this.tabHoristaInserir.Controls.Add(this.textBoxHoristaSaidaInserir);
+            this.tabHoristaInserir.Controls.Add(this.textBoxHoristaExemploInserir);
+            this.tabHoristaInserir.Controls.Add(this.textBoxHoristaEntradaInserir);
+            this.tabHoristaInserir.Location = new System.Drawing.Point(4, 22);
+            this.tabHoristaInserir.Name = "tabHoristaInserir";
+            this.tabHoristaInserir.Size = new System.Drawing.Size(896, 597);
+            this.tabHoristaInserir.TabIndex = 2;
+            this.tabHoristaInserir.Text = "Inserir";
+            this.tabHoristaInserir.UseVisualStyleBackColor = true;
             // 
-            // buttonContratadoExecutarInserir
+            // buttonHoristaExecutarInserir
             // 
-            this.buttonContratadoExecutarInserir.Location = new System.Drawing.Point(404, 88);
-            this.buttonContratadoExecutarInserir.Name = "buttonContratadoExecutarInserir";
-            this.buttonContratadoExecutarInserir.Size = new System.Drawing.Size(92, 94);
-            this.buttonContratadoExecutarInserir.TabIndex = 7;
-            this.buttonContratadoExecutarInserir.Text = "EXECUTAR";
-            this.buttonContratadoExecutarInserir.UseVisualStyleBackColor = true;
-            this.buttonContratadoExecutarInserir.Click += new System.EventHandler(this.buttonExecutarInserir_Click);
+            this.buttonHoristaExecutarInserir.Location = new System.Drawing.Point(404, 88);
+            this.buttonHoristaExecutarInserir.Name = "buttonHoristaExecutarInserir";
+            this.buttonHoristaExecutarInserir.Size = new System.Drawing.Size(92, 94);
+            this.buttonHoristaExecutarInserir.TabIndex = 7;
+            this.buttonHoristaExecutarInserir.Text = "EXECUTAR";
+            this.buttonHoristaExecutarInserir.UseVisualStyleBackColor = true;
+            this.buttonHoristaExecutarInserir.Click += new System.EventHandler(this.buttonExecutarInserir_Click);
             // 
-            // textBoxContratadoSaidaInserir
+            // textBoxHoristaSaidaInserir
             // 
-            this.textBoxContratadoSaidaInserir.Location = new System.Drawing.Point(3, 334);
-            this.textBoxContratadoSaidaInserir.Multiline = true;
-            this.textBoxContratadoSaidaInserir.Name = "textBoxContratadoSaidaInserir";
-            this.textBoxContratadoSaidaInserir.ReadOnly = true;
-            this.textBoxContratadoSaidaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoSaidaInserir.Size = new System.Drawing.Size(890, 247);
-            this.textBoxContratadoSaidaInserir.TabIndex = 6;
+            this.textBoxHoristaSaidaInserir.Location = new System.Drawing.Point(3, 334);
+            this.textBoxHoristaSaidaInserir.Multiline = true;
+            this.textBoxHoristaSaidaInserir.Name = "textBoxHoristaSaidaInserir";
+            this.textBoxHoristaSaidaInserir.ReadOnly = true;
+            this.textBoxHoristaSaidaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaSaidaInserir.Size = new System.Drawing.Size(890, 247);
+            this.textBoxHoristaSaidaInserir.TabIndex = 6;
             // 
-            // textBoxContratadoExemploInserir
+            // textBoxHoristaExemploInserir
             // 
-            this.textBoxContratadoExemploInserir.Location = new System.Drawing.Point(515, 3);
-            this.textBoxContratadoExemploInserir.Multiline = true;
-            this.textBoxContratadoExemploInserir.Name = "textBoxContratadoExemploInserir";
-            this.textBoxContratadoExemploInserir.ReadOnly = true;
-            this.textBoxContratadoExemploInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoExemploInserir.Size = new System.Drawing.Size(378, 325);
-            this.textBoxContratadoExemploInserir.TabIndex = 5;
+            this.textBoxHoristaExemploInserir.Location = new System.Drawing.Point(515, 3);
+            this.textBoxHoristaExemploInserir.Multiline = true;
+            this.textBoxHoristaExemploInserir.Name = "textBoxHoristaExemploInserir";
+            this.textBoxHoristaExemploInserir.ReadOnly = true;
+            this.textBoxHoristaExemploInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaExemploInserir.Size = new System.Drawing.Size(378, 325);
+            this.textBoxHoristaExemploInserir.TabIndex = 5;
             // 
-            // textBoxContratadoEntradaInserir
+            // textBoxHoristaEntradaInserir
             // 
-            this.textBoxContratadoEntradaInserir.Location = new System.Drawing.Point(3, 3);
-            this.textBoxContratadoEntradaInserir.Multiline = true;
-            this.textBoxContratadoEntradaInserir.Name = "textBoxContratadoEntradaInserir";
-            this.textBoxContratadoEntradaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoEntradaInserir.Size = new System.Drawing.Size(378, 325);
-            this.textBoxContratadoEntradaInserir.TabIndex = 4;
-            this.textBoxContratadoEntradaInserir.TextChanged += new System.EventHandler(this.textBoxContratadoEntradaInserir_TextChanged);
+            this.textBoxHoristaEntradaInserir.Location = new System.Drawing.Point(3, 3);
+            this.textBoxHoristaEntradaInserir.Multiline = true;
+            this.textBoxHoristaEntradaInserir.Name = "textBoxHoristaEntradaInserir";
+            this.textBoxHoristaEntradaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaEntradaInserir.Size = new System.Drawing.Size(378, 325);
+            this.textBoxHoristaEntradaInserir.TabIndex = 4;
+            this.textBoxHoristaEntradaInserir.TextChanged += new System.EventHandler(this.textBoxHoristaEntradaInserir_TextChanged);
             // 
-            // tabContratadoAtualizar
+            // tabHoristaAtualizar
             // 
-            this.tabContratadoAtualizar.Controls.Add(this.buttonContratadoAtualizar);
-            this.tabContratadoAtualizar.Controls.Add(this.textBoxContratadoSaidaAtualizar);
-            this.tabContratadoAtualizar.Controls.Add(this.textBoxContratadoExemploAtualizar);
-            this.tabContratadoAtualizar.Controls.Add(this.textBoxContratadoEntradaAtualizar);
-            this.tabContratadoAtualizar.Location = new System.Drawing.Point(4, 22);
-            this.tabContratadoAtualizar.Name = "tabContratadoAtualizar";
-            this.tabContratadoAtualizar.Size = new System.Drawing.Size(896, 597);
-            this.tabContratadoAtualizar.TabIndex = 3;
-            this.tabContratadoAtualizar.Text = "Atualizar";
-            this.tabContratadoAtualizar.UseVisualStyleBackColor = true;
+            this.tabHoristaAtualizar.Controls.Add(this.buttonHoristaAtualizar);
+            this.tabHoristaAtualizar.Controls.Add(this.textBoxHoristaSaidaAtualizar);
+            this.tabHoristaAtualizar.Controls.Add(this.textBoxHoristaExemploAtualizar);
+            this.tabHoristaAtualizar.Controls.Add(this.textBoxHoristaEntradaAtualizar);
+            this.tabHoristaAtualizar.Location = new System.Drawing.Point(4, 22);
+            this.tabHoristaAtualizar.Name = "tabHoristaAtualizar";
+            this.tabHoristaAtualizar.Size = new System.Drawing.Size(896, 597);
+            this.tabHoristaAtualizar.TabIndex = 3;
+            this.tabHoristaAtualizar.Text = "Atualizar";
+            this.tabHoristaAtualizar.UseVisualStyleBackColor = true;
             // 
-            // buttonContratadoAtualizar
+            // buttonHoristaAtualizar
             // 
-            this.buttonContratadoAtualizar.Location = new System.Drawing.Point(404, 94);
-            this.buttonContratadoAtualizar.Name = "buttonContratadoAtualizar";
-            this.buttonContratadoAtualizar.Size = new System.Drawing.Size(92, 94);
-            this.buttonContratadoAtualizar.TabIndex = 11;
-            this.buttonContratadoAtualizar.Text = "EXECUTAR";
-            this.buttonContratadoAtualizar.UseVisualStyleBackColor = true;
-            this.buttonContratadoAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
+            this.buttonHoristaAtualizar.Location = new System.Drawing.Point(404, 94);
+            this.buttonHoristaAtualizar.Name = "buttonHoristaAtualizar";
+            this.buttonHoristaAtualizar.Size = new System.Drawing.Size(92, 94);
+            this.buttonHoristaAtualizar.TabIndex = 11;
+            this.buttonHoristaAtualizar.Text = "EXECUTAR";
+            this.buttonHoristaAtualizar.UseVisualStyleBackColor = true;
+            this.buttonHoristaAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
             // 
-            // textBoxContratadoSaidaAtualizar
+            // textBoxHoristaSaidaAtualizar
             // 
-            this.textBoxContratadoSaidaAtualizar.Location = new System.Drawing.Point(3, 340);
-            this.textBoxContratadoSaidaAtualizar.Multiline = true;
-            this.textBoxContratadoSaidaAtualizar.Name = "textBoxContratadoSaidaAtualizar";
-            this.textBoxContratadoSaidaAtualizar.ReadOnly = true;
-            this.textBoxContratadoSaidaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoSaidaAtualizar.Size = new System.Drawing.Size(890, 247);
-            this.textBoxContratadoSaidaAtualizar.TabIndex = 10;
+            this.textBoxHoristaSaidaAtualizar.Location = new System.Drawing.Point(3, 340);
+            this.textBoxHoristaSaidaAtualizar.Multiline = true;
+            this.textBoxHoristaSaidaAtualizar.Name = "textBoxHoristaSaidaAtualizar";
+            this.textBoxHoristaSaidaAtualizar.ReadOnly = true;
+            this.textBoxHoristaSaidaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaSaidaAtualizar.Size = new System.Drawing.Size(890, 247);
+            this.textBoxHoristaSaidaAtualizar.TabIndex = 10;
             // 
-            // textBoxContratadoExemploAtualizar
+            // textBoxHoristaExemploAtualizar
             // 
-            this.textBoxContratadoExemploAtualizar.Location = new System.Drawing.Point(515, 9);
-            this.textBoxContratadoExemploAtualizar.Multiline = true;
-            this.textBoxContratadoExemploAtualizar.Name = "textBoxContratadoExemploAtualizar";
-            this.textBoxContratadoExemploAtualizar.ReadOnly = true;
-            this.textBoxContratadoExemploAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoExemploAtualizar.Size = new System.Drawing.Size(378, 325);
-            this.textBoxContratadoExemploAtualizar.TabIndex = 9;
+            this.textBoxHoristaExemploAtualizar.Location = new System.Drawing.Point(515, 9);
+            this.textBoxHoristaExemploAtualizar.Multiline = true;
+            this.textBoxHoristaExemploAtualizar.Name = "textBoxHoristaExemploAtualizar";
+            this.textBoxHoristaExemploAtualizar.ReadOnly = true;
+            this.textBoxHoristaExemploAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaExemploAtualizar.Size = new System.Drawing.Size(378, 325);
+            this.textBoxHoristaExemploAtualizar.TabIndex = 9;
             // 
-            // textBoxContratadoEntradaAtualizar
+            // textBoxHoristaEntradaAtualizar
             // 
-            this.textBoxContratadoEntradaAtualizar.Location = new System.Drawing.Point(3, 9);
-            this.textBoxContratadoEntradaAtualizar.Multiline = true;
-            this.textBoxContratadoEntradaAtualizar.Name = "textBoxContratadoEntradaAtualizar";
-            this.textBoxContratadoEntradaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxContratadoEntradaAtualizar.Size = new System.Drawing.Size(378, 325);
-            this.textBoxContratadoEntradaAtualizar.TabIndex = 8;
-            this.textBoxContratadoEntradaAtualizar.TextChanged += new System.EventHandler(this.textBoxContratadoEntradaAtualizar_TextChanged);
+            this.textBoxHoristaEntradaAtualizar.Location = new System.Drawing.Point(3, 9);
+            this.textBoxHoristaEntradaAtualizar.Multiline = true;
+            this.textBoxHoristaEntradaAtualizar.Name = "textBoxHoristaEntradaAtualizar";
+            this.textBoxHoristaEntradaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxHoristaEntradaAtualizar.Size = new System.Drawing.Size(378, 325);
+            this.textBoxHoristaEntradaAtualizar.TabIndex = 8;
+            this.textBoxHoristaEntradaAtualizar.TextChanged += new System.EventHandler(this.textBoxHoristaEntradaAtualizar_TextChanged);
             // 
             // tabPageExcluir
             // 
@@ -313,24 +313,24 @@
             this.textBoxSaidaExcluir.Size = new System.Drawing.Size(884, 548);
             this.textBoxSaidaExcluir.TabIndex = 14;
             // 
-            // FormContratado
+            // FormHorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 647);
-            this.Controls.Add(this.tabControlContratado);
-            this.Name = "FormContratado";
-            this.Text = "Contratado";
-            this.Load += new System.EventHandler(this.FormContratado_Load);
-            this.tabControlContratado.ResumeLayout(false);
+            this.Controls.Add(this.tabControlHorista);
+            this.Name = "FormHorista";
+            this.Text = "Horista";
+            this.Load += new System.EventHandler(this.FormHorista_Load);
+            this.tabControlHorista.ResumeLayout(false);
             this.tabPageBuscarTodos.ResumeLayout(false);
             this.tabPageBuscarTodos.PerformLayout();
             this.tabPageBuscarById.ResumeLayout(false);
             this.tabPageBuscarById.PerformLayout();
-            this.tabContratadoInserir.ResumeLayout(false);
-            this.tabContratadoInserir.PerformLayout();
-            this.tabContratadoAtualizar.ResumeLayout(false);
-            this.tabContratadoAtualizar.PerformLayout();
+            this.tabHoristaInserir.ResumeLayout(false);
+            this.tabHoristaInserir.PerformLayout();
+            this.tabHoristaAtualizar.ResumeLayout(false);
+            this.tabHoristaAtualizar.PerformLayout();
             this.tabPageExcluir.ResumeLayout(false);
             this.tabPageExcluir.PerformLayout();
             this.ResumeLayout(false);
@@ -339,26 +339,26 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControlContratado;
+        private System.Windows.Forms.TabControl tabControlHorista;
         private System.Windows.Forms.TabPage tabPageBuscarTodos;
         private System.Windows.Forms.TextBox textBoxBuscarTodos;
         private System.Windows.Forms.Button buttonBuscarTodos;
         private System.Windows.Forms.TabPage tabPageBuscarById;
-        private System.Windows.Forms.TabPage tabContratadoInserir;
-        private System.Windows.Forms.TabPage tabContratadoAtualizar;
+        private System.Windows.Forms.TabPage tabHoristaInserir;
+        private System.Windows.Forms.TabPage tabHoristaAtualizar;
         private System.Windows.Forms.TabPage tabPageExcluir;
         private System.Windows.Forms.Button buttonExecutarId;
         private System.Windows.Forms.TextBox textBoxSaidaBuscarId;
         private System.Windows.Forms.TextBox textBoxExemploId;
         private System.Windows.Forms.TextBox textBoxEntradaBuscarId;
-        private System.Windows.Forms.Button buttonContratadoExecutarInserir;
-        private System.Windows.Forms.TextBox textBoxContratadoSaidaInserir;
-        private System.Windows.Forms.TextBox textBoxContratadoExemploInserir;
-        private System.Windows.Forms.TextBox textBoxContratadoEntradaInserir;
-        private System.Windows.Forms.Button buttonContratadoAtualizar;
-        private System.Windows.Forms.TextBox textBoxContratadoSaidaAtualizar;
-        private System.Windows.Forms.TextBox textBoxContratadoExemploAtualizar;
-        private System.Windows.Forms.TextBox textBoxContratadoEntradaAtualizar;
+        private System.Windows.Forms.Button buttonHoristaExecutarInserir;
+        private System.Windows.Forms.TextBox textBoxHoristaSaidaInserir;
+        private System.Windows.Forms.TextBox textBoxHoristaExemploInserir;
+        private System.Windows.Forms.TextBox textBoxHoristaEntradaInserir;
+        private System.Windows.Forms.Button buttonHoristaAtualizar;
+        private System.Windows.Forms.TextBox textBoxHoristaSaidaAtualizar;
+        private System.Windows.Forms.TextBox textBoxHoristaExemploAtualizar;
+        private System.Windows.Forms.TextBox textBoxHoristaEntradaAtualizar;
         private System.Windows.Forms.Button buttonExcluir;
         private System.Windows.Forms.TextBox textBoxSaidaExcluir;
         private System.Windows.Forms.TextBox textBoxExemploExcluir;

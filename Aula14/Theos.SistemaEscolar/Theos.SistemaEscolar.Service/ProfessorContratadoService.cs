@@ -26,6 +26,11 @@ namespace Theos.SistemaEscolar.Service
         {
             ProfessorContratado professorContratado = _repositorio.BuscarPorId(id);
 
+            if(professorContratado == null)
+            {
+                return null;
+            }
+
             return new ProfessorContratadoDto
             {
                 Id = professorContratado.Id,
@@ -59,7 +64,7 @@ namespace Theos.SistemaEscolar.Service
         public ProfessorContratadoDto Atualizar(ProfessorContratadoAtualizarViewModel professorContratadoAtualizarViewModel)
         {
             var professorContratado = _repositorio.BuscarPorId(professorContratadoAtualizarViewModel.Id);
-            professorContratado.Alterar(professorContratadoAtualizarViewModel.Nome, professorContratadoAtualizarViewModel.Nome);
+            professorContratado.Alterar(professorContratadoAtualizarViewModel.Nome, professorContratadoAtualizarViewModel.Cpf);
             professorContratado.SetarAlteracao();
 
             _repositorio.Atualizar(professorContratado);

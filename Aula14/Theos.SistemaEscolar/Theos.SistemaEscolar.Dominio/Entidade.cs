@@ -14,7 +14,7 @@ namespace Theos.SistemaEscolar.Dominio
 
         public Entidade()
         {
-            DataAlteracao = DateTime.Now;
+            DataInsercao = DateTime.Now;
         }
 
         public void GerarId()

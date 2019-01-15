@@ -27,7 +27,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
                 case EEscolaridade.SegundoGrau:
                     return 1000;
                 case EEscolaridade.EnsinoSuperior:
-                    return 1800;
+                    return 1800;  
                 case EEscolaridade.Mestrado:
                     return 3000;
                 case EEscolaridade.Doutorado:

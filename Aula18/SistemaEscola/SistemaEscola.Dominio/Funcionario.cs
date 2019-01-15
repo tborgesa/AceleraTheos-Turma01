@@ -19,6 +19,12 @@ namespace SistemaEscola.Dominio.Funcionario
             Endereco = endereco;
         }
 
+        public void AlterarEndereco(string endereco)
+        {
+            Endereco = endereco;
+            Console.WriteLine("Alterar Endereco Cliente");
+        }
+
         public string Nome { get; }
         public string Cpf { get; }
         public DateTime DataNascimento { get; }
@@ -27,10 +33,5 @@ namespace SistemaEscola.Dominio.Funcionario
         public abstract  decimal SalarioFuncionario();
 
         public abstract void Gravar();
-
-        public void GerarId()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

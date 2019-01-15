@@ -16,6 +16,12 @@ namespace SistemaEscola.Dominio.Funcionario
             InstanciarEscolaridade(escolaridade);
         }
 
+        public Contratado(DateTime dataNascimento, string cpf, string nome, string endereco, EscolaridadeALias escolaridade) :
+            base(nome, cpf, dataNascimento)
+        {
+            Escolaridade = escolaridade;
+        }
+
         private void InstanciarEscolaridade(EEscolaridade eEscolaridade)
         {
             if (!EEscolaridade.IsDefined(typeof(EEscolaridade), eEscolaridade))

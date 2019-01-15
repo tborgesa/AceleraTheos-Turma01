@@ -4,3 +4,9 @@ C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\Siste
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb

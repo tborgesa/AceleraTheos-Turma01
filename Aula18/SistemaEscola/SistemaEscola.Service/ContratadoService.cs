@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using SistemaEscola.Dominio.Contratado;
 using SistemaEscola.Dominio.Funcionario;
+using SistemaEscola.Dominio;
 using SistemaEscola.Repositorio;
 
 
@@ -9,7 +10,7 @@ namespace SistemaEscola.Service
 {
     public class ContratadoService
     {
-        private SistemaEscolaRepositorio _repositorio = new SistemaEscolaRepositorio();
+        private ContratadoRepositorio _repositorio = new ContratadoRepositorio();
 
         public  ContratadoDto Inserir(ContratadoInserirViewModel contratadoViewModel)
         {
@@ -37,15 +38,15 @@ namespace SistemaEscola.Service
             };
         }
 
-        public List<ContratadoSearch> BuscarTodos()
+        public List<FuncionarioSearch> BuscarTodos()
         {
             List<Contratado> contratadoes = _repositorio.BuscarTodos();
 
-            List<ContratadoSearch> retorno = new List<ContratadoSearch>();
+            List<FuncionarioSearch> retorno = new List<FuncionarioSearch>();
 
             foreach (var contratado in contratadoes)
             {
-                retorno.Add(new ContratadoSearch
+                retorno.Add(new FuncionarioSearch
                 {
                     Id = contratado.Id,
                     Cpf = contratado.Cpf,

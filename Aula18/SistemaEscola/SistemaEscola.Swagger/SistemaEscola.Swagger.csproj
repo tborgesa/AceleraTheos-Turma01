@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormContratado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContratado.Designer.cs">
+      <DependentUpon>FormContratado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSistemaEscola.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormContratado.resx">
+      <DependentUpon>FormContratado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSistemaEscola.resx">
+      <DependentUpon>FormSistemaEscola.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,6 +91,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaEscola.Dominio\SistemaEscola.Dominio.csproj">
+      <Project>{868fc139-9f05-460a-9d29-eb2ebcc7a019}</Project>
+      <Name>SistemaEscola.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaEscola.Service\SistemaEscola.Service.csproj">
+      <Project>{c7ae0e72-50a7-4c2f-887b-9a8e4014993d}</Project>
+      <Name>SistemaEscola.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

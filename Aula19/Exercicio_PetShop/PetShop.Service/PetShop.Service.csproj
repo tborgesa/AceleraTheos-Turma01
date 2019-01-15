@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}</ProjectGuid>
+    <ProjectGuid>{79BE8987-3891-4FBA-817A-36327465D486}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PetShop.Dominio</RootNamespace>
-    <AssemblyName>PetShop.Dominio</AssemblyName>
+    <RootNamespace>PetShop.Service</RootNamespace>
+    <AssemblyName>PetShop.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,25 +32,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animais\Animal.cs" />
-    <Compile Include="Animais\Cachorro.cs" />
-    <Compile Include="Animais\Enumerador\EnumEspecie.cs" />
-    <Compile Include="Animais\Gato.cs" />
-    <Compile Include="Animais\Peixe.cs" />
-    <Compile Include="Entidade.cs" />
-    <Compile Include="Pessoas\Cliente.cs" />
-    <Compile Include="Pessoas\ClienteDto.cs" />
-    <Compile Include="Pessoas\ClienteSearch.cs" />
-    <Compile Include="Pessoas\ClinteInserirViewModel.cs" />
+    <Compile Include="ClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PetShop.Comum\PetShop.Comum.csproj">
-      <Project>{37b51f4c-be98-4936-9f64-22156c572a4f}</Project>
-      <Name>PetShop.Comum</Name>
+    <ProjectReference Include="..\PetShop.Dominio\PetShop.Dominio.csproj">
+      <Project>{83b4bbc3-a4e0-45d4-b6bb-3a23a199995e}</Project>
+      <Name>PetShop.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PetShot.Repositorio\PetShop.Repositorio.csproj">
+      <Project>{68582f43-e347-4b3f-af68-725fb42831f3}</Project>
+      <Name>PetShop.Repositorio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

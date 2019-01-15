@@ -41,7 +41,7 @@
             this.buttonCliente.UseVisualStyleBackColor = true;
             this.buttonCliente.Click += new System.EventHandler(this.buttonCliente_Click);
             // 
-            // Swagger___PetShop
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,6 +49,7 @@
             this.Controls.Add(this.buttonCliente);
             this.Name = "FormPrincipal";
             this.Text = "Swagger - PetShop";
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.ResumeLayout(false);
 
         }

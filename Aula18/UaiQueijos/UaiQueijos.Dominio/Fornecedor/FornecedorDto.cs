@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UaiQueijos.Dominio.Fornecedor
 {
@@ -11,5 +12,22 @@ namespace UaiQueijos.Dominio.Fornecedor
         public DateTime DataNascimento { get; set; }
         public string Endereco { get; set; }
         public string NomeFantasia { get; set; }
+    }
+
+    public class FornecedorDtoReturn
+    {
+        public FornecedorDtoReturn(FornecedorDto fornecedor)
+        {
+            Fornecedor = fornecedor;
+            Erros = new List<string>();
+        }
+
+        public FornecedorDtoReturn(List<string> erros)
+        {
+            Erros = erros;
+        }
+
+        public FornecedorDto Fornecedor { get; }
+        public List<string> Erros { get; }
     }
 }

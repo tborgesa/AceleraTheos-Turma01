@@ -52,6 +52,8 @@
             this.textBoxSaidaExcluir = new System.Windows.Forms.TextBox();
             this.textBoxExemploExcluir = new System.Windows.Forms.TextBox();
             this.textBoxEntradaExcluir = new System.Windows.Forms.TextBox();
+            this.textBoxStatusCodeInserir = new System.Windows.Forms.TextBox();
+            this.textBoxStatusCodeAtualizar = new System.Windows.Forms.TextBox();
             this.tabControlFornecedor.SuspendLayout();
             this.tabPageBuscarTodos.SuspendLayout();
             this.tabPageBuscarById.SuspendLayout();
@@ -158,6 +160,7 @@
             // 
             // tabPageInserir
             // 
+            this.tabPageInserir.Controls.Add(this.textBoxStatusCodeInserir);
             this.tabPageInserir.Controls.Add(this.buttonExecutarInserir);
             this.tabPageInserir.Controls.Add(this.textBoxSaidaInserir);
             this.tabPageInserir.Controls.Add(this.textBoxExemploInserir);
@@ -182,12 +185,12 @@
             // 
             // textBoxSaidaInserir
             // 
-            this.textBoxSaidaInserir.Location = new System.Drawing.Point(6, 337);
+            this.textBoxSaidaInserir.Location = new System.Drawing.Point(6, 401);
             this.textBoxSaidaInserir.Multiline = true;
             this.textBoxSaidaInserir.Name = "textBoxSaidaInserir";
             this.textBoxSaidaInserir.ReadOnly = true;
             this.textBoxSaidaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSaidaInserir.Size = new System.Drawing.Size(963, 440);
+            this.textBoxSaidaInserir.Size = new System.Drawing.Size(963, 376);
             this.textBoxSaidaInserir.TabIndex = 2;
             // 
             // textBoxExemploInserir
@@ -211,6 +214,7 @@
             // 
             // tabPageAtualizar
             // 
+            this.tabPageAtualizar.Controls.Add(this.textBoxStatusCodeAtualizar);
             this.tabPageAtualizar.Controls.Add(this.buttonAtualizar);
             this.tabPageAtualizar.Controls.Add(this.textBoxSaidaAtualizar);
             this.tabPageAtualizar.Controls.Add(this.textBoxExemploAtualizar);
@@ -235,12 +239,12 @@
             // 
             // textBoxSaidaAtualizar
             // 
-            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(6, 337);
+            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(6, 386);
             this.textBoxSaidaAtualizar.Multiline = true;
             this.textBoxSaidaAtualizar.Name = "textBoxSaidaAtualizar";
             this.textBoxSaidaAtualizar.ReadOnly = true;
             this.textBoxSaidaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(963, 440);
+            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(963, 391);
             this.textBoxSaidaAtualizar.TabIndex = 6;
             // 
             // textBoxExemploAtualizar
@@ -313,6 +317,26 @@
             this.textBoxEntradaExcluir.Size = new System.Drawing.Size(378, 38);
             this.textBoxEntradaExcluir.TabIndex = 8;
             // 
+            // textBoxStatusCodeInserir
+            // 
+            this.textBoxStatusCodeInserir.Location = new System.Drawing.Point(6, 346);
+            this.textBoxStatusCodeInserir.Multiline = true;
+            this.textBoxStatusCodeInserir.Name = "textBoxStatusCodeInserir";
+            this.textBoxStatusCodeInserir.ReadOnly = true;
+            this.textBoxStatusCodeInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxStatusCodeInserir.Size = new System.Drawing.Size(963, 43);
+            this.textBoxStatusCodeInserir.TabIndex = 4;
+            // 
+            // textBoxStatusCodeAtualizar
+            // 
+            this.textBoxStatusCodeAtualizar.Location = new System.Drawing.Point(6, 337);
+            this.textBoxStatusCodeAtualizar.Multiline = true;
+            this.textBoxStatusCodeAtualizar.Name = "textBoxStatusCodeAtualizar";
+            this.textBoxStatusCodeAtualizar.ReadOnly = true;
+            this.textBoxStatusCodeAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxStatusCodeAtualizar.Size = new System.Drawing.Size(963, 43);
+            this.textBoxStatusCodeAtualizar.TabIndex = 8;
+            // 
             // FormFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,5 +387,7 @@
         private System.Windows.Forms.TextBox textBoxSaidaExcluir;
         private System.Windows.Forms.TextBox textBoxExemploExcluir;
         private System.Windows.Forms.TextBox textBoxEntradaExcluir;
+        private System.Windows.Forms.TextBox textBoxStatusCodeInserir;
+        private System.Windows.Forms.TextBox textBoxStatusCodeAtualizar;
     }
 }

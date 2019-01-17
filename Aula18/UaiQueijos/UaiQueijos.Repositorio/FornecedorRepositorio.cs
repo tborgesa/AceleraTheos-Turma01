@@ -17,7 +17,7 @@ namespace UaiQueijos.Repositorio
 
         public Fornecedor BuscarPorId(Guid id)
         {
-            return _fornecedores.FirstOrDefault(f => f.Id == id);
+            return fornecedor = _fornecedores.FirstOrDefault(f => f.Id == id);
         }
 
         public List<Fornecedor> BuscarTodos()

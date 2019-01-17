@@ -46,7 +46,7 @@
     <Compile Include="Cliente\ClienteGold.cs" />
     <Compile Include="Entidade.cs" />
     <Compile Include="Fornecedor\FornecedorAtualizarViewModel.cs" />
-    <Compile Include="Fornecedor\FornecedorSearch.cs" />
+    <Compile Include="Fornecedor\FornecedorSearchDto.cs" />
     <Compile Include="Fornecedor\FornecedorDto.cs" />
     <Compile Include="Fornecedor\FornecedorInserirViewModel.cs" />
     <Compile Include="Fornecedor\Fornecedor.cs" />
@@ -55,6 +55,11 @@
     <Compile Include="Produto\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UaiQueijos.Comum\UaiQueijos.Comum.csproj">
+      <Project>{d78c2135-5084-4f89-afbf-c0816cc9cad9}</Project>
+      <Name>UaiQueijos.Comum</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

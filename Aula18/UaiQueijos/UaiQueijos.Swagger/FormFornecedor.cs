@@ -47,16 +47,26 @@ namespace UaiQueijos.Swagger
 
                 if (fornecedorViewModel == null)
                 {
+                    textBoxStatusCodeInserir.Text = "400 Bad Request";
                     textBoxSaidaInserir.Text = $"Json inválido.";
                     return;
                 }
 
-                var fornecedorDto = _service.Inserir(fornecedorViewModel);
+                var fornecedorDtoReturn = _service.Inserir(fornecedorViewModel);
 
-                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(fornecedorDto);
+                if (fornecedorDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeInserir.Text = "400 Bad Request";
+                    textBoxSaidaInserir.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeInserir.Text = "200 OK";
+                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Fornecedor);
             }
             catch (Exception ex)
             {
+                textBoxStatusCodeInserir.Text = "500 Internal Server Error.";
                 textBoxSaidaInserir.Text = $"{Environment.NewLine} {ex.ToString()}";
             }
         }
@@ -72,7 +82,7 @@ namespace UaiQueijos.Swagger
             }
             catch (Exception ex)
             {
-                textBoxSaidaInserir.Text = $"{ex.ToString()}";
+                textBoxBuscarTodos.Text = $"{ex.ToString()}";
             }
         }
         #endregion
@@ -130,22 +140,30 @@ namespace UaiQueijos.Swagger
 
                 if (fornecedorViewModel == null)
                 {
+                    textBoxStatusCodeAtualizar.Text = "400 Bad Request.";
                     textBoxSaidaAtualizar.Text = $"Json inválido.";
                     return;
                 }
 
-                var fornecedorDto = _service.Atualizar(fornecedorViewModel);
+                var fornecedorDtoReturn = _service.Atualizar(fornecedorViewModel);
 
-                textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(fornecedorDto);
+                if (fornecedorDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeAtualizar.Text = "400 Bad Request";
+                    textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeAtualizar.Text = "200 OK.";
+                textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Fornecedor);
             }
             catch (Exception ex)
             {
+                textBoxStatusCodeAtualizar.Text = "500 Internal Server Error.";
                 textBoxSaidaAtualizar.Text = $"{ex.ToString()}";
             }
         }
         #endregion
-
-
 
         #region Excluir
         private void CarregarExemploExcluir()

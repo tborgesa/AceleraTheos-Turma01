@@ -9,19 +9,24 @@ namespace UaiQueijos.Service
     {
         private FornecedorRepositorio _repositorio = new FornecedorRepositorio();
 
-        public FornecedorDto Inserir (FornecedorInserirViewModel fornecedorViewModel)
+        public FornecedorDtoReturn Inserir(FornecedorInserirViewModel fornecedorViewModel)
         {
             var fornecedor = new Fornecedor(fornecedorViewModel.DataNascimento, fornecedorViewModel.Cpf, fornecedorViewModel.Nome
                     , fornecedorViewModel.Endereco, fornecedorViewModel.NomeFantasia);
 
-            _repositorio.Inserir(fornecedor);
+            if (!fornecedor.Valido())
+                return new FornecedorDtoReturn(fornecedor.GetErros());
 
-            return BuscarPorId(fornecedor.Id);
+            _repositorio.Inserir(fornecedor);
+            return new FornecedorDtoReturn(BuscarPorId(fornecedor.Id));
         }
 
         public FornecedorDto BuscarPorId(Guid id)
         {
             Fornecedor fornecedor = _repositorio.BuscarPorId(id);
+
+            if (fornecedor == null)
+                return null;
 
             return new FornecedorDto
             {
@@ -35,15 +40,15 @@ namespace UaiQueijos.Service
             };
         }
 
-        public List<FornecedorSearch> BuscarTodos()
+        public List<FornecedorSearchDto> BuscarTodos()
         {
             List<Fornecedor> fornecedores = _repositorio.BuscarTodos();
 
-            List<FornecedorSearch> retorno = new List<FornecedorSearch>();
+            List<FornecedorSearchDto> retorno = new List<FornecedorSearchDto>();
 
             foreach (var fornecedor in fornecedores)
             {
-                retorno.Add(new FornecedorSearch
+                retorno.Add(new FornecedorSearchDto
                 {
                     Id = fornecedor.Id,
                     Cpf = fornecedor.Cpf,
@@ -54,15 +59,26 @@ namespace UaiQueijos.Service
             return retorno;
         }
 
-        public FornecedorDto Atualizar(FornecedorAtualizarViewModel fornecedorAtualizarViewModel)
+        public FornecedorDtoReturn Atualizar(FornecedorAtualizarViewModel fornecedorAtualizarViewModel)
         {
             var fornecedor = _repositorio.BuscarPorId(fornecedorAtualizarViewModel.Id);
+                       
+            if (fornecedor == null)
+            {
+                var erros = new List<string>();
+                erros.Add("Fornecedor não existe.");
+                return new FornecedorDtoReturn(erros);
+            }
+
             fornecedor.AlterarEndereco(fornecedorAtualizarViewModel.Endereco);
             fornecedor.SetarAlteracao();
 
+            if (!fornecedor.Valido())
+                return new FornecedorDtoReturn(fornecedor.GetErros());
+
             _repositorio.Atualizar(fornecedor);
 
-            return BuscarPorId(fornecedorAtualizarViewModel.Id);
+            return new FornecedorDtoReturn(BuscarPorId(fornecedor.Id));
         }
 
         public void Excluir(Guid id)

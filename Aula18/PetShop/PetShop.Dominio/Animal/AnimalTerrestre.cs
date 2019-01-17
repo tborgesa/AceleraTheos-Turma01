@@ -8,6 +8,11 @@
             Peso = peso;
         }
 
-        public decimal Peso { get; }
+        public decimal Peso { get; private set; }
+
+        public void AlterarPeso(decimal peso)
+        {
+            Peso = peso;
+        }
     }
 }

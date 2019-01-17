@@ -22,3 +22,5 @@ C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetSho
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.ConsoleApp\bin\Debug\PetShop.Comum.pdb
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.ConsoleApp\bin\Debug\PetShop.Dominio.pdb
 C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.ConsoleApp\obj\Debug\PetShop.ConsoleApp.csproj.CopyComplete
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.ConsoleApp\obj\Debug\PetShop.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.ConsoleApp\obj\Debug\PetShop.ConsoleApp.csproj.CoreCompileInputs.cache

@@ -58,9 +58,12 @@ namespace SistemaEscola.Dominio.Funcionario
             }
         }
 
-        public override void Gravar()
-        {
+        public override void Gravar() { }
 
+        public void AlterarEscolaridade(EEscolaridade eEscolaridade)
+        {
+            InstanciarEscolaridade(eEscolaridade);
+            Console.WriteLine("Alterar Escolaridade do Professor");
         }
 
         public override decimal SalarioFuncionario()

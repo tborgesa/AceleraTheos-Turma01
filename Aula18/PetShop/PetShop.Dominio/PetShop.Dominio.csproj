@@ -42,10 +42,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal\Animal.cs" />
+    <Compile Include="Animal\AnimalSearch.cs" />
     <Compile Include="Animal\AnimalTerrestre.cs" />
-    <Compile Include="Animal\Cachorro.cs" />
-    <Compile Include="Animal\Gato.cs" />
-    <Compile Include="Animal\Peixe.cs" />
+    <Compile Include="Animal\Cachorro\Cachorro.cs" />
+    <Compile Include="Animal\Cachorro\CachorroAtualizarViewModel.cs" />
+    <Compile Include="Animal\Cachorro\CachorroDto.cs" />
+    <Compile Include="Animal\Cachorro\CachorroInserirViewModel.cs" />
+    <Compile Include="Animal\Gato\Gato.cs" />
+    <Compile Include="Animal\Gato\GatoAtualizarViewModel.cs" />
+    <Compile Include="Animal\Gato\GatoDto.cs" />
+    <Compile Include="Animal\Gato\GatoInserirViewModel.cs" />
+    <Compile Include="Animal\Peixe\Peixe.cs" />
+    <Compile Include="Animal\Peixe\PeixeDto.cs" />
+    <Compile Include="Animal\Peixe\PeixeInserirViewModel.cs" />
+    <Compile Include="Animal\Peixe\PeixeAtualizarViewModel.cs" />
+    <Compile Include="Entidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

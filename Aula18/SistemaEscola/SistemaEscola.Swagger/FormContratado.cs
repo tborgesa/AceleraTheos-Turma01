@@ -131,8 +131,6 @@ namespace SistemaEscola.Swagger
         }
         #endregion
 
-
-
         #region Excluir
         private void CarregarExemploExcluir()
         {

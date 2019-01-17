@@ -25,6 +25,7 @@ namespace SistemaEscola.Dominio.Funcionario
             Console.WriteLine("Alterar Endereco Cliente");
         }
 
+
         public string Nome { get; }
         public string Cpf { get; }
         public DateTime DataNascimento { get; }

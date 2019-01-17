@@ -2,7 +2,7 @@
 
 namespace PetShop.Dominio.Animal
 {
-    public abstract class Animal
+    public abstract class Animal : Entidade
     {
         public string NomeAnimal;
         public string NomeDono;

@@ -65,6 +65,7 @@ namespace SistemaEscola.Service
         {
             var contratado = _repositorio.BuscarPorId(contratadoAtualizarViewModel.Id);
             contratado.AlterarEndereco(contratadoAtualizarViewModel.Endereco);
+            contratado.AlterarEscolaridade(contratadoAtualizarViewModel.Escolaridade);
             contratado.SetarAlteracao();
 
             _repositorio.Atualizar(contratado);

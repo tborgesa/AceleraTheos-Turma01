@@ -41,3 +41,4 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula18\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Swagger\obj\Debug\SistemaEscola.Swagger.exe
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Swagger\obj\Debug\SistemaEscola.Swagger.pdb
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Swagger\obj\Debug\SistemaEscola.Swagger.FormHorista.resources
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\SistemaEscola\SistemaEscola.Swagger\obj\Debug\SistemaEscola.Swagger.FormHorista.resources

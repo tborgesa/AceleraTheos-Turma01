@@ -13,7 +13,7 @@ namespace SistemaEscola.Service
 
         public  HoristaDto Inserir(HoristaInserirViewModel horistaViewModel)
         {
-            var horista = new Horista(horistaViewModel.DataNascimento, horistaViewModel.Cpf, horistaViewModel.Nome
+            var horista = new Horista(horistaViewModel.Nome, horistaViewModel.Cpf, horistaViewModel.DataNascimento
                     , horistaViewModel.Endereco, horistaViewModel.Horas);
 
             _repositorio.Inserir(horista);
@@ -60,6 +60,7 @@ namespace SistemaEscola.Service
         {
             var horista = _repositorio.BuscarPorId(horistaAtualizarViewModel.Id);
             horista.AlterarEndereco(horistaAtualizarViewModel.Endereco);
+            horista.AlterarHora(horistaAtualizarViewModel.Horas);
             horista.SetarAlteracao();
 
             _repositorio.Atualizar(horista);

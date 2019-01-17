@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SistemaEscola.Dominio
 {
@@ -7,6 +8,7 @@ namespace SistemaEscola.Dominio
         public Guid Id { get; private set; }
         public DateTime DataInsercao { get; }
         public DateTime DataAlteracao { get; private set; }
+        private List<string> _erros = new List<string>();
 
         public Entidade()
         {
@@ -21,6 +23,18 @@ namespace SistemaEscola.Dominio
         public void SetarAlteracao()
         {
             DataAlteracao = DateTime.Now;
+        }
+
+        public void AdicionarErro(string erro)
+        {
+            if(!_erros.Exists(e => e == erro)) {
+                _erros.Add (erro);
+            }
+        }
+
+        public bool Valido()
+        {
+            return _erros.Count == 0;
         }
     }
 }

@@ -12,23 +12,32 @@ namespace SistemaEscola.Service
     {
         private ContratadoRepositorio _repositorio = new ContratadoRepositorio();
 
-        public  ContratadoDto Inserir(ContratadoInserirViewModel contratadoViewModel)
+        public Tuple<ContratadoDto, List<string>> Inserir(ContratadoInserirViewModel contratadoViewModel)
         {
             var contratado = new Contratado(
-                contratadoViewModel.DataNascimento, 
-                contratadoViewModel.Nome, 
-                contratadoViewModel.Cpf, 
-                contratadoViewModel.Endereco, 
+                contratadoViewModel.DataNascimento,
+                contratadoViewModel.Nome,
+                contratadoViewModel.Cpf,
+                contratadoViewModel.Endereco,
                 contratadoViewModel.Escolaridade);
+
+            if (!contratado.Valido())
+            {
+                var erros = contratado.GetErros();
+                return new Tuple<ContratadoDto, List<string>>(null, erros);
+            }
 
             _repositorio.Inserir(contratado);
 
-            return BuscarPorId(contratado.Id);
+            return new Tuple<ContratadoDto, List<string>>(BuscarPorId(contratado.Id), null);
         }
 
         public ContratadoDto BuscarPorId(Guid id)
         {
             Contratado contratado = _repositorio.BuscarPorId(id);
+
+            if (contratado == null)
+                return null;
 
             return new ContratadoDto
             {
@@ -61,16 +70,24 @@ namespace SistemaEscola.Service
             return retorno;
         }
 
-        public ContratadoDto Atualizar(ContratadoAtualizarViewModel contratadoAtualizarViewModel)
+        public Tuple<ContratadoDto, List<string>> Atualizar(ContratadoAtualizarViewModel contratadoAtualizarViewModel)
         {
             var contratado = _repositorio.BuscarPorId(contratadoAtualizarViewModel.Id);
             contratado.AlterarEndereco(contratadoAtualizarViewModel.Endereco);
             contratado.AlterarEscolaridade(contratadoAtualizarViewModel.Escolaridade);
             contratado.SetarAlteracao();
 
+            if (!contratado.Valido())
+            {
+                var erros = contratado.GetErros();
+                //                return new Tuple<ContratadoDto, List<string>>(null, erros);
+            }
+
             _repositorio.Atualizar(contratado);
 
-            return BuscarPorId(contratadoAtualizarViewModel.Id);
+
+            //            return new BuscarPorId(contratadoAtualizarViewModel.Id);
+            return new Tuple<ContratadoDto, List<string>>(BuscarPorId(contratadoAtualizarViewModel.Id),null);
         }
 
         public void Excluir(Guid id)

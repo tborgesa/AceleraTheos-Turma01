@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SistemaEscola.Dominio.Funcionario
 {
@@ -9,6 +10,14 @@ namespace SistemaEscola.Dominio.Funcionario
             Nome = nome;
             Cpf = cpf;
             DataNascimento = dataNascimento;
+
+            ValidaNome();
+
+            if (string.IsNullOrWhiteSpace(nome))
+            {
+                AdicionarErro("");
+            }
+
         }
 
         public Funcionario(string nome, string cpf, DateTime dataNascimento, string endereco)
@@ -17,6 +26,8 @@ namespace SistemaEscola.Dominio.Funcionario
             Cpf = cpf;
             DataNascimento = dataNascimento;
             Endereco = endereco;
+
+            ValidaNome();
         }
 
         public void AlterarEndereco(string endereco)
@@ -25,11 +36,23 @@ namespace SistemaEscola.Dominio.Funcionario
             Console.WriteLine("Alterar Endereco Cliente");
         }
 
+        public List<string> GetErros()
+        {
+            return _erros;
+        }
+
+        public void ValidaNome()
+        {
+            if (string.IsNullOrWhiteSpace(Nome))
+                AdicionarErro("Preencha o Nome");
+        }
+
 
         public string Nome { get; }
         public string Cpf { get; }
         public DateTime DataNascimento { get; }
         public string Endereco { get; private set; }
+        private List<string> _erros = new List<string>();
 
         public abstract  decimal SalarioFuncionario();
 

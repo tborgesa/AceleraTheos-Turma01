@@ -42,6 +42,7 @@
     <Compile Include="Animais\Peixe.cs" />
     <Compile Include="Entidade.cs" />
     <Compile Include="Pessoas\Cliente.cs" />
+    <Compile Include="Pessoas\ClienteAtualizarViewModel.cs" />
     <Compile Include="Pessoas\ClienteDto.cs" />
     <Compile Include="Pessoas\ClienteSearch.cs" />
     <Compile Include="Pessoas\ClinteInserirViewModel.cs" />

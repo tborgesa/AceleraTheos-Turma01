@@ -50,5 +50,22 @@ namespace PetShop.Service
 
             return retorno;
         }
+
+        public ClienteDto Atualizar(ClienteAtualizarViewModel clienteAtualizarViewModel)
+        {
+            var cliente = _repositorio.BuscarPorId(clienteAtualizarViewModel.Id);
+            cliente.AlterarEndereco(clienteAtualizarViewModel.Endereco);
+            cliente.AlterarTelefone(clienteAtualizarViewModel.Telefone);
+            cliente.SetarAlteracao();
+
+            _repositorio.Atualizar(cliente);
+
+            return BuscarPorId(clienteAtualizarViewModel.Id);
+        }
+
+        public void Excluir(Guid id)
+        {
+            _repositorio.Excluir(id);
+        }
     }
 }

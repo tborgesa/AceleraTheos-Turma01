@@ -1,0 +1,6 @@
+1. Validar domino. Para isso, colocar uma lista de erros na ENTIDADE.
+
+2. Valida os campos no contrutor do dominio.
+
+"Pensa que o service é um lider. Ele recebe uma ordem, manda alguém fazer e retorna o resultado"
+3. No service, orquestra a inserção do fornecedor (insere ou manda mensagem de erro).

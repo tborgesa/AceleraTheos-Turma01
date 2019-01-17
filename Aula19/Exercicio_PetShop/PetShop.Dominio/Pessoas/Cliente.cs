@@ -27,14 +27,12 @@ namespace PetShop.Dominio.Pessoas
 
         public void AlterarEndereco(string endereco)
         {
-            Console.WriteLine("Alterando endereço...");
 
             Endereco = endereco;
         }
 
         public void AlterarTelefone(string telefone)
         {
-            Console.WriteLine("Alterando telefone...");
 
             Telefone = telefone;
         }

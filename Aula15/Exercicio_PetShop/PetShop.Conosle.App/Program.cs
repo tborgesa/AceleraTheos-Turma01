@@ -3,6 +3,8 @@ using PetShop.Dominio.Animais.Enumerador;
 using PetShop.Dominio.Pessoas;
 using PetShop.Comum.Helpers;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PetShop.Conosle.App
 {
@@ -12,6 +14,7 @@ namespace PetShop.Conosle.App
         static int _opcao;
         static Cliente _dono;
         static Animal _animal;
+        static List<Animal> _animais = new List<Animal>();
         static double _valorLimpeza;
 
         static void Main(string[] args)
@@ -29,6 +32,7 @@ namespace PetShop.Conosle.App
                     case 1:
                         _dono = CadastrarCliente();
                         Animal animal = CadastrarAnimal(_dono);
+                        _animais.Add(animal);
                         _valorLimpeza = animal.CalcularLimpeza();
 
                         Console.WriteLine($"Cadastro Realizado com Sucesso...\nDADOS CADASTRAIS DO DONO" +
@@ -44,6 +48,17 @@ namespace PetShop.Conosle.App
                         return;
 
                     case 2:
+                        int i = _animais.Count();
+                        Console.WriteLine($"Foram cadastrados {i} animal(is)");
+                        _animais = _animais.OrderBy(a => _animal.Nome).ToList();
+
+                        foreach (var bicho in _animais)
+                        {
+                            Console.WriteLine(_animal.Nome);
+                        }
+
+                        return;
+                    case 0:
                         Console.WriteLine("Aperte qualquer tecla para encerrar o sistema... ");
                         menu = false;
                         break;
@@ -66,8 +81,9 @@ namespace PetShop.Conosle.App
                 int opcao = InputHelper.GetInputInt(@"##### PET SHOP #####
 
 Escolha a opção desejada:
-1 - Calcular Limpreza;
-2 - SAIR;
+1 - Calcular limpreza;
+2 - Listar animais;
+0 - SAIR;
 
 Digite sua escolha abaixo: ", "Opção inválida!");
 
@@ -139,7 +155,7 @@ Digite sua escolha abaixo: ", "Opção inválida!");
                 default:
                     break;
             }
-
+            _animais.Add(_animal);
             return _animal;
 
         }

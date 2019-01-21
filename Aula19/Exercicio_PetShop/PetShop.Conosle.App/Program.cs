@@ -5,10 +5,7 @@ using PetShop.Comum.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
-=======
 using System.Globalization;
->>>>>>> Talita
 
 namespace PetShop.Conosle.App
 {
@@ -17,10 +14,9 @@ namespace PetShop.Conosle.App
         static string _MensagemErro { get; set; }
         static Cliente _dono;
         static Animal _animal;
-        static List<Animal> _animais = new List<Animal>();
         static double _valorLimpeza;
-        static List<Animal> _animais = new List<Animal>();
 
+        static List<Animal> _animais = new List<Animal>();
 
         static void Main(string[] args)
         {
@@ -32,17 +28,6 @@ namespace PetShop.Conosle.App
                 {
                     case 1:
                         _dono = CadastrarCliente();
-<<<<<<< HEAD
-                        Animal animal = CadastrarAnimal(_dono);
-                        _animais.Add(animal);
-                        _valorLimpeza = animal.CalcularLimpeza();
-
-                        Console.WriteLine($"Cadastro Realizado com Sucesso...\nDADOS CADASTRAIS DO DONO" +
-                            $"\nNome: {_dono.Nome}" +
-                            $"\nTelefone: {_dono.Telefone}" +
-                            $"\n\nDADOS CADASTRAIS DO ANIMAL" +
-                            $"\nNome: {_animal.Nome}" +
-=======
                         _animal = CadastrarAnimal(_dono);
                         _animais.Add(_animal);
                         _valorLimpeza = _animal.CalcularLimpeza();
@@ -50,7 +35,6 @@ namespace PetShop.Conosle.App
                         Console.Clear();
                         Console.WriteLine($"***** DADOS CADASTRADOS COM SUCESSO *****" +
                             $"\nNome do Animal: {_animal.Nome}" +
->>>>>>> Talita
                             $"\nEspécie: {_animal.Especie}" +
                             $"\nValor da Limpeza: {_animal.ValorLimpeza.ToString("C", CultureInfo.CurrentCulture)}");
 
@@ -58,21 +42,6 @@ namespace PetShop.Conosle.App
                         break;
 
                     case 2:
-<<<<<<< HEAD
-                        int i = _animais.Count();
-                        Console.WriteLine($"Foram cadastrados {i} animal(is)");
-                        _animais = _animais.OrderBy(a => _animal.Nome).ToList();
-
-                        foreach (var bicho in _animais)
-                        {
-                            Console.WriteLine(_animal.Nome);
-                        }
-
-                        return;
-                    case 0:
-                        Console.WriteLine("Aperte qualquer tecla para encerrar o sistema... ");
-                        menu = false;
-=======
                         int menuLista = InputHelper.GetInputInt(@"ESCOLHA UMA OPÇÃO:
 1 - Procurar animal pelo nome;
 2 - Listar todos os animais;", "Opção inválida!");
@@ -80,7 +49,6 @@ namespace PetShop.Conosle.App
                         ListarAnimais(menuLista);
 
                         Console.ReadKey();
->>>>>>> Talita
                         break;
 
                     default:
@@ -98,13 +66,8 @@ namespace PetShop.Conosle.App
                 string menu = @"##### PET SHOP #####
 
 Escolha a opção desejada:
-<<<<<<< HEAD
-1 - Calcular limpreza;
-2 - Listar animais;
-=======
 1 - Calcular Limpeza;
 2 - Listar Animais;
->>>>>>> Talita
 0 - SAIR;
 
 Digite sua escolha abaixo: ";
@@ -178,7 +141,7 @@ Digite sua escolha abaixo: ";
                     Console.Clear();
                     break;
             }
-            _animais.Add(_animal);
+
             return _animal;
         }
 

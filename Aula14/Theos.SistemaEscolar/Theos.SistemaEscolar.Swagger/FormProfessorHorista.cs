@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Theos.SistemaEscolar.Service;
 
 namespace Theos.SistemaEscolar.Swagger
 {
@@ -15,6 +16,13 @@ namespace Theos.SistemaEscolar.Swagger
         public FormProfessorHorista()
         {
             InitializeComponent();
+        }
+
+        private ProfessorHoristaService _service = new ProfessorHoristaService();
+
+        private void btnBuscarTodosProfHorista_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

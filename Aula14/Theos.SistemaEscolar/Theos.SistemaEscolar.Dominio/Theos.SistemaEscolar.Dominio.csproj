@@ -40,6 +40,7 @@
     <Compile Include="Professor\ProfessorContratadoInserirViewModel.cs" />
     <Compile Include="Professor\ProfessorContratadoSearch.cs" />
     <Compile Include="Professor\ProfessorHorista.cs" />
+    <Compile Include="Professor\ProfessorHoristaAtualizarViewModel.cs" />
     <Compile Include="Professor\ProfessorHoristaDto.cs" />
     <Compile Include="Professor\ProfessorHoristaSearch.cs" />
     <Compile Include="Professor\ProfessorHoristaViewModel.cs" />

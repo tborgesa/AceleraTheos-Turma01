@@ -13,7 +13,8 @@ namespace PetShop.Dominio.Pessoas
             Console.WriteLine("Criando cliente sem endereço...");
 
             Nome = nome;
-            Telefone = telefone;   
+            Telefone = telefone;
+            Validar();
         }
 
         public Cliente(string nome, string telefone, string endereco)
@@ -23,18 +24,34 @@ namespace PetShop.Dominio.Pessoas
             Nome = nome;
             Telefone = telefone;
             Endereco = endereco;
+            Validar();
         }
 
         public void AlterarEndereco(string endereco)
         {
-
             Endereco = endereco;
+
+            if (string.IsNullOrEmpty(endereco))
+                AdicionarErro("Na alteração, o endereço é obrigatório.");
         }
 
         public void AlterarTelefone(string telefone)
         {
-
             Telefone = telefone;
+
+            if (string.IsNullOrEmpty(telefone))
+                AdicionarErro("Na alteração, o telefone é obrigatório.");
+        }
+
+        private void Validar()
+        {
+            if(string.IsNullOrWhiteSpace(Nome))
+                AdicionarErro("Preencha o nome do cliente.");
+
+            if(string.IsNullOrWhiteSpace(Telefone))
+                AdicionarErro("Preencha o telefone do cliente.");
+
+           // Telefone = 
         }
     }
 }

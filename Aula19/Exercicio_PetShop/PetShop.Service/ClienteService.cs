@@ -13,10 +13,9 @@ namespace PetShop.Service
     {
         private ClienteRepositorio _repositorio = new ClienteRepositorio();
 
-        public ClienteDtoReturn Inserir (ClinteInserirViewModel clienteViewModel)
+        public ClienteDtoReturn Inserir(ClinteInserirViewModel clienteViewModel)
         {
             var cliente = new Cliente(clienteViewModel.Nome, clienteViewModel.Telefone, clienteViewModel.Endereco);
-            _repositorio.Inserir(cliente);
 
             if (!cliente.Valido())
                 return new ClienteDtoReturn(cliente.GetErros());
@@ -57,16 +56,28 @@ namespace PetShop.Service
             return retorno;
         }
 
-        public ClienteDto Atualizar(ClienteAtualizarViewModel clienteAtualizarViewModel)
+        public ClienteDtoReturn Atualizar(ClienteAtualizarViewModel clienteAtualizarViewModel)
         {
             var cliente = _repositorio.BuscarPorId(clienteAtualizarViewModel.Id);
+            var erros = new List<string>();
+
+            if (cliente == null)
+            {
+                erros.Add("Cliente não existe.");
+                return new ClienteDtoReturn(erros);
+            }
+
+            if (!cliente.Valido())
+                return new ClienteDtoReturn(cliente.GetErros());
+
+
             cliente.AlterarEndereco(clienteAtualizarViewModel.Endereco);
             cliente.AlterarTelefone(clienteAtualizarViewModel.Telefone);
             cliente.SetarAlteracao();
 
             _repositorio.Atualizar(cliente);
 
-            return BuscarPorId(clienteAtualizarViewModel.Id);
+            return new ClienteDtoReturn(BuscarPorId(clienteAtualizarViewModel.Id));
         }
 
         public void Excluir(Guid id)

@@ -24,16 +24,6 @@ namespace PetShop.Swagger
         }
 
 
-        private void textBoxExemploInserir_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxEntradaInserir_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         #region Inserir
         private void CarregarExemploInserir()
         {
@@ -51,25 +41,33 @@ namespace PetShop.Swagger
 
                 if(clienteViewModel == null)
                 {
+                    textBoxStatusCodeInserir.Text = "400 - Bad Request.";
                     textBoxSaidaInserir.Text = $"Json Inválido";
                     return;
                 }
 
-                var clienteDto = _service.Inserir(clienteViewModel);
-                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(clienteDto);
+                var clienteDtoReturn = _service.Inserir(clienteViewModel);
+
+                if(clienteDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeInserir.Text = "400 - Bad Request.";
+                    textBoxSaidaInserir.Text = JsonConvert.SerializeObject(clienteDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeInserir.Text = "200 - Sucess.";
+                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(clienteDtoReturn.Cliente);
+                
             }
             catch (Exception ex)
             {
+                textBoxStatusCodeInserir.Text = "500 - Internal Server Error.";
                 textBoxSaidaInserir.Text = $"{Environment.NewLine} {ex.ToString()}";
             }
         }
 
         #endregion
 
-        private void tabPageInserir_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #region BuscarTodos
         private void buttonBuscarTodos_Click(object sender, EventArgs e)
@@ -142,15 +140,26 @@ namespace PetShop.Swagger
 
                 if(clienteViewModel == null)
                 {
-                    textBoxSaidaAtualizar.Text = $"Json inválido";
+                    textBoxStatusCodeAtualizar.Text = "400 - Bad Request.";
+                    textBoxSaidaAtualizar.Text = $"Json inválido.";
                     return;
                 }
 
-                var clienteDto = _service.Atualizar(clienteViewModel);
-                textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(clienteDto);
+                var clienteDtoReturn = _service.Atualizar(clienteViewModel);
+
+                if(clienteDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeAtualizar.Text = "400 - Bad Request.";
+                    textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(clienteDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeAtualizar.Text = "200 - Sucess.";
+                textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(clienteDtoReturn.Cliente);
             }
             catch(Exception ex)
             {
+                textBoxStatusCodeAtualizar.Text = "500 - Internal Service Error.";
                 textBoxSaidaAtualizar.Text = $"{ex.ToString()}";
             }
         }

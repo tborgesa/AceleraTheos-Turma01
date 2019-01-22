@@ -52,6 +52,8 @@
             this.buttonExecutarExcluir = new System.Windows.Forms.Button();
             this.textBoxExemploExcluir = new System.Windows.Forms.TextBox();
             this.textBoxEntradaExcluir = new System.Windows.Forms.TextBox();
+            this.textBoxStatusCodeInserir = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControlCliente.SuspendLayout();
             this.tabPageBuscarTodos.SuspendLayout();
             this.tabPageBuscarById.SuspendLayout();
@@ -90,6 +92,7 @@
             this.textBoxBuscarTodos.Location = new System.Drawing.Point(7, 50);
             this.textBoxBuscarTodos.Multiline = true;
             this.textBoxBuscarTodos.Name = "textBoxBuscarTodos";
+            this.textBoxBuscarTodos.ReadOnly = true;
             this.textBoxBuscarTodos.Size = new System.Drawing.Size(775, 449);
             this.textBoxBuscarTodos.TabIndex = 1;
             // 
@@ -122,6 +125,7 @@
             this.textBoxSaidaBuscarPorId.Location = new System.Drawing.Point(4, 59);
             this.textBoxSaidaBuscarPorId.Multiline = true;
             this.textBoxSaidaBuscarPorId.Name = "textBoxSaidaBuscarPorId";
+            this.textBoxSaidaBuscarPorId.ReadOnly = true;
             this.textBoxSaidaBuscarPorId.Size = new System.Drawing.Size(778, 444);
             this.textBoxSaidaBuscarPorId.TabIndex = 3;
             // 
@@ -140,6 +144,7 @@
             this.textBoxExemploId.Location = new System.Drawing.Point(463, 6);
             this.textBoxExemploId.Multiline = true;
             this.textBoxExemploId.Name = "textBoxExemploId";
+            this.textBoxExemploId.ReadOnly = true;
             this.textBoxExemploId.Size = new System.Drawing.Size(319, 48);
             this.textBoxExemploId.TabIndex = 1;
             // 
@@ -153,6 +158,7 @@
             // 
             // tabPageInserir
             // 
+            this.tabPageInserir.Controls.Add(this.textBoxStatusCodeInserir);
             this.tabPageInserir.Controls.Add(this.textBoxSaidaInserir);
             this.tabPageInserir.Controls.Add(this.buttonExecurarInserir);
             this.tabPageInserir.Controls.Add(this.textBoxExemploInserir);
@@ -171,12 +177,13 @@
             this.textBoxSaidaInserir.Location = new System.Drawing.Point(4, 266);
             this.textBoxSaidaInserir.Multiline = true;
             this.textBoxSaidaInserir.Name = "textBoxSaidaInserir";
+            this.textBoxSaidaInserir.ReadOnly = true;
             this.textBoxSaidaInserir.Size = new System.Drawing.Size(778, 233);
             this.textBoxSaidaInserir.TabIndex = 3;
             // 
             // buttonExecurarInserir
             // 
-            this.buttonExecurarInserir.Location = new System.Drawing.Point(335, 76);
+            this.buttonExecurarInserir.Location = new System.Drawing.Point(336, 43);
             this.buttonExecurarInserir.Name = "buttonExecurarInserir";
             this.buttonExecurarInserir.Size = new System.Drawing.Size(115, 114);
             this.buttonExecurarInserir.TabIndex = 2;
@@ -189,8 +196,9 @@
             this.textBoxExemploInserir.Location = new System.Drawing.Point(457, 6);
             this.textBoxExemploInserir.Multiline = true;
             this.textBoxExemploInserir.Name = "textBoxExemploInserir";
+            this.textBoxExemploInserir.ReadOnly = true;
             this.textBoxExemploInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxExemploInserir.Size = new System.Drawing.Size(325, 252);
+            this.textBoxExemploInserir.Size = new System.Drawing.Size(325, 191);
             this.textBoxExemploInserir.TabIndex = 1;
             this.textBoxExemploInserir.TextChanged += new System.EventHandler(this.textBoxExemploInserir_TextChanged);
             // 
@@ -199,12 +207,13 @@
             this.textBoxEntradaInserir.Location = new System.Drawing.Point(4, 7);
             this.textBoxEntradaInserir.Multiline = true;
             this.textBoxEntradaInserir.Name = "textBoxEntradaInserir";
-            this.textBoxEntradaInserir.Size = new System.Drawing.Size(325, 252);
+            this.textBoxEntradaInserir.Size = new System.Drawing.Size(325, 191);
             this.textBoxEntradaInserir.TabIndex = 0;
             this.textBoxEntradaInserir.TextChanged += new System.EventHandler(this.textBoxEntradaInserir_TextChanged);
             // 
             // tabPageAtualizar
             // 
+            this.tabPageAtualizar.Controls.Add(this.textBox1);
             this.tabPageAtualizar.Controls.Add(this.textBoxSaidaAtualizar);
             this.tabPageAtualizar.Controls.Add(this.buttonAtualizar);
             this.tabPageAtualizar.Controls.Add(this.textBoxExemploAtualizar);
@@ -219,15 +228,16 @@
             // 
             // textBoxSaidaAtualizar
             // 
-            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(5, 268);
+            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(5, 289);
             this.textBoxSaidaAtualizar.Multiline = true;
             this.textBoxSaidaAtualizar.Name = "textBoxSaidaAtualizar";
-            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(778, 233);
+            this.textBoxSaidaAtualizar.ReadOnly = true;
+            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(778, 212);
             this.textBoxSaidaAtualizar.TabIndex = 7;
             // 
             // buttonAtualizar
             // 
-            this.buttonAtualizar.Location = new System.Drawing.Point(336, 78);
+            this.buttonAtualizar.Location = new System.Drawing.Point(336, 55);
             this.buttonAtualizar.Name = "buttonAtualizar";
             this.buttonAtualizar.Size = new System.Drawing.Size(115, 114);
             this.buttonAtualizar.TabIndex = 6;
@@ -240,8 +250,9 @@
             this.textBoxExemploAtualizar.Location = new System.Drawing.Point(458, 8);
             this.textBoxExemploAtualizar.Multiline = true;
             this.textBoxExemploAtualizar.Name = "textBoxExemploAtualizar";
+            this.textBoxExemploAtualizar.ReadOnly = true;
             this.textBoxExemploAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxExemploAtualizar.Size = new System.Drawing.Size(325, 252);
+            this.textBoxExemploAtualizar.Size = new System.Drawing.Size(325, 211);
             this.textBoxExemploAtualizar.TabIndex = 5;
             // 
             // textBoxEntradaAtualizar
@@ -249,7 +260,7 @@
             this.textBoxEntradaAtualizar.Location = new System.Drawing.Point(5, 9);
             this.textBoxEntradaAtualizar.Multiline = true;
             this.textBoxEntradaAtualizar.Name = "textBoxEntradaAtualizar";
-            this.textBoxEntradaAtualizar.Size = new System.Drawing.Size(325, 252);
+            this.textBoxEntradaAtualizar.Size = new System.Drawing.Size(325, 211);
             this.textBoxEntradaAtualizar.TabIndex = 4;
             // 
             // tabPageCliente
@@ -271,6 +282,7 @@
             this.textBoxSaidaExcluir.Location = new System.Drawing.Point(5, 59);
             this.textBoxSaidaExcluir.Multiline = true;
             this.textBoxSaidaExcluir.Name = "textBoxSaidaExcluir";
+            this.textBoxSaidaExcluir.ReadOnly = true;
             this.textBoxSaidaExcluir.Size = new System.Drawing.Size(778, 444);
             this.textBoxSaidaExcluir.TabIndex = 7;
             // 
@@ -289,6 +301,7 @@
             this.textBoxExemploExcluir.Location = new System.Drawing.Point(464, 6);
             this.textBoxExemploExcluir.Multiline = true;
             this.textBoxExemploExcluir.Name = "textBoxExemploExcluir";
+            this.textBoxExemploExcluir.ReadOnly = true;
             this.textBoxExemploExcluir.Size = new System.Drawing.Size(319, 48);
             this.textBoxExemploExcluir.TabIndex = 5;
             // 
@@ -299,6 +312,24 @@
             this.textBoxEntradaExcluir.Name = "textBoxEntradaExcluir";
             this.textBoxEntradaExcluir.Size = new System.Drawing.Size(319, 48);
             this.textBoxEntradaExcluir.TabIndex = 4;
+            // 
+            // textBoxStatusCodeInserir
+            // 
+            this.textBoxStatusCodeInserir.Location = new System.Drawing.Point(5, 203);
+            this.textBoxStatusCodeInserir.Multiline = true;
+            this.textBoxStatusCodeInserir.Name = "textBoxStatusCodeInserir";
+            this.textBoxStatusCodeInserir.ReadOnly = true;
+            this.textBoxStatusCodeInserir.Size = new System.Drawing.Size(778, 57);
+            this.textBoxStatusCodeInserir.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(5, 226);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(778, 57);
+            this.textBox1.TabIndex = 8;
             // 
             // FormCliente
             // 
@@ -350,5 +381,7 @@
         private System.Windows.Forms.Button buttonExecutarExcluir;
         private System.Windows.Forms.TextBox textBoxExemploExcluir;
         private System.Windows.Forms.TextBox textBoxEntradaExcluir;
+        private System.Windows.Forms.TextBox textBoxStatusCodeInserir;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PetShop.Dominio.Pessoas;
 using PetShop.Repositorio;
+using static PetShop.Dominio.Pessoas.ClienteDto;
 
 namespace PetShop.Service
 {
@@ -12,11 +13,16 @@ namespace PetShop.Service
     {
         private ClienteRepositorio _repositorio = new ClienteRepositorio();
 
-        public ClienteDto Inserir (ClinteInserirViewModel clienteViewModel)
+        public ClienteDtoReturn Inserir (ClinteInserirViewModel clienteViewModel)
         {
             var cliente = new Cliente(clienteViewModel.Nome, clienteViewModel.Telefone, clienteViewModel.Endereco);
             _repositorio.Inserir(cliente);
-            return BuscarPorId(cliente.Id);
+
+            if (!cliente.Valido())
+                return new ClienteDtoReturn(cliente.GetErros());
+
+            _repositorio.Inserir(cliente);
+            return new ClienteDtoReturn(BuscarPorId(cliente.Id));
         }
 
         public ClienteDto BuscarPorId(Guid id)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PetShop.Dominio.Pessoas
 {
@@ -9,8 +10,21 @@ namespace PetShop.Dominio.Pessoas
         public string Telefone { get; set; }
         public string Endereco { get; set; }
 
-  
+        public class ClienteDtoReturn
+        {
+            public ClienteDto Cliente { get; }
+            public List<string> Erros { get; }
 
-       
+            public ClienteDtoReturn(ClienteDto cliente)
+            {
+                Cliente = cliente;
+                Erros = new List<string>();
+            }
+
+            public ClienteDtoReturn(List<string> erros)
+            {
+                Erros = erros;
+            }
+        }
     }
 }

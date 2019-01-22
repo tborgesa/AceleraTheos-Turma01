@@ -165,7 +165,29 @@ namespace PetShop.Swagger
 
         private void buttonExecutarExcluir_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var entrada = textBoxEntradaExcluir.Text;
 
+                if(entrada == null)
+                {
+                    textBoxSaidaExcluir.Text = "Id Inválida.";
+                    return;
+                }
+
+                if(!Guid.TryParse(entrada, out Guid guid))
+                {
+                    textBoxSaidaExcluir.Text = "Id inválda.";
+                    return;
+                }
+
+                _service.Excluir(guid);
+                textBoxSaidaExcluir.Text = "Registro excluído com sucesso.";
+            }
+            catch(Exception ex)
+            {
+                textBoxSaidaExcluir.Text = $"{ex.ToString()}";
+            }
         }
         #endregion
 

@@ -4,22 +4,27 @@ using System;
 
 namespace PetShop.Dominio.Animais
 {
-    public abstract class Animal
+    public abstract class Animal : Entidade
     {
         public string Nome { get; }
         public Cliente Dono { get; private set; }
-        public Enum Especie { get; }
-        public string erro { get; private set; }
         public double ValorLimpeza { get; set; }
 
-        public Animal(string nome, Cliente dono, Enum especie)
+        public Animal(string nome, Cliente dono)
         {
             Nome = nome;
             Dono = dono;
-            Especie = especie;
+            ValidarAnimal();
         }
 
         public abstract double CalcularLimpeza();
+
+        public void ValidarAnimal()
+        {
+            if (string.IsNullOrWhiteSpace(Nome))
+                AdicionarErro("Preencha o nome do anima.");
+
+        }
 
     }
 }

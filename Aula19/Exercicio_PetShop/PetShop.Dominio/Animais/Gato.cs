@@ -10,8 +10,8 @@ namespace PetShop.Dominio.Animais
         public string Raca { get; }
         public double Peso { get; private set; }
 
-        public Gato(string nome, Cliente dono, EnumEspecie especie, double peso)
-            : base (nome, dono, especie)
+        public Gato(string nome, Cliente dono,  double peso)
+            : base (nome, dono)
         {
             Peso = peso;
         }

@@ -10,8 +10,6 @@ namespace PetShop.Dominio.Pessoas
 
         public Cliente(string nome, string telefone)
         {
-            Console.WriteLine("Criando cliente sem endereço...");
-
             Nome = nome;
             Telefone = telefone;
             Validar();
@@ -19,8 +17,6 @@ namespace PetShop.Dominio.Pessoas
 
         public Cliente(string nome, string telefone, string endereco)
         {
-            Console.WriteLine("Criando cliente com endereço...");
-
             Nome = nome;
             Telefone = telefone;
             Endereco = endereco;

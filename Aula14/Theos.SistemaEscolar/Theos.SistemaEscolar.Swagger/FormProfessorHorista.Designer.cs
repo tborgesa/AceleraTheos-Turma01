@@ -135,6 +135,7 @@
             this.buttonExecutarIdProfHorista.TabIndex = 8;
             this.buttonExecutarIdProfHorista.Text = "EXECUTAR";
             this.buttonExecutarIdProfHorista.UseVisualStyleBackColor = true;
+            this.buttonExecutarIdProfHorista.Click += new System.EventHandler(this.buttonExecutarIdProfHorista_Click);
             // 
             // textBoxSaidaBuscarIdProfHorista
             // 
@@ -196,6 +197,7 @@
             this.buttonExecutarInserirProfHorista.TabIndex = 4;
             this.buttonExecutarInserirProfHorista.Text = "EXECUTAR";
             this.buttonExecutarInserirProfHorista.UseVisualStyleBackColor = true;
+            this.buttonExecutarInserirProfHorista.Click += new System.EventHandler(this.buttonExecutarInserirProfHorista_Click);
             // 
             // textBoxEntradaInserirProfHorista
             // 

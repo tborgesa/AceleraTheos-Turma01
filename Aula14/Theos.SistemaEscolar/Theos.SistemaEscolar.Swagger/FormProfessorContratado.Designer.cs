@@ -33,25 +33,25 @@
             this.tabControlProfessorContratado = new System.Windows.Forms.TabControl();
             this.tabPageBuscarTodosProfessorContratado = new System.Windows.Forms.TabPage();
             this.tabPageBuscarProfessorContratado = new System.Windows.Forms.TabPage();
-            this.tabPageInserirProfessorContratado = new System.Windows.Forms.TabPage();
-            this.tabPageAtualizarProfessorContratado = new System.Windows.Forms.TabPage();
-            this.tabPageExcluirProfessorContratado = new System.Windows.Forms.TabPage();
-            this.textBoxEntradaBuscarId = new System.Windows.Forms.TextBox();
-            this.textBoxSaidaBuscarId = new System.Windows.Forms.TextBox();
-            this.buttonExecutarId = new System.Windows.Forms.Button();
             this.textBoxExemploId = new System.Windows.Forms.TextBox();
-            this.textBoxEntradaInserir = new System.Windows.Forms.TextBox();
-            this.buttonExecutarInserir = new System.Windows.Forms.Button();
-            this.textBoxExemploInserir = new System.Windows.Forms.TextBox();
+            this.buttonExecutarId = new System.Windows.Forms.Button();
+            this.textBoxSaidaBuscarId = new System.Windows.Forms.TextBox();
+            this.textBoxEntradaBuscarId = new System.Windows.Forms.TextBox();
+            this.tabPageInserirProfessorContratado = new System.Windows.Forms.TabPage();
             this.textBoxSaidaInserir = new System.Windows.Forms.TextBox();
-            this.textBoxEntradaAtualizar = new System.Windows.Forms.TextBox();
-            this.buttonAtualizar = new System.Windows.Forms.Button();
-            this.textBoxExemploAtualizar = new System.Windows.Forms.TextBox();
+            this.textBoxExemploInserir = new System.Windows.Forms.TextBox();
+            this.buttonExecutarInserir = new System.Windows.Forms.Button();
+            this.textBoxEntradaInserir = new System.Windows.Forms.TextBox();
+            this.tabPageAtualizarProfessorContratado = new System.Windows.Forms.TabPage();
             this.textBoxSaidaAtualizar = new System.Windows.Forms.TextBox();
-            this.textBoxEntradaExcluir = new System.Windows.Forms.TextBox();
+            this.textBoxExemploAtualizar = new System.Windows.Forms.TextBox();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
+            this.textBoxEntradaAtualizar = new System.Windows.Forms.TextBox();
+            this.tabPageExcluirProfessorContratado = new System.Windows.Forms.TabPage();
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.textBoxSaidaExcluir = new System.Windows.Forms.TextBox();
             this.textBoxExemploExcluir = new System.Windows.Forms.TextBox();
+            this.textBoxEntradaExcluir = new System.Windows.Forms.TextBox();
             this.tabControlProfessorContratado.SuspendLayout();
             this.tabPageBuscarTodosProfessorContratado.SuspendLayout();
             this.tabPageBuscarProfessorContratado.SuspendLayout();
@@ -103,6 +103,7 @@
             this.tabPageBuscarTodosProfessorContratado.TabIndex = 0;
             this.tabPageBuscarTodosProfessorContratado.Text = "Buscar Todos";
             this.tabPageBuscarTodosProfessorContratado.UseVisualStyleBackColor = true;
+   
             // 
             // tabPageBuscarProfessorContratado
             // 
@@ -118,6 +119,43 @@
             this.tabPageBuscarProfessorContratado.Text = "Buscar Por Id";
             this.tabPageBuscarProfessorContratado.UseVisualStyleBackColor = true;
             // 
+            // textBoxExemploId
+            // 
+            this.textBoxExemploId.Location = new System.Drawing.Point(495, 2);
+            this.textBoxExemploId.Multiline = true;
+            this.textBoxExemploId.Name = "textBoxExemploId";
+            this.textBoxExemploId.ReadOnly = true;
+            this.textBoxExemploId.Size = new System.Drawing.Size(353, 38);
+            this.textBoxExemploId.TabIndex = 9;
+            // 
+            // buttonExecutarId
+            // 
+            this.buttonExecutarId.Location = new System.Drawing.Point(356, 2);
+            this.buttonExecutarId.Name = "buttonExecutarId";
+            this.buttonExecutarId.Size = new System.Drawing.Size(133, 38);
+            this.buttonExecutarId.TabIndex = 8;
+            this.buttonExecutarId.Text = "EXECUTAR";
+            this.buttonExecutarId.UseVisualStyleBackColor = true;
+            this.buttonExecutarId.Click += new System.EventHandler(this.buttonExecutarId_Click);
+            // 
+            // textBoxSaidaBuscarId
+            // 
+            this.textBoxSaidaBuscarId.Location = new System.Drawing.Point(3, 44);
+            this.textBoxSaidaBuscarId.Multiline = true;
+            this.textBoxSaidaBuscarId.Name = "textBoxSaidaBuscarId";
+            this.textBoxSaidaBuscarId.ReadOnly = true;
+            this.textBoxSaidaBuscarId.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSaidaBuscarId.Size = new System.Drawing.Size(849, 551);
+            this.textBoxSaidaBuscarId.TabIndex = 7;
+            // 
+            // textBoxEntradaBuscarId
+            // 
+            this.textBoxEntradaBuscarId.Location = new System.Drawing.Point(6, 2);
+            this.textBoxEntradaBuscarId.Multiline = true;
+            this.textBoxEntradaBuscarId.Name = "textBoxEntradaBuscarId";
+            this.textBoxEntradaBuscarId.Size = new System.Drawing.Size(344, 38);
+            this.textBoxEntradaBuscarId.TabIndex = 5;
+            // 
             // tabPageInserirProfessorContratado
             // 
             this.tabPageInserirProfessorContratado.Controls.Add(this.textBoxSaidaInserir);
@@ -131,6 +169,45 @@
             this.tabPageInserirProfessorContratado.TabIndex = 2;
             this.tabPageInserirProfessorContratado.Text = "Inserir";
             this.tabPageInserirProfessorContratado.UseVisualStyleBackColor = true;
+            // 
+            // textBoxSaidaInserir
+            // 
+            this.textBoxSaidaInserir.Location = new System.Drawing.Point(6, 264);
+            this.textBoxSaidaInserir.Multiline = true;
+            this.textBoxSaidaInserir.Name = "textBoxSaidaInserir";
+            this.textBoxSaidaInserir.ReadOnly = true;
+            this.textBoxSaidaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSaidaInserir.Size = new System.Drawing.Size(846, 328);
+            this.textBoxSaidaInserir.TabIndex = 6;
+            // 
+            // textBoxExemploInserir
+            // 
+            this.textBoxExemploInserir.Location = new System.Drawing.Point(548, 3);
+            this.textBoxExemploInserir.Multiline = true;
+            this.textBoxExemploInserir.Name = "textBoxExemploInserir";
+            this.textBoxExemploInserir.ReadOnly = true;
+            this.textBoxExemploInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxExemploInserir.Size = new System.Drawing.Size(301, 255);
+            this.textBoxExemploInserir.TabIndex = 5;
+            // 
+            // buttonExecutarInserir
+            // 
+            this.buttonExecutarInserir.Location = new System.Drawing.Point(370, 75);
+            this.buttonExecutarInserir.Name = "buttonExecutarInserir";
+            this.buttonExecutarInserir.Size = new System.Drawing.Size(133, 94);
+            this.buttonExecutarInserir.TabIndex = 4;
+            this.buttonExecutarInserir.Text = "EXECUTAR";
+            this.buttonExecutarInserir.UseVisualStyleBackColor = true;
+            this.buttonExecutarInserir.Click += new System.EventHandler(this.buttonExecutarInserir_Click);
+            // 
+            // textBoxEntradaInserir
+            // 
+            this.textBoxEntradaInserir.Location = new System.Drawing.Point(3, 3);
+            this.textBoxEntradaInserir.Multiline = true;
+            this.textBoxEntradaInserir.Name = "textBoxEntradaInserir";
+            this.textBoxEntradaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxEntradaInserir.Size = new System.Drawing.Size(326, 255);
+            this.textBoxEntradaInserir.TabIndex = 1;
             // 
             // tabPageAtualizarProfessorContratado
             // 
@@ -146,6 +223,45 @@
             this.tabPageAtualizarProfessorContratado.Text = "Atualizar";
             this.tabPageAtualizarProfessorContratado.UseVisualStyleBackColor = true;
             // 
+            // textBoxSaidaAtualizar
+            // 
+            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(6, 297);
+            this.textBoxSaidaAtualizar.Multiline = true;
+            this.textBoxSaidaAtualizar.Name = "textBoxSaidaAtualizar";
+            this.textBoxSaidaAtualizar.ReadOnly = true;
+            this.textBoxSaidaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(846, 295);
+            this.textBoxSaidaAtualizar.TabIndex = 10;
+            // 
+            // textBoxExemploAtualizar
+            // 
+            this.textBoxExemploAtualizar.Location = new System.Drawing.Point(528, 3);
+            this.textBoxExemploAtualizar.Multiline = true;
+            this.textBoxExemploAtualizar.Name = "textBoxExemploAtualizar";
+            this.textBoxExemploAtualizar.ReadOnly = true;
+            this.textBoxExemploAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxExemploAtualizar.Size = new System.Drawing.Size(327, 288);
+            this.textBoxExemploAtualizar.TabIndex = 9;
+            // 
+            // buttonAtualizar
+            // 
+            this.buttonAtualizar.Location = new System.Drawing.Point(367, 98);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(133, 94);
+            this.buttonAtualizar.TabIndex = 8;
+            this.buttonAtualizar.Text = "EXECUTAR";
+            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
+            // 
+            // textBoxEntradaAtualizar
+            // 
+            this.textBoxEntradaAtualizar.Location = new System.Drawing.Point(3, 0);
+            this.textBoxEntradaAtualizar.Multiline = true;
+            this.textBoxEntradaAtualizar.Name = "textBoxEntradaAtualizar";
+            this.textBoxEntradaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxEntradaAtualizar.Size = new System.Drawing.Size(339, 291);
+            this.textBoxEntradaAtualizar.TabIndex = 5;
+            // 
             // tabPageExcluirProfessorContratado
             // 
             this.tabPageExcluirProfessorContratado.Controls.Add(this.buttonExcluir);
@@ -159,129 +275,6 @@
             this.tabPageExcluirProfessorContratado.TabIndex = 4;
             this.tabPageExcluirProfessorContratado.Text = "Excluir";
             this.tabPageExcluirProfessorContratado.UseVisualStyleBackColor = true;
-            // 
-            // textBoxEntradaBuscarId
-            // 
-            this.textBoxEntradaBuscarId.Location = new System.Drawing.Point(6, 2);
-            this.textBoxEntradaBuscarId.Multiline = true;
-            this.textBoxEntradaBuscarId.Name = "textBoxEntradaBuscarId";
-            this.textBoxEntradaBuscarId.Size = new System.Drawing.Size(344, 38);
-            this.textBoxEntradaBuscarId.TabIndex = 5;
-            // 
-            // textBoxSaidaBuscarId
-            // 
-            this.textBoxSaidaBuscarId.Location = new System.Drawing.Point(3, 44);
-            this.textBoxSaidaBuscarId.Multiline = true;
-            this.textBoxSaidaBuscarId.Name = "textBoxSaidaBuscarId";
-            this.textBoxSaidaBuscarId.ReadOnly = true;
-            this.textBoxSaidaBuscarId.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSaidaBuscarId.Size = new System.Drawing.Size(849, 551);
-            this.textBoxSaidaBuscarId.TabIndex = 7;
-            // 
-            // buttonExecutarId
-            // 
-            this.buttonExecutarId.Location = new System.Drawing.Point(356, 2);
-            this.buttonExecutarId.Name = "buttonExecutarId";
-            this.buttonExecutarId.Size = new System.Drawing.Size(133, 38);
-            this.buttonExecutarId.TabIndex = 8;
-            this.buttonExecutarId.Text = "EXECUTAR";
-            this.buttonExecutarId.UseVisualStyleBackColor = true;
-            this.buttonExecutarId.Click += new System.EventHandler(this.buttonExecutarId_Click);
-            // 
-            // textBoxExemploId
-            // 
-            this.textBoxExemploId.Location = new System.Drawing.Point(495, 2);
-            this.textBoxExemploId.Multiline = true;
-            this.textBoxExemploId.Name = "textBoxExemploId";
-            this.textBoxExemploId.ReadOnly = true;
-            this.textBoxExemploId.Size = new System.Drawing.Size(353, 38);
-            this.textBoxExemploId.TabIndex = 9;
-            // 
-            // textBoxEntradaInserir
-            // 
-            this.textBoxEntradaInserir.Location = new System.Drawing.Point(3, 3);
-            this.textBoxEntradaInserir.Multiline = true;
-            this.textBoxEntradaInserir.Name = "textBoxEntradaInserir";
-            this.textBoxEntradaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxEntradaInserir.Size = new System.Drawing.Size(326, 255);
-            this.textBoxEntradaInserir.TabIndex = 1;
-            // 
-            // buttonExecutarInserir
-            // 
-            this.buttonExecutarInserir.Location = new System.Drawing.Point(370, 75);
-            this.buttonExecutarInserir.Name = "buttonExecutarInserir";
-            this.buttonExecutarInserir.Size = new System.Drawing.Size(133, 94);
-            this.buttonExecutarInserir.TabIndex = 4;
-            this.buttonExecutarInserir.Text = "EXECUTAR";
-            this.buttonExecutarInserir.UseVisualStyleBackColor = true;
-            this.buttonExecutarInserir.Click += new System.EventHandler(this.buttonExecutarInserir_Click);
-            // 
-            // textBoxExemploInserir
-            // 
-            this.textBoxExemploInserir.Location = new System.Drawing.Point(548, 3);
-            this.textBoxExemploInserir.Multiline = true;
-            this.textBoxExemploInserir.Name = "textBoxExemploInserir";
-            this.textBoxExemploInserir.ReadOnly = true;
-            this.textBoxExemploInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxExemploInserir.Size = new System.Drawing.Size(301, 255);
-            this.textBoxExemploInserir.TabIndex = 5;
-            // 
-            // textBoxSaidaInserir
-            // 
-            this.textBoxSaidaInserir.Location = new System.Drawing.Point(6, 264);
-            this.textBoxSaidaInserir.Multiline = true;
-            this.textBoxSaidaInserir.Name = "textBoxSaidaInserir";
-            this.textBoxSaidaInserir.ReadOnly = true;
-            this.textBoxSaidaInserir.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSaidaInserir.Size = new System.Drawing.Size(846, 328);
-            this.textBoxSaidaInserir.TabIndex = 6;
-            // 
-            // textBoxEntradaAtualizar
-            // 
-            this.textBoxEntradaAtualizar.Location = new System.Drawing.Point(3, 0);
-            this.textBoxEntradaAtualizar.Multiline = true;
-            this.textBoxEntradaAtualizar.Name = "textBoxEntradaAtualizar";
-            this.textBoxEntradaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxEntradaAtualizar.Size = new System.Drawing.Size(339, 291);
-            this.textBoxEntradaAtualizar.TabIndex = 5;
-            // 
-            // buttonAtualizar
-            // 
-            this.buttonAtualizar.Location = new System.Drawing.Point(367, 98);
-            this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(133, 94);
-            this.buttonAtualizar.TabIndex = 8;
-            this.buttonAtualizar.Text = "EXECUTAR";
-            this.buttonAtualizar.UseVisualStyleBackColor = true;
-            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
-            // 
-            // textBoxExemploAtualizar
-            // 
-            this.textBoxExemploAtualizar.Location = new System.Drawing.Point(528, 3);
-            this.textBoxExemploAtualizar.Multiline = true;
-            this.textBoxExemploAtualizar.Name = "textBoxExemploAtualizar";
-            this.textBoxExemploAtualizar.ReadOnly = true;
-            this.textBoxExemploAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxExemploAtualizar.Size = new System.Drawing.Size(327, 288);
-            this.textBoxExemploAtualizar.TabIndex = 9;
-            // 
-            // textBoxSaidaAtualizar
-            // 
-            this.textBoxSaidaAtualizar.Location = new System.Drawing.Point(6, 297);
-            this.textBoxSaidaAtualizar.Multiline = true;
-            this.textBoxSaidaAtualizar.Name = "textBoxSaidaAtualizar";
-            this.textBoxSaidaAtualizar.ReadOnly = true;
-            this.textBoxSaidaAtualizar.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSaidaAtualizar.Size = new System.Drawing.Size(846, 295);
-            this.textBoxSaidaAtualizar.TabIndex = 10;
-            // 
-            // textBoxEntradaExcluir
-            // 
-            this.textBoxEntradaExcluir.Location = new System.Drawing.Point(6, 3);
-            this.textBoxEntradaExcluir.Multiline = true;
-            this.textBoxEntradaExcluir.Name = "textBoxEntradaExcluir";
-            this.textBoxEntradaExcluir.Size = new System.Drawing.Size(346, 38);
-            this.textBoxEntradaExcluir.TabIndex = 9;
             // 
             // buttonExcluir
             // 
@@ -311,6 +304,14 @@
             this.textBoxExemploExcluir.ReadOnly = true;
             this.textBoxExemploExcluir.Size = new System.Drawing.Size(355, 38);
             this.textBoxExemploExcluir.TabIndex = 12;
+            // 
+            // textBoxEntradaExcluir
+            // 
+            this.textBoxEntradaExcluir.Location = new System.Drawing.Point(6, 3);
+            this.textBoxEntradaExcluir.Multiline = true;
+            this.textBoxEntradaExcluir.Name = "textBoxEntradaExcluir";
+            this.textBoxEntradaExcluir.Size = new System.Drawing.Size(346, 38);
+            this.textBoxEntradaExcluir.TabIndex = 9;
             // 
             // FormProfessorContratado
             // 

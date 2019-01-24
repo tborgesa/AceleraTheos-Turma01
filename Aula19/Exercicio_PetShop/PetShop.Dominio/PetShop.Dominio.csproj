@@ -36,6 +36,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animais\Animal.cs" />
+    <Compile Include="Animais\AnimalDto.cs" />
+    <Compile Include="Animais\AnimalinserirViewModel.cs" />
     <Compile Include="Animais\Cachorro.cs" />
     <Compile Include="Animais\Enumerador\EnumEspecie.cs" />
     <Compile Include="Animais\Gato.cs" />

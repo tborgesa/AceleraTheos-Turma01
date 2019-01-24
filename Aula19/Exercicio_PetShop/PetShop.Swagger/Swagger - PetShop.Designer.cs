@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonCliente = new System.Windows.Forms.Button();
+            this.buttonAnimal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCliente
@@ -41,11 +42,22 @@
             this.buttonCliente.UseVisualStyleBackColor = true;
             this.buttonCliente.Click += new System.EventHandler(this.buttonCliente_Click);
             // 
+            // buttonAnimal
+            // 
+            this.buttonAnimal.Location = new System.Drawing.Point(204, 34);
+            this.buttonAnimal.Name = "buttonAnimal";
+            this.buttonAnimal.Size = new System.Drawing.Size(171, 80);
+            this.buttonAnimal.TabIndex = 1;
+            this.buttonAnimal.Text = "Animal";
+            this.buttonAnimal.UseVisualStyleBackColor = true;
+            this.buttonAnimal.Click += new System.EventHandler(this.buttonAnimal_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 202);
+            this.ClientSize = new System.Drawing.Size(391, 147);
+            this.Controls.Add(this.buttonAnimal);
             this.Controls.Add(this.buttonCliente);
             this.Name = "FormPrincipal";
             this.Text = "Swagger - PetShop";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCliente;
+        private System.Windows.Forms.Button buttonAnimal;
     }
 }

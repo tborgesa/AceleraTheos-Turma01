@@ -34,5 +34,10 @@ namespace PetShop.Swagger
                 DateFormatString = "dd/MM/yyyy"
             };
         }
+
+        private void buttonAnimal_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

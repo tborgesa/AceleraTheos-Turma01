@@ -19,7 +19,10 @@ namespace Exercicio01.Dominio.Animais
             return preco;
         }
 
+        public override double RetornaPeso()
+        {
+            return Peso;
+        }
 
-        
     }
 }

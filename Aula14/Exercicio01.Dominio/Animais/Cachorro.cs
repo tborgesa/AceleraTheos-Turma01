@@ -18,5 +18,10 @@ namespace Exercicio01.Dominio.Animais
             decimal preco = (decimal)(Peso * 2);
             return preco;
         }
+
+        public override double RetornaPeso()
+        {
+            return Peso;
+        }
     }
 }

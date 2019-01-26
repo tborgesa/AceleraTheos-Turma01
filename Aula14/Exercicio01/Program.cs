@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Exercicio01.Comum.Helpers;
 using AnimalTerrestreAlias = Exercicio01.Dominio.Animais.AnimalTerrestre;
+using AnimalAquaticoAlias = Exercicio01.Dominio.Animais.AnimalAquatico;
 using AnimalAlias = Exercicio01.Dominio.Animais.Animal;
 using CachorroAlias = Exercicio01.Dominio.Animais.Cachorro;
 using GatoAlias = Exercicio01.Dominio.Animais.Gato;
@@ -13,7 +14,7 @@ using PeixeAlias = Exercicio01.Dominio.Animais.Peixe;
 namespace Exercicio01
 {
     class Program
-    {      
+    {
         static double _peso;
         static double _altura;
         static double _largura;
@@ -41,12 +42,18 @@ namespace Exercicio01
                     case 3:
                         Sair();
                         break;
+                    case 4:
+                        DeletarAnimal();
+                        break;
+                    case 5:
+                        AlterarAnimal();
+                        break;
                     default:
                         InputHelper.GetInputString("Opçao invalida, tente novamente");
                         break;
 
                 }
-                if (_escolhaMenu ==1)
+                if (_escolhaMenu == 1)
                 {
                     decimal precoLimpeza = _animal.CalculaPreco();
                     Console.WriteLine($"O preço da limpeza do {_nome} é R${precoLimpeza:c}");
@@ -55,12 +62,11 @@ namespace Exercicio01
                 Menu();
             }
         }
-        
-        static void CriarGatoInserirLista()
+        static void Menu()
         {
-            _animal = ValoresAnimalTerrestre();
-            _listaAnimais.Add(_animal);
-
+            Console.Clear();
+            Console.WriteLine("Menu PET SHOP \n1 - Cadastrar Animais \n2 - Listar animais \n3 - Sair \n4 - Deletar \n5 - Alterar");
+            _escolhaMenu = Convert.ToInt32(Console.ReadLine());
         }
         static void CadastrarAnimais()
         {
@@ -83,29 +89,29 @@ namespace Exercicio01
                     return;
             }
         }
-        static void CriarCachorroInserirLista()
-        {
-            _animal = new CachorroAlias(_nome, _peso);
-            _listaAnimais.Add(_animal);
-        }
-        static void CriarPeixeInserirLista()
-        {
-            _animal = new PeixeAlias(_nome, _largura, _comprimento, _altura);
-            _listaAnimais.Add(_animal);
-        }
-        static void Menu()
-        {
-            Console.Clear();
-            Console.WriteLine("Menu PET SHOP \n1 - Cadastrar Animais \n2 - Listar animais \n3 - Sair");
-            _escolhaMenu = Convert.ToInt32(Console.ReadLine());
-        }
         static void Listagem()
         {
-            
+            int codigo=1;
+            //_animal
             Console.Clear();
-            foreach (var animal in _listaAnimais)
+            foreach (AnimalAlias animal in _listaAnimais)
             {
-                Console.WriteLine($"{_animal.Nome} ");
+                var complemento = string.Empty;
+                var animalTerrestre = animal as AnimalTerrestreAlias;
+                if (animalTerrestre != null)
+                {
+                    complemento = $"e o peso é {animalTerrestre.RetornaPeso()}";
+                }
+
+                var animalAquatico = animal as AnimalAquaticoAlias;
+                if (animalAquatico != null)
+                {
+                    complemento = $"e o volume é {animalAquatico.RetornaVolume()}";
+                }
+                
+                
+                Console.WriteLine($"Código = {codigo} e o nome do animal é : {animal.Nome} {complemento}");
+                codigo++;
             }
         }
         static void Sair()
@@ -115,14 +121,26 @@ namespace Exercicio01
             _sair = false;
             //Environment.Exit(0);
         }
-        static AnimalAlias ValoresAnimalTerrestre()
+        private static void CriarGatoInserirLista()
+        {
+            ValoresAnimalTerrestre();
+            _listaAnimais.Add(_animal);
+
+        }
+        static void CriarCachorroInserirLista()
+        {
+            _animal = new CachorroAlias(_nome, _peso);
+
+            _listaAnimais.Add(_animal);
+        }
+        private static AnimalAlias ValoresAnimalTerrestre()
         {
             Console.Clear();
-            _nome = InputHelper.GetInputString("Digite o nome do Animal");           
-            _peso = InputHelper.GetInputDouble("Digite o peso do seu Animal", "Digite um peso valido");
-            AnimalAlias animal = new GatoAlias(_nome, _peso);
+            var nomeAnimal = InputHelper.GetInputString("Digite o nome do Animal");
+            var peso = InputHelper.GetInputDouble("Digite o peso do seu Animal", "Digite um peso valido");
+            _animal = new GatoAlias(nomeAnimal, peso);
 
-            return animal;
+            return _animal;
         }
         static void ValoresAnimalAquatico()
         {
@@ -132,5 +150,39 @@ namespace Exercicio01
             _largura = InputHelper.GetInputDouble("Digite a largura do seu Animal", "Digite uma largura valida");
             _altura = InputHelper.GetInputDouble("Digite a altura do seu Animal", "Digite uma altura valida");
         }
+        static void CriarPeixeInserirLista()
+        {
+            _animal = new PeixeAlias(_nome, _largura, _comprimento, _altura);
+            _listaAnimais.Add(_animal);
+        }
+
+
+
+        static void DeletarAnimal()
+        {
+            Listagem();
+            Console.WriteLine();
+            Console.WriteLine("qual vc qr excluir");
+            int selecao = Convert.ToInt32(Console.ReadLine()) -1 ;
+            _listaAnimais.RemoveAt(selecao);
+            Console.WriteLine();
+            Listagem();
+            Console.ReadKey();
+            Menu();
+
+        }
+
+        static void AlterarAnimal()
+        {
+            Listagem();
+            Console.WriteLine();
+            Console.WriteLine("qual vc qr alterar");
+            int selecao = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine("ql o nome correto do animal ?");
+            _listaAnimais[selecao].AlterarNome(Console.ReadLine());
+            Console.WriteLine("nome alterado");
+            Listagem();
+        }
+
     }
 }

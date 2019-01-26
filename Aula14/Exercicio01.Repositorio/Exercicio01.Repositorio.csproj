@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58588ED4-E3DB-4C56-AD6C-4E7968D4361F}</ProjectGuid>
+    <ProjectGuid>{E8C60618-7C9B-41FD-A460-BF29B0B2CE7F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exercicio01.Dominio</RootNamespace>
-    <AssemblyName>Exercicio01.Dominio</AssemblyName>
+    <RootNamespace>Exercicio01.Repositorio</RootNamespace>
+    <AssemblyName>Exercicio01.Repositorio</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,23 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animais\Animal.cs" />
-    <Compile Include="Animais\AnimalAquatico.cs" />
-    <Compile Include="Animais\ViewModelDto\AnimalDto.cs" />
-    <Compile Include="Animais\ViewModelDto\AnimalInserirViewModel.cs" />
-    <Compile Include="Animais\AnimalTerrestre.cs" />
-    <Compile Include="Animais\Cachorro.cs" />
-    <Compile Include="Animais\Gato.cs" />
-    <Compile Include="Animais\Peixe.cs" />
-    <Compile Include="Enumerador\EnumAnimal.cs" />
+    <Compile Include="CachorroRepositorio.cs" />
+    <Compile Include="GatoRepositorio.cs" />
+    <Compile Include="PeixeRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Exercicio01.Comum\Exercicio01.Comum.csproj">
-      <Project>{9d6acafe-2fea-4dcd-92b7-b6ced7cfd3de}</Project>
-      <Name>Exercicio01.Comum</Name>
+    <ProjectReference Include="..\Exercicio01.Dominio\Exercicio01.Dominio.csproj">
+      <Project>{58588ed4-e3db-4c56-ad6c-4e7968d4361f}</Project>
+      <Name>Exercicio01.Dominio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

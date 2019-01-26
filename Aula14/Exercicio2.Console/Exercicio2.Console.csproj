@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exercicio2.Dominio\Exercicio2.Dominio.csproj">
+      <Project>{79fdf622-c0f4-4890-8591-758141b47b93}</Project>
+      <Name>Exercicio2.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

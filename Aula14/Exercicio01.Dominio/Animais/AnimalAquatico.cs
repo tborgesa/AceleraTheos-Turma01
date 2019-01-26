@@ -20,6 +20,6 @@ namespace Exercicio01.Dominio.Animais
         public double Altura { get; set; }
 
         //public abstract decimal CalculaPrecoAnimalAquatico(double largura, double comprimento, double altura);
-
+        public abstract double RetornaVolume();
     }
 }

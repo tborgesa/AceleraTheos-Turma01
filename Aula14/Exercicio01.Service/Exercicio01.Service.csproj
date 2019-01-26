@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58588ED4-E3DB-4C56-AD6C-4E7968D4361F}</ProjectGuid>
+    <ProjectGuid>{D88F0123-6A77-4D58-B039-72B8A5EBE3AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exercicio01.Dominio</RootNamespace>
-    <AssemblyName>Exercicio01.Dominio</AssemblyName>
+    <RootNamespace>Exercicio01.Service</RootNamespace>
+    <AssemblyName>Exercicio01.Service</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,15 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animais\Animal.cs" />
-    <Compile Include="Animais\AnimalAquatico.cs" />
-    <Compile Include="Animais\ViewModelDto\AnimalDto.cs" />
-    <Compile Include="Animais\ViewModelDto\AnimalInserirViewModel.cs" />
-    <Compile Include="Animais\AnimalTerrestre.cs" />
-    <Compile Include="Animais\Cachorro.cs" />
-    <Compile Include="Animais\Gato.cs" />
-    <Compile Include="Animais\Peixe.cs" />
-    <Compile Include="Enumerador\EnumAnimal.cs" />
+    <Compile Include="AnimalService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,7 +49,14 @@
       <Project>{9d6acafe-2fea-4dcd-92b7-b6ced7cfd3de}</Project>
       <Name>Exercicio01.Comum</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Exercicio01.Dominio\Exercicio01.Dominio.csproj">
+      <Project>{58588ed4-e3db-4c56-ad6c-4e7968d4361f}</Project>
+      <Name>Exercicio01.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exercicio01.Repositorio\Exercicio01.Repositorio.csproj">
+      <Project>{e8c60618-7c9b-41fd-a460-bf29b0b2ce7f}</Project>
+      <Name>Exercicio01.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

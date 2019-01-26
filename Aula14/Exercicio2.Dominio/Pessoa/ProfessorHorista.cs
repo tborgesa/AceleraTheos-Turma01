@@ -8,16 +8,16 @@ namespace Exercicio2.Dominio.Pessoa
 {
     public class ProfessorHorista : Professor
     {
-        public ProfessorHorista(string nome, string cpf, string disciplina) : base(nome,cpf,disciplina)
+        public ProfessorHorista(int codigo, string nome, string cpf, string disciplina, decimal salario) : base(codigo, nome,cpf,disciplina,salario)
         {
 
         }
 
-        public override decimal SalarioProfessor()
+        public override decimal SalarioProfessor(decimal horasTrabalhadas)
         {
-
-            decimal salario = (decimal)(horas * 17.00);
-
+            horasTrabalhadas=0;
+            decimal salario = (decimal)horasTrabalhadas * 17.0m;
+            salario = Salario;
             return salario;
         }
     }

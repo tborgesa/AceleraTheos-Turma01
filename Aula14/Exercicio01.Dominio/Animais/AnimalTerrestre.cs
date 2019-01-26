@@ -15,5 +15,6 @@ namespace Exercicio01.Dominio.Animais
             Peso = peso;
         }
 
+        public abstract double RetornaPeso();
     }
 }

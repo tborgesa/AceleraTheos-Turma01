@@ -18,5 +18,10 @@ namespace Exercicio01.Dominio.Animais
             decimal preco = (decimal)(Largura * Comprimento * Altura);
             return preco;
         }
+
+        public override double RetornaVolume()
+        {
+            return Largura * Comprimento * Altura;
+        }
     }
 }

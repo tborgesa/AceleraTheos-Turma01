@@ -18,5 +18,11 @@ namespace Theos.SistemaEscolar.Dominio.Professor
             salarioFinal = HorasTrabalhadas * 17;
             return salarioFinal;
         }
+
+        public void Alterar(string nome, string cpf, int horasTrabalhadas)
+        {
+            HorasTrabalhadas = horasTrabalhadas;
+            base.Alterar(nome, cpf);
+        }
     }
 }

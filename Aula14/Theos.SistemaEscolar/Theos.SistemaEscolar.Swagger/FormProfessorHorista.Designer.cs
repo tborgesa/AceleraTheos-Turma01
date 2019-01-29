@@ -250,6 +250,7 @@
             this.buttonAtualizarProfHorista.TabIndex = 8;
             this.buttonAtualizarProfHorista.Text = "EXECUTAR";
             this.buttonAtualizarProfHorista.UseVisualStyleBackColor = true;
+            this.buttonAtualizarProfHorista.Click += new System.EventHandler(this.buttonAtualizarProfHorista_Click);
             // 
             // textBoxEntradaAtualizarProfHorista
             // 
@@ -282,6 +283,7 @@
             this.buttonExcluirProfHorista.TabIndex = 14;
             this.buttonExcluirProfHorista.Text = "EXECUTAR";
             this.buttonExcluirProfHorista.UseVisualStyleBackColor = true;
+            this.buttonExcluirProfHorista.Click += new System.EventHandler(this.buttonExcluirProfHorista_Click);
             // 
             // textBoxSaidaExcluirProfHorista
             // 

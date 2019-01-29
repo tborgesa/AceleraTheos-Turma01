@@ -49,6 +49,7 @@ namespace Theos.SistemaEscolar.Swagger
             CarregarExemploId();
             CarregarExemploInserir();
             CarregarExemploAtualizar();
+            CarregarExemploExcluir();
         }
 
         private ProfessorHoristaService _service = new ProfessorHoristaService();
@@ -144,11 +145,69 @@ namespace Theos.SistemaEscolar.Swagger
 
         public void CarregarExemploAtualizar()
         {
-            ProfessorHoristaViewModel professorHorista = new ProfessorHoristaViewModel();
+            ProfessorHoristaAtualizarViewModel professorHorista = new ProfessorHoristaAtualizarViewModel();
             var texto = JsonConvert.SerializeObject(professorHorista);
             textBoxEntradaAtualizarProfHorista.Text = texto;
             textBoxExemploAtualizarProfHorista.Text = texto;
         }
+
+        private void buttonAtualizarProfHorista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var professorHoristaViewModel = JsonConvert.DeserializeObject<ProfessorHoristaAtualizarViewModel>(textBoxEntradaAtualizarProfHorista.Text);
+                if (professorHoristaViewModel == null)
+                {
+                    textBoxSaidaAtualizarProfHorista.Text = "Json inválido";
+                    return;
+                }
+
+                var professorHoristaDto = _service.Atualizar(professorHoristaViewModel);
+                textBoxSaidaAtualizarProfHorista.Text = JsonConvert.SerializeObject(professorHoristaDto);
+            }
+            catch (Exception ex)
+            {
+                textBoxSaidaAtualizarProfHorista.Text = ex.ToString();
+            }
+        }
+
+
         #endregion
+
+        #region Excluir
+        public void CarregarExemploExcluir()
+        {
+            textBoxEntradaExcluirProfHorista.Text = Guid.NewGuid().ToString();
+            textBoxExemploExcluirProfHorista.Text = Guid.NewGuid().ToString();
+        }
+
+        private void buttonExcluirProfHorista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var entrada = textBoxEntradaExcluirProfHorista.Text;
+                if (entrada == null)
+                {
+                    textBoxSaidaExcluirProfHorista.Text = "Id inválido";
+                    return;
+                }
+                if (!Guid.TryParse(entrada, out Guid id))
+                {
+                    textBoxSaidaExcluirProfHorista.Text = "Id inválido";
+                    return;
+                }
+
+                _service.Excluir(id);
+                textBoxSaidaExcluirProfHorista.Text = "Excluído com sucesso";
+
+            }
+            catch (Exception ex)
+            {
+                textBoxSaidaExcluirProfHorista.Text = ex.ToString();
+            }
+        }
+
+        #endregion
+
     }
 }

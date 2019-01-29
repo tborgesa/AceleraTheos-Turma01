@@ -72,7 +72,7 @@ namespace Theos.SistemaEscolar.Service
         public ProfessorHoristaDto Atualizar(ProfessorHoristaAtualizarViewModel professorHoristaAtualizarViewModel)
         {
             var professorHorista = _repositorio.BuscarPorId(professorHoristaAtualizarViewModel.Id);
-            professorHorista.Alterar(professorHoristaAtualizarViewModel.Nome, professorHoristaAtualizarViewModel.Cpf);
+            professorHorista.Alterar(professorHoristaAtualizarViewModel.Nome, professorHoristaAtualizarViewModel.Cpf, professorHoristaAtualizarViewModel.HorasTrabalhadas);
             professorHorista.SetarAlteracao();
 
             _repositorio.Atualizar(professorHorista);

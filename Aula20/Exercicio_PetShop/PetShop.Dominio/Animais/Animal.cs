@@ -7,13 +7,15 @@ namespace PetShop.Dominio.Animais
     public abstract class Animal : Entidade
     {
         public string Nome { get; }
-        public Cliente Dono { get; private set; } 
+        public Cliente Cliente { get; private set; } 
         public double ValorLimpeza { get; set; }
+        public EnumEspecie Especie { get; set; }
 
-        public Animal(string nome, Cliente dono)
+        public Animal(string nome, Cliente cliente, EnumEspecie especie)
         {
             Nome = nome;
-            Dono = dono;
+            Cliente = cliente;
+            Especie = especie;
             ValidarAnimal();
         }
 

@@ -37,6 +37,11 @@ namespace PetShop.Service
             };
         }
 
+        public Cliente BuscarModeloPorId(Guid id)
+        {
+            return _repositorio.BuscarPorId(id);
+        }
+
         public List<ClienteSearch> BuscarTodos()
         {
             List<Cliente> clientes = _repositorio.BuscarTodos();

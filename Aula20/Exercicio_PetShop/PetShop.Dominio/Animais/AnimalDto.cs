@@ -11,8 +11,7 @@ namespace PetShop.Dominio.Animais
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public Cliente Dono { get; set; }
-        public Enum Especie { get; set;  }
+        public Cliente Cliente { get; set; }
         public string erro { get;  set; }
         public double ValorLimpeza { get; set; }
         public string Raca { get; set; }

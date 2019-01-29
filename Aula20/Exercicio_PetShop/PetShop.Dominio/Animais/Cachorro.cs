@@ -11,8 +11,8 @@ namespace PetShop.Dominio.Animais
 
         public double _multiplicador = 2;
 
-        public Cachorro(string nome, Cliente dono, double peso)
-            : base(nome, dono)
+        public Cachorro(string nome, Cliente cliente, EnumEspecie especie, double peso)
+            : base(nome, cliente, EnumEspecie.Cachorro)
         {
             Peso = peso;
         }

@@ -4,23 +4,24 @@ using PetShop.Repositorio;
 using PetShop.Dominio.Animais;
 using PetShop.Dominio.Pessoas;
 using PetShop.Dominio.Animais.Enumerador;
+using PetShot.Repositorio;
 
 namespace PetShop.Service
 {
     public class AnimalService
     {
         private CachorroRepositorio _cachorros = new CachorroRepositorio();
-
+        private GatoRepositorio _gatos = new GatoRepositorio();
+        private PeixeRepositorio _peixes = new PeixeRepositorio();
 
         public AnimalDtoReturn Inserir(AnimalInserirViewModel animalViewModel)
         {
             switch (animalViewModel.Especie)
             {
                 case EnumEspecie.Cachorro:
-
-                    var clienteService = new ClienteService();
-                    var cliente = clienteService.BuscarModeloPorId(animalViewModel.DonoId);
-                    var cachorro = new Cachorro(animalViewModel.Nome, cliente, EnumEspecie.Cachorro, animalViewModel.Peso);
+                    var clienteServiceCachorro = new ClienteService();
+                    var clienteCachorro = clienteServiceCachorro.BuscarModeloPorId(animalViewModel.DonoId);
+                    var cachorro = new Cachorro(animalViewModel.Nome, clienteCachorro, EnumEspecie.Cachorro, animalViewModel.Peso);
 
                     if (!cachorro.Valido())
                         return new AnimalDtoReturn(cachorro.GetErros());
@@ -31,7 +32,31 @@ namespace PetShop.Service
 
                     return new AnimalDtoReturn(BuscarPorId(cachorro.Id));
 
+                case EnumEspecie.Gato:
+                    var clienteServiceGato = new ClienteService();
+                    var clienteGato = clienteServiceGato.BuscarModeloPorId(animalViewModel.DonoId);
+                    var gato = new Gato(animalViewModel.Nome, clienteGato, EnumEspecie.Gato, animalViewModel.Peso);
+
+                    if (!gato.Valido())
+                        return new AnimalDtoReturn(gato.GetErros());
+
+                    _gatos.Inserir(gato);
+
+                    return new AnimalDtoReturn(BuscarPorId(gato.Id));
+
+                case EnumEspecie.Peixe:
+                    var clienteServicePeixe = new ClienteService();
+                    var clientePeixe = clienteServicePeixe.BuscarModeloPorId(animalViewModel.DonoId);
+                    var peixe = new Peixe(animalViewModel.Nome, clientePeixe, EnumEspecie.Peixe, animalViewModel.Altura, animalViewModel.Largura, animalViewModel.Comprimento);
+
+                    if (!peixe.Valido())
+                        return new AnimalDtoReturn(peixe.GetErros());
+
+                    _peixes.Inserir(peixe);
+                    return new AnimalDtoReturn(BuscarPorId(peixe.Id));
             }
+
+            return;
         }
 
         public Animal BuscarModeloPorId(Guid id)

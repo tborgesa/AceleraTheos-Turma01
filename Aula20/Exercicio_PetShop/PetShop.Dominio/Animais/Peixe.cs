@@ -11,8 +11,8 @@ namespace PetShop.Dominio.Animais
         public double Comprimento { get; private set; }
 
 
-        public Peixe(string nome, Cliente dono, double altura, double largura, double comprimento)
-            : base (nome, dono)
+        public Peixe(string nome, Cliente dono, EnumEspecie peixe,  double altura, double largura, double comprimento)
+            : base (nome, dono, EnumEspecie.Peixe)
         {
             Altura = altura;
             Largura = largura;

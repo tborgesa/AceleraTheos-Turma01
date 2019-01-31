@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="CachorroRepositorio.cs" />
     <Compile Include="ClienteRepositorio.cs" />
+    <Compile Include="GatoRepositorio.cs" />
+    <Compile Include="PeixeRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

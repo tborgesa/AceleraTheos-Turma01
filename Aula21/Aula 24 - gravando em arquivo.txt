@@ -1,0 +1,102 @@
+Gravando em arquivos
+
+*Cria um Helper static, com um método static para Gravar o arquivo (GravaArquivo string conteudo, string nomeArquivo). Existem dois caminhos:
+
+Caminho absoluto - coloca o caminho inteiro de onde esta o arquivo
+Caminho Relativo - coloca o caminho a partir da pasta raiz do projeto
+	Usamos sem o caminho absoluto.
+Podemos obter o caminho de configuração: projeto Principal (Swagger) > AppConfig
+	adiciona a chave: 
+	<appSetings>
+		<add key="PastaDataBase" value = "caminho absoluto"/>
+	<\appSetings>
+
+********** 1a forma de pegar a pasta 
+Para pegar o arquivo na classe ArquiovoHelper, tem que referenciar o System.Configuration nas Referencias do projeto
+	var pasta = ConfigurationManager.AppSettings["PastaDataBase"];
+
+	if(string.isNullOrWhiteSpace(pasta))
+		throw new Exception("Pasta do Banco de Dados não configurada.");	
+
+	if(pasta.EndsWith("\\")) // se terminar com barra, removemos a barra
+	pasta = pasta.Remove(pasta.Length - 1);
+
+*********** 2a forma de pegar a pasta
+	var pastaExecutavel = System.Enviroment.CurrentDirectory;
+    desta forma ele instancia o caminho como sendo a pasta onde esta o executável do swagger.
+
+*********** Continuando...
+ --- uma forma de criar a pasta configurada, caso ela nao exista no diretorio
+	if(!Directory.Exists(pasta))
+	   Throw Directory.CreateDirectory(pasta);
+
+	var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
+
+--- criando o arquivo
+	var arquivo = new StreamWhiter(caminhoAbsoluto, false)
+	arquivo.Write(conteudo);
+ 
+   using é como se fosse um dispose, ele é usado para liberar o arquivo. Se não o arquivo fica preso no processe
+	using (var arquivo = new StreamWriter(caminhoAbsoluto, false))
+		arquivo.Write(conteudo);
+
+**********
+adicionar a referencia do "comum" no repositorio e add o NewtonSoft Json
+
+Feito isso, no método inserir do repositorio, adiciona
+
+	var conteudo = JsonConvert.SertializeObject(_listaDeRepo);
+	DataBaseHekper.GravarArquivo(conteudo, "Fornecedor")
+
+###################################
+LENDO O ARQUIVO
+###################################
+
+No Helper:
+
+** aqui o Thiago separou o método de GravarArquivo em GravarArquivo e GetPastaConfigurada (ver no código).
+
+** Deois criou o método LerArquivo
+
+public satic string LerArquivo(string nomeArquivo){
+	var pasta = GetPastaConfigurada();
+	var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
+
+	using (var arquivo = new StreamReader(caminhoAbsoluto))
+		return arquivo.ReadToEnd();
+
+--------------- no repositorio
+  remove a lista inicial
+
+*** todo método tem que começar pegando os dados da base
+var fornecedores = GetFornecedoresArquivo();
+
+esse méto lê a lista e deserializa ela em string
+	private List<Obj> GetFornecedoresArquivo()
+	{
+	var conteudo = DataBaseHelper.LerArquivo("Obj [Fornecedor]");
+	return JsonConvert.DeserializeObject<List<Fornecedor>>(conteudo);
+}
+
+o Tiago criou um método para gravar os arquivos no arquivo e usa ele no final do inserir, excluir e do atualizar.
+
+	private static List<> GravarArquivo()
+	var conteudo = JsonConvert.SertializeObject(_listaDeRepo);
+	DataBaseHekper.GravarArquivo(conteudo, "Fornecedor")
+
+--- no metodo LerArquivo coloca uma confição para que se nao exista o arquivo, o sistema crie
+
+public satic string LerArquivo(string nomeArquivo){
+	var pasta = GetPastaConfigurada();
+	var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
+
+	if(!File.Exists(caminhoAbsoluto))
+	{
+		var arquivo = File.Create(caminhoAbsoluto);
+		arquivo.Close();
+	}
+	using (var arquivo = new StreamReader(caminhoAbsoluto))
+		return arquivo.ReadToEnd();
+
+		
+#### por causa do newtonsoft as classes modelo tem que ter um construtor vazio

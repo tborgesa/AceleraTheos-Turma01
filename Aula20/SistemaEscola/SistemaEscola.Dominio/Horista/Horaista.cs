@@ -9,6 +9,15 @@ namespace SistemaEscola.Dominio.Funcionario
         public Horista(string nome, string cpf, DateTime dataNascimento, string endereco, int horas):base(nome, cpf, dataNascimento,endereco)
         {
             Horas = horas;
+            ValidaHoras(horas);
+        }
+
+        private void ValidaHoras(int horas)
+        {
+            if (horas < 0 || horas > 800)
+            {
+                AdicionarErro("Hora Invalida");
+            }
         }
 
         public override void Gravar()

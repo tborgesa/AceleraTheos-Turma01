@@ -16,7 +16,7 @@
 
         public string erro { get; private set; }
 
-        public string EscolariadadeDescricao { get;}
+        public string EscolariadadeDescricao { get; private set; }
 
         public decimal Salario { get; }
     }

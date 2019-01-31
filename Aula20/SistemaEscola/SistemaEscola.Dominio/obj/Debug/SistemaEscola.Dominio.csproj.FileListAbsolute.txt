@@ -24,3 +24,11 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.dll
+C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula20\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.pdb

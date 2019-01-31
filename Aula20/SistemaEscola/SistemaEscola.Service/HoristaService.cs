@@ -11,19 +11,31 @@ namespace SistemaEscola.Service
     {
         private HoristaRepositorio _repositorio = new HoristaRepositorio();
 
-        public  HoristaDto Inserir(HoristaInserirViewModel horistaViewModel)
+        public  HoristaDtoReturn Inserir(HoristaInserirViewModel horistaViewModel)
         {
-            var horista = new Horista(horistaViewModel.Nome, horistaViewModel.Cpf, horistaViewModel.DataNascimento
-                    , horistaViewModel.Endereco, horistaViewModel.Horas);
+            var horista = new Horista(
+                horistaViewModel.Nome,
+                horistaViewModel.Cpf, 
+                horistaViewModel.DataNascimento,
+                horistaViewModel.Endereco, 
+                horistaViewModel.Horas);
+
+            if (!horista.Valido())
+                return new HoristaDtoReturn(horista.GetErros());
 
             _repositorio.Inserir(horista);
 
-            return BuscarPorId(horista.Id);
+            return new HoristaDtoReturn(BuscarPorId(horista.Id));
         }
 
         public HoristaDto BuscarPorId(Guid id)
         {
             Horista horista = _repositorio.BuscarPorId(id);
+
+            if (horista == null)
+            {
+                return null;
+            }
 
             return new HoristaDto
             {
@@ -56,16 +68,27 @@ namespace SistemaEscola.Service
             return retorno;
         }
 
-        public HoristaDto Atualizar(HoristaAtualizarViewModel horistaAtualizarViewModel)
+        public HoristaDtoReturn Atualizar(HoristaAtualizarViewModel horistaAtualizarViewModel)
         {
             var horista = _repositorio.BuscarPorId(horistaAtualizarViewModel.Id);
+
+            if (horista == null)
+            {
+                var erros = new List<string>();
+                erros.Add("Horista nao existe");
+                return new HoristaDtoReturn(erros);
+            }
+
             horista.AlterarEndereco(horistaAtualizarViewModel.Endereco);
             horista.AlterarHora(horistaAtualizarViewModel.Horas);
             horista.SetarAlteracao();
 
+            if (!horista.Valido())
+                return new HoristaDtoReturn(horista.GetErros());
+
             _repositorio.Atualizar(horista);
 
-            return BuscarPorId(horistaAtualizarViewModel.Id);
+            return new HoristaDtoReturn(BuscarPorId(horistaAtualizarViewModel.Id));
         }
 
         public void Excluir(Guid id)

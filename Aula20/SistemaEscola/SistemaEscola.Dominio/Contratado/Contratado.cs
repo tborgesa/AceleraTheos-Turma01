@@ -12,8 +12,8 @@ namespace SistemaEscola.Dominio.Funcionario
         public Contratado(DateTime dataNascimento, string nome, string cpf, string endereco,  EEscolaridade escolaridade) :
             base (nome, cpf, dataNascimento, endereco)
         {
-            InstanciarEscolaridade(escolaridade);
             ValidaEscolaridade(escolaridade);
+            InstanciarEscolaridade(escolaridade);
         }
 
         private void ValidaEscolaridade(EEscolaridade escolaridade)
@@ -37,11 +37,6 @@ namespace SistemaEscola.Dominio.Funcionario
 
         public void InstanciarEscolaridade(EEscolaridade eEscolaridade)
         {
-            if (!EEscolaridade.IsDefined(typeof(EEscolaridade), eEscolaridade))
-            {
-                System.Console.WriteLine("Escolaridade Incorreta");
-                return;
-            }
 
             switch (eEscolaridade)
             {
@@ -66,8 +61,8 @@ namespace SistemaEscola.Dominio.Funcionario
 
         public void AlterarEscolaridade(EEscolaridade eEscolaridade)
         {
+            ValidaEscolaridade(eEscolaridade);
             InstanciarEscolaridade(eEscolaridade);
-            Console.WriteLine("Alterar Escolaridade do Professor");
         }
 
         public override decimal SalarioFuncionario()

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SistemaEscola.Dominio.Horista
 {
@@ -12,4 +13,22 @@ namespace SistemaEscola.Dominio.Horista
         public string Endereco { get; set; }
         public int Horas { get; set; }
     }
+
+    public class HoristaDtoReturn
+    {
+        public HoristaDtoReturn(HoristaDto horista)
+        {
+            Horista = horista;
+            Erros = new List<string>();
+        }
+
+        public HoristaDtoReturn(List<string> erros)
+        {
+            Erros = erros;
+        }
+
+        public HoristaDto Horista { get; }
+        public List<string> Erros { get; }
+    }
+
 }

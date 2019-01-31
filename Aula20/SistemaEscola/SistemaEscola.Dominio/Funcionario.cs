@@ -28,7 +28,6 @@ namespace SistemaEscola.Dominio.Funcionario
         public void AlterarEndereco(string endereco)
         {
             Endereco = endereco;
-            Console.WriteLine("Alterar Endereco Cliente");
         }
 
         private void Validar()

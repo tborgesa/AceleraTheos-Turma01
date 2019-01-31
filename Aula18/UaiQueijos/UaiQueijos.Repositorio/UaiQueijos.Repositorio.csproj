@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,10 +48,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UaiQueijos.Comum\UaiQueijos.Comum.csproj">
+      <Project>{d78c2135-5084-4f89-afbf-c0816cc9cad9}</Project>
+      <Name>UaiQueijos.Comum</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UaiQueijos.Dominio\UaiQueijos.Dominio.csproj">
       <Project>{6B584268-9CF5-4DD7-B532-39129862EAB7}</Project>
       <Name>UaiQueijos.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

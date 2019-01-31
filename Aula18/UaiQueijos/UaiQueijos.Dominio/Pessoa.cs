@@ -3,8 +3,13 @@ using UaiQueijos.Comum.Helpers;
 
 namespace UaiQueijos.Dominio
 {
-    public abstract class Pessoa : Entidade 
+    public abstract class Pessoa : Entidade
     {
+        public Pessoa()
+        {
+
+        }
+
         public Pessoa(DateTime dataNascimento, string cpf, string nome)
         {
             DataNascimento = dataNascimento;
@@ -23,10 +28,10 @@ namespace UaiQueijos.Dominio
             Validar();
         }
 
-        public string Nome { get; }
-        public string Cpf { get; }
-        public DateTime DataNascimento { get; }
-        public string Endereco { get; private set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public string Endereco { get; set; }
 
         public void AlterarEndereco(string endereco)
         {

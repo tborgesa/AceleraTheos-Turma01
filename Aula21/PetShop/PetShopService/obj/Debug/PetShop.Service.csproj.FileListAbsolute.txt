@@ -1,0 +1,2 @@
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShopService\obj\Debug\PetShop.Service.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShopService\obj\Debug\PetShop.Service.csproj.CoreCompileInputs.cache

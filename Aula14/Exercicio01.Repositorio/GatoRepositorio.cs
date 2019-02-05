@@ -7,7 +7,7 @@ using Exercicio01.Dominio.Animais;
 
 namespace Exercicio01.Repositorio
 {
-    class GatoRepositorio
+    public class GatoRepositorio
     {
         private List<Gato> _gatos = new List<Gato>();
 

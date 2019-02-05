@@ -49,6 +49,7 @@
     <Compile Include="Animais\Cachorro.cs" />
     <Compile Include="Animais\Gato.cs" />
     <Compile Include="Animais\Peixe.cs" />
+    <Compile Include="Animais\ViewModelDto\AnimalSearchDto.cs" />
     <Compile Include="Enumerador\EnumAnimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

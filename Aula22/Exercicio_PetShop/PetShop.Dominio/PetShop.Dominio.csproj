@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83B4BBC3-A4E0-45D4-B6BB-3A23A199995E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PetShop.Dominio</RootNamespace>
+    <AssemblyName>PetShop.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animais\Animal.cs" />
+    <Compile Include="Animais\AnimalAtualizarViewModel.cs" />
+    <Compile Include="Animais\AnimalDto.cs" />
+    <Compile Include="Animais\AnimalInserirViewModel.cs" />
+    <Compile Include="Animais\Cachorro.cs" />
+    <Compile Include="Animais\Enumerador\EnumEspecie.cs" />
+    <Compile Include="Animais\Gato.cs" />
+    <Compile Include="Animais\Peixe.cs" />
+    <Compile Include="Entidade.cs" />
+    <Compile Include="Pessoas\Cliente.cs" />
+    <Compile Include="Pessoas\ClienteAtualizarViewModel.cs" />
+    <Compile Include="Pessoas\ClienteDto.cs" />
+    <Compile Include="Pessoas\ClienteSearch.cs" />
+    <Compile Include="Pessoas\ClienteInserirViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PetShop.Comum\PetShop.Comum.csproj">
+      <Project>{37b51f4c-be98-4936-9f64-22156c572a4f}</Project>
+      <Name>PetShop.Comum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

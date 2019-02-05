@@ -1,6 +1,8 @@
 ﻿using System.Configuration;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace UaiQueijos.Comum.Helpers
 {
@@ -15,7 +17,7 @@ namespace UaiQueijos.Comum.Helpers
                 arquivo.Write(conteudo);
         }
 
-        public static string LerArquivo(string nomeArquivo)
+        public static List<T> LerArquivo<T>(string nomeArquivo)
         {
             var pasta = GetPastaConfigurada();
             var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
@@ -26,8 +28,12 @@ namespace UaiQueijos.Comum.Helpers
                 arquivo.Close();
             }
 
+            string retornoArquivo;
+
             using (var arquivo = new StreamReader(caminhoAbsoluto))
-                return arquivo.ReadToEnd();
+                retornoArquivo = arquivo.ReadToEnd();
+
+            return JsonConvert.DeserializeObject<List<T>>(retornoArquivo) ?? new List<T>();
         }
 
         private static string GetPastaConfigurada()

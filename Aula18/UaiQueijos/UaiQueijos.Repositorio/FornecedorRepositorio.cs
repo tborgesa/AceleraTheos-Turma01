@@ -13,7 +13,7 @@ namespace UaiQueijos.Repositorio
 
         public FornecedorRepositorio()
         {
-            _fornecedores = GetFornecedoresArquivo();
+            _fornecedores = DataBaseHelper.LerArquivo<Fornecedor>("Fornecedor");
         }
 
         public void Inserir(Fornecedor fornecedor)
@@ -44,17 +44,6 @@ namespace UaiQueijos.Repositorio
         {
             _fornecedores = _fornecedores.Where(f => f.Id != id).ToList();
             GravarFornecedoresArquivo(_fornecedores);
-        }
-
-        private List<Fornecedor> GetFornecedoresArquivo()
-        {
-            var conteudo = DataBaseHelper.LerArquivo("Fornecedor");
-            var lista = JsonConvert.DeserializeObject<List<Fornecedor>>(conteudo);
-
-            if (lista == null)
-                lista = new List<Fornecedor>();
-
-            return lista;
         }
 
         private void GravarFornecedoresArquivo(List<Fornecedor> fornecedores)

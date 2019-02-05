@@ -112,7 +112,7 @@ Digite sua escolha abaixo: ";
                     string nomeCachorro = Console.ReadLine();
                     double pesoCachorro = (double)InputHelper.GetInputDouble("Informe o peso(kg) do cachorro: ", "Você digitou um valor inválido");
 
-                    _animal = new Cachorro(nomeCachorro, _dono, pesoCachorro);
+                    _animal = new Cachorro(nomeCachorro, _dono, EnumEspecie.Cachorro, pesoCachorro);
 
                     Console.Clear();
                     break;
@@ -123,7 +123,7 @@ Digite sua escolha abaixo: ";
                     string nomeGato = Console.ReadLine();
                     double pesoGato = (double)InputHelper.GetInputDouble("Informe o peso(kg) do gato: ", "Você digitou um valor inválido");
 
-                    _animal = new Gato(nomeGato, _dono, pesoGato);
+                    _animal = new Gato(nomeGato, _dono, EnumEspecie.Gato, pesoGato);
 
                     Console.Clear();
                     break;
@@ -135,7 +135,7 @@ Digite sua escolha abaixo: ";
                     double larguraPeixe = (double)InputHelper.GetInputDouble("Informe a largura do aquário: ", "Você digitou um valor inválido");
                     double comprimentoPeixe = (double)InputHelper.GetInputDouble("Informe o comprimento do aquário: ", "Você digitou um valor inválido");
 
-                    _animal = new Peixe(nomePeixe, dono, alturaPeixe, larguraPeixe, comprimentoPeixe);
+                    _animal = new Peixe(nomePeixe, dono, EnumEspecie.Peixe, alturaPeixe, larguraPeixe, comprimentoPeixe);
 
                     Console.Clear();
                     break;
@@ -188,8 +188,8 @@ Digite sua escolha abaixo: ";
                         string resultadoBusca = @"*****REGISTRO ENCONTRADO*****
 
 Nome do Animal: " + animalEncontrado.Nome
-+ "\nDono do Animal: " + animalEncontrado.Dono.Nome
-+ "\nTelefone de Contato: " + animalEncontrado.Dono.Telefone
++ "\nDono do Animal: " + animalEncontrado.Cliente.Nome
++ "\nTelefone de Contato: " + animalEncontrado.Cliente.Telefone
 +"\nValor da última limpeza: " + animalEncontrado.ValorLimpeza.ToString("C", CultureInfo.CurrentCulture);
 
                         Console.WriteLine(resultadoBusca);

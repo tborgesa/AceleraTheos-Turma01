@@ -12,13 +12,13 @@ namespace PetShop.Dominio.Animais
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public Cliente Cliente { get; set; }
-        public string erro { get;  set; }
+        public string erro { get; set; }
         public double ValorLimpeza { get; set; }
         public string Raca { get; set; }
-        public double Peso { get;  set; }
-        public double Altura { get;  set; }
-        public double Largura { get;  set; }
-        public double Comprimento { get;  set; }
+        public double Peso { get; set; }
+        public double Altura { get; set; }
+        public double Largura { get; set; }
+        public double Comprimento { get; set; }
 
     }
 
@@ -26,6 +26,11 @@ namespace PetShop.Dominio.Animais
     {
         public AnimalDto Animal { get; }
         public List<string> Erros { get; }
+
+        public AnimalDtoReturn()
+        {
+
+        }
 
         public AnimalDtoReturn (AnimalDto animal)
         {

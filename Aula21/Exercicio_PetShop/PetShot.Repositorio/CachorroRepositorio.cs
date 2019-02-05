@@ -11,10 +11,16 @@ namespace PetShop.Repositorio
     {
         private List<Cachorro> _cachorros = new List<Cachorro>();
 
+        public CachorroRepositorio()
+        {
+            _cachorros = GetCachorrosArquivo();
+        }
+
         public void Inserir(Cachorro cachorro)
         {
             cachorro.GerarId();
             _cachorros.Add(cachorro);
+            GravarFornecedoresArquivos(_cachorros);
         }
 
         public Cachorro BuscarPorId(Guid id)
@@ -31,17 +37,30 @@ namespace PetShop.Repositorio
         {
             var cachorroLista = _cachorros.FirstOrDefault(c => c.Id == cachorro.Id);
             cachorroLista = cachorro;
+            GravarFornecedoresArquivos(_cachorros);
         }
 
         public void Excluir(Guid id)
         {
             _cachorros = _cachorros.Where(c => c.Id != id).ToList();
+            GravarFornecedoresArquivos(_cachorros);
         }
 
         private void GravarFornecedoresArquivos(List<Cachorro> cachorros)
         {
             var conteudo = JsonConvert.SerializeObject(cachorros);
             DataBaseHelper.GravarArquivo(conteudo, "Cachorros");
+        }
+
+        private List<Cachorro> GetCachorrosArquivo()
+        {
+            var conteudo = DataBaseHelper.LerArquivo("Cachorros");
+            var lista = JsonConvert.DeserializeObject<List<Cachorro>>(conteudo);
+
+            if (lista == null)
+                lista = new List<Cachorro>();
+
+            return lista;
         }
     }
 }

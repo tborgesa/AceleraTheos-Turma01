@@ -13,7 +13,7 @@ namespace PetShot.Repositorio
 
         public void Inserir (Peixe peixe)
         {
-            peixe.GerarId(;
+            peixe.GerarId();
             _peixes.Add(peixe);
         }
 

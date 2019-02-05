@@ -31,7 +31,7 @@ namespace PetShop.Comum.Helpers
             return pasta;
         }
 
-        private static string LerArquivo(string nomeArquivo)
+        public  static string LerArquivo(string nomeArquivo)
         {
             var pasta = GetPastaConfigurada();
             var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";

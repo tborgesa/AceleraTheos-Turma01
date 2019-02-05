@@ -16,6 +16,8 @@ namespace PetShop.Service
 
         public AnimalDtoReturn Inserir(AnimalInserirViewModel animalViewModel)
         {
+            var animal = new AnimalDtoReturn();
+            
             switch (animalViewModel.Especie)
             {
                 case EnumEspecie.Cachorro:
@@ -24,7 +26,9 @@ namespace PetShop.Service
                     var cachorro = new Cachorro(animalViewModel.Nome, clienteCachorro, EnumEspecie.Cachorro, animalViewModel.Peso);
 
                     if (!cachorro.Valido())
-                        return new AnimalDtoReturn(cachorro.GetErros());
+                    {
+                        //validar o cachorro com animal, para o return fora do case funcionar.
+                    }
 
                     _cachorros.Inserir(cachorro);
 
@@ -56,7 +60,7 @@ namespace PetShop.Service
                     return new AnimalDtoReturn(BuscarPorId(peixe.Id));
             }
 
-            return;
+            return animal;
         }
 
         public Animal BuscarModeloPorId(Guid id)
@@ -90,6 +94,13 @@ namespace PetShop.Service
                 animais.Add(cachorro);
 
             //adicionar o gatos e peixes na lista
+            List<Gato> gatos = _gatos.BuscarTodos();
+            foreach (Gato gato in gatos)
+                animais.Add(gato);
+
+            List<Peixe> peixes = _peixes.BuscarTodos();
+            foreach (Peixe peixe in peixes)
+                animais.Add(peixe);
 
             return animais;
         }

@@ -14,6 +14,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         {
             Nome = nome;
             Cpf = cpf;
+            ValidarNomeProfessor();
         }
 
         public Professor()
@@ -27,6 +28,12 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         {
             Cpf = cpf;
             Nome = nome;
+        }
+
+        private void ValidarNomeProfessor()
+        {
+            if (string.IsNullOrWhiteSpace(Nome))
+                AdicionarErro("Preencha o nome do professor");
         }
     }
 }

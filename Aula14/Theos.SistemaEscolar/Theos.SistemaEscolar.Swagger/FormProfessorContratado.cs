@@ -51,9 +51,16 @@ namespace Theos.SistemaEscolar.Swagger
                     return;
                 }
 
-                var professorContratadoDto = _service.Inserir(professorContratadoViewModel);
 
-                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(professorContratadoDto);
+                var professorContratadoDtoReturn = _service.Inserir(professorContratadoViewModel);
+
+                if (professorContratadoDtoReturn.Erros.Count > 0)
+                {
+                    textBoxSaidaInserir.Text = JsonConvert.SerializeObject(professorContratadoDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxSaidaInserir.Text = JsonConvert.SerializeObject(professorContratadoDtoReturn.ProfessorContratado);
             }
             catch (Exception ex)
             {
@@ -126,20 +133,20 @@ namespace Theos.SistemaEscolar.Swagger
 
         private void buttonAtualizar_Click(object sender, EventArgs e)
         {
-         
+
             try
             {
                 var professorContratadoViewModel = JsonConvert.DeserializeObject<ProfessorContratadoAtualizarViewModel>(textBoxEntradaAtualizar.Text);
                 if (professorContratadoViewModel == null)
                 {
                     textBoxSaidaAtualizar.Text = $"Id inválido";
-                    return;    
+                    return;
                 }
-             
+
                 var professorContratatoDto = _service.Atualizar(professorContratadoViewModel);
                 textBoxSaidaAtualizar.Text = JsonConvert.SerializeObject(professorContratatoDto);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 textBoxSaidaAtualizar.Text = $"{ex.Message}";
             }
@@ -159,12 +166,12 @@ namespace Theos.SistemaEscolar.Swagger
             try
             {
                 var entrada = textBoxEntradaExcluir.Text;
-                if(entrada == null)
+                if (entrada == null)
                 {
                     textBoxSaidaExcluir.Text = "Id inválido";
                     return;
                 }
-                if(!Guid.TryParse(entrada, out Guid guid))
+                if (!Guid.TryParse(entrada, out Guid guid))
                 {
                     textBoxSaidaExcluir.Text = "Id inválido";
                     return;
@@ -173,7 +180,7 @@ namespace Theos.SistemaEscolar.Swagger
                 _service.Excluir(guid);
                 textBoxSaidaExcluir.Text = "Excluído com sucesso";
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 textBoxSaidaExcluir.Text = $"{ex.Message}";
             }
@@ -183,6 +190,6 @@ namespace Theos.SistemaEscolar.Swagger
 
         #endregion
 
-    
+
     }
 }

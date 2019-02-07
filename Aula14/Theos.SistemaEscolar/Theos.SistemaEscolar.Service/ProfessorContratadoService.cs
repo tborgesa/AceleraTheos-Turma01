@@ -12,21 +12,25 @@ namespace Theos.SistemaEscolar.Service
     {
         private ProfessorContratadoRepositorio _repositorio = new ProfessorContratadoRepositorio();
 
-        public ProfessorContratadoDto Inserir(ProfessorContratadoInserirViewModel professorContratadoViewModel)
+        public ProfessorContratadoDtoReturn Inserir(ProfessorContratadoInserirViewModel professorContratadoViewModel)
         {
             var professorContratado = new ProfessorContratado(professorContratadoViewModel.Nome, professorContratadoViewModel.Cpf
                 , professorContratadoViewModel.Escolaridade);
 
-            _repositorio.Inserir(professorContratado);
+            if (!professorContratado.Valido())
+                return new ProfessorContratadoDtoReturn(professorContratado.GetErros());
 
-            return BuscarPorId(professorContratado.Id);
+            _repositorio.Inserir(professorContratado);
+            return new ProfessorContratadoDtoReturn(BuscarPorId(professorContratado.Id));
+
+
         }
 
         public ProfessorContratadoDto BuscarPorId(Guid id)
         {
             ProfessorContratado professorContratado = _repositorio.BuscarPorId(id);
 
-            if(professorContratado == null)
+            if (professorContratado == null)
             {
                 return null;
             }

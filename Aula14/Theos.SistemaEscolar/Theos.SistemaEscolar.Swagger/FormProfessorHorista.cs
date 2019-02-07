@@ -19,33 +19,6 @@ namespace Theos.SistemaEscolar.Swagger
         {
             InitializeComponent();
 
-            ProfessorHoristaViewModel professor = new ProfessorHoristaViewModel();
-            professor.Nome = "gfbhdt";
-            professor.Cpf = "07346153618";
-
-            _service.Inserir(professor);
-
-
-            professor = new ProfessorHoristaViewModel();
-            professor.Nome = "hjjkfy";
-            professor.Cpf = "07346153618";
-
-            _service.Inserir(professor);
-
-
-            professor = new ProfessorHoristaViewModel();
-            professor.Nome = "bjcf";
-            professor.Cpf = "07346153618";
-
-            _service.Inserir(professor);
-
-
-            professor = new ProfessorHoristaViewModel();
-            professor.Nome = "gfbjkghhdt";
-            professor.Cpf = "07346153618";
-
-            _service.Inserir(professor);
-
             CarregarExemploId();
             CarregarExemploInserir();
             CarregarExemploAtualizar();

@@ -21,13 +21,13 @@ namespace Theos.SistemaEscolar.Dominio.Professor
 
         public override decimal CalcularSalario()
         {
-       
+
             switch (Escolaridade)
             {
                 case EEscolaridade.SegundoGrau:
                     return 1000;
                 case EEscolaridade.EnsinoSuperior:
-                    return 1800;  
+                    return 1800;
                 case EEscolaridade.Mestrado:
                     return 3000;
                 case EEscolaridade.Doutorado:
@@ -36,5 +36,6 @@ namespace Theos.SistemaEscolar.Dominio.Professor
                     return 0;
             }
         }
+
     }
 }

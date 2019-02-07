@@ -12,7 +12,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
             HorasTrabalhadas = horasTrabalhadas;
         }
 
-     
+
         public override decimal CalcularSalario()
         {
             salarioFinal = HorasTrabalhadas * 17;
@@ -24,5 +24,6 @@ namespace Theos.SistemaEscolar.Dominio.Professor
             HorasTrabalhadas = horasTrabalhadas;
             base.Alterar(nome, cpf);
         }
+
     }
 }

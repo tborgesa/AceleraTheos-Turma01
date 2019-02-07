@@ -14,17 +14,19 @@ namespace Theos.SistemaEscolar.Service
         private ProfessorHoristaRepositorio _repositorio = new ProfessorHoristaRepositorio();
 
         //Será criado os métodos CRUD utilizando o viewModel como parametro com retorno de um Dto
-        public ProfessorHoristaDto Inserir(ProfessorHoristaViewModel professorHoristaViewModel)
+        public ProfessorHoristaDtoReturn Inserir(ProfessorHoristaViewModel professorHoristaViewModel)
         {
             //cria uma variavel local do tipo ProfessorHorista, instancia e passa as propriedades por parametro
             var professorHorista = new ProfessorHorista(professorHoristaViewModel.Nome, professorHoristaViewModel.Cpf,
                 professorHoristaViewModel.HorasTrabalhadas);
 
-            //repositorio insere o que foi adicionado na variável local
+            if (!professorHorista.Valido())
+                new ProfessorHoristaDtoReturn(professorHorista.GetErros());
 
+            //repositorio insere o que foi adicionado na variável local
             _repositorio.Inserir(professorHorista);
 
-            return BuscarPorId(professorHorista.Id);
+            return new ProfessorHoristaDtoReturn(BuscarPorId(professorHorista.Id));
         }
 
         //Será criado um método retornando um Dto para buscar professorHorista por Id, recebendo como parametro um id
@@ -32,7 +34,7 @@ namespace Theos.SistemaEscolar.Service
         {
             ProfessorHorista professorHorista = _repositorio.BuscarPorId(id);
 
-            if(professorHorista == null)
+            if (professorHorista == null)
             {
                 return null;
             }
@@ -41,7 +43,7 @@ namespace Theos.SistemaEscolar.Service
             {
                 Id = professorHorista.Id,
                 Cpf = professorHorista.Cpf,
-                Nome =  professorHorista.Nome,
+                Nome = professorHorista.Nome,
                 HorasTrabalhadas = professorHorista.HorasTrabalhadas,
                 DataInsercao = professorHorista.DataInsercao
             };

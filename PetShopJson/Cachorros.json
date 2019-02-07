@@ -1,0 +1,38 @@
+[
+  {
+    "_multiplicador": 2.0,
+    "raca": null,
+    "peso": 65.0,
+    "nome": "Biju",
+    "cliente": null,
+    "valorLimpeza": 0.0,
+    "especie": 1,
+    "id": "00000000-0000-0000-0000-000000000000",
+    "dataInsercao": "01/01/0001",
+    "dataAlteracao": "05/02/2019"
+  },
+  {
+    "_multiplicador": 2.0,
+    "raca": null,
+    "peso": 65.0,
+    "nome": "Biju",
+    "cliente": null,
+    "valorLimpeza": 0.0,
+    "especie": 1,
+    "id": "00000000-0000-0000-0000-000000000000",
+    "dataInsercao": "01/01/0001",
+    "dataAlteracao": "05/02/2019"
+  },
+  {
+    "_multiplicador": 2.0,
+    "raca": null,
+    "peso": 65.0,
+    "nome": "Biju",
+    "cliente": null,
+    "valorLimpeza": 0.0,
+    "especie": 1,
+    "id": "f1d7389e-368a-470b-9029-df0693a1b3ec",
+    "dataInsercao": "01/01/0001",
+    "dataAlteracao": "05/02/2019"
+  }
+]

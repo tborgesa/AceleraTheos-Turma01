@@ -7,18 +7,17 @@ using Newtonsoft.Json;
 
 namespace UaiQueijos.Repositorio
 {
-    public class FornecedorRepositorio
+    public class FornecedorArquivoRepositorio
     {
         private List<Fornecedor> _fornecedores = new List<Fornecedor>();
 
-        public FornecedorRepositorio()
+        public FornecedorArquivoRepositorio()
         {
             _fornecedores = DataBaseHelper.LerArquivo<Fornecedor>("Fornecedor");
         }
 
         public void Inserir(Fornecedor fornecedor)
         {
-            fornecedor.GerarId();
             _fornecedores.Add(fornecedor);
             GravarFornecedoresArquivo(_fornecedores);
         }

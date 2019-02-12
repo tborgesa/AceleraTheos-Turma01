@@ -7,7 +7,7 @@ namespace UaiQueijos.Service
 {
     public class FornecedorService
     {
-        private FornecedorRepositorio _repositorio = new FornecedorRepositorio();
+        private FornecedorAdoNetRepositorio _repositorio = new FornecedorAdoNetRepositorio();
 
         public FornecedorDtoReturn Inserir(FornecedorInserirViewModel fornecedorViewModel)
         {
@@ -17,6 +17,7 @@ namespace UaiQueijos.Service
             if (!fornecedor.Valido())
                 return new FornecedorDtoReturn(fornecedor.GetErros());
 
+            fornecedor.GerarId();
             _repositorio.Inserir(fornecedor);
             return new FornecedorDtoReturn(BuscarPorId(fornecedor.Id));
         }

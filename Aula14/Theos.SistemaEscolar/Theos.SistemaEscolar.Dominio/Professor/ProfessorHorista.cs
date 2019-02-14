@@ -3,10 +3,16 @@ namespace Theos.SistemaEscolar.Dominio.Professor
 {
     public class ProfessorHorista : Professor
     {
+
+        public ProfessorHorista()
+        {
+
+        }
+
         decimal salarioFinal = 0;
 
-        public int HorasTrabalhadas { get; private set; }
-        public ProfessorHorista(string nome, string cpf, int horasTrabalhadas)
+        public decimal HorasTrabalhadas { get; set; }
+        public ProfessorHorista(string nome, string cpf, decimal horasTrabalhadas)
             : base(nome, cpf)
         {
             HorasTrabalhadas = horasTrabalhadas;
@@ -19,7 +25,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
             return salarioFinal;
         }
 
-        public void Alterar(string nome, string cpf, int horasTrabalhadas)
+        public void Alterar(string nome, string cpf, decimal horasTrabalhadas)
         {
             HorasTrabalhadas = horasTrabalhadas;
             base.Alterar(nome, cpf);

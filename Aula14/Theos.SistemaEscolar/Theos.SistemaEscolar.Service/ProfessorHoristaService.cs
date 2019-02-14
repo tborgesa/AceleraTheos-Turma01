@@ -11,7 +11,7 @@ namespace Theos.SistemaEscolar.Service
     public class ProfessorHoristaService
     {
         //cria uma variável do tipo repositorio e instancia ela
-        private ProfessorHoristaRepositorio _repositorio = new ProfessorHoristaRepositorio();
+        private ProfessorHoristaAdoNetRepositorio _repositorio = new ProfessorHoristaAdoNetRepositorio();
 
         //Será criado os métodos CRUD utilizando o viewModel como parametro com retorno de um Dto
         public ProfessorHoristaDtoReturn Inserir(ProfessorHoristaViewModel professorHoristaViewModel)
@@ -24,6 +24,7 @@ namespace Theos.SistemaEscolar.Service
                 new ProfessorHoristaDtoReturn(professorHorista.GetErros());
 
             //repositorio insere o que foi adicionado na variável local
+            professorHorista.GerarId();
             _repositorio.Inserir(professorHorista);
 
             return new ProfessorHoristaDtoReturn(BuscarPorId(professorHorista.Id));
@@ -77,6 +78,7 @@ namespace Theos.SistemaEscolar.Service
             professorHorista.Alterar(professorHoristaAtualizarViewModel.Nome, professorHoristaAtualizarViewModel.Cpf, professorHoristaAtualizarViewModel.HorasTrabalhadas);
             professorHorista.SetarAlteracao();
 
+            professorHorista.GerarId();
             _repositorio.Atualizar(professorHorista);
 
             return BuscarPorId(professorHoristaAtualizarViewModel.Id);

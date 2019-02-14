@@ -7,8 +7,8 @@ namespace Theos.SistemaEscolar.Dominio.Professor
     public abstract class Professor : Entidade
     {
 
-        public string Nome { get; private set; }
-        public string Cpf { get; private set; }
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
 
         public Professor(string nome, string cpf)
         {

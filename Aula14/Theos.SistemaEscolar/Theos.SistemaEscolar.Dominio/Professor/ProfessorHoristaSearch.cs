@@ -11,6 +11,6 @@ namespace Theos.SistemaEscolar.Dominio.Professor
         public Guid Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public int HorasTrabalhadas { get; set; }
+        public decimal HorasTrabalhadas { get; set; }
     }
 }

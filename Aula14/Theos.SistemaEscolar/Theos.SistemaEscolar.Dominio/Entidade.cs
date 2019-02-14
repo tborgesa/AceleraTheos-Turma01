@@ -8,9 +8,9 @@ namespace Theos.SistemaEscolar.Dominio
 {
     public class Entidade
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
         public DateTime DataInsercao { get; set; }
-        public DateTime DataAlteracao { get; private set; }
+        public DateTime DataAlteracao { get; set; }
         public List<string> _erros = new List<string>();
 
         public Entidade()

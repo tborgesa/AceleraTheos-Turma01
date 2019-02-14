@@ -45,6 +45,7 @@ namespace Theos.SistemaEscolar.Repositorio
         public void Excluir(Guid id)
         {
             _professoresHorista = _professoresHorista.Where(p => p.Id != id).ToList();
+            GravarProfessorHoristaArquivo(_professoresHorista);
 
         }
 

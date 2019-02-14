@@ -11,11 +11,12 @@ namespace PetShop.Service
 {
     public class ClienteService
     {
-        private ClienteRepositorio _repositorio = new ClienteRepositorio();
+        private ClienteAdoNetRepositorio _repositorio = new ClienteAdoNetRepositorio();
 
         public ClienteDtoReturn Inserir(ClienteInserirViewModel clienteViewModel)
         {
             var cliente = new Cliente(clienteViewModel.Nome, clienteViewModel.Telefone, clienteViewModel.Endereco);
+            cliente.GerarId();
 
             if (!cliente.Valido())
                 return new ClienteDtoReturn(cliente.GetErros());
@@ -54,6 +55,7 @@ namespace PetShop.Service
                 {
                     Id = cliente.Id,
                     Nome = cliente.Nome,
+                    Telefone = cliente.Telefone,
                     Endereco = cliente.Endereco
                 });
             }

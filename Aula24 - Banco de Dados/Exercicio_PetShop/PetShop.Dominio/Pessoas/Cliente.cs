@@ -4,9 +4,14 @@ namespace PetShop.Dominio.Pessoas
 {
     public class Cliente : Entidade
     {
-        public string Nome { get; }
-        public string Telefone { get; private set; }
-        public string Endereco { get; private set; }
+        public string Nome { get; set; }
+        public string Telefone { get; set; }
+        public string Endereco { get; set; }
+
+        public Cliente()
+        {
+
+        }
 
         public Cliente(string nome, string telefone)
         {

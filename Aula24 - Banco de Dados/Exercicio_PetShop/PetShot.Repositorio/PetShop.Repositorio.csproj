@@ -7,8 +7,8 @@
     <ProjectGuid>{68582F43-E347-4B3F-AF68-725FB42831F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PetShot.Repositorio</RootNamespace>
-    <AssemblyName>PetShot.Repositorio</AssemblyName>
+    <RootNamespace>PetShop.Repositorio</RootNamespace>
+    <AssemblyName>PetShop.Repositorio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,6 +35,7 @@
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,7 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalAdoNetRepositorio.cs" />
+    <Compile Include="BaseRepositorio.cs" />
     <Compile Include="CachorroRepositorio.cs" />
+    <Compile Include="ClienteAdoNetRepositorio.cs" />
     <Compile Include="ClienteRepositorio.cs" />
     <Compile Include="GatoRepositorio.cs" />
     <Compile Include="PeixeRepositorio.cs" />

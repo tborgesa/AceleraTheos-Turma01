@@ -18,7 +18,7 @@ namespace PetShop.Repositorio
 
         public void Inserir(Cliente cliente)
         {
-            cliente.GerarId();
+            
             _clientes.Add(cliente);
             GravarClientesArquivo(_clientes);
         }

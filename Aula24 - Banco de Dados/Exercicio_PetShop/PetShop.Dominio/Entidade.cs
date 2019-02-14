@@ -5,14 +5,14 @@ namespace PetShop.Dominio
 {
     public abstract class Entidade
     {
-        public Guid Id { get; private set; }
-        public DateTime DataInsercao { get; }
-        public DateTime DataAlteracao { get; private set; }
+        public Guid Id { get; set; }
+        public DateTime DataInsercao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
         private List<string> _erros = new List<string>();
 
         public Entidade()
         {
-            DataAlteracao = DateTime.Now;
+            DataInsercao = DateTime.Now;
         }
 
         public void GerarId()

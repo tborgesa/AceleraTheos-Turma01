@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UaiQueijos.Comum.Helpers
+﻿namespace UaiQueijos.Comum.Helpers
 {
     public static class CpfHelper
     {
-        public static bool CpfValido(string cpf)
+        public static bool CpfValido(this string cpf)
         {
             cpf = cpf ?? string.Empty;
 

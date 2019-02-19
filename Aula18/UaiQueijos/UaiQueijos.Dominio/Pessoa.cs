@@ -48,7 +48,7 @@ namespace UaiQueijos.Dominio
             if (string.IsNullOrWhiteSpace(Nome))
                 AdicionarErro("Preencha o nome.");
 
-            if (!CpfHelper.CpfValido(Cpf))
+            if (!Cpf.CpfValido())
                 AdicionarErro("CPF inválido.");
 
             if (DataNascimento < new DateTime(1900,01,01).Date)

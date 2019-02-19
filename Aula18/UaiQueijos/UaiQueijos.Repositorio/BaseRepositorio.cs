@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using UaiQueijos.Repositorio.Map;
 
 namespace UaiQueijos.Repositorio
 {
@@ -10,6 +11,7 @@ namespace UaiQueijos.Repositorio
 
         public BaseRepositorio()
         {
+            ConfigMapDapper.Carregar();
             Conexao = new SqlConnection(GetStringConexao());
         }
 

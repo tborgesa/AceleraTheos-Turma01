@@ -60,3 +60,19 @@ C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Repositorio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Repositorio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CopyComplete

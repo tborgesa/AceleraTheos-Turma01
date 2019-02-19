@@ -7,13 +7,14 @@ using Newtonsoft.Json;
 
 namespace SistemaEscola.Repositorio
 {
-    public class ContratadoRepositorio
+    public class ContratadoArquivoRepositorio
     {
         private List<Contratado> _contratados = new List<Contratado>();
 
-        public ContratadoRepositorio()
+        public ContratadoArquivoRepositorio()
         {
-            _contratados = GetContratadoArquivo();
+           // _contratados = GetContratadoArquivo();
+            _contratados = DataBaseHelper.LerArquivo<Contratado>("Contratado");
         }
 
         public void Inserir(Contratado contratado)
@@ -27,6 +28,17 @@ namespace SistemaEscola.Repositorio
         {
             return _contratados.FirstOrDefault(f => f.Id == id);
         }
+        
+        //public List<Contratado> GetContratadoArquivo()
+        //{
+        //    var conteudo = DataBaseHelper.LerArquivo("Contratado");
+        //    var lista = JsonConvert.DeserializeObject<List<Contratado>>(conteudo);
+
+        //    if (lista == null)
+        //        lista = new List<Contratado>();
+
+        //    return lista;
+        //}
 
         public List<Contratado> BuscarTodos()
         {
@@ -44,17 +56,6 @@ namespace SistemaEscola.Repositorio
         {
             _contratados = _contratados.Where(f => f.Id != id).ToList();
             GravarContratadosArquvo(_contratados);
-        }
-
-        public List<Contratado> GetContratadoArquivo()
-        {
-            var conteudo = DataBaseHelper.LerArquivo("Contratado");
-            var lista = JsonConvert.DeserializeObject<List<Contratado>>(conteudo);
-
-            if (lista == null)
-                lista = new List<Contratado>();
-
-            return lista;
         }
 
         private void GravarContratadosArquvo(List<Contratado> contratados)

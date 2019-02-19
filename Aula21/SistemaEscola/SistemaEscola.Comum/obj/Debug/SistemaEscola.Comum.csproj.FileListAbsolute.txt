@@ -28,3 +28,13 @@ C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.dll
 C:\Users\Castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CopyComplete

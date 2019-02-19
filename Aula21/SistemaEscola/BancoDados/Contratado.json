@@ -1,0 +1,16 @@
+[
+  {
+    "escolaridade": {
+      "erro": null,
+      "escolariadadeDescricao": "Doutorado",
+      "salario": 5000.0
+    },
+    "nome": "Christian Castilho",
+    "cpf": "073.461.536-18",
+    "dataNascimento": "03/04/1992",
+    "endereco": "Rua Teste",
+    "id": "88174b0d-8565-4aa8-9c57-de8e87b2b0f1",
+    "dataInsercao": "19/02/2019",
+    "dataAlteracao": null
+  }
+]

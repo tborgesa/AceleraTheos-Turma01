@@ -9,7 +9,7 @@ namespace SistemaEscola.Service
 {
     public class HoristaService
     {
-        private HoristaRepositorio _repositorio = new HoristaRepositorio();
+        private HoristaArquivoRepositorio _repositorio = new HoristaArquivoRepositorio();
 
         public  HoristaDtoReturn Inserir(HoristaInserirViewModel horistaViewModel)
         {
@@ -23,8 +23,8 @@ namespace SistemaEscola.Service
             if (!horista.Valido())
                 return new HoristaDtoReturn(horista.GetErros());
 
+            horista.GerarId();
             _repositorio.Inserir(horista);
-
             return new HoristaDtoReturn(BuscarPorId(horista.Id));
         }
 

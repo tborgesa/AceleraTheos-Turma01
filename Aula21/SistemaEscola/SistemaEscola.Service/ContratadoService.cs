@@ -10,7 +10,7 @@ namespace SistemaEscola.Service
 {
     public class ContratadoService
     {
-        private ContratadoRepositorio _repositorio = new ContratadoRepositorio();
+        private ContratadoArquivoRepositorio _repositorio = new ContratadoArquivoRepositorio();
 
         public ContratadoDtoReturn Inserir(ContratadoInserirViewModel contratadoViewModel)
         {
@@ -23,7 +23,8 @@ namespace SistemaEscola.Service
 
             if (!contratado.Valido())
                 return new ContratadoDtoReturn(contratado.GetErros());
-            
+
+            contratado.GerarId();
             _repositorio.Inserir(contratado);
 
             return new ContratadoDtoReturn(BuscarPorId(contratado.Id));

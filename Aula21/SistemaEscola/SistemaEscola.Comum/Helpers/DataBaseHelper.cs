@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace SistemaEscola.Comum.Helpers
 {
-    public class DataBaseHelper
+    public static class DataBaseHelper
     {
-        public static void GravarArquivo (string conteudo, string nomeArquivo)
+        public static void GravarArquivo(string conteudo, string nomeArquivo)
         {
             var pasta = GetPastaConfigurada();
             var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
@@ -19,7 +17,7 @@ namespace SistemaEscola.Comum.Helpers
                 arquivo.Write(conteudo);
         }
 
-        public static string LerArquivo(string nomeArquivo)
+        public static List<T> LerArquivo<T>(string nomeArquivo)
         {
             var pasta = GetPastaConfigurada();
             var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
@@ -30,29 +28,32 @@ namespace SistemaEscola.Comum.Helpers
                 arquivo.Close();
             }
 
+            string retornoArquivo;
+
             using (var arquivo = new StreamReader(caminhoAbsoluto))
-                return arquivo.ReadToEnd();
+                retornoArquivo = arquivo.ReadToEnd();
+
+            return JsonConvert.DeserializeObject<List<T>>(retornoArquivo) ?? new List<T>();
         }
 
         private static string GetPastaConfigurada()
         {
-            //Caminho Relativo: Destino parcial para caminhos da origem do arquivo.
-            //Caminho Absoluto: Destino completo do arquivo.
+            //Caminho Relativo
+            //Caminho Absoluto
 
-            //Arquivo de Configuracao (Nome de ser o mesmo no App.config)
+            //Arquivo de Configuracao
             var pasta = ConfigurationManager.AppSettings["PastaDataBase"];
 
             if (string.IsNullOrWhiteSpace(pasta))
-                throw new Exception("Pasta do Banco de Dados nao configurado");
+                throw new Exception("Pasta do Banco de Dados não configurado");
 
-            //Tratamento para caso o caminho possua "\"
             if (pasta.EndsWith("\\"))
                 pasta = pasta.Remove(pasta.Length - 1);
 
             //AssemblyExecution
             //var pastaExecutavel = System.Environment.CurrentDirectory;
 
-            if (Directory.Exists(pasta))
+            if (!Directory.Exists(pasta))
                 Directory.CreateDirectory(pasta);
 
             return pasta;

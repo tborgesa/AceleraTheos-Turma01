@@ -1,0 +1,17 @@
+Aula 19-02
+
+Dapper - Resultado do selsect em uma classe. 
+
+Dommel - Faz um mapeamento para propriedade sem ter mesmo nome com do banco.
+
+usando NuGet 
+
+Construtor da classe
+ToTable - nome da tabela (o nome seja diferente no sistema e banco)
+
+Extension Metod - Quando um método é static é possível declarar no parâmetro como this o metódo pode ser chamado por qualquer variável da mesma tipo de variável.
+
+Correção para fazer:
+
+Deve salvar o valor como número e ao ler o valor deve instaciar o valor como objeto.
+Após feito fazer um instaciar para corrigir no BuscarTodos e BuscarPorId

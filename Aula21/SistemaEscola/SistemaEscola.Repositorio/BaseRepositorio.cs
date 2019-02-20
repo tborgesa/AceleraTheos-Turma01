@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaEscola.Repositorio.Map;
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
 
@@ -10,6 +11,7 @@ namespace SistemaEscola.Repositorio
 
         public BaseRepositorio()
         {
+            ConfigMapDapper.Carregar();
             Conexao = new SqlConnection(GetStringConexao());
         }
 

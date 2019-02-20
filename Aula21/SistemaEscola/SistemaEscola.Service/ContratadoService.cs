@@ -19,7 +19,8 @@ namespace SistemaEscola.Service
                 contratadoViewModel.Nome,
                 contratadoViewModel.Cpf,
                 contratadoViewModel.Endereco,
-                contratadoViewModel.Escolaridade);
+                contratadoViewModel.Escolaridade
+                );
 
             if (!contratado.Valido())
                 return new ContratadoDtoReturn(contratado.GetErros());

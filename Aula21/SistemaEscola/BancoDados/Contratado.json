@@ -9,7 +9,49 @@
     "cpf": "073.461.536-18",
     "dataNascimento": "03/04/1992",
     "endereco": "Rua Teste",
-    "id": "88174b0d-8565-4aa8-9c57-de8e87b2b0f1",
+    "id": "6f9e18d3-82fd-4bd0-8bc0-437071e340f2",
+    "dataInsercao": "19/02/2019",
+    "dataAlteracao": null
+  },
+  {
+    "escolaridade": {
+      "erro": null,
+      "escolariadadeDescricao": "Ensino Superior",
+      "salario": 1000.0
+    },
+    "nome": "Christian Castilho",
+    "cpf": "073.461.536-18",
+    "dataNascimento": "03/04/1992",
+    "endereco": "Rua Teste",
+    "id": "8c7ebb0c-a2e2-42d2-a28c-be8d6c1d16c3",
+    "dataInsercao": "19/02/2019",
+    "dataAlteracao": null
+  },
+  {
+    "escolaridade": {
+      "erro": null,
+      "escolariadadeDescricao": "Mestrado",
+      "salario": 3000.0
+    },
+    "nome": "Christian Castilho",
+    "cpf": "073.461.536-18",
+    "dataNascimento": "03/04/1992",
+    "endereco": "Rua Teste",
+    "id": "97176c98-14f2-4bae-85fb-dac4ffa02f64",
+    "dataInsercao": "19/02/2019",
+    "dataAlteracao": null
+  },
+  {
+    "escolaridade": {
+      "erro": null,
+      "escolariadadeDescricao": "Segundo Grau",
+      "salario": 1000.0
+    },
+    "nome": "Christian Castilho",
+    "cpf": "073.461.536-18",
+    "dataNascimento": "03/04/1992",
+    "endereco": "Rua Teste",
+    "id": "0b1e510b-1fe8-4d1a-97b7-bda2388477c0",
     "dataInsercao": "19/02/2019",
     "dataAlteracao": null
   }

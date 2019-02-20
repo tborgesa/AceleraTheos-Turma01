@@ -7,13 +7,16 @@ namespace SistemaEscola.Dominio.Funcionario
 {
     public class Contratado : Funcionario
     {
+
         public EscolaridadeALias Escolaridade { get; set; }
+        public EEscolaridade EscolaridadeEnum { get; set; }
 
         public Contratado() { }
 
         public Contratado(DateTime dataNascimento, string nome, string cpf, string endereco,  EEscolaridade escolaridade) :
             base (nome, cpf, dataNascimento, endereco)
         {
+            //Deve setar para corrigir
             ValidaEscolaridade(escolaridade);
             InstanciarEscolaridade(escolaridade);
         }

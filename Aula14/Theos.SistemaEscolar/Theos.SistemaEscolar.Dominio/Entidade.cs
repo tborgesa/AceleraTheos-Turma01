@@ -10,7 +10,7 @@ namespace Theos.SistemaEscolar.Dominio
     {
         public Guid Id { get; set; }
         public DateTime DataInsercao { get; set; }
-        public DateTime DataAlteracao { get; set; }
+        public DateTime? DataAlteracao { get; set; }
         public List<string> _erros = new List<string>();
 
         public Entidade()

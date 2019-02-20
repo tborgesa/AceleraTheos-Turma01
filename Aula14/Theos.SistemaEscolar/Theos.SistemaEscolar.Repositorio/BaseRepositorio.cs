@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Repositorio.Map;
 
 namespace Theos.SistemaEscolar.Repositorio
 {
@@ -14,6 +15,7 @@ namespace Theos.SistemaEscolar.Repositorio
 
         public BaseRepositorio()
         {
+            ConfigMapDapper.Carregar();
             Conexao = new SqlConnection(GetStringConexao());
         }
 

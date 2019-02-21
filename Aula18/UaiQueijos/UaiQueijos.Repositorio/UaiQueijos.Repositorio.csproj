@@ -65,6 +65,7 @@
     <Compile Include="FornecedorDapperRepositorio.cs" />
     <Compile Include="FornecedorAdoNetRepositorio.cs" />
     <Compile Include="FornecedorArquivoRepositorio.cs" />
+    <Compile Include="FornecedorEFRepositorio.cs" />
     <Compile Include="Map\ConfigMapDapper.cs" />
     <Compile Include="Map\FornecedorMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

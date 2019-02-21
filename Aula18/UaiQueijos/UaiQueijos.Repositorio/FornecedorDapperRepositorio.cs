@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UaiQueijos.Dominio.Fornecedor;
+using UaiQueijos.Dominio.Fornecedor.Interfaces;
 
 namespace UaiQueijos.Repositorio
 {
-    public class FornecedorDapperRepositorio : BaseRepositorio
+    public class FornecedorDapperRepositorio : BaseRepositorio, IFornecedorRepositorio
     {
         public void Inserir(Fornecedor fornecedor)
         {

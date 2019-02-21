@@ -4,10 +4,11 @@ using System.Linq;
 using UaiQueijos.Comum.Helpers;
 using UaiQueijos.Dominio.Fornecedor;
 using Newtonsoft.Json;
+using UaiQueijos.Dominio.Fornecedor.Interfaces;
 
 namespace UaiQueijos.Repositorio
 {
-    public class FornecedorArquivoRepositorio
+    public class FornecedorArquivoRepositorio : IFornecedorRepositorio
     {
         private List<Fornecedor> _fornecedores = new List<Fornecedor>();
 

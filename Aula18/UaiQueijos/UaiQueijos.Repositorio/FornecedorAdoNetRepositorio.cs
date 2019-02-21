@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using UaiQueijos.Dominio.Fornecedor;
+using UaiQueijos.Dominio.Fornecedor.Interfaces;
 
 namespace UaiQueijos.Repositorio
 {
-    public class FornecedorAdoNetRepositorio : BaseRepositorio
+    public class FornecedorAdoNetRepositorio : BaseRepositorio, IFornecedorRepositorio
     {
         public void Inserir(Fornecedor fornecedor)
         {

@@ -1,0 +1,9 @@
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\bin\Debug\PetShop.Repositorio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\bin\Debug\PetShop.Repositorio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\bin\Debug\PetShop.Dominio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\bin\Debug\PetShop.Dominio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\obj\Debug\PetShop.Repositorio.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\obj\Debug\PetShop.Repositorio.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\obj\Debug\PetShop.Repositorio.csproj.CopyComplete
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\obj\Debug\PetShop.Repositorio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Repositorio\obj\Debug\PetShop.Repositorio.pdb

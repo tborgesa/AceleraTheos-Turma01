@@ -1,0 +1,18 @@
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula 15\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.pdb
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csprojAssemblyReference.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.dll
+C:\Users\chrca\OneDrive\Documentos\Curso .Net\AceleraTheos-Turma01\Aula17\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\bin\Debug\PetShop.Dominio.pdb
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csprojAssemblyReference.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.dll
+C:\Users\Castilho\Documents\Curso Dot Net\AceleraTheos-Turma01\Aula18\PetShop\PetShop.Dominio\obj\Debug\PetShop.Dominio.pdb

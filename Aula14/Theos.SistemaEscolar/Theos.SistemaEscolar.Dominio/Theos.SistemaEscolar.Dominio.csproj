@@ -33,6 +33,8 @@
   <ItemGroup>
     <Compile Include="Entidade.cs" />
     <Compile Include="Enumerador\EEscolaridade.cs" />
+    <Compile Include="Interfaces\IProfessorContratadoRepositorio.cs" />
+    <Compile Include="Interfaces\IProfessorHoristaRepositorio.cs" />
     <Compile Include="Professor\Professor.cs" />
     <Compile Include="Professor\ProfessorContratado.cs" />
     <Compile Include="Professor\ProfessorContratadoAtualizarViewModel.cs" />

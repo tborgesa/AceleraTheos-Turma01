@@ -22,8 +22,6 @@ namespace Theos.SistemaEscolar.Service
 
             _repositorio.Inserir(professorContratado);
             return new ProfessorContratadoDtoReturn(BuscarPorId(professorContratado.Id));
-
-
         }
 
         public ProfessorContratadoDto BuscarPorId(Guid id)

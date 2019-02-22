@@ -1,7 +1,7 @@
 [
   {
     "_erros": [],
-    "horasTrabalhadas": 15,
+    "horasTrabalhadas": 15.0,
     "nome": "Caroline Molina",
     "cpf": "42120768889",
     "id": "54623b4f-f7c5-4ef6-8df6-bc203be8cb93",
@@ -10,7 +10,7 @@
   },
   {
     "_erros": [],
-    "horasTrabalhadas": 15,
+    "horasTrabalhadas": 15.0,
     "nome": "Caroline Molina",
     "cpf": "42120768889",
     "id": "05098a15-acb2-4e42-b1c8-025db1d1ae53",
@@ -19,11 +19,20 @@
   },
   {
     "_erros": [],
-    "horasTrabalhadas": 15,
+    "horasTrabalhadas": 15.0,
     "nome": "Caroline Molina",
     "cpf": "42120768889",
     "id": "b6c2490f-ae38-44cd-8a0d-6b879a59b38c",
     "dataInsercao": "14/02/2019",
     "dataAlteracao": "01/01/0001"
+  },
+  {
+    "_erros": [],
+    "horasTrabalhadas": 5536.0,
+    "nome": "Thiago Borges",
+    "cpf": "21225155151",
+    "id": "6d7f703d-b3e7-4ced-8b79-fd7544508ef1",
+    "dataInsercao": "21/02/2019",
+    "dataAlteracao": null
   }
 ]

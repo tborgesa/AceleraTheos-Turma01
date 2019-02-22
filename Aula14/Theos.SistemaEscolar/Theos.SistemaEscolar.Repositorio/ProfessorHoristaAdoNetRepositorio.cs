@@ -5,11 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 
 namespace Theos.SistemaEscolar.Repositorio
 {
-    public class ProfessorHoristaAdoNetRepositorio : BaseRepositorio
+    public class ProfessorHoristaAdoNetRepositorio : BaseRepositorio, IProfessorHoristaRepositorio
     {
 
         public void Inserir(ProfessorHorista professorHorista)
@@ -63,7 +64,7 @@ namespace Theos.SistemaEscolar.Repositorio
                 SqlCommand command = new SqlCommand(sql, Conexao);
                 command.Parameters.AddWithValue("@IDPROFESSORHORISTA", professorHorista.Id).SqlDbType = SqlDbType.UniqueIdentifier;
                 command.Parameters.AddWithValue("@DATAINSERCAO", professorHorista.DataInsercao).SqlDbType = SqlDbType.SmallDateTime;
-                command.Parameters.AddWithValue("@DATAALTERACAO", professorHorista.DataInsercao).SqlDbType = SqlDbType.SmallDateTime;
+                command.Parameters.AddWithValue("@DATAALTERACAO", professorHorista.DataAlteracao).SqlDbType = SqlDbType.SmallDateTime;
                 command.Parameters.AddWithValue("@NOME", professorHorista.Nome).SqlDbType = SqlDbType.VarChar;
                 command.Parameters.AddWithValue("@CPF", professorHorista.Cpf).SqlDbType = SqlDbType.Char;
                 command.Parameters.AddWithValue("@HORASTRABALHADAS", professorHorista.HorasTrabalhadas).SqlDbType = SqlDbType.Decimal;
@@ -107,6 +108,7 @@ namespace Theos.SistemaEscolar.Repositorio
 
                 professorHorista.Nome = reader["NOME"].ToString();
                 professorHorista.Cpf = reader["CPF"].ToString();
+                professorHorista.HorasTrabalhadas = (Decimal)reader["HORASTRABALHADAS"];
 
                 return professorHorista;
             }
@@ -115,7 +117,6 @@ namespace Theos.SistemaEscolar.Repositorio
                 Conexao.Close();
             }
         }
-
 
         public List<ProfessorHorista> BuscarTodos()
         {
@@ -142,6 +143,7 @@ namespace Theos.SistemaEscolar.Repositorio
 
                     professorHorista.Nome = reader["NOME"].ToString();
                     professorHorista.Cpf = reader["CPF"].ToString();
+                    professorHorista.HorasTrabalhadas = (Decimal)reader["HORASTRABALHADAS"];
 
 
                     professoresHoristas.Add(professorHorista);

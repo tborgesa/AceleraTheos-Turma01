@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 using Theos.SistemaEscolar.Repositorio;
 
@@ -11,7 +13,29 @@ namespace Theos.SistemaEscolar.Service
     public class ProfessorHoristaService
     {
         //cria uma variável do tipo repositorio e instancia ela
-        private ProfessorHoristaDapperRepositorio _repositorio = new ProfessorHoristaDapperRepositorio();
+        public IProfessorHoristaRepositorio _repositorio;
+
+
+        public ProfessorHoristaService()
+        {
+            var tipoDataBase = int.Parse(ConfigurationManager.AppSettings["TipoDataBase"]);
+
+            switch (tipoDataBase)
+            {
+                case 1:
+                    _repositorio = new ProfessorHoristaDapperRepositorio();
+                    break;
+                case 2:
+                    _repositorio = new ProfessorHoristaAdoNetRepositorio();
+                    break;
+                case 3:
+                    _repositorio = new ProfessorHoristaRepositorio();
+                    break;
+                default:
+                    throw new Exception("Tipo de repositório não configurado");
+            }
+
+        }
 
         //Será criado os métodos CRUD utilizando o viewModel como parametro com retorno de um Dto
         public ProfessorHoristaDtoReturn Inserir(ProfessorHoristaViewModel professorHoristaViewModel)

@@ -64,6 +64,7 @@
     <Compile Include="BaseRepositorio.cs" />
     <Compile Include="Map\ConfigMapDapper.cs" />
     <Compile Include="Map\ProfessorHoristaMap.cs" />
+    <Compile Include="ProfessorContratadoAdoNetRepositorio.cs" />
     <Compile Include="ProfessorContratadoRepositorio.cs" />
     <Compile Include="ProfessorHoristaDapperRepositorio.cs" />
     <Compile Include="ProfessorHoristaAdoNetRepositorio.cs" />

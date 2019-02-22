@@ -6,11 +6,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 
 namespace Theos.SistemaEscolar.Repositorio
 {
-    public class ProfessorHoristaDapperRepositorio : BaseRepositorio
+    public class ProfessorHoristaDapperRepositorio : BaseRepositorio, IProfessorHoristaRepositorio
     {
 
         public void Inserir(ProfessorHorista professorHorista)

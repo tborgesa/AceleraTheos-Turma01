@@ -5,11 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Theos.SistemaEscolar.Comum;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 
 namespace Theos.SistemaEscolar.Repositorio
 {
-    public class ProfessorHoristaRepositorio
+    public class ProfessorHoristaRepositorio : IProfessorHoristaRepositorio
     {
         private List<ProfessorHorista> _professoresHorista = new List<ProfessorHorista>();
 

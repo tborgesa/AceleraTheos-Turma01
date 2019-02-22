@@ -10,7 +10,7 @@ namespace PetShop.Service
 {
     public class AnimalService
     {
-        private CachorroAdoNetRepositorio _cachorros = new CachorroAdoNetRepositorio();
+        private CachorroDapperRepositorio _cachorros = new CachorroDapperRepositorio();
         private GatoRepositorio _gatos = new GatoRepositorio();
         private PeixeRepositorio _peixes = new PeixeRepositorio();
 

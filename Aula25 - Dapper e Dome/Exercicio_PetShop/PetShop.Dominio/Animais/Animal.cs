@@ -7,7 +7,8 @@ namespace PetShop.Dominio.Animais
     public abstract class Animal : Entidade
     {
         public string Nome { get; set; }
-        public Cliente Cliente { get; set; } 
+        public Guid ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
         public double ValorLimpeza { get; set; }
         public EnumEspecie Especie { get; set; }
 
@@ -20,6 +21,7 @@ namespace PetShop.Dominio.Animais
         {
             Nome = nome;
             Cliente = cliente;
+            ClienteId = cliente.Id;
             Especie = especie;
             ValidarAnimal();
         }

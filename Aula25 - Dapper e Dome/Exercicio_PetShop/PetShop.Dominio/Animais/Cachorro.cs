@@ -16,8 +16,8 @@ namespace PetShop.Dominio.Animais
 
         }
 
-        public Cachorro(string nome, Cliente cliente, EnumEspecie especie, double peso)
-            : base(nome, cliente, EnumEspecie.Cachorro)
+        public Cachorro(string nome, Cliente cliente, EnumEspecie especie ,double peso)
+            : base(nome, cliente, especie)
         {
             Peso = peso;
         }

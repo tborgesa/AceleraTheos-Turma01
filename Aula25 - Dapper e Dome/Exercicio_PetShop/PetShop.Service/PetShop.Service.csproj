@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68582F43-E347-4B3F-AF68-725FB42831F3}</ProjectGuid>
+    <ProjectGuid>{79BE8987-3891-4FBA-817A-36327465D486}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PetShop.Repositorio</RootNamespace>
-    <AssemblyName>PetShop.Repositorio</AssemblyName>
+    <RootNamespace>PetShop.Service</RootNamespace>
+    <AssemblyName>PetShop.Service</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,11 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,30 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseRepositorio.cs" />
-    <Compile Include="CachorroAdoNetRepositorio.cs" />
-    <Compile Include="CachorroRepositorio.cs" />
-    <Compile Include="ClienteAdoNetRepositorio.cs" />
-    <Compile Include="ClienteRepositorio.cs" />
-    <Compile Include="GatoRepositorio.cs" />
-    <Compile Include="PeixeRepositorio.cs" />
+    <Compile Include="AnimalService.cs" />
+    <Compile Include="ClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PetShop.Comum\PetShop.Comum.csproj">
-      <Project>{37b51f4c-be98-4936-9f64-22156c572a4f}</Project>
-      <Name>PetShop.Comum</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PetShop.Dominio\PetShop.Dominio.csproj">
       <Project>{83b4bbc3-a4e0-45d4-b6bb-3a23a199995e}</Project>
       <Name>PetShop.Dominio</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\PetShot.Repositorio\PetShop.Repositorio.csproj">
+      <Project>{68582f43-e347-4b3f-af68-725fb42831f3}</Project>
+      <Name>PetShop.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

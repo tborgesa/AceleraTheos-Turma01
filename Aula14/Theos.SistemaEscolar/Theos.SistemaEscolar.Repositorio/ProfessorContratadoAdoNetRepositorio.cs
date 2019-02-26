@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Dominio.Enumerador;
 using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 
@@ -103,6 +104,7 @@ namespace Theos.SistemaEscolar.Repositorio
 
                 professorContratado.Nome = reader["NOME"].ToString();
                 professorContratado.Cpf = reader["CPF"].ToString();
+                professorContratado.Escolaridade = (EEscolaridade)reader["ESCOLARIDADE"];
 
                 return professorContratado;
 
@@ -140,6 +142,7 @@ namespace Theos.SistemaEscolar.Repositorio
                     professorContratado.Nome = reader["NOME"].ToString();
                     professorContratado.Cpf = reader["CPF"].ToString();
 
+                    professorContratado.Escolaridade = (EEscolaridade)reader["ESCOLARIDADE"];
                     professoresContratados.Add(professorContratado);
                  }
 
@@ -156,6 +159,14 @@ namespace Theos.SistemaEscolar.Repositorio
             try
             {
                 Conexao.Open();
+
+                var sql = @"DELETE FROM DBO.PROFESSORCONTRATADO WHERE IDPROFESSORCONTRATADO = @IDPROFESSORCONTRATADO";
+
+                SqlCommand command = new SqlCommand(sql, Conexao);
+
+                command.Parameters.AddWithValue("@IDPROFESSORCONTRATADO", id).SqlDbType = SqlDbType.UniqueIdentifier;
+
+                command.ExecuteNonQuery();
             }
             finally
             {

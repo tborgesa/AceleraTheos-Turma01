@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 using Theos.SistemaEscolar.Repositorio;
 
@@ -10,7 +12,27 @@ namespace Theos.SistemaEscolar.Service
 {
     public class ProfessorContratadoService
     {
-        private ProfessorContratadoRepositorio _repositorio = new ProfessorContratadoRepositorio();
+        public IProfessorContratadoRepositorio _repositorio;
+
+        public ProfessorContratadoService()
+        {
+            var tipoDataBase = int.Parse(ConfigurationManager.AppSettings["TipoDataBase"]);
+
+            switch (tipoDataBase)
+            {
+                case 1:
+                    _repositorio = new ProfessorContratadoDapperRepositorio();
+                    break;
+                case 2:
+                    _repositorio = new ProfessorContratadoAdoNetRepositorio();
+                    break;
+                case 3:
+                    _repositorio = new ProfessorContratadoRepositorio();
+                    break;
+                default:
+                    throw new Exception("Tipo de repositório não configurado");
+            }
+        }
 
         public ProfessorContratadoDtoReturn Inserir(ProfessorContratadoInserirViewModel professorContratadoViewModel)
         {
@@ -20,6 +42,7 @@ namespace Theos.SistemaEscolar.Service
             if (!professorContratado.Valido())
                 return new ProfessorContratadoDtoReturn(professorContratado.GetErros());
 
+            professorContratado.GerarId();
             _repositorio.Inserir(professorContratado);
             return new ProfessorContratadoDtoReturn(BuscarPorId(professorContratado.Id));
         }
@@ -66,7 +89,8 @@ namespace Theos.SistemaEscolar.Service
         public ProfessorContratadoDto Atualizar(ProfessorContratadoAtualizarViewModel professorContratadoAtualizarViewModel)
         {
             var professorContratado = _repositorio.BuscarPorId(professorContratadoAtualizarViewModel.Id);
-            professorContratado.Alterar(professorContratadoAtualizarViewModel.Nome, professorContratadoAtualizarViewModel.Cpf);
+            professorContratado.Alterar(professorContratadoAtualizarViewModel.Nome, professorContratadoAtualizarViewModel.Cpf, 
+                professorContratadoAtualizarViewModel.Escolaridade);
             professorContratado.SetarAlteracao();
 
             _repositorio.Atualizar(professorContratado);

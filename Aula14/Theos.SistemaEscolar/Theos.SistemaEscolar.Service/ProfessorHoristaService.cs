@@ -102,7 +102,6 @@ namespace Theos.SistemaEscolar.Service
             professorHorista.Alterar(professorHoristaAtualizarViewModel.Nome, professorHoristaAtualizarViewModel.Cpf, professorHoristaAtualizarViewModel.HorasTrabalhadas);
             professorHorista.SetarAlteracao();
 
-            professorHorista.GerarId();
             _repositorio.Atualizar(professorHorista);
 
             return BuscarPorId(professorHoristaAtualizarViewModel.Id);

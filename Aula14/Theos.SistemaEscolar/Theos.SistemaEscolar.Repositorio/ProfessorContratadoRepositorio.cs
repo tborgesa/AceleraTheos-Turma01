@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Theos.SistemaEscolar.Comum;
+using Theos.SistemaEscolar.Dominio.Interfaces;
 using Theos.SistemaEscolar.Dominio.Professor;
 
 
 namespace Theos.SistemaEscolar.Repositorio
 {
-    public class ProfessorContratadoRepositorio
+    public class ProfessorContratadoRepositorio : IProfessorContratadoRepositorio
     {
         private List<ProfessorContratado> _professorContratado = new List<ProfessorContratado>();
 
@@ -21,7 +22,6 @@ namespace Theos.SistemaEscolar.Repositorio
 
         public void Inserir(ProfessorContratado professorContratado)
         {
-            professorContratado.GerarId();
             _professorContratado.Add(professorContratado);
             GravarProfessorContratadoArquivo(_professorContratado);
         }

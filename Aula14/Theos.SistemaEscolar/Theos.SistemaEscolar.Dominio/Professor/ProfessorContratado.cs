@@ -5,7 +5,7 @@ namespace Theos.SistemaEscolar.Dominio.Professor
 {
     public class ProfessorContratado : Professor
     {
-        public EEscolaridade Escolaridade { get; private set; }
+        public EEscolaridade Escolaridade { get; set; }
 
         public ProfessorContratado()
         {
@@ -35,6 +35,12 @@ namespace Theos.SistemaEscolar.Dominio.Professor
                 default:
                     return 0;
             }
+        }
+
+        public void Alterar(string nome, string cpf, EEscolaridade escolaridade)
+        {
+            Escolaridade = escolaridade;
+            base.Alterar(nome, cpf);
         }
 
     }

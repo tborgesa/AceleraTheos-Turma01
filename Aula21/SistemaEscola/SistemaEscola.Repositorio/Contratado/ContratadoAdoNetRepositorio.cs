@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using SistemaEscola.Dominio.Funcionario;
+using SistemaEscola.Dominio.Escolaridade.Enumerador;
 
 namespace SistemaEscola.Repositorio
 {
@@ -22,7 +23,7 @@ namespace SistemaEscola.Repositorio
                            ,[Cpf]
                            ,[DataNascimento]
                            ,[Endereco]
-                           ,[Escolaridade])
+                           ,[EnumEscolaridade])
                      VALUES
                            (@ContratadoId
                            ,@DataInsercao
@@ -30,7 +31,7 @@ namespace SistemaEscola.Repositorio
                            ,@Cpf
                            ,@DataNascimento
                            ,@Endereco
-                           ,@Escolaridade)";
+                           ,@EnumEscolaridade)";
 
                 SqlCommand command = new SqlCommand(sql, Conexao);
 
@@ -40,7 +41,7 @@ namespace SistemaEscola.Repositorio
                 command.Parameters.AddWithValue("@Cpf", contratado.Cpf).SqlDbType = SqlDbType.VarChar;
                 command.Parameters.AddWithValue("@DataNascimento", contratado.DataNascimento).SqlDbType = SqlDbType.Date;
                 command.Parameters.AddWithValue("@Endereco", contratado.Endereco).SqlDbType = SqlDbType.VarChar;
-                command.Parameters.AddWithValue("@Escolaridade", contratado.Escolaridade).SqlDbType = SqlDbType.SmallInt;
+                command.Parameters.AddWithValue("@EnumEscolaridade", contratado.EnumEscolaridade).SqlDbType = SqlDbType.SmallInt;
 
                 command.ExecuteNonQuery();
             }
@@ -79,7 +80,7 @@ namespace SistemaEscola.Repositorio
                 if (reader["Endereco"] != DBNull.Value)
                     contratado.Endereco = reader["Endereco"].ToString();
 
-                //contratado.Escolaridade = (Int16)reader["Escolaridade"];
+                contratado.EnumEscolaridade = (EEscolaridade)reader["EnumEscolaridade"];
                 contratado.Cpf = reader["Cpf"].ToString();
 
                 return contratado;
@@ -119,7 +120,7 @@ namespace SistemaEscola.Repositorio
                     if (reader["Endereco"] != DBNull.Value)
                         contratado.Endereco = reader["Endereco"].ToString();
 
-                    //contratado.Escolaridade = (int)reader["Escolaridade"];
+                    contratado.EnumEscolaridade = reader["EnumEscolaridade"];
                     contratado.Cpf = reader["Cpf"].ToString();
 
                     contratadoes.Add(contratado);
@@ -146,7 +147,7 @@ namespace SistemaEscola.Repositorio
                         ,[Nome] = @Nome
                         ,[DataNascimento] = @DataNascimento
                         ,[Endereco] = @Endereco
-                        ,[Escolaridade] = @Escolaridade
+                        ,[EnumEscolaridade] = @EnumEscolaridade
                         ,[Cpf] = @Cpf
                     WHERE ContratadoId = @ContratadoId";
 
@@ -159,7 +160,7 @@ namespace SistemaEscola.Repositorio
                 command.Parameters.AddWithValue("@Cpf", contratado.Cpf).SqlDbType = SqlDbType.VarChar;
                 command.Parameters.AddWithValue("@DataNascimento", contratado.DataNascimento).SqlDbType = SqlDbType.Date;
                 command.Parameters.AddWithValue("@Endereco", contratado.Endereco).SqlDbType = SqlDbType.VarChar;
-                command.Parameters.AddWithValue("@Escolaridade", contratado.Escolaridade).SqlDbType = SqlDbType.SmallInt;
+                command.Parameters.AddWithValue("@EnumEscolaridade", contratado.EnumEscolaridade).SqlDbType = SqlDbType.SmallInt;
 
                 command.ExecuteNonQuery();
             }

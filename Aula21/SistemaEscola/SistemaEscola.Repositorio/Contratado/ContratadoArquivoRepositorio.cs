@@ -26,7 +26,9 @@ namespace SistemaEscola.Repositorio
 
         public Contratado BuscarPorId(Guid id)
         {
-            return _contratados.FirstOrDefault(f => f.Id == id);
+            var aux = _contratados.FirstOrDefault(f => f.Id == id);
+            aux.InstanciarEscolaridade();
+            return aux;
         }
         
         //public List<Contratado> GetContratadoArquivo()
@@ -42,6 +44,7 @@ namespace SistemaEscola.Repositorio
 
         public List<Contratado> BuscarTodos()
         {
+            
             return _contratados;
         }
 

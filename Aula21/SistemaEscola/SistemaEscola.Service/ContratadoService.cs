@@ -15,9 +15,9 @@ namespace SistemaEscola.Service
         public ContratadoDtoReturn Inserir(ContratadoInserirViewModel contratadoViewModel)
         {
             var contratado = new Contratado(
-                contratadoViewModel.DataNascimento,
                 contratadoViewModel.Nome,
                 contratadoViewModel.Cpf,
+                contratadoViewModel.DataNascimento,
                 contratadoViewModel.Endereco,
                 contratadoViewModel.Escolaridade
                 );

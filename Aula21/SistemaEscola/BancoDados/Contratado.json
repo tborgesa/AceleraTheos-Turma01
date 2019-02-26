@@ -1,58 +1,32 @@
 [
   {
-    "escolaridade": {
-      "erro": null,
-      "escolariadadeDescricao": "Doutorado",
-      "salario": 5000.0
-    },
+    "enumEscolaridade": 3,
+    "nome": "Christian Castilho",
+    "cpf": "073.461.536-18",
+    "dataNascimento": "03/04/1992",
+    "endereco": "",
+    "id": "9eca2092-f81a-4121-bc40-dfee922e91e6",
+    "dataInsercao": "26/02/2019",
+    "dataAlteracao": "26/02/2019"
+  },
+  {
+    "enumEscolaridade": 1,
     "nome": "Christian Castilho",
     "cpf": "073.461.536-18",
     "dataNascimento": "03/04/1992",
     "endereco": "Rua Teste",
-    "id": "6f9e18d3-82fd-4bd0-8bc0-437071e340f2",
-    "dataInsercao": "19/02/2019",
+    "id": "72b15623-5211-49c7-8b74-87d054ee1ec0",
+    "dataInsercao": "26/02/2019",
     "dataAlteracao": null
   },
   {
-    "escolaridade": {
-      "erro": null,
-      "escolariadadeDescricao": "Ensino Superior",
-      "salario": 1000.0
-    },
+    "enumEscolaridade": 1,
     "nome": "Christian Castilho",
     "cpf": "073.461.536-18",
     "dataNascimento": "03/04/1992",
     "endereco": "Rua Teste",
-    "id": "8c7ebb0c-a2e2-42d2-a28c-be8d6c1d16c3",
-    "dataInsercao": "19/02/2019",
-    "dataAlteracao": null
-  },
-  {
-    "escolaridade": {
-      "erro": null,
-      "escolariadadeDescricao": "Mestrado",
-      "salario": 3000.0
-    },
-    "nome": "Christian Castilho",
-    "cpf": "073.461.536-18",
-    "dataNascimento": "03/04/1992",
-    "endereco": "Rua Teste",
-    "id": "97176c98-14f2-4bae-85fb-dac4ffa02f64",
-    "dataInsercao": "19/02/2019",
-    "dataAlteracao": null
-  },
-  {
-    "escolaridade": {
-      "erro": null,
-      "escolariadadeDescricao": "Segundo Grau",
-      "salario": 1000.0
-    },
-    "nome": "Christian Castilho",
-    "cpf": "073.461.536-18",
-    "dataNascimento": "03/04/1992",
-    "endereco": "Rua Teste",
-    "id": "0b1e510b-1fe8-4d1a-97b7-bda2388477c0",
-    "dataInsercao": "19/02/2019",
+    "id": "3ba603a3-3179-4b8b-bbca-9140cff57876",
+    "dataInsercao": "26/02/2019",
     "dataAlteracao": null
   }
 ]

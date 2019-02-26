@@ -1,3 +1,0 @@
-uniqueidentifiquer é tipo de GUID no SQL
-
-create table Fornecedor

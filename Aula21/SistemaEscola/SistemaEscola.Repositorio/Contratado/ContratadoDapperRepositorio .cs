@@ -39,27 +39,27 @@ namespace SistemaEscola.Repositorio
         }
 
         //Caso precise de consulta customisada
-        public Contratado BuscarPorCpf(string cpf)
-        {
-            try
-            {
-                Conexao.Open();
+        //public Contratado BuscarPorCpf(string cpf)
+        //{
+        //    try
+        //    {
+        //        Conexao.Open();
 
-                var sql = "SELECT * FROM CONTRATADO WHERE CPF = @CPF";
+        //        var sql = "SELECT * FROM CONTRATADO WHERE CPF = @CPF";
 
-                var paramentros = new DynamicParameters();
-                paramentros.Add("CPF", new DbString { Value = cpf, IsAnsi = true, Length = 14 });
-                //True/False para quando nvarchar
+        //        var paramentros = new DynamicParameters();
+        //        paramentros.Add("CPF", new DbString { Value = cpf, IsAnsi = true, Length = 14 });
+        //        //True/False para quando nvarchar
                 
-                return Conexao.Query<Contratado>(sql, paramentros).FirstOrDefault() ;
-                //Query tem o retorno do valor
+        //        return Conexao.Query<Contratado>(sql, paramentros).FirstOrDefault() ;
+        //        //Query tem o retorno do valor
 
-            }
-            finally
-            {
-                Conexao.Close();
-            }
-        }
+        //    }
+        //    finally
+        //    {
+        //        Conexao.Close();
+        //    }
+        //}
 
         public List<Contratado> BuscarTodos()
         {

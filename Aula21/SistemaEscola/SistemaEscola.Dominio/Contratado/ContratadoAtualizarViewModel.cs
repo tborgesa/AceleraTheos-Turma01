@@ -7,6 +7,6 @@ namespace SistemaEscola.Dominio.Contratado
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Endereco { get; set; } = "";
-        public  EEscolaridade Escolaridade{ get; set; }
+        public EEscolaridade Escolaridade { get; set; }
     }
 }

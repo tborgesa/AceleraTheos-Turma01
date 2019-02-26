@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 using SistemaEscola.Dominio.Escolaridade.Enumerador;
 using EscolaridadeALias = SistemaEscola.Dominio.Escolaridade.Escolaridade;
 using EscolaridadeALiasAux = SistemaEscola.Dominio.Escolaridade;
@@ -7,18 +8,20 @@ namespace SistemaEscola.Dominio.Funcionario
 {
     public class Contratado : Funcionario
     {
+        public EEscolaridade EnumEscolaridade { get; set; }
 
+        [JsonIgnore]
         public EscolaridadeALias Escolaridade { get; set; }
-        public EEscolaridade EscolaridadeEnum { get; set; }
 
         public Contratado() { }
 
-        public Contratado(DateTime dataNascimento, string nome, string cpf, string endereco,  EEscolaridade escolaridade) :
+        public Contratado(string nome, string cpf, DateTime dataNascimento, string endereco,  EEscolaridade escolaridade) :
             base (nome, cpf, dataNascimento, endereco)
         {
             //Deve setar para corrigir
+            EnumEscolaridade = escolaridade;
             ValidaEscolaridade(escolaridade);
-            InstanciarEscolaridade(escolaridade);
+            InstanciarEscolaridade();
         }
 
         private void ValidaEscolaridade(EEscolaridade escolaridade)
@@ -40,10 +43,10 @@ namespace SistemaEscola.Dominio.Funcionario
             return EEscolaridade.Doutorado;
         }
 
-        public void InstanciarEscolaridade(EEscolaridade eEscolaridade)
+        public void InstanciarEscolaridade()
         {
 
-            switch (eEscolaridade)
+            switch (EnumEscolaridade)
             {
                 case EEscolaridade.SegudundoGrau:
                     Escolaridade = new EscolaridadeALiasAux.SegundoGrau();
@@ -64,10 +67,11 @@ namespace SistemaEscola.Dominio.Funcionario
 
         public override void Gravar() { }
 
-        public void AlterarEscolaridade(EEscolaridade eEscolaridade)
+        public void AlterarEscolaridade(EEscolaridade escolaridade)
         {
-            ValidaEscolaridade(eEscolaridade);
-            InstanciarEscolaridade(eEscolaridade);
+            EnumEscolaridade = escolaridade;
+            ValidaEscolaridade(escolaridade);
+            InstanciarEscolaridade();
         }
 
         public override decimal SalarioFuncionario()

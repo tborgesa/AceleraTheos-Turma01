@@ -19,8 +19,8 @@ namespace SistemaEscola.Swagger
         #region Inserir
         private void CarregarExemploInserir()
         {
-            HoristaInserirViewModel HoristaViewModel = new HoristaInserirViewModel();
-            string texto = JsonConvert.SerializeObject(HoristaViewModel);
+            HoristaInserirViewModel horistaViewModel = new HoristaInserirViewModel();
+            string texto = JsonConvert.SerializeObject(horistaViewModel);
             textBoxHoristaExemploInserir.Text = texto;
             textBoxHoristaEntradaInserir.Text = texto;
         }
@@ -29,20 +29,30 @@ namespace SistemaEscola.Swagger
         {
             try
             {
-                var HoristaViewModel = JsonConvert.DeserializeObject<HoristaInserirViewModel>(textBoxHoristaEntradaInserir.Text);
+                var horistaViewModel = JsonConvert.DeserializeObject<HoristaInserirViewModel>(textBoxHoristaEntradaInserir.Text);
 
-                if (HoristaViewModel == null)
+                if (horistaViewModel == null)
                 {
+                    textBoxStatusCodeInserir.Text = "400 Bad Request";
                     textBoxHoristaSaidaInserir.Text = $"Json inválido.";
                     return;
                 }
 
-                var HoristaDto = _service.Inserir(HoristaViewModel);
+                var horistaDtoReturn = _service.Inserir(horistaViewModel);
 
-                textBoxHoristaSaidaInserir.Text = JsonConvert.SerializeObject(HoristaDto);
+                if (horistaDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeInserir.Text = "400 Bad Request";
+                    textBoxHoristaSaidaInserir.Text = JsonConvert.SerializeObject(horistaDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeInserir.Text = "200 OK";
+                textBoxHoristaSaidaInserir.Text = JsonConvert.SerializeObject(horistaDtoReturn.Horista);
             }
             catch (Exception ex)
             {
+                textBoxStatusCodeInserir.Text = "500 Internal Server Error.";
                 textBoxHoristaSaidaInserir.Text = $"{Environment.NewLine} {ex.ToString()}";
             }
         }
@@ -53,8 +63,8 @@ namespace SistemaEscola.Swagger
         {
             try
             {
-                var Horistaes = _service.BuscarTodos();
-                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(Horistaes);
+                var horistaes = _service.BuscarTodos();
+                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(horistaes);
             }
             catch (Exception ex)
             {
@@ -89,8 +99,8 @@ namespace SistemaEscola.Swagger
                 }
 
 
-                var HoristaDto = _service.BuscarPorId(guid);
-                textBoxSaidaBuscarId.Text = JsonConvert.SerializeObject(HoristaDto);
+                var horistaDto = _service.BuscarPorId(guid);
+                textBoxSaidaBuscarId.Text = JsonConvert.SerializeObject(horistaDto);
             }
             catch (Exception ex)
             {
@@ -102,8 +112,8 @@ namespace SistemaEscola.Swagger
         #region Atualizar
         private void CarregarExemploAtualizar()
         {
-            HoristaAtualizarViewModel HoristaViewModel = new HoristaAtualizarViewModel();
-            string texto = JsonConvert.SerializeObject(HoristaViewModel);
+            HoristaAtualizarViewModel horistaViewModel = new HoristaAtualizarViewModel();
+            string texto = JsonConvert.SerializeObject(horistaViewModel);
             textBoxHoristaExemploAtualizar.Text = texto;
             textBoxHoristaEntradaAtualizar.Text = texto;
         }
@@ -112,24 +122,36 @@ namespace SistemaEscola.Swagger
         {
             try
             {
-                var HoristaViewModel = JsonConvert.DeserializeObject<HoristaAtualizarViewModel>(textBoxHoristaEntradaAtualizar.Text);
+                var fornecedorViewModel = JsonConvert.DeserializeObject<HoristaAtualizarViewModel>(textBoxHoristaEntradaAtualizar.Text);
 
-                if (HoristaViewModel == null)
+                if (fornecedorViewModel == null)
                 {
+                    textBoxStatusCodeAtualizar.Text = "400 Bad Request.";
                     textBoxHoristaSaidaAtualizar.Text = $"Json inválido.";
                     return;
                 }
 
-                var HoristaDto = _service.Atualizar(HoristaViewModel);
+                var fornecedorDtoReturn = _service.Atualizar(fornecedorViewModel);
 
-                textBoxHoristaSaidaAtualizar.Text = JsonConvert.SerializeObject(HoristaDto);
+                if (fornecedorDtoReturn.Erros.Count > 0)
+                {
+                    textBoxStatusCodeAtualizar.Text = "400 Bad Request";
+                    textBoxHoristaSaidaAtualizar.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Erros);
+                    return;
+                }
+
+                textBoxStatusCodeAtualizar.Text = "200 OK.";
+                textBoxHoristaSaidaAtualizar.Text = JsonConvert.SerializeObject(fornecedorDtoReturn.Horista);
             }
             catch (Exception ex)
             {
+                textBoxStatusCodeAtualizar.Text = "500 Internal Server Error.";
                 textBoxHoristaSaidaAtualizar.Text = $"{ex.ToString()}";
             }
         }
         #endregion
+
+
 
         #region Excluir
         private void CarregarExemploExcluir()

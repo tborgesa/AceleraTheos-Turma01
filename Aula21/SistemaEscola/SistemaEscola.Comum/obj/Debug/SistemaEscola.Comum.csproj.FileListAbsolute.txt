@@ -48,3 +48,13 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csprojAssemblyReference.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CoreCompileInputs.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.csproj.CopyComplete
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Comum\obj\Debug\SistemaEscola.Comum.pdb

@@ -100,3 +100,27 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.xml
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.Dommel.xml
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dommel.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Repositorio.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.Dommel.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dommel.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Repositorio.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.FluentMap.Dommel.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dommel.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Dapper.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csprojAssemblyReference.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CoreCompileInputs.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CopyComplete
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.pdb

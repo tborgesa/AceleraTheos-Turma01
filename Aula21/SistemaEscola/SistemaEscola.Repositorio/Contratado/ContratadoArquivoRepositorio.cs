@@ -4,10 +4,11 @@ using System.Linq;
 using SistemaEscola.Dominio.Funcionario;
 using SistemaEscola.Comum.Helpers;
 using Newtonsoft.Json;
+using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Repositorio
 {
-    public class ContratadoArquivoRepositorio
+    public class ContratadoArquivoRepositorio : IContratadoRepositorio
     {
         private List<Contratado> _contratados = new List<Contratado>();
 
@@ -27,8 +28,9 @@ namespace SistemaEscola.Repositorio
         public Contratado BuscarPorId(Guid id)
         {
             var aux = _contratados.FirstOrDefault(f => f.Id == id);
+            if (aux == null) return aux;
             aux.InstanciarEscolaridade();
-            return aux;
+            return aux;            
         }
         
         //public List<Contratado> GetContratadoArquivo()

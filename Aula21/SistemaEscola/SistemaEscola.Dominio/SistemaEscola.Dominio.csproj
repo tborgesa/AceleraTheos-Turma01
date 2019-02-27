@@ -48,6 +48,7 @@
     <Compile Include="Contratado\ContratadoAtualizarViewModel.cs" />
     <Compile Include="Contratado\ContratadoDto.cs" />
     <Compile Include="Contratado\ContratadoInserirViewModel.cs" />
+    <Compile Include="Contratado\Interfacecs\IContratadoRepositorio.cs" />
     <Compile Include="Entidade.cs" />
     <Compile Include="Escolaridade\Doutorado.cs" />
     <Compile Include="Escolaridade\EnsinoSuperior.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="Horista\HoristaDto.cs" />
     <Compile Include="Horista\HoristaInserirViewModel.cs" />
     <Compile Include="Horista\Horaista.cs" />
+    <Compile Include="Horista\Interfacecs\IHoristaRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Escolaridade\SegundoGrau.cs" />
   </ItemGroup>

@@ -4,10 +4,11 @@ using System.Data;
 using System.Data.SqlClient;
 using SistemaEscola.Dominio.Funcionario;
 using SistemaEscola.Dominio.Escolaridade.Enumerador;
+using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Repositorio
 {
-    public class ContratadoAdoNetRepositorio : BaseRepositorio
+    public class ContratadoAdoNetRepositorio : BaseRepositorio , IContratadoRepositorio
     {
         public void Inserir(Contratado contratado)
         {
@@ -120,7 +121,7 @@ namespace SistemaEscola.Repositorio
                     if (reader["Endereco"] != DBNull.Value)
                         contratado.Endereco = reader["Endereco"].ToString();
 
-                    contratado.EnumEscolaridade = reader["EnumEscolaridade"];
+                    contratado.EnumEscolaridade = (EEscolaridade)reader["EnumEscolaridade"];
                     contratado.Cpf = reader["Cpf"].ToString();
 
                     contratadoes.Add(contratado);

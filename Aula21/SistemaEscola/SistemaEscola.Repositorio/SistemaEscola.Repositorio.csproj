@@ -65,9 +65,11 @@
     <Compile Include="Contratado\ContratadoDapperRepositorio .cs" />
     <Compile Include="Contratado\ContratadoAdoNetRepositorio.cs" />
     <Compile Include="Contratado\ContratadoArquivoRepositorio.cs" />
+    <Compile Include="Horista\HoristaDapperRepositorio .cs" />
     <Compile Include="Horista\HoristaAdoNetRepositorio.cs" />
     <Compile Include="Horista\HoristaArquivoRepositorio.cs" />
     <Compile Include="Map\ConfigMapDapper.cs" />
+    <Compile Include="Map\HoristaMap.cs" />
     <Compile Include="Map\ContratadoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

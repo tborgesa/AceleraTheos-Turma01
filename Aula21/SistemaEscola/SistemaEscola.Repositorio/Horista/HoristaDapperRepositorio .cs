@@ -10,14 +10,14 @@ using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Repositorio
 {
-    public class ContratadoDapperRepositorio : BaseRepositorio , IContratadoRepositorio
+    public class HoristaDapperRepositorio : BaseRepositorio , IHoristaRepositorio
     {
-        public void Inserir(Contratado contratado)
+        public void Inserir(Horista horista)
         {
             try
             {
                 Conexao.Open();
-                Conexao.Insert(contratado);
+                Conexao.Insert(horista);
 
             }
             finally
@@ -26,12 +26,12 @@ namespace SistemaEscola.Repositorio
             }
         }
 
-        public Contratado BuscarPorId(Guid id)
+        public Horista BuscarPorId(Guid id)
         {
             try
             {
                 Conexao.Open();
-                return Conexao.Get<Contratado>(id);
+                return Conexao.Get<Horista>(id);
             }
             finally
             {
@@ -40,7 +40,7 @@ namespace SistemaEscola.Repositorio
         }
 
         //Caso precise de consulta customisada
-        //public Contratado BuscarPorCpf(string cpf)
+        //public Horista BuscarPorCpf(string cpf)
         //{
         //    try
         //    {
@@ -52,7 +52,7 @@ namespace SistemaEscola.Repositorio
         //        paramentros.Add("CPF", new DbString { Value = cpf, IsAnsi = true, Length = 14 });
         //        //True/False para quando nvarchar
                 
-        //        return Conexao.Query<Contratado>(sql, paramentros).FirstOrDefault() ;
+        //        return Conexao.Query<Horista>(sql, paramentros).FirstOrDefault() ;
         //        //Query tem o retorno do valor
 
         //    }
@@ -62,12 +62,12 @@ namespace SistemaEscola.Repositorio
         //    }
         //}
 
-        public List<Contratado> BuscarTodos()
+        public List<Horista> BuscarTodos()
         {
             try
             {
                 Conexao.Open();
-                return Conexao.GetAll<Contratado>().ToList();
+                return Conexao.GetAll<Horista>().ToList();
             }
             finally
             {
@@ -75,12 +75,12 @@ namespace SistemaEscola.Repositorio
             }
         }
 
-        public void Atualizar(Contratado contratado)
+        public void Atualizar(Horista horista)
         {
             try
             {
                 Conexao.Open();
-                Conexao.Update(contratado);
+                Conexao.Update(horista);
             }
             finally
             {
@@ -94,7 +94,7 @@ namespace SistemaEscola.Repositorio
             {
                 Conexao.Open();
                 //Nova entidade para deletar o dado correspondente
-                Conexao.Delete(new Contratado() { Id = id });
+                Conexao.Delete(new Horista() { Id = id });
             }
             finally
             {

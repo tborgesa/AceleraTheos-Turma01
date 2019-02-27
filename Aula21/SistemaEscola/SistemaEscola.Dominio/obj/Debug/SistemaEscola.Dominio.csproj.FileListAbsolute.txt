@@ -64,3 +64,15 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csprojAssemblyReference.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.csproj.CopyComplete
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.dll
+C:\Users\Christian.Castilho\CursoDotNet\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Dominio\obj\Debug\SistemaEscola.Dominio.pdb

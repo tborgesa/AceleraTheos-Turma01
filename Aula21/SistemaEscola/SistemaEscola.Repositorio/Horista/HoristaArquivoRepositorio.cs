@@ -4,10 +4,11 @@ using System.Linq;
 using SistemaEscola.Dominio.Funcionario;
 using SistemaEscola.Comum.Helpers;
 using Newtonsoft.Json;
+using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Repositorio
 {
-    public class HoristaArquivoRepositorio
+    public class HoristaArquivoRepositorio : IHoristaRepositorio
     {
         private List<Horista> _contratados = new List<Horista>();
 

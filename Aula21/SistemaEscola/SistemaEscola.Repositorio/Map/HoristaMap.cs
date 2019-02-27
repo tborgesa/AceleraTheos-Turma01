@@ -3,17 +3,17 @@ using SistemaEscola.Dominio.Funcionario;
 
 namespace SistemaEscola.Repositorio.Map
 {
-    public class ContratadoMap : DommelEntityMap<Contratado>
+    public class HoristaMap : DommelEntityMap<Horista>
     {
         //Mapeamento das propriedades da classe
-        public ContratadoMap()
+        public HoristaMap()
         {
-            //ToTable("Contratado"); Poderia ser caso fosse diferente.
+            //ToTable("Horista"); Poderia ser caso fosse diferente.
             /*
              
              */
-            ToTable("Contratado");
-            Map(col => col.Id).ToColumn("ContratadoId").IsKey();
+            ToTable("Horista");
+            Map(col => col.Id).ToColumn("HoristaId").IsKey();
             //IsKey da informação que esta é a PK
             //Map(col => col.DataInsercao).ToColumn("DataInsercao");
         }

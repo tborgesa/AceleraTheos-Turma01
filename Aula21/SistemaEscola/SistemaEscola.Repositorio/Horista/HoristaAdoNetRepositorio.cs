@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using SistemaEscola.Dominio.Funcionario;
+using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Repositorio
 {
-    public class HoristaAdoNetRepositorio : BaseRepositorio
+    public class HoristaAdoNetRepositorio : BaseRepositorio, IHoristaRepositorio
     {
         public void Inserir(Horista horista)
         {

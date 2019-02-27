@@ -4,13 +4,35 @@ using SistemaEscola.Dominio.Contratado;
 using SistemaEscola.Dominio.Funcionario;
 using SistemaEscola.Dominio;
 using SistemaEscola.Repositorio;
-
+using System.Configuration;
+using SistemaEscola.Dominio.Funcionario.Interfaces;
 
 namespace SistemaEscola.Service
 {
     public class ContratadoService
     {
-        private ContratadoArquivoRepositorio _repositorio = new ContratadoArquivoRepositorio();
+        private IContratadoRepositorio _repositorio;
+
+        public ContratadoService()
+        {
+            var tipoBancoDados = int.Parse(ConfigurationManager.AppSettings["TipoBancoDados"]);
+
+            switch (tipoBancoDados)
+            {
+                case 1:
+                    _repositorio = new ContratadoArquivoRepositorio();
+                    break;
+                case 2:
+                    _repositorio = new ContratadoAdoNetRepositorio();
+                    break;
+                case 3:
+                    _repositorio = new ContratadoDapperRepositorio();
+                    break;
+                default:
+                    _repositorio = new ContratadoArquivoRepositorio();
+                    break;
+            }
+        }
 
         public ContratadoDtoReturn Inserir(ContratadoInserirViewModel contratadoViewModel)
         {

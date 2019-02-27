@@ -18,7 +18,7 @@ namespace SistemaEscola.Repositorio.Map
             FluentMapper.Initialize(config =>
             {
                 config.AddMap(new ContratadoMap());
-                //config.AddMap(new HoristaMap());
+                config.AddMap(new HoristaMap());
 
                 config.ForDommel();
                 //Necessário para criar os INSERT, UDPATE, DELETE;

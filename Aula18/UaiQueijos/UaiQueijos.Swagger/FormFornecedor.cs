@@ -1,25 +1,19 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UaiQueijos.Dominio.Fornecedor;
-using UaiQueijos.Service;
+using UaiQueijos.Dominio.Fornecedor.Interfaces;
 
 namespace UaiQueijos.Swagger
 {
     public partial class FormFornecedor : Form
     {
-        private FornecedorService _service = new FornecedorService();
+        private IFornecedorService _service;
 
-        public FormFornecedor()
+        public FormFornecedor(IFornecedorService service)
         {
             InitializeComponent();
+            _service = service;
         }
 
         private void FormFornecedor_Load(object sender, EventArgs e)

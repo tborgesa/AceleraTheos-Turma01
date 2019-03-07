@@ -1,28 +1,23 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UaiQueijos.Swagger
 {
     public partial class FormPrincipal : Form
     {
-        public FormPrincipal()
+        private FormFornecedor _formFornecedor;
+
+        public FormPrincipal(FormFornecedor formFornecedor)
         {
+            _formFornecedor = formFornecedor;
             InitializeComponent();
         }
 
         private void buttonFornecedor_Click(object sender, EventArgs e)
         {
-            FormFornecedor formFornecedor = new FormFornecedor();
-            formFornecedor.ShowDialog();
+            _formFornecedor.ShowDialog();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)

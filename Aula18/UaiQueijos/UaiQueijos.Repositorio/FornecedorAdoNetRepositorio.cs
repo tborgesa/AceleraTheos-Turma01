@@ -9,6 +9,11 @@ namespace UaiQueijos.Repositorio
 {
     public class FornecedorAdoNetRepositorio : BaseRepositorio, IFornecedorRepositorio
     {
+        public FornecedorAdoNetRepositorio()
+        {
+
+        }
+
         public void Inserir(Fornecedor fornecedor)
         {
             try
@@ -63,19 +68,19 @@ namespace UaiQueijos.Repositorio
 
                 command.Parameters.AddWithValue("@FornecedorId", id).SqlDbType = SqlDbType.UniqueIdentifier;
 
-                
+
                 var reader = command.ExecuteReader();
                 if (!reader.Read()) return null;
 
                 var fornecedor = new Fornecedor();
-                fornecedor.Id = (Guid) reader["FornecedorId"];
-                fornecedor.DataInsercao = (DateTime) reader["DataInsercao"];
+                fornecedor.Id = (Guid)reader["FornecedorId"];
+                fornecedor.DataInsercao = (DateTime)reader["DataInsercao"];
 
                 if (reader["DataAlteracao"] != DBNull.Value)
-                    fornecedor.DataAlteracao = (DateTime) reader["DataAlteracao"];
+                    fornecedor.DataAlteracao = (DateTime)reader["DataAlteracao"];
 
                 fornecedor.Nome = reader["Nome"].ToString();
-                fornecedor.DataNascimento = (DateTime) reader["DataNascimento"];
+                fornecedor.DataNascimento = (DateTime)reader["DataNascimento"];
 
                 if (reader["Endereco"] != DBNull.Value)
                     fornecedor.Endereco = reader["Endereco"].ToString();
@@ -100,7 +105,7 @@ namespace UaiQueijos.Repositorio
                 var sql = @"SELECT * FROM FORNECEDOR";
 
                 SqlCommand command = new SqlCommand(sql, Conexao);
-                               
+
                 var reader = command.ExecuteReader();
 
                 var fornecedores = new List<Fornecedor>();

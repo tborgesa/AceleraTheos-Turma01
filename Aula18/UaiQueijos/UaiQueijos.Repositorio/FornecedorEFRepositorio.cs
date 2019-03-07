@@ -19,7 +19,7 @@ namespace UaiQueijos.Repositorio
 
         public List<Fornecedor> BuscarTodos()
         {
-            throw new NotImplementedException("Repositório em construção");
+                throw new NotImplementedException("Repositório em construção");
         }
 
         public void Excluir(Guid id)

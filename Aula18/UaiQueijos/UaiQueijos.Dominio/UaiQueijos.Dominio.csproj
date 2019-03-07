@@ -51,6 +51,7 @@
     <Compile Include="Fornecedor\FornecedorInserirViewModel.cs" />
     <Compile Include="Fornecedor\Fornecedor.cs" />
     <Compile Include="Fornecedor\Interfaces\IFornecedorRepositorio.cs" />
+    <Compile Include="Fornecedor\Interfaces\IFornecedorService.cs" />
     <Compile Include="Funcionario\Funcionario.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Produto\Produto.cs" />

@@ -1,38 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using UaiQueijos.Dominio.Fornecedor;
 using UaiQueijos.Dominio.Fornecedor.Interfaces;
-using UaiQueijos.Repositorio;
 
 namespace UaiQueijos.Service
 {
-    public class FornecedorService
+    public class FornecedorService : IFornecedorService
     {
         private IFornecedorRepositorio _repositorio;
 
-        public FornecedorService()
+        public FornecedorService(IFornecedorRepositorio repositorio)
         {
-            var tipoBancoDados = int.Parse(ConfigurationManager.AppSettings["TipoBancoDados"]);
-
-            switch (tipoBancoDados)
-            {
-                case 1:
-                    _repositorio = new FornecedorArquivoRepositorio();
-                    break;
-                case 2:
-                    _repositorio = new FornecedorAdoNetRepositorio();
-                    break;  
-                case 3:
-                    _repositorio = new FornecedorDapperRepositorio();
-                    break;
-                case 4:
-                    _repositorio = new FornecedorEFRepositorio();
-                    break;
-                default:
-                    _repositorio = new FornecedorArquivoRepositorio();
-                    break;
-            }
+            _repositorio = repositorio;
         }
 
         public FornecedorDtoReturn Inserir(FornecedorInserirViewModel fornecedorViewModel)

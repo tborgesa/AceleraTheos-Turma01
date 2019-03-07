@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEscola.Swagger", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEscola.Service", "SistemaEscola.Service\SistemaEscola.Service.csproj", "{C7AE0E72-50A7-4C2F-887B-9A8E4014993D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - InjecaoDependecia", "06 - InjecaoDependecia", "{46035787-BA25-4EED-B945-6D9D71B04B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaEscola.InjecaoDependencia", "SistemaEscola.InjecaoDependencia\SistemaEscola.InjecaoDependencia.csproj", "{7EDAF640-B0E1-4E2C-A022-BB6072603915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,10 @@ Global
 		{C7AE0E72-50A7-4C2F-887B-9A8E4014993D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7AE0E72-50A7-4C2F-887B-9A8E4014993D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7AE0E72-50A7-4C2F-887B-9A8E4014993D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDAF640-B0E1-4E2C-A022-BB6072603915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDAF640-B0E1-4E2C-A022-BB6072603915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDAF640-B0E1-4E2C-A022-BB6072603915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDAF640-B0E1-4E2C-A022-BB6072603915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{965FD5FA-4089-4F1E-BD21-A42EFF6D89BC} = {1E48B32F-1631-4E03-A568-C5DD9AE7848E}
 		{957B4450-8A05-4ECF-BD35-3D3755B2CF24} = {63CC123F-5A07-4EAD-992F-762B781161F8}
 		{C7AE0E72-50A7-4C2F-887B-9A8E4014993D} = {5F6BCC2F-F5E7-4124-8FD2-BCA94E8920DC}
+		{7EDAF640-B0E1-4E2C-A022-BB6072603915} = {46035787-BA25-4EED-B945-6D9D71B04B87}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {95261133-E91C-4C8B-AA42-E10502529CE5}

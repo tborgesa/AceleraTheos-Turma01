@@ -51,10 +51,6 @@
       <Project>{868fc139-9f05-460a-9d29-eb2ebcc7a019}</Project>
       <Name>SistemaEscola.Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SistemaEscola.Repositorio\SistemaEscola.Repositorio.csproj">
-      <Project>{965fd5fa-4089-4f1e-bd21-a42eff6d89bc}</Project>
-      <Name>SistemaEscola.Repositorio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

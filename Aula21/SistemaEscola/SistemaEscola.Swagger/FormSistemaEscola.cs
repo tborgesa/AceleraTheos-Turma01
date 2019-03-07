@@ -14,21 +14,23 @@ namespace SistemaEscola.Swagger
 {
     public partial class FormSistemaEscola : Form
     {
-        public FormSistemaEscola()
+        private FormContratado _formContratado;
+
+        public FormSistemaEscola(FormContratado formContratado)
         {
+            _formContratado = formContratado;
             InitializeComponent();
         }
 
         private void buttonContratado_Click(object sender, EventArgs e)
         {
-            FormContratado formContratado = new FormContratado();
-            formContratado.ShowDialog();
+            _formContratado.ShowDialog();
         }
 
         private void buttonHorista_Click(object sender, EventArgs e)
         {
-            FormHorista formHorista = new FormHorista();
-            formHorista.ShowDialog();
+            //FormHorista formHorista = new FormHorista();
+            //formHorista.ShowDialog();
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)

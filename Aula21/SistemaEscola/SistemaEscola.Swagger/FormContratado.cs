@@ -2,17 +2,18 @@
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using SistemaEscola.Dominio.Contratado;
-using SistemaEscola.Service;
+using SistemaEscola.Dominio.Contratado.Interfacecs;
 
 namespace SistemaEscola.Swagger
 {
     public partial class FormContratado : Form
     {
-        private ContratadoService _service = new ContratadoService();
+        private IContratadoService _service;
 
-        public FormContratado()
+        public FormContratado(IContratadoService service)
         {
             InitializeComponent();
+            _service = service;
         }
 
 

@@ -12,7 +12,7 @@ namespace SistemaEscola.Repositorio.Map
             /*
              
              */
-            ToTable("Horista");
+            ToTable("HORISTA");
             Map(col => col.Id).ToColumn("HoristaId").IsKey();
             //IsKey da informação que esta é a PK
             //Map(col => col.DataInsercao).ToColumn("DataInsercao");

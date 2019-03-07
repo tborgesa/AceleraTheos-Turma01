@@ -81,7 +81,8 @@ namespace SistemaEscola.Repositorio
                 if (reader["Endereco"] != DBNull.Value)
                     contratado.Endereco = reader["Endereco"].ToString();
 
-                contratado.EnumEscolaridade = (EEscolaridade)reader["EnumEscolaridade"];
+                contratado.EnumEscolaridade = 
+                (EEscolaridade)Enum.Parse(typeof(EEscolaridade), reader["EnumEscolaridade"].ToString());
                 contratado.Cpf = reader["Cpf"].ToString();
 
                 return contratado;
@@ -121,7 +122,8 @@ namespace SistemaEscola.Repositorio
                     if (reader["Endereco"] != DBNull.Value)
                         contratado.Endereco = reader["Endereco"].ToString();
 
-                    contratado.EnumEscolaridade = (EEscolaridade)reader["EnumEscolaridade"];
+                    contratado.EnumEscolaridade = 
+                        (EEscolaridade)Enum.Parse(typeof(EEscolaridade), reader["EnumEscolaridade"].ToString());
                     contratado.Cpf = reader["Cpf"].ToString();
 
                     contratadoes.Add(contratado);

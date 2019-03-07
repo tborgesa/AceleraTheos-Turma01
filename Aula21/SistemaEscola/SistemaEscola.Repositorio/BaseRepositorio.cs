@@ -25,12 +25,13 @@ namespace SistemaEscola.Repositorio
 
             var builder = new SqlConnectionStringBuilder
             {
-                ApplicationName = "SISTEMAESCOLA",
+                //ApplicationName = "ESCOLA",
+                ApplicationName = "SistemaEscola",
                 DataSource = host,
                 InitialCatalog = database,
-                //UserID = "sa",
-                //Password = "sys@36911",
-                IntegratedSecurity = true,
+                UserID = "sa",
+                Password = "sys@36911",
+                //IntegratedSecurity = true,
                 ConnectRetryCount = 1,
                 ConnectTimeout = 120,
                 MinPoolSize = 5,

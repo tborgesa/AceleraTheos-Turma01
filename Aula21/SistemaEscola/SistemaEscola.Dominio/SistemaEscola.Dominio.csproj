@@ -49,6 +49,7 @@
     <Compile Include="Contratado\ContratadoDto.cs" />
     <Compile Include="Contratado\ContratadoInserirViewModel.cs" />
     <Compile Include="Contratado\Interfacecs\IContratadoRepositorio.cs" />
+    <Compile Include="Contratado\Interfacecs\IContratadoService.cs" />
     <Compile Include="Entidade.cs" />
     <Compile Include="Escolaridade\Doutorado.cs" />
     <Compile Include="Escolaridade\EnsinoSuperior.cs" />

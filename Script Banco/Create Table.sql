@@ -5,6 +5,8 @@ use PETSHOP
 CREATE TABLE Cliente(
 	IdCliente uniqueidentifier NOT NULL CONSTRAINT [PK_IdCliente] PRIMARY KEY,
 	DataInsercao smalldatetime NOT NULL,
+	Nome varchar(100) NOT NULL,
+	Telefone varchar(11) NOT NULL,
 	Endereco varchar(500) NULL,
 	DataAlteracao smalldatetime NULL,
  )

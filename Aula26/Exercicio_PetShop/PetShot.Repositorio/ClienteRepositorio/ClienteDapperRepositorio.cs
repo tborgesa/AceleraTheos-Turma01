@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Dommel;
 using PetShop.Dominio.Pessoas;
+using PetShop.Dominio.Pessoas.Interfaces;
 using PetShot.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Linq;
 
 namespace PetShop.Repositorio
 {
-    public class ClienteDapperRepositorio : BaseRepositorio
+    public class ClienteDapperRepositorio : BaseRepositorio, IClienteRepositorio
     {
         public void Inserir(Cliente cliente)
         {

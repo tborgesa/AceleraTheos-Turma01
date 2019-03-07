@@ -6,12 +6,18 @@ using System.Threading.Tasks;
 using PetShop.Dominio.Pessoas;
 using PetShop.Repositorio;
 using static PetShop.Dominio.Pessoas.ClienteDto;
+using PetShop.Dominio.Pessoas.Interfaces;
 
 namespace PetShop.Service
 {
-    public class ClienteService
+    public class ClienteService : IClienteService
     {
-        private ClienteDapperRepositorio _repositorio = new ClienteDapperRepositorio();
+        private IClienteRepositorio _repositorio;
+
+        public ClienteService(IClienteRepositorio repositorio)
+        {
+            _repositorio = repositorio;
+        }
 
         public ClienteDtoReturn Inserir(ClienteInserirViewModel clienteViewModel)
         {

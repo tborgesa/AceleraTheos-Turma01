@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Repositorio", "PetS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Service", "PetShop.Service\PetShop.Service.csproj", "{79BE8987-3891-4FBA-817A-36327465D486}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 - InjecaoDependencia", "06 - InjecaoDependencia", "{82FB0EA9-73B1-4CC7-85C6-98AB7D0EA2FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.InjecaoDependencia", "PetShop.InjecaoDependencia\PetShop.InjecaoDependencia.csproj", "{DE7AD618-771F-414D-9DFF-E823D802FC2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{79BE8987-3891-4FBA-817A-36327465D486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79BE8987-3891-4FBA-817A-36327465D486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79BE8987-3891-4FBA-817A-36327465D486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7AD618-771F-414D-9DFF-E823D802FC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7AD618-771F-414D-9DFF-E823D802FC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7AD618-771F-414D-9DFF-E823D802FC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7AD618-771F-414D-9DFF-E823D802FC2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +84,8 @@ Global
 		{053CB629-94AE-4397-9E08-614B165A886E} = {8DA7E0F3-A6F6-4F6C-8F84-99902A7AF2A9}
 		{68582F43-E347-4B3F-AF68-725FB42831F3} = {E76889C9-0FE5-4510-B0DD-5B5B629AA920}
 		{79BE8987-3891-4FBA-817A-36327465D486} = {52C532B0-093B-42A0-8D4F-F8B957AA5827}
+		{82FB0EA9-73B1-4CC7-85C6-98AB7D0EA2FF} = {4C475832-0793-40F2-9684-79B7DE5C1B25}
+		{DE7AD618-771F-414D-9DFF-E823D802FC2F} = {82FB0EA9-73B1-4CC7-85C6-98AB7D0EA2FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EE58CC70-F23B-416B-933A-CD9077E9144A}

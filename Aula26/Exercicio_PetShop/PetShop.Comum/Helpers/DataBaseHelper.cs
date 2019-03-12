@@ -1,6 +1,8 @@
 ﻿using System;
-using System.IO;
 using System.Configuration;
+using System.IO;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace PetShop.Comum.Helpers
 {
@@ -31,7 +33,7 @@ namespace PetShop.Comum.Helpers
             return pasta;
         }
 
-        public  static string LerArquivo(string nomeArquivo)
+        public  static List<T> LerArquivo<T>(string nomeArquivo)
         {
             var pasta = GetPastaConfigurada();
             var caminhoAbsoluto = $"{pasta}\\{nomeArquivo}.json";
@@ -41,8 +43,12 @@ namespace PetShop.Comum.Helpers
                 var arquivo = File.Create(caminhoAbsoluto);
                 arquivo.Close();
             }
+            string retornoArquivo;
+
             using (var arquivo = new StreamReader(caminhoAbsoluto))
-                return arquivo.ReadToEnd();
+                retornoArquivo = arquivo.ReadToEnd();
+
+            return JsonConvert.DeserializeObject<List<T>>(retornoArquivo) ?? new List<T>();
         }
     }
 }

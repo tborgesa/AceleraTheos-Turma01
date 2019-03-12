@@ -4,11 +4,17 @@ using System.Data.SqlClient;
 using System.Data;
 using PetShop.Dominio.Pessoas;
 using PetShot.Repositorio;
+using PetShop.Dominio.Pessoas.Interfaces;
 
 namespace PetShop.Repositorio
 {
-    public class ClienteAdoNetRepositorio : BaseRepositorio
+    public class ClienteAdoNetRepositorio : BaseRepositorio, IClienteRepositorio
     {
+        public ClienteAdoNetRepositorio()
+        {
+
+        }
+
         public void Inserir(Cliente cliente)
         {
             try

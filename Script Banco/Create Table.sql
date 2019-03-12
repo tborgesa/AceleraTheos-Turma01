@@ -19,6 +19,8 @@ CREATE TABLE Cliente(
  Descricao varchar(10) not null,
  )
 
+ insert into Especies(idEpecie, Descricao) values (1, 'CACHORRO'), (2, 'GATO'), (3, 'PEIXE')
+
  create table Cachorro
 (
 	IdCachorro uniqueidentifier not null CONSTRAINT [PK_IdCachorro] PRIMARY KEY,

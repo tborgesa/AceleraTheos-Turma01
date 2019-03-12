@@ -65,9 +65,9 @@
     <Compile Include="CachorroAdoNetRepositorio.cs" />
     <Compile Include="CachorroDapperRepositorio.cs" />
     <Compile Include="CachorroRepositorio.cs" />
-    <Compile Include="ClienteAdoNetRepositorio.cs" />
-    <Compile Include="ClienteDapperRepositorio.cs" />
-    <Compile Include="ClienteRepositorio.cs" />
+    <Compile Include="ClienteRepositorio\ClienteAdoNetRepositorio.cs" />
+    <Compile Include="ClienteRepositorio\ClienteDapperRepositorio.cs" />
+    <Compile Include="ClienteRepositorio\ClienteRepositorio.cs" />
     <Compile Include="GatoRepositorio.cs" />
     <Compile Include="Maps\CachorroMap.cs" />
     <Compile Include="Maps\ClienteMap.cs" />

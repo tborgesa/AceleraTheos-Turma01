@@ -5,6 +5,7 @@ using PetShop.Dominio.Animais;
 using PetShop.Dominio.Pessoas;
 using PetShop.Dominio.Animais.Enumerador;
 using PetShot.Repositorio;
+using PetShop.Dominio.Pessoas.Interfaces;
 
 namespace PetShop.Service
 {

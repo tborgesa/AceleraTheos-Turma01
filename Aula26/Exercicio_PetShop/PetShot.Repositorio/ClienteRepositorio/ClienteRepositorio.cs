@@ -4,16 +4,17 @@ using System.Linq;
 using PetShop.Dominio.Pessoas;
 using PetShop.Comum.Helpers;
 using Newtonsoft.Json;
+using PetShop.Dominio.Pessoas.Interfaces;
 
 namespace PetShop.Repositorio
 {
-    public class ClienteRepositorio
+    public class ClienteRepositorio : IClienteRepositorio
     {
         private List<Cliente> _clientes = new List<Cliente>();
 
         public ClienteRepositorio()
         {
-            _clientes = GetClientesArquivo();
+            _clientes = DataBaseHelper.LerArquivo<Cliente>("Cliente");
         }
 
         public void Inserir(Cliente cliente)
@@ -45,14 +46,15 @@ namespace PetShop.Repositorio
             GravarClientesArquivo(_clientes);
         }
 
+/*
         private List<Cliente> GetClientesArquivo()
         {
-            var conteudo = DataBaseHelper.LerArquivo("Cliene");
+            var conteudo = DataBaseHelper.LerArquivo("Cliente");
             var lista = JsonConvert.DeserializeObject<List<Cliente>>(conteudo);
 
             return lista ?? new List<Cliente>();
         }
-
+*/
         private void GravarClientesArquivo(List<Cliente> clientes)
         {
             var conteudo = JsonConvert.SerializeObject(clientes);

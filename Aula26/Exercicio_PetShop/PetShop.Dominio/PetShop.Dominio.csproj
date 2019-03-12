@@ -49,6 +49,8 @@
     <Compile Include="Pessoas\ClienteDto.cs" />
     <Compile Include="Pessoas\ClienteSearch.cs" />
     <Compile Include="Pessoas\ClienteInserirViewModel.cs" />
+    <Compile Include="Pessoas\Interfaces\IClienteRepositorio.cs" />
+    <Compile Include="Pessoas\Interfaces\IClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

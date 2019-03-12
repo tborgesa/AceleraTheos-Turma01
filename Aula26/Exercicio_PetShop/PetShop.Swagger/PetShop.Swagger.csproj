@@ -115,6 +115,10 @@
       <Project>{83b4bbc3-a4e0-45d4-b6bb-3a23a199995e}</Project>
       <Name>PetShop.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PetShop.InjecaoDependencia\PetShop.InjecaoDependencia.csproj">
+      <Project>{de7ad618-771f-414d-9dff-e823d802fc2f}</Project>
+      <Name>PetShop.InjecaoDependencia</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PetShop.Service\PetShop.Service.csproj">
       <Project>{79be8987-3891-4fba-817a-36327465d486}</Project>
       <Name>PetShop.Service</Name>

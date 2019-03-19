@@ -1,5 +1,4 @@
-﻿using Microsoft.Owin.Cors;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using System.Globalization;

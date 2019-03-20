@@ -12,12 +12,8 @@ namespace UaiQueijos.Api
         public void Configuration(IAppBuilder app)
         {
             var configuration = new HttpConfiguration();
-            //app.UseCors(CorsOptions.AllowAll);
             ConfigureFormatters(configuration);
-
             configuration.MapHttpAttributeRoutes(new CustomDirectRouteProvider());
-            //configuration.Routes.MapHttpRoute("DefaultHttpRoute", "api/{controller}/{id}", new { id = RouteParameter.Optional });
-
             app.UseWebApi(configuration);
             configuration.EnsureInitialized();
         }

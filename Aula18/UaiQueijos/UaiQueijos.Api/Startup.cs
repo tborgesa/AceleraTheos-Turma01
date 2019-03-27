@@ -4,6 +4,10 @@ using Owin;
 using System.Globalization;
 using System.Web.Http;
 using UaiQueijos.Api.Config;
+using Swashbuckle.Application;
+using Unity;
+using UaiQueijos.InjecaoDependencia;
+using UaiQueijos.Api.InjecaoDependencia;
 
 namespace UaiQueijos.Api
 {
@@ -15,6 +19,16 @@ namespace UaiQueijos.Api
             ConfigureFormatters(configuration);
             configuration.MapHttpAttributeRoutes(new CustomDirectRouteProvider());
             app.UseWebApi(configuration);
+
+            configuration.EnableSwagger(c =>
+            { c.SingleApiVersion("v1", "UaiQueijos"); })
+            .EnableSwaggerUi(c => c.DocumentTitle("UaiQueijos"));
+
+            IUnityContainer container = new UnityContainer();
+            ServicoRegister.Register(container);
+            RepositorioRegister.Register(container);
+            configuration.DependencyResolver = new UnityDependencyResolver(container);
+
             configuration.EnsureInitialized();
         }
 

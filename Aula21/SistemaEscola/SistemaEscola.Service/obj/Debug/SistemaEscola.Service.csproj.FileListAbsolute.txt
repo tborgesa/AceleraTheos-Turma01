@@ -114,3 +114,17 @@ C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\Sis
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\AceleraTheos-Turma01\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Service.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Dominio.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\bin\Debug\SistemaEscola.Comum.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csprojAssemblyReference.cache
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CoreCompileInputs.cache
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.csproj.CopyComplete
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\Aula21\SistemaEscola\SistemaEscola.Service\obj\Debug\SistemaEscola.Service.pdb

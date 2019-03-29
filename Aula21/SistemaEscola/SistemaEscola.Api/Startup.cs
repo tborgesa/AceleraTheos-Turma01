@@ -5,6 +5,9 @@ using System.Globalization;
 using System.Web.Http;
 using SistemaEscola.Api.Config;
 using Swashbuckle.Application;
+using Unity;
+using SistemaEscola.Api.InjecaoDependencia;
+using SistemaEscola.InjecaoDependencia;
 
 namespace SistemaEscola.Api
 {
@@ -21,6 +24,13 @@ namespace SistemaEscola.Api
             configuration.EnableSwagger(c =>
             { c.SingleApiVersion("v1", "SistemaEscola"); })
             .EnableSwaggerUi(c => c.DocumentTitle("SistemaEscola"));
+
+            IUnityContainer container = new UnityContainer();
+            ServiceRegister.Register(container);
+            RepositoryRegister.Register(container);
+            configuration.DependencyResolver = new UnityDependencyResolver(container);
+
+            configuration.EnsureInitialized();
         }
 
         private void ConfigureFormatters(HttpConfiguration configuration)

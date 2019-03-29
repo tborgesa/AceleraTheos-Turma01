@@ -64,8 +64,8 @@ namespace SistemaEscola.Swagger
         {
             try
             {
-                var contratadoes = _service.BuscarTodos();
-                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(contratadoes);
+                var contratados = _service.BuscarTodos();
+                textBoxBuscarTodos.Text = JsonConvert.SerializeObject(contratados);
             }
             catch (Exception ex)
             {

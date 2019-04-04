@@ -12,9 +12,9 @@ namespace PetShop.Service
 {
     public class AnimalService : IAnimalService
     {
-        private IAnimalRepositorio _repositorio;
+        private ICachorroRepositorio _repositorio;
 
-        public AnimalService(IAnimalRepositorio repositorio)
+        public AnimalService(ICachorroRepositorio repositorio)
         {
             _repositorio = repositorio;
         }

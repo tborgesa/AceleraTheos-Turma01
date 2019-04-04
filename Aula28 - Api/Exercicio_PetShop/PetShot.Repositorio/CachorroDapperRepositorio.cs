@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PetShop.Dominio.Animais;
-
+using PetShop.Dominio.Animais.Interfaces;
 
 namespace PetShop.Repositorio
 {
-    public class CachorroDapperRepositorio : BaseRepositorio
+    public class CachorroDapperRepositorio : BaseRepositorio, ICachorroRepositorio
+
     {
         public void Inserir(Cachorro cachorro)
         {

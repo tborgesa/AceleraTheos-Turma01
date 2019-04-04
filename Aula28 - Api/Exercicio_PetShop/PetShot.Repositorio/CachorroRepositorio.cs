@@ -4,16 +4,17 @@ using System.Linq;
 using PetShop.Comum.Helpers;
 using PetShop.Dominio.Animais;
 using Newtonsoft.Json;
+using PetShop.Dominio.Animais.Interfaces;
 
 namespace PetShop.Repositorio
 {
-    public class CachorroRepositorio
+    public class CachorroRepositorio : ICachorroRepositorio
     {
         private List<Cachorro> _cachorros = new List<Cachorro>();
 
         public CachorroRepositorio()
         {
-            //_cachorros = GetCachorrosArquivo();
+            _cachorros = DataBaseHelper.LerArquivo<Cachorro>("Cachorro");
         }
 
         public void Inserir(Cachorro cachorro)

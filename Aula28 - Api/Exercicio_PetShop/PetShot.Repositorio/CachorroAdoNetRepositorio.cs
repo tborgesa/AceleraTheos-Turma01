@@ -4,12 +4,15 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using PetShop.Dominio.Animais.Enumerador;
+using PetShop.Dominio.Animais.Interfaces;
 
 namespace PetShop.Repositorio
 {
-    public class CachorroAdoNetRepositorio : BaseRepositorio
+    public class CachorroAdoNetRepositorio : BaseRepositorio, ICachorroRepositorio
     {
+
+        public CachorroAdoNetRepositorio(ICachorroRepositorio cachorros) {}
+
         public void Inserir(Cachorro cachorro)
         {
             try

@@ -4,6 +4,10 @@ using Owin;
 using System.Globalization;
 using System.Web.Http;
 using PetShop.Api.Config;
+using Swashbuckle.Application;
+using Unity;
+using PetShop.InjecaoDependencia;
+using PetShop.Api.InjecaoDependencia;
 
 namespace PetShop.Api
 {
@@ -15,6 +19,22 @@ namespace PetShop.Api
             ConfigureFormatters(configuration);
             configuration.MapHttpAttributeRoutes(new CustomDirectRouteProvider());
             app.UseWebApi(configuration);
+            configuration.EnsureInitialized();
+
+            configuration.EnableSwagger(c =>
+           {
+               c.SingleApiVersion("v1", "PetShop");
+           })
+           .EnableSwaggerUi(c =>
+          {
+              c.DocumentTitle("PetShop");
+          });
+
+            IUnityContainer container = new UnityContainer();
+            ServicoRegister.Register(container);
+            RepositorioRegister.Register(container);
+            configuration.DependencyResolver = new UnityDependencyResolver(container);
+
             configuration.EnsureInitialized();
         }
 

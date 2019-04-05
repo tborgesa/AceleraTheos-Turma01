@@ -5,6 +5,20 @@ VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AceleraPizza.Api", "AceleraPizza.Api\AceleraPizza.Api.csproj", "{32568522-F2C1-418D-8F9D-08486E885960}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - APi", "00 - APi", "{97D7B340-C29E-4A90-8A92-73DA27A8770C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Dominio", "01 - Dominio", "{E917B634-E76A-4799-8570-19B2846FBD0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Service", "02 - Service", "{B8AAD362-FAD1-45BE-B579-FC5935F727B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Repositorio", "03 - Repositorio", "{35DB5540-968B-498B-95E1-288C5CE36297}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Comum", "04 - Comum", "{C3C5488D-5BAC-4EDC-B3CC-10340A798B40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - InjecaoDependencia", "05 - InjecaoDependencia", "{BDE95FE8-7366-41A7-B858-5232A278AF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AceleraPizza.Dominio", "AceleraPizza.Dominio\AceleraPizza.Dominio.csproj", "{8419B3AD-A15C-4B5D-A11E-22DBDCF18531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +29,17 @@ Global
 		{32568522-F2C1-418D-8F9D-08486E885960}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32568522-F2C1-418D-8F9D-08486E885960}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32568522-F2C1-418D-8F9D-08486E885960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8419B3AD-A15C-4B5D-A11E-22DBDCF18531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8419B3AD-A15C-4B5D-A11E-22DBDCF18531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8419B3AD-A15C-4B5D-A11E-22DBDCF18531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8419B3AD-A15C-4B5D-A11E-22DBDCF18531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{32568522-F2C1-418D-8F9D-08486E885960} = {97D7B340-C29E-4A90-8A92-73DA27A8770C}
+		{8419B3AD-A15C-4B5D-A11E-22DBDCF18531} = {E917B634-E76A-4799-8570-19B2846FBD0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AB1D8DEA-C5A3-4BC7-98C3-28395FF90215}

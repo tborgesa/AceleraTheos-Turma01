@@ -1,0 +1,6 @@
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Dominio.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Dominio.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csprojAssemblyReference.cache
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.dll
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.pdb

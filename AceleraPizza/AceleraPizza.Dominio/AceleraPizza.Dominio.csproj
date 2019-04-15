@@ -41,35 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Borda\Borda.cs" />
-    <Compile Include="Borda\Catupiry.cs" />
-    <Compile Include="Borda\Cheddar.cs" />
-    <Compile Include="Borda\Enumerador\EBorda.cs" />
-    <Compile Include="Borda\SemRecheio.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="Cliente\ClienteAtualizarViewModel.cs" />
+    <Compile Include="Cliente\ClienteDto.cs" />
+    <Compile Include="Cliente\ClienteInserirViewModel.cs" />
+    <Compile Include="Cliente\ClienteSearch.cs" />
+    <Compile Include="Cliente\Interfaces\IClienteService.cs" />
+    <Compile Include="Cliente\Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Entidade.cs" />
-    <Compile Include="Ingredientes\IngredientesItens\IngredientesAtualizarViewModel.cs" />
-    <Compile Include="Ingredientes\IngredientesItens\IngredientesDto.cs" />
-    <Compile Include="Ingredientes\IngredientesItens\IngredientesInserirViewModel.cs" />
-    <Compile Include="Ingredientes\Itens\Azeitona.cs" />
-    <Compile Include="Ingredientes\Itens\Bacon.cs" />
-    <Compile Include="Ingredientes\Itens\Cebola.cs" />
-    <Compile Include="Ingredientes\Enumerador\EIngredientes.cs" />
-    <Compile Include="Ingredientes\IngredientesItens\IngredientesItens.cs" />
-    <Compile Include="Ingredientes\Itens\Palmito.cs" />
-    <Compile Include="Ingredientes\Ingredientes.cs" />
-    <Compile Include="Ingredientes\Itens\Milho.cs" />
-    <Compile Include="Ingredientes\Itens\Mussarela.cs" />
-    <Compile Include="Ingredientes\Itens\Oregano.cs" />
-    <Compile Include="Ingredientes\Itens\PimentaCalabresa.cs" />
-    <Compile Include="Ingredientes\Itens\Presunto.cs" />
-    <Compile Include="Pedido\Pedido.cs" />
-    <Compile Include="Pizza\Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tamanho\Enumerador\ETamanho.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ingredientes\IngredientesItens\Interfaces\" />
+    <ProjectReference Include="..\AceleraPizza.Comum\AceleraPizza.Comum.csproj">
+      <Project>{e839d303-0b62-4062-ba8c-b23f07facd2b}</Project>
+      <Name>AceleraPizza.Comum</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

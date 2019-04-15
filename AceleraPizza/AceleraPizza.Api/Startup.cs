@@ -6,6 +6,8 @@ using System.Web.Http;
 using AceleraPizza.Api.Config;
 using Swashbuckle.Application;
 using Unity;
+using AceleraPizza.Api.InjecaoDependencia;
+using AceleraPizza.InjecaoDependencia;
 
 namespace AceleraPizza.Api
 {
@@ -24,9 +26,9 @@ namespace AceleraPizza.Api
             .EnableSwaggerUi(c => c.DocumentTitle("AceleraPizza"));
 
             IUnityContainer container = new UnityContainer();
-            //ServiceRegister.Register(container);
-            //RepositoryRegister.Register(container);
-            //configuration.DependencyResolver = new UnityDependencyResolver(container);
+            ServiceRegister.Register(container);
+            RepositoryRegister.Register(container);
+            configuration.DependencyResolver = new UnityDependencyResolver(container);
 
             configuration.EnsureInitialized();
         }

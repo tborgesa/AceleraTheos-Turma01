@@ -1,0 +1,14 @@
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Service.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Service.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Dominio.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Comum.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Dominio.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\AceleraPizza.Comum.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\obj\Debug\AceleraPizza.Service.csprojAssemblyReference.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\obj\Debug\AceleraPizza.Service.csproj.CoreCompileInputs.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\obj\Debug\AceleraPizza.Service.csproj.CopyComplete
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\obj\Debug\AceleraPizza.Service.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Service\obj\Debug\AceleraPizza.Service.pdb

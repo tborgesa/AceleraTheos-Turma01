@@ -131,7 +131,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Theos.Pizzaria.Dominio\Theos.Pizzaria.Dominio.csproj">
+      <Project>{03C53D73-0AA6-4B27-BC7A-F397B8B6CF91}</Project>
+      <Name>Theos.Pizzaria.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Theos.Pizzaria.IoC\Theos.Pizzaria.IoC.csproj">
+      <Project>{DF347D0D-2982-4DD9-A6FD-C77A33193F8B}</Project>
+      <Name>Theos.Pizzaria.IoC</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

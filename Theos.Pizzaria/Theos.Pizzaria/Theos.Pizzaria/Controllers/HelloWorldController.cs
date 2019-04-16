@@ -3,17 +3,35 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Theos.Pizzaria.Dominio.Cliente.Interfaces;
 
 namespace Theos.Pizzaria.Controllers
 {
     [RoutePrefix("helloworld")]
     public class HelloWordController : ApiController
     {
+        private IClienteService _clienteService;
+        private IClienteRepository _clienteRepository;
+
+
+        public HelloWordController(IClienteService clienteService, IClienteRepository clienteRepository)
+        {
+            _clienteService = clienteService;
+            _clienteRepository = clienteRepository;
+        }
+
         [HttpGet]
         [Route("")]
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, "Hello World");
+            return Request.CreateResponse(HttpStatusCode.OK, _clienteService.HelloWorld());
+        }
+
+        [HttpGet]
+        [Route("Repository")]
+        public HttpResponseMessage GetHelloWorld()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, _clienteRepository.HelloWorldRepository());
         }
 
         [HttpPost]

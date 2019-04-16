@@ -7,7 +7,7 @@ using Swashbuckle.Application;
 using Unity;
 using Theos.Pizzaria.Config;
 using Theos.Pizzaria.InjecaoDependencia;
-
+using Theos.Pizzaria.IoC;
 namespace Theos.Pizzaria
 {
     public class Startup
@@ -24,8 +24,8 @@ namespace Theos.Pizzaria
             .EnableSwaggerUi(c => c.DocumentTitle("Theos.Pizzaria"));
 
             IUnityContainer container = new UnityContainer();
-           // ServicoRegister.Register(container);
-            //RepositorioRegister.Register(container);
+            ServiceRegister.Register(container);
+            RepositoryRegister.Register(container);
             configuration.DependencyResolver = new UnityDependencyResolver(container);
 
             configuration.EnsureInitialized();

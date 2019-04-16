@@ -49,6 +49,13 @@
     <Compile Include="Cliente\Interfaces\IClienteService.cs" />
     <Compile Include="Cliente\Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Entidade.cs" />
+    <Compile Include="Pedido\Interfaces\IPedidoRepositorio.cs" />
+    <Compile Include="Pedido\Interfaces\IPedidoService.cs" />
+    <Compile Include="Pedido\Pedido.cs" />
+    <Compile Include="Pedido\PedidoAtualizarViewModel.cs" />
+    <Compile Include="Pedido\PedidoDto.cs" />
+    <Compile Include="Pedido\PedidoInserirViewModel.cs" />
+    <Compile Include="Pedido\PedidoSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,5 +64,6 @@
       <Name>AceleraPizza.Comum</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

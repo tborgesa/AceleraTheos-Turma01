@@ -117,6 +117,7 @@
     <Compile Include="Config\CustomDirectRouteProvider.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
+    <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="InjecaoDependencia\UnityDependecyScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

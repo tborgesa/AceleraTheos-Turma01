@@ -7,35 +7,68 @@ namespace AceleraPizza.Dominio.Pedido
     {
         public Pedido() { }
 
+        //TODO: O total seria um valor zerado para depois ser preenchido?
 
-        private void Validar()
+        public Pedido(int tamanho, int idListaIngredientes, int borda, int cliente, double total)
         {
-            if (string.IsNullOrWhiteSpace(Nome))
-                AdicionarErro("Preencha o nome.");
+            Tamanho = tamanho;
+            IdListaIngredientes = idListaIngredientes;
+            Borda = borda;
+            Cliente = cliente;
+            Total = total;
 
-            if (string.IsNullOrWhiteSpace(Endereco))
-                AdicionarErro("Preencha o endereço.");
-
-            if (!(Telefone.Length >= 8 & Telefone.Length <= 10))
-                AdicionarErro("Telefone inválido.");
-
-            if (!CpfHelper.CpfValido(Cpf))
-                AdicionarErro("CPF inválido.");
-
-            if (DataNascimento < new DateTime(1900, 01, 01).Date)
-                AdicionarErro("Data Inválida.");
+            GetValorTamanho();
+            GetValorBorda();
+            SetValor(total);
         }
 
+        //private void Validar()
+        //{
+        //    if (string.IsNullOrWhiteSpace(Nome))
+        //        AdicionarErro("Preencha o nome.");
 
-        public ETamanho Tamanho { get; set; }
-        public Ingrediente ListaIngredientes { get; set; }
-        public EBorda Borda { get; set; }
-        public Cliente Cliente { get; set; }
+        //    if (string.IsNullOrWhiteSpace(Endereco))
+        //        AdicionarErro("Preencha o endereço.");
+
+        //    if (!(Telefone.Length >= 8 & Telefone.Length <= 10))
+        //        AdicionarErro("Telefone inválido.");
+
+        //    if (!CpfHelper.CpfValido(Cpf))
+        //        AdicionarErro("CPF inválido.");
+
+        //    if (DataNascimento < new DateTime(1900, 01, 01).Date)
+        //        AdicionarErro("Data Inválida.");
+        //}
+
+        public void GetValorTamanho() { }
+        public void GetValorBorda() { }
+
+        public void SetValor(double total) {
+
+            Total = total;
+        }
+
+        public void AlterarTamanho(int tamanho)
+        {
+            Tamanho = tamanho;
+        }
+
+        public void AlterarIdListaIngredientes(int idListaIngredientes)
+        {
+            /*todo: Duvida seria o mais apropriado uma chave estrangeira 
+            para a tabela alimentada com a quantidade do que necessita?*/
+            IdListaIngredientes = idListaIngredientes;
+        }
+
+        public void AlterarBorda(int borda)
+        {
+            Borda = borda;
+        }
+
+        public int Tamanho { get; set; }
+        public int IdListaIngredientes { get; set; }
+        public int Borda { get; set; }
+        public int Cliente { get; set; }
         public double Total { get; set; }
-
-        public void GetValorTamhno();
-        public void GetValorBorda();
-        public void SetValor();
-
     }
 }

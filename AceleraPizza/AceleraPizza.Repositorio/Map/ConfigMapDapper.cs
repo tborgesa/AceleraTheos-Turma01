@@ -18,6 +18,7 @@ namespace AceleraPizza.Repositorio.Map
             FluentMapper.Initialize(config =>
             {
                 config.AddMap(new ClienteMap());
+                config.AddMap(new PedidoMap());
                 config.ForDommel();
 
                 //Necessário para criar os INSERT, UDPATE, DELETE;

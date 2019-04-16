@@ -27,7 +27,7 @@ namespace AceleraPizza.Dominio.Cliente
                 AdicionarErro("Preencha o endereço.");
 
             if (!(Telefone.Length >= 8 & Telefone.Length <= 10))
-                AdicionarErro("Telefone Invalido.");
+                AdicionarErro("Telefone inválido.");
 
             if (!CpfHelper.CpfValido(Cpf))
                 AdicionarErro("CPF inválido.");

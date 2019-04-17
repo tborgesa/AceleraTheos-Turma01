@@ -41,9 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntity.cs" />
     <Compile Include="Cliente\Cliente.cs" />
+    <Compile Include="Cliente\ClienteAtualizarViewModel.cs" />
     <Compile Include="Cliente\ClienteDto.cs" />
     <Compile Include="Cliente\ClienteInserirViewModel.cs" />
+    <Compile Include="Cliente\ClienteSearchDto.cs" />
     <Compile Include="Cliente\Interfaces\IClienteRepository.cs" />
     <Compile Include="Cliente\Interfaces\IClienteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -66,6 +66,8 @@
     <Compile Include="Map\ClienteMap.cs" />
     <Compile Include="Map\ConfigMapDapper.cs" />
     <Compile Include="Map\PedidoMap.cs" />
+    <Compile Include="PedidoDapperRepositorio.cs" />
+    <Compile Include="PedidoIngredienteDapperRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

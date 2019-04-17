@@ -30,8 +30,8 @@ namespace AceleraPizza.Api.Controllers
             if (id == null)
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-            var fornecedorDto = _clienteService.BuscarPorId(id);
-            return Request.CreateResponse(HttpStatusCode.OK, fornecedorDto);
+            var clienteDto = _clienteService.BuscarPorId(id);
+            return Request.CreateResponse(HttpStatusCode.OK, clienteDto);
         }
 
         [HttpPost]

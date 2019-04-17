@@ -18,7 +18,7 @@ namespace AceleraPizza.Service
         {
             var pedido = new Pedido(
                 pedidoViewModel.Tamanho,
-                pedidoViewModel.IdListaIngredientes,
+                pedidoViewModel.IdPedidoIngredientes,
                 pedidoViewModel.Borda,
                 pedidoViewModel.Cliente,
                 pedidoViewModel.Total
@@ -44,7 +44,7 @@ namespace AceleraPizza.Service
             {
                 Id = pedido.Id,
                 Tamanho = pedido.Tamanho,
-                IdListaIngredientes = pedido.IdListaIngredientes,
+                IdPedidoIngredientes = pedido.IdPedidoIngredientes,
                 Borda = pedido.Borda,
                 Cliente = pedido.Cliente,
                 Total = pedido.Total
@@ -63,7 +63,7 @@ namespace AceleraPizza.Service
                 {
                     Id = pedido.Id,
                     Tamanho = pedido.Tamanho,
-                    IdListaIngredientes = pedido.IdListaIngredientes,
+                    IdPedidoIngredientes = pedido.IdPedidoIngredientes,
                     Borda = pedido.Borda,
                     Cliente = pedido.Cliente,
                     Total = pedido.Total
@@ -79,13 +79,15 @@ namespace AceleraPizza.Service
 
             if (pedido == null)
             {
-                var erros = new List<string>();
-                erros.Add("Pedido não existe.");
+                List<string> erros = new List<string>
+                {
+                    "Pedido não existe."
+                };
                 return new PedidoDtoReturn(erros);
             }
 
             pedido.AlterarTamanho(pedidoAtualizarViewModel.Tamanho);
-            pedido.AlterarIdListaIngredientes(pedidoAtualizarViewModel.IdListaIngredientes);
+            pedido.AlterarIdPedidoIngredientes(pedidoAtualizarViewModel.IdPedidoIngredientes);
             pedido.AlterarBorda(pedidoAtualizarViewModel.Borda);
             pedido.SetarAlteracao();
 

@@ -7,6 +7,9 @@ namespace AceleraPizza.Dominio.Cliente
     {
         public Cliente() { }
 
+        //Sobrepor para não atrapalhar para quando instanciar
+        public override Guid Id { get; set; }
+
         public Cliente(string nome, string cpf, DateTime dataNascimento, string endereco, string telefone)
         {
             Nome = nome;
@@ -26,7 +29,10 @@ namespace AceleraPizza.Dominio.Cliente
             if (string.IsNullOrWhiteSpace(Endereco))
                 AdicionarErro("Preencha o endereço.");
 
-            if (!(Telefone.Length >= 8 & Telefone.Length <= 10))
+            if (string.IsNullOrWhiteSpace(Telefone))
+                AdicionarErro("Preencha o telefone.");
+
+            if (Telefone.Length < 8 | Telefone.Length > 10)
                 AdicionarErro("Telefone inválido.");
 
             if (!CpfHelper.CpfValido(Cpf))

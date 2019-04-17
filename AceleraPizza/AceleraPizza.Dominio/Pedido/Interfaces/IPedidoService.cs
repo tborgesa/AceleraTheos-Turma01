@@ -5,10 +5,10 @@ namespace AceleraPizza.Dominio.Pedido.Interfaces
 {
     public interface IPedidoService
     {
-        PedidoDtoReturn Inserir(PedidoInserirViewModel contratadoViewModel);
+        PedidoDtoReturn Inserir(PedidoInserirViewModel pedidoViewModel);
         PedidoDto BuscarPorId(Guid id);
         List<PedidoSearch> BuscarTodos();
-        PedidoDtoReturn Atualizar(PedidoAtualizarViewModel contratadoAtualizarViewModel);
+        PedidoDtoReturn Atualizar(PedidoAtualizarViewModel pedidoAtualizarViewModel);
         void Excluir(Guid id);
     }
 }

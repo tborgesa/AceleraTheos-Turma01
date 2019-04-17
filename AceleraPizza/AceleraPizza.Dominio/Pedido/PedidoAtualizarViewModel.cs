@@ -10,7 +10,7 @@ namespace AceleraPizza.Dominio.Pedido
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public int Tamanho { get; set; }
-        public int IdListaIngredientes { get; set; }
+        public int IdPedidoIngredientes { get; set; }
         public int Borda { get; set; }
         public double Total { get; set; }
     }

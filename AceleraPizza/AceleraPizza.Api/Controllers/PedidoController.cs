@@ -2,8 +2,8 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-//todo:using AceleraPizza.Dominio.Pedido;
-//todo:using AceleraPizza.Dominio.Pedido.Interfaces;
+using AceleraPizza.Dominio.Pedido;
+using AceleraPizza.Dominio.Pedido.Interfaces;
 
 namespace AceleraPizza.Api.Controllers
 {
@@ -30,8 +30,8 @@ namespace AceleraPizza.Api.Controllers
             if (id == null)
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-            var fornecedorDto = _pedidoService.BuscarPorId(id);
-            return Request.CreateResponse(HttpStatusCode.OK, fornecedorDto);
+            var pedidoDto = _pedidoService.BuscarPorId(id);
+            return Request.CreateResponse(HttpStatusCode.OK, pedidoDto);
         }
 
         [HttpPost]

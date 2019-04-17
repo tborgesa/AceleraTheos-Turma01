@@ -8,11 +8,12 @@ namespace AceleraPizza.Dominio.Pedido
         public Pedido() { }
 
         //TODO: O total seria um valor zerado para depois ser preenchido?
+        public override Guid Id { get; set; }
 
-        public Pedido(int tamanho, int idListaIngredientes, int borda, int cliente, double total)
+        public Pedido(int tamanho, int idPedidoIngredientes, int borda, int cliente, double total)
         {
             Tamanho = tamanho;
-            IdListaIngredientes = idListaIngredientes;
+            IdPedidoIngredientes = idPedidoIngredientes;
             Borda = borda;
             Cliente = cliente;
             Total = total;
@@ -53,11 +54,11 @@ namespace AceleraPizza.Dominio.Pedido
             Tamanho = tamanho;
         }
 
-        public void AlterarIdListaIngredientes(int idListaIngredientes)
+        public void AlterarIdPedidoIngredientes(int idPedidoIngredientes)
         {
             /*todo: Duvida seria o mais apropriado uma chave estrangeira 
             para a tabela alimentada com a quantidade do que necessita?*/
-            IdListaIngredientes = idListaIngredientes;
+            IdPedidoIngredientes = idPedidoIngredientes;
         }
 
         public void AlterarBorda(int borda)
@@ -66,7 +67,7 @@ namespace AceleraPizza.Dominio.Pedido
         }
 
         public int Tamanho { get; set; }
-        public int IdListaIngredientes { get; set; }
+        public int IdPedidoIngredientes { get; set; }
         public int Borda { get; set; }
         public int Cliente { get; set; }
         public double Total { get; set; }

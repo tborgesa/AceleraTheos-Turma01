@@ -5,7 +5,8 @@ namespace AceleraPizza.Dominio
 {
     public abstract class Entidade
     {
-        public Guid Id { get; set; }
+        //Virtual para sobrepor para mais de um mapeamento
+        public virtual Guid Id { get; set; }
         public DateTime DataInsercao { get; set; }
         public DateTime? DataAlteracao { get; set; }
         private List<string> _erros = new List<string>();

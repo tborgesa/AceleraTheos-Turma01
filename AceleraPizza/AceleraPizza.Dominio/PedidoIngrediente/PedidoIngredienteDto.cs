@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace AceleraPizza.Dominio.PedidoIngrediente
+{
+    public class PedidoIngredienteDto
+    {
+        public Guid Id { get; set; }
+        public int Tamanho { get; set; }
+        public int IdPedidoIngredienteIngredientes { get; set; }
+        public int Borda { get; set; }
+        public int Cliente { get; set; }
+        public double Total { get; set; }
+    }
+
+    public class PedidoIngredienteDtoReturn
+    {
+        public PedidoIngredienteDtoReturn(PedidoIngredienteDto pedidoIngrediente)
+        {
+            PedidoIngrediente = pedidoIngrediente;
+            Erros = new List<string>();
+        }
+
+        public PedidoIngredienteDtoReturn(List<string> erros)
+        {
+            Erros = erros;
+        }
+
+        public PedidoIngredienteDto PedidoIngrediente { get; }
+        public List<string> Erros { get; }
+    }
+}
+

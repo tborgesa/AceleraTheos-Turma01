@@ -49,6 +49,12 @@
     <Compile Include="Cliente\Interfaces\IClienteService.cs" />
     <Compile Include="Cliente\Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Entidade.cs" />
+    <Compile Include="PedidoIngrediente\Interfaces\IPedidoIngredienteRepositorio.cs" />
+    <Compile Include="PedidoIngrediente\Interfaces\IPedidoIngredienteService.cs" />
+    <Compile Include="PedidoIngrediente\PedidoIngrediente.cs" />
+    <Compile Include="PedidoIngrediente\PedidoIngredienteAtualizarViewModel.cs" />
+    <Compile Include="PedidoIngrediente\PedidoIngredienteDto.cs" />
+    <Compile Include="PedidoIngrediente\PedidoIngredienteInserirViewModel.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoRepositorio.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoService.cs" />
     <Compile Include="Pedido\Pedido.cs" />

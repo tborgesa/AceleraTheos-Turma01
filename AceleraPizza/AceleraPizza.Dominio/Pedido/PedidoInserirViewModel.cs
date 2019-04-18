@@ -9,7 +9,7 @@ namespace AceleraPizza.Dominio.Pedido
     public class PedidoInserirViewModel
     {
         public int Tamanho { get; set; } = 1;
-        public int IdPedidoIngredientes { get; set; } = 1;
+        public int IdPedidoIngrediente { get; set; } = 1;
         public int Borda { get; set; } = 1;
         public int Cliente { get; set; } = 1;
         public double Total { get; set; } = 0;

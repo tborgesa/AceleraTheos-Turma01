@@ -7,7 +7,6 @@ namespace AceleraPizza.Dominio.PedidoIngrediente.Interfaces
     {
         PedidoIngredienteDtoReturn Inserir(PedidoIngredienteInserirViewModel PedidoIngredienteViewModel);
         PedidoIngredienteDto BuscarPorId(Guid id);
-        List<PedidoIngredienteSearch> BuscarTodos();
         PedidoIngredienteDtoReturn Atualizar(PedidoIngredienteAtualizarViewModel PedidoIngredienteAtualizarViewModel);
         void Excluir(Guid id);
     }

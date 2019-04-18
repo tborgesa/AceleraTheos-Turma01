@@ -6,11 +6,8 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
     public class PedidoIngredienteDto
     {
         public Guid Id { get; set; }
-        public int Tamanho { get; set; }
-        public int IdPedidoIngredienteIngredientes { get; set; }
-        public int Borda { get; set; }
-        public int Cliente { get; set; }
-        public double Total { get; set; }
+        public Guid IdPedido { get; set; }
+        public Guid IdIngrediente { get; set; }
     }
 
     public class PedidoIngredienteDtoReturn

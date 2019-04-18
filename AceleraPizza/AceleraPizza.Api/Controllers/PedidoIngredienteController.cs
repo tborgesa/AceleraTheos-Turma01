@@ -1,79 +1,73 @@
-﻿//using System;
-//using System.Net;
-//using System.Net.Http;
-//using System.Web.Http;
-//using AceleraPizza.Dominio.PedidoIngredientes;
-//using AceleraPizza.Dominio.PedidoIngredientes.Interfaces;
+﻿using System;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using AceleraPizza.Dominio.PedidoIngrediente;
+using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
-//namespace AceleraPizza.Api.Controllers
-//{
-//    [RoutePrefix("PedidoIngredientes")]
-//    public class PedidoIngredientesController : ApiController
-//    {
-//        private readonly IPedidoIngredientesService _PedidoIngredientesService;
+namespace AceleraPizza.Api.Controllers
+{
+    [RoutePrefix("pedidoIngrediente")]
+    public class PedidoIngredienteController : ApiController
+    {
+        private readonly IPedidoIngredienteService _pedidoIngredienteService;
 
-//        public PedidoIngredientesController(IPedidoIngredientesService PedidoIngredientesService)
-//        {
-//            _PedidoIngredientesService = PedidoIngredientesService;
-//        }
+        public PedidoIngredienteController(IPedidoIngredienteService pedidoIngredienteService)
+        {
+            _pedidoIngredienteService = pedidoIngredienteService;
+        }
 
-//        [HttpGet]
-//        [Route("getAll")]
-//        public HttpResponseMessage GetAll()
-//        {
-//            return Request.CreateResponse(HttpStatusCode.OK, _PedidoIngredientesService.BuscarTodos());
-//        }
-//        [HttpGet]
-//        [Route("{id}")]
-//        public HttpResponseMessage Get(Guid id)
-//        {
-//            if (id == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
+        [HttpGet]
+        [Route("{id}")]
+        public HttpResponseMessage Get(Guid id)
+        {
+            if (id == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-//            var PedidoIngredientesDto = _PedidoIngredientesService.BuscarPorId(id);
-//            return Request.CreateResponse(HttpStatusCode.OK, PedidoIngredientesDto);
-//        }
+            var pedidoIngredienteDto = _pedidoIngredienteService.BuscarPorId(id);
+            return Request.CreateResponse(HttpStatusCode.OK, pedidoIngredienteDto);
+        }
 
-//        [HttpPost]
-//        [Route("")]
-//        public HttpResponseMessage Post([FromBody] PedidoIngredientesInserirViewModel viewModel)
-//        {
-//            if (viewModel == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
+        [HttpPost]
+        [Route("")]
+        public HttpResponseMessage Post([FromBody] PedidoIngredienteInserirViewModel viewModel)
+        {
+            if (viewModel == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
 
-//            var PedidoIngredientesDtoReturn = _PedidoIngredientesService.Inserir(viewModel);
+            var pedidoIngredienteDtoReturn = _pedidoIngredienteService.Inserir(viewModel);
 
-//            if (PedidoIngredientesDtoReturn.Erros.Count > 0)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, PedidoIngredientesDtoReturn.Erros);
+            if (pedidoIngredienteDtoReturn.Erros.Count > 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, pedidoIngredienteDtoReturn.Erros);
 
-//            return Request.CreateResponse(HttpStatusCode.Created, PedidoIngredientesDtoReturn.PedidoIngredientes);
-//        }
+            return Request.CreateResponse(HttpStatusCode.Created, pedidoIngredienteDtoReturn.PedidoIngrediente);
+        }
 
-//        [HttpPut]
-//        [Route("")]
-//        public HttpResponseMessage Put([FromBody] PedidoIngredientesAtualizarViewModel viewModel)
-//        {
-//            if (viewModel == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
+        [HttpPut]
+        [Route("")]
+        public HttpResponseMessage Put([FromBody] PedidoIngredienteAtualizarViewModel viewModel)
+        {
+            if (viewModel == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
 
-//            var PedidoIngredientesDtoReturn = _PedidoIngredientesService.Atualizar(viewModel);
+            var pedidoIngredienteDtoReturn = _pedidoIngredienteService.Atualizar(viewModel);
 
-//            if (PedidoIngredientesDtoReturn.Erros.Count > 0)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, PedidoIngredientesDtoReturn.Erros);
+            if (pedidoIngredienteDtoReturn.Erros.Count > 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, pedidoIngredienteDtoReturn.Erros);
 
-//            return Request.CreateResponse(HttpStatusCode.Created, PedidoIngredientesDtoReturn.PedidoIngredientes);
-//        }
+            return Request.CreateResponse(HttpStatusCode.Created, pedidoIngredienteDtoReturn.PedidoIngrediente);
+        }
 
-//        [HttpDelete]
-//        [Route("{id}")]
-//        public HttpResponseMessage Delete(Guid id)
-//        {
-//            if (id == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
+        [HttpDelete]
+        [Route("{id}")]
+        public HttpResponseMessage Delete(Guid id)
+        {
+            if (id == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-//            _PedidoIngredientesService.Excluir(id);
-//            return Request.CreateResponse(HttpStatusCode.NoContent);
-//        }
+            _pedidoIngredienteService.Excluir(id);
+            return Request.CreateResponse(HttpStatusCode.NoContent);
+        }
 
-//    }
-//}
+    }
+}

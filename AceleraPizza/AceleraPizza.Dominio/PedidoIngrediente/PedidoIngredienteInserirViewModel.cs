@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente
 {
-    class PedidoIngredienteInserirViewModel
+    public class PedidoIngredienteInserirViewModel
     {
+        public Guid IdPedido { get; set; } = Guid.Parse("905158D5-A4AB-49CB-B24D-060C501D83BB");
+        public Guid IdPedidoIngrediente { get; set; } = Guid.Parse("905158D5-A4AB-49CB-B24D-060C501D83BB");
     }
 }

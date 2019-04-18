@@ -9,9 +9,7 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
     public class PedidoIngredienteAtualizarViewModel
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-        public int Tamanho { get; set; }
-        public int IdPedidoIngredientes { get; set; }
-        public int Borda { get; set; }
-        public double Total { get; set; }
+        public Guid IdPedido { get; set; }
+        public Guid IdIngrediente { get; set; }
     }
 }

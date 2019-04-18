@@ -1,5 +1,6 @@
 ﻿using AceleraPizza.Dominio.Cliente.Interfaces;
 using AceleraPizza.Dominio.Pedido.Interfaces;
+using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 using AceleraPizza.Repositorio;
 using Unity;
 using Unity.Lifetime;
@@ -26,6 +27,7 @@ namespace AceleraPizza.InjecaoDependencia
             //CADA SERVICE INSERIR MAIS UMA LINHA
             container.RegisterType<IClienteRepositorio, ClienteDapperRepositorio>(new PerThreadLifetimeManager());
             container.RegisterType<IPedidoRepositorio, PedidoDapperRepositorio>(new PerThreadLifetimeManager());
+            container.RegisterType<IPedidoIngredienteRepositorio, PedidoIngredienteDapperRepositorio>(new PerThreadLifetimeManager());
         }
     }
 }

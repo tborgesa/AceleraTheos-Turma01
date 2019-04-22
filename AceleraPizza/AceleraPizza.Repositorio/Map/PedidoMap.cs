@@ -10,7 +10,7 @@ namespace AceleraPizza.Repositorio.Map
         {
             ToTable("PEDIDO");
             Map(col => col.Id).ToColumn("IdPedido").IsKey();
-            //IsKey da informação que esta é a PK
+
         }
     }
 }

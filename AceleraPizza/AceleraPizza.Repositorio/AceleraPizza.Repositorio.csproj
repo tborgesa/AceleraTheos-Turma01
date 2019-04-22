@@ -63,8 +63,11 @@
   <ItemGroup>
     <Compile Include="BaseRepositorio.cs" />
     <Compile Include="ClienteDapperRepositorio.cs" />
+    <Compile Include="IngredienteDapperRepositorio.cs" />
     <Compile Include="Map\ClienteMap.cs" />
     <Compile Include="Map\ConfigMapDapper.cs" />
+    <Compile Include="Map\IngredienteMap.cs" />
+    <Compile Include="Map\PedidoIngredienteMap.cs" />
     <Compile Include="Map\PedidoMap.cs" />
     <Compile Include="PedidoDapperRepositorio.cs" />
     <Compile Include="PedidoIngredienteDapperRepositorio.cs" />

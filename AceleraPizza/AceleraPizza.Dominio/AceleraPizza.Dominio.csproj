@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Borda\Borda.cs" />
+    <Compile Include="Borda\Enumerador\EBorda.cs" />
+    <Compile Include="Borda\Cheddar.cs" />
+    <Compile Include="Borda\Catupiry.cs" />
+    <Compile Include="Borda\SemRecheio.cs" />
     <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="Cliente\ClienteAtualizarViewModel.cs" />
     <Compile Include="Cliente\ClienteDto.cs" />
@@ -49,12 +57,19 @@
     <Compile Include="Cliente\Interfaces\IClienteService.cs" />
     <Compile Include="Cliente\Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Entidade.cs" />
+    <Compile Include="EntidadeBase.cs" />
+    <Compile Include="Ingrediente\Interfaces\IIngredienteRepositorio.cs" />
+    <Compile Include="Ingrediente\Interfaces\IIngredienteService.cs" />
     <Compile Include="PedidoIngrediente\Interfaces\IPedidoIngredienteRepositorio.cs" />
     <Compile Include="PedidoIngrediente\Interfaces\IPedidoIngredienteService.cs" />
     <Compile Include="PedidoIngrediente\PedidoIngrediente.cs" />
+    <Compile Include="Ingrediente\Ingrediente.cs" />
     <Compile Include="PedidoIngrediente\PedidoIngredienteAtualizarViewModel.cs" />
+    <Compile Include="Ingrediente\IngredienteAtualizarViewModel.cs" />
     <Compile Include="PedidoIngrediente\PedidoIngredienteDto.cs" />
+    <Compile Include="Ingrediente\IngredienteDto.cs" />
     <Compile Include="PedidoIngrediente\PedidoIngredienteInserirViewModel.cs" />
+    <Compile Include="Ingrediente\IngredienteInserirViewModel.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoRepositorio.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoService.cs" />
     <Compile Include="Pedido\Pedido.cs" />
@@ -63,12 +78,20 @@
     <Compile Include="Pedido\PedidoInserirViewModel.cs" />
     <Compile Include="Pedido\PedidoSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tamanho\Enumerador\ETamanho.cs" />
+    <Compile Include="Tamanho\Grande.cs" />
+    <Compile Include="Tamanho\Media.cs" />
+    <Compile Include="Tamanho\Pequena.cs" />
+    <Compile Include="Tamanho\Tamanho.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AceleraPizza.Comum\AceleraPizza.Comum.csproj">
       <Project>{e839d303-0b62-4062-ba8c-b23f07facd2b}</Project>
       <Name>AceleraPizza.Comum</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

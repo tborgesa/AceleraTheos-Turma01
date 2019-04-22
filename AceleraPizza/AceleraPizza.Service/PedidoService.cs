@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
+using AceleraPizza.Dominio.PedidoIngrediente;
+using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Service
 {
     public class PedidoService : IPedidoService
     {
         private IPedidoRepositorio _repositorio;
+        private IPedidoIngredienteRepositorio _repositorioPedidoIngrediente;
+
 
         public PedidoService(IPedidoRepositorio repositorio)
         {
@@ -18,10 +22,9 @@ namespace AceleraPizza.Service
         {
             var pedido = new Pedido(
                 pedidoViewModel.Tamanho,
-                pedidoViewModel.IdPedidoIngrediente,
                 pedidoViewModel.Borda,
-                pedidoViewModel.Cliente,
-                pedidoViewModel.Total
+                GetListaIngredientes(pedidoViewModel.ListaIngredientes),
+                pedidoViewModel.IdCliente
                 );
 
             if (!pedido.Valido())
@@ -33,9 +36,21 @@ namespace AceleraPizza.Service
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
+        private List<_PedidoIngrediente> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
+        {
+            var lista = new List<_PedidoIngrediente>();
+            foreach (var item in listaIngredientes)
+            {
+                lista.Add(new _PedidoIngrediente { Id = item.Id, Quantidade = item.Quantidade, IdIngrediente = item.IdIngrediente });
+            }
+            return lista;
+        }
+
         public PedidoDto BuscarPorId(Guid id)
         {
             Pedido pedido = _repositorio.BuscarPorId(id);
+
+
 
             if (pedido == null)
                 return null;
@@ -44,9 +59,9 @@ namespace AceleraPizza.Service
             {
                 Id = pedido.Id,
                 Tamanho = pedido.Tamanho,
-                IdPedidoIngrediente = pedido.IdPedidoIngrediente,
                 Borda = pedido.Borda,
-                Cliente = pedido.Cliente,
+                ListaIngredientes = pedido.ListaIngredientes,
+                IdCliente = pedido.IdCliente,
                 Total = pedido.Total
             };
         }
@@ -63,9 +78,9 @@ namespace AceleraPizza.Service
                 {
                     Id = pedido.Id,
                     Tamanho = pedido.Tamanho,
-                    IdPedidoIngrediente = pedido.IdPedidoIngrediente,
+                    ListaIngredientes = pedido.ListaIngredientes,
                     Borda = pedido.Borda,
-                    Cliente = pedido.Cliente,
+                    IdCliente = pedido.IdCliente,
                     Total = pedido.Total
                 });
             }
@@ -87,7 +102,6 @@ namespace AceleraPizza.Service
             }
 
             pedido.AlterarTamanho(pedidoAtualizarViewModel.Tamanho);
-            pedido.AlterarIdPedidoIngrediente(pedidoAtualizarViewModel.IdPedidoIngrediente);
             pedido.AlterarBorda(pedidoAtualizarViewModel.Borda);
             pedido.SetarAlteracao();
 

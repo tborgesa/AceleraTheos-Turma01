@@ -1,73 +1,73 @@
-﻿//using System;
-//using System.Net;
-//using System.Net.Http;
-//using System.Web.Http;
-//using AceleraPizza.Dominio.Ingredientes;
-//using AceleraPizza.Dominio.Ingredientes.Interfaces;
+﻿using AceleraPizza.Dominio.Ingrediente;
+using AceleraPizza.Dominio.Ingrediente.Interfaces;
+using System;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
-//namespace AceleraPizza.Api.Controllers
-//{
-//    [RoutePrefix("ingredientes")]
-//    public class IngredientesController : ApiController
-//    {
-//        private readonly IIngredientesService _ingredientesService;
+namespace AceleraPizza.Api.Controllers
+{
+    [RoutePrefix("ingrediente")]
+    public class IngredienteController : ApiController
+    {
+        private readonly IIngredienteService _ingredienteService;
 
-//        public IngredientesController(IIngredientesService ingredientesService)
-//        {
-//            _ingredientesService = ingredientesService;
-//        }
+        public IngredienteController(IIngredienteService ingredienteService)
+        {
+            _ingredienteService = ingredienteService;
+        }
 
-//        [HttpGet]
-//        [Route("{id}")]
-//        public HttpResponseMessage Get(Guid id)
-//        {
-//            if (id == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
+        [HttpGet]
+        [Route("{id}")]
+        public HttpResponseMessage Get(Guid id)
+        {
+            if (id == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-//            var ingredientesDto = _ingredientesService.BuscarPorId(id);
-//            return Request.CreateResponse(HttpStatusCode.OK, ingredientesDto);
-//        }
+            var ingredienteDto = _ingredienteService.BuscarPorId(id);
+            return Request.CreateResponse(HttpStatusCode.OK, ingredienteDto);
+        }
 
-//        [HttpPost]
-//        [Route("")]
-//        public HttpResponseMessage Post([FromBody] IngredientesInserirViewModel viewModel)
-//        {
-//            if (viewModel == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
+        [HttpPost]
+        [Route("")]
+        public HttpResponseMessage Post([FromBody] IngredienteInserirViewModel viewModel)
+        {
+            if (viewModel == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
 
-//            var ingredientesDtoReturn = _ingredientesService.Inserir(viewModel);
+            var ingredienteDtoReturn = _ingredienteService.Inserir(viewModel);
 
-//            if (ingredientesDtoReturn.Erros.Count > 0)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, ingredientesDtoReturn.Erros);
+            if (ingredienteDtoReturn.Erros.Count > 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ingredienteDtoReturn.Erros);
 
-//            return Request.CreateResponse(HttpStatusCode.Created, ingredientesDtoReturn.Ingredientes);
-//        }
+            return Request.CreateResponse(HttpStatusCode.Created, ingredienteDtoReturn.Ingrediente);
+        }
 
-//        [HttpPut]
-//        [Route("")]
-//        public HttpResponseMessage Put([FromBody] IngredientesAtualizarViewModel viewModel)
-//        {
-//            if (viewModel == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
+        [HttpPut]
+        [Route("")]
+        public HttpResponseMessage Put([FromBody] IngredienteAtualizarViewModel viewModel)
+        {
+            if (viewModel == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
 
-//            var ingredientesDtoReturn = _ingredientesService.Atualizar(viewModel);
+            var ingredienteDtoReturn = _ingredienteService.Atualizar(viewModel);
 
-//            if (ingredientesDtoReturn.Erros.Count > 0)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, ingredientesDtoReturn.Erros);
+            if (ingredienteDtoReturn.Erros.Count > 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ingredienteDtoReturn.Erros);
 
-//            return Request.CreateResponse(HttpStatusCode.Created, ingredientesDtoReturn.Ingredientes);
-//        }
+            return Request.CreateResponse(HttpStatusCode.Created, ingredienteDtoReturn.Ingrediente);
+        }
 
-//        [HttpDelete]
-//        [Route("{id}")]
-//        public HttpResponseMessage Delete(Guid id)
-//        {
-//            if (id == null)
-//                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
+        [HttpDelete]
+        [Route("{id}")]
+        public HttpResponseMessage Delete(Guid id)
+        {
+            if (id == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-//            _ingredientesService.Excluir(id);
-//            return Request.CreateResponse(HttpStatusCode.NoContent);
-//        }
+            _ingredienteService.Excluir(id);
+            return Request.CreateResponse(HttpStatusCode.NoContent);
+        }
 
-//    }
-//}
+    }
+}

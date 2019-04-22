@@ -30,6 +30,8 @@ C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\Acel
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csproj.CoreCompileInputs.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csprojAssemblyReference.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\AceleraPizza.InjecaoDependencia.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\AceleraPizza.InjecaoDependencia.pdb
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\AceleraPizza.Dominio.dll
@@ -57,8 +59,6 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Injec
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\Newtonsoft.Json.xml
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\bin\Debug\Dapper.xml
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csprojAssemblyReference.cache
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csproj.CoreCompileInputs.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.csproj.CopyComplete
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.InjecaoDependencia\obj\Debug\AceleraPizza.InjecaoDependencia.pdb

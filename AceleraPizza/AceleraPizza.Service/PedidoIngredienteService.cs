@@ -16,9 +16,10 @@ namespace AceleraPizza.Service
 
         public PedidoIngredienteDtoReturn Inserir(PedidoIngredienteInserirViewModel pedidoIngredienteViewModel)
         {
-            var pedidoIngrediente = new PedidoIngrediente(
-                pedidoIngredienteViewModel.IdPedido,
-                pedidoIngredienteViewModel.IdPedidoIngrediente
+            var pedidoIngrediente = new _PedidoIngrediente(
+                pedidoIngredienteViewModel.Id,
+                pedidoIngredienteViewModel.IdIngrediente,
+                pedidoIngredienteViewModel.Quantidade
                 );
 
             if (!pedidoIngrediente.Valido())
@@ -32,7 +33,7 @@ namespace AceleraPizza.Service
 
         public PedidoIngredienteDto BuscarPorId(Guid id)
         {
-            PedidoIngrediente pedidoIngrediente = _repositorio.BuscarPorId(id);
+            _PedidoIngrediente pedidoIngrediente = _repositorio.BuscarPorId(id);
 
             if (pedidoIngrediente == null)
                 return null;
@@ -40,8 +41,8 @@ namespace AceleraPizza.Service
             return new PedidoIngredienteDto
             {
                 Id = pedidoIngrediente.Id,
-                IdPedido = pedidoIngrediente.IdPedido,
-                IdIngrediente = pedidoIngrediente.IdIngrediente
+                IdIngrediente = pedidoIngrediente.IdIngrediente,
+                 Quantidade= pedidoIngrediente.Quantidade
             };
         }
 

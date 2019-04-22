@@ -21,6 +21,8 @@ C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\Acel
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csproj.CopyComplete
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.dll
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csprojAssemblyReference.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csproj.CoreCompileInputs.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\AceleraPizza.Repositorio.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\AceleraPizza.Repositorio.pdb
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\AceleraPizza.Comum.dll
@@ -39,8 +41,6 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repos
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\Dommel.xml
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\bin\Debug\Newtonsoft.Json.xml
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csprojAssemblyReference.cache
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csproj.CoreCompileInputs.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.csproj.CopyComplete
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Repositorio\obj\Debug\AceleraPizza.Repositorio.pdb

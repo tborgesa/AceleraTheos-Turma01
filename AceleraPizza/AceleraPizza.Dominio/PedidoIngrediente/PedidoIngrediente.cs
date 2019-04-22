@@ -1,22 +1,19 @@
-﻿using AceleraPizza.Comum.Helpers;
-using System;
+﻿using System;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente
 {
-    public class PedidoIngrediente : Entidade
+    public class _PedidoIngrediente : Entidade
     {
-        public PedidoIngrediente() { }
-
-        public PedidoIngrediente(Guid idPedido, Guid idIngrediente)
+        public _PedidoIngrediente() { }
+                
+        public _PedidoIngrediente(Guid idPedido, Guid idIngrediente, Int16 quantidade)
         {
-            IdPedido = idPedido;
             IdIngrediente = idIngrediente;
+            Quantidade = quantidade;
         }
-
-        //TODO: O total seria um valor zerado para depois ser preenchido?
+        
         public override Guid Id { get; set; }
-
-        public Guid IdPedido { get; set; }
         public Guid IdIngrediente { get; set; }
+        public Int16 Quantidade { get; set; }
     }
 }

@@ -19,6 +19,8 @@ namespace AceleraPizza.Repositorio.Map
             {
                 config.AddMap(new ClienteMap());
                 config.AddMap(new PedidoMap());
+                config.AddMap(new IngredienteMap());
+                config.AddMap(new PedidoIngredienteMap());
                 config.ForDommel();
 
                 //Necessário para criar os INSERT, UDPATE, DELETE;

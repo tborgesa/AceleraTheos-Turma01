@@ -1,27 +1,32 @@
-﻿using AceleraPizza.Comum.Helpers;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using AceleraPizza.Dominio.Borda.Enumerador;
+using AceleraPizza.Dominio.PedidoIngrediente;
+using AceleraPizza.Dominio.Tamanho.Enumerador;
 
 namespace AceleraPizza.Dominio.Pedido
 {
     public class Pedido : Entidade
     {
-        public Pedido() { }
+        public Pedido()
+        {
 
-        //TODO: O total seria um valor zerado para depois ser preenchido?
-        public override Guid Id { get; set; }
+        }
 
-        public Pedido(int tamanho, int idPedidoIngrediente, int borda, int cliente, double total)
+        public Pedido(ETamanho tamanho, EBorda borda, List<_PedidoIngrediente> listaIngredientes, Guid idCliente)
         {
             Tamanho = tamanho;
-            IdPedidoIngrediente = idPedidoIngrediente;
             Borda = borda;
-            Cliente = cliente;
-            Total = total;
+            IdCliente = idCliente;
 
-            GetValorTamanho();
-            GetValorBorda();
-            SetValor(total);
+            ValidaTamanho(tamanho);
+            ValidaBorda(borda);
+
+            SetListaIngredientes(listaIngredientes);
+            SetValor();
         }
+
+        public override Guid Id { get; set; }
 
         //private void Validar()
         //{
@@ -41,35 +46,53 @@ namespace AceleraPizza.Dominio.Pedido
         //        AdicionarErro("Data Inválida.");
         //}
 
-        public void GetValorTamanho() { }
+        private void ValidaTamanho(ETamanho tamanho)
+        {
+            if (!Enum.IsDefined(typeof(ETamanho), tamanho))
+                AdicionarErro("Tamanho Invalida");
+        }
+
+        private void ValidaBorda(EBorda borda)
+        {
+            if (!Enum.IsDefined(typeof(EBorda), borda))
+                AdicionarErro("Borda Invalida");
+        }
+
+        public void GetValorTamanho()
+        {
+
+        }
+
+        public void SetValor()
+        {
+            Total = 0;
+        }
+
+        public void AlterarTamanho(ETamanho etamanho)
+        {
+            Tamanho = etamanho;
+        }
+
+        public void AlterarBorda(EBorda eborda)
+        {
+            Borda = eborda;
+        }
+
+        public void SetListaIngredientes(List<_PedidoIngrediente> ingredientes)
+        {
+            ListaIngredientes = new List<_PedidoIngrediente>();
+            foreach (var item in ingredientes)
+            {
+                item.Id = Guid.NewGuid();
+                ListaIngredientes.Add(item);
+            }
+        }
+
         public void GetValorBorda() { }
-
-        public void SetValor(double total) {
-
-            Total = total;
-        }
-
-        public void AlterarTamanho(int tamanho)
-        {
-            Tamanho = tamanho;
-        }
-
-        public void AlterarIdPedidoIngrediente(int idPedidoIngrediente)
-        {
-            /*todo: Duvida seria o mais apropriado uma chave estrangeira 
-            para a tabela alimentada com a quantidade do que necessita?*/
-            IdPedidoIngrediente = idPedidoIngrediente;
-        }
-
-        public void AlterarBorda(int borda)
-        {
-            Borda = borda;
-        }
-
-        public int Tamanho { get; set; }
-        public int IdPedidoIngrediente { get; set; }
-        public int Borda { get; set; }
-        public int Cliente { get; set; }
+        public ETamanho Tamanho { get; set; }
+        public EBorda Borda { get; set; }
+        public List<_PedidoIngrediente> ListaIngredientes { get; set; }
+        public Guid IdCliente { get; set; }
         public double Total { get; set; }
     }
 }

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 
 namespace AceleraPizza.Dominio
 {
-    public abstract class Entidade
+    public abstract class Entidade : EntidadeBase
     {
         //Virtual para sobrepor para mais de um mapeamento
-        public virtual Guid Id { get; set; }
-        public DateTime DataInsercao { get; set; }
-        public DateTime? DataAlteracao { get; set; }
+        public virtual DateTime DataInsercao { get; set; }
+        public virtual DateTime? DataAlteracao { get; set; }
         private List<string> _erros = new List<string>();
 
         public Entidade()
@@ -45,4 +44,3 @@ namespace AceleraPizza.Dominio
         }
     }
 }
-

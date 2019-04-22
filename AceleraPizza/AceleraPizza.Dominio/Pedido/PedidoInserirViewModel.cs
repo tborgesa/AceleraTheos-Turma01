@@ -1,17 +1,17 @@
-﻿using System;
+﻿using AceleraPizza.Dominio.Borda.Enumerador;
+using AceleraPizza.Dominio.PedidoIngrediente;
+using AceleraPizza.Dominio.Tamanho.Enumerador;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AceleraPizza.Dominio.Pedido
 {
     public class PedidoInserirViewModel
     {
-        public int Tamanho { get; set; } = 1;
-        public int IdPedidoIngrediente { get; set; } = 1;
-        public int Borda { get; set; } = 1;
-        public int Cliente { get; set; } = 1;
-        public double Total { get; set; } = 0;
-    }
+    public ETamanho Tamanho { get; set; }
+    public List<PedidoIngredienteInserirViewModel> ListaIngredientes { get; set; }
+    public EBorda Borda { get; set; }
+    public Guid IdCliente { get; set; }
+}
 }

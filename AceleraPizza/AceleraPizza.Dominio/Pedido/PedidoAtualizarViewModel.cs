@@ -1,13 +1,17 @@
-﻿using System;
+﻿using AceleraPizza.Dominio.Borda.Enumerador;
+using AceleraPizza.Dominio.PedidoIngrediente;
+using AceleraPizza.Dominio.Tamanho.Enumerador;
+using System;
+using System.Collections.Generic;
 
 namespace AceleraPizza.Dominio.Pedido
 {
     public class PedidoAtualizarViewModel
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-        public int Tamanho { get; set; }
-        public int IdPedidoIngrediente { get; set; }
-        public int Borda { get; set; }
-        public double Total { get; set; }
+        public ETamanho Tamanho { get; set; }
+        public List<_PedidoIngrediente> ListaIngredientes { get; set; }
+        public Guid IdPedidoIngrediente { get; set; }
+        public EBorda Borda { get; set; }
     }
 }

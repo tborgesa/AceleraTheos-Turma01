@@ -184,6 +184,8 @@ C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\Acel
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Api\bin\Dapper.FluentMap.xml
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Api\bin\Dommel.xml
 C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Api\bin\Dapper.xml
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.csproj.CoreCompileInputs.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.csprojAssemblyReference.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\AceleraPizza.Api.dll.config
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\AceleraPizza.Api.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\AceleraPizza.Api.pdb
@@ -281,8 +283,6 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\b
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\Dapper.FluentMap.xml
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\Dommel.xml
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\bin\Dapper.xml
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.csprojAssemblyReference.cache
-C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.csproj.CoreCompileInputs.cache
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.csproj.CopyComplete
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Api\obj\Debug\AceleraPizza.Api.pdb

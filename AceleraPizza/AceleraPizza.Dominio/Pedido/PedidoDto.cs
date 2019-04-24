@@ -1,6 +1,5 @@
 ﻿using AceleraPizza.Dominio.Borda.Enumerador;
-using AceleraPizza.Dominio.PedidoIngrediente;
-using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
 using System;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ namespace AceleraPizza.Dominio.Pedido
     {
         public Guid Id { get; set; }
         public ETamanho Tamanho { get; set; }
-        public List<_PedidoIngrediente> ListaIngredientes { get; set; }
+        public List<PedidoIngrediente.PedidoIngrediente> ListaIngredientes { get; set; }
         public EBorda Borda { get; set; }
         public Guid IdCliente { get; set; }
         public double Total { get; set; }
@@ -25,12 +24,12 @@ namespace AceleraPizza.Dominio.Pedido
             Erros = new List<string>();
         }
 
-        private List<_PedidoIngrediente> GetPedidoIngrediente(Guid id)
+        private List<PedidoIngrediente.PedidoIngrediente> GetPedidoIngrediente(Guid id)
         {
-            var lista = new List<_PedidoIngrediente>();
+            var lista = new List<PedidoIngrediente.PedidoIngrediente>();
             foreach (var item in lista)
             {
-                lista.Add(new _PedidoIngrediente { Id = item.Id, Quantidade = item.Quantidade, IdIngrediente = item.IdIngrediente });
+                lista.Add(new PedidoIngredienteAlias.PedidoIngrediente { Id = item.Id, Quantidade = item.Quantidade, IdIngrediente = item.IdIngrediente });
             }
             return lista;
         }

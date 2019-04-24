@@ -15,7 +15,6 @@ namespace AceleraPizza.Repositorio
             {
                 Conexao.Open();
                 Conexao.Insert(Pedido);
-
             }
             finally
             {

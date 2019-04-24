@@ -3,7 +3,7 @@ using AceleraPizza.Dominio.PedidoIngrediente;
 
 namespace AceleraPizza.Repositorio.Map
 {
-    public class PedidoIngredienteMap : DommelEntityMap<_PedidoIngrediente>
+    public class PedidoIngredienteMap : DommelEntityMap<PedidoIngrediente>
     {
         //Mapeamento das propriedades da classe
         public PedidoIngredienteMap()
@@ -11,6 +11,8 @@ namespace AceleraPizza.Repositorio.Map
             ToTable("PEDIDOINGREDIENTE");
             Map(col => col.Id).ToColumn("IdPedidoIngrediente").IsKey();
             //IsKey da informação que esta é a PK
+            Map(col => col.DataAlteracao).Ignore();
+            Map(col => col.DataInsercao).Ignore();
         }
     }
 }

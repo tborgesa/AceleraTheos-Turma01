@@ -8,8 +8,6 @@ namespace AceleraPizza.Dominio.Cliente
         public Cliente() { }
 
         //Sobrepor para não atrapalhar para quando instanciar
-        public override Guid Id { get; set; }
-
         public Cliente(string nome, string cpf, DateTime dataNascimento, string endereco, string telefone)
         {
             Nome = nome;
@@ -52,6 +50,7 @@ namespace AceleraPizza.Dominio.Cliente
             Telefone = telefone;
         }
 
+        public override Guid Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
         public DateTime DataNascimento { get; set; }

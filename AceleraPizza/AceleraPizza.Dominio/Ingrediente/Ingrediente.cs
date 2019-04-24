@@ -13,9 +13,7 @@ namespace AceleraPizza.Dominio.Ingrediente
             Valor = valor;
         }
 
-        //TODO: O total seria um valor zerado para depois ser preenchido?
         public override Guid Id { get; set; }
-
         public override DateTime DataInsercao { get; set; }
         public override DateTime? DataAlteracao { get; set; }
 

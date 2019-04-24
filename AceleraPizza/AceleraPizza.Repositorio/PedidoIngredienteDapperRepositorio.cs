@@ -9,7 +9,7 @@ namespace AceleraPizza.Repositorio
 {
     public class PedidoIngredienteDapperRepositorio : BaseRepositorio, IPedidoIngredienteRepositorio
     {
-        public void Inserir(_PedidoIngrediente PedidoIngrediente)
+        public void Inserir(PedidoIngrediente PedidoIngrediente)
         {
             try
             {
@@ -23,12 +23,12 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public _PedidoIngrediente BuscarPorId(Guid id)
+        public PedidoIngrediente BuscarPorId(Guid id)
         {
             try
             {
                 Conexao.Open();
-                return Conexao.Get<_PedidoIngrediente>(id);
+                return Conexao.Get<PedidoIngrediente>(id);
             }
             finally
             {
@@ -36,12 +36,12 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public List<_PedidoIngrediente> BuscarTodos()
+        public List<PedidoIngrediente> BuscarTodos()
         {
             try
             {
                 Conexao.Open();
-                return Conexao.GetAll<_PedidoIngrediente>().ToList();
+                return Conexao.GetAll<PedidoIngrediente>().ToList();
             }
             finally
             {
@@ -49,7 +49,7 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public void Atualizar(_PedidoIngrediente PedidoIngrediente)
+        public void Atualizar(PedidoIngrediente PedidoIngrediente)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace AceleraPizza.Repositorio
             try
             {
                 Conexao.Open();
-                Conexao.Delete(new _PedidoIngrediente() { Id = id });
+                Conexao.Delete(new PedidoIngrediente() { Id = id });
             }
             finally
             {

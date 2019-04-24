@@ -12,10 +12,10 @@ namespace AceleraPizza.Service
         private IPedidoRepositorio _repositorio;
         private IPedidoIngredienteRepositorio _repositorioPedidoIngrediente;
 
-
-        public PedidoService(IPedidoRepositorio repositorio)
+        public PedidoService(IPedidoRepositorio repositorio, IPedidoIngredienteRepositorio repositorioPedidoIngrediente)
         {
             _repositorio = repositorio;
+            _repositorioPedidoIngrediente = repositorioPedidoIngrediente;
         }
 
         public PedidoDtoReturn Inserir(PedidoInserirViewModel pedidoViewModel)
@@ -33,15 +33,22 @@ namespace AceleraPizza.Service
             pedido.GerarId();
             _repositorio.Inserir(pedido);
 
+            foreach (var item in pedido.ListaIngredientes)
+            {
+                item.GerarId();
+                item.IdPedido = pedido.Id;
+                _repositorioPedidoIngrediente.Inserir(item);
+            }
+
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
-        private List<_PedidoIngrediente> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
+        private List<PedidoIngrediente> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
         {
-            var lista = new List<_PedidoIngrediente>();
+            var lista = new List<PedidoIngrediente>();
             foreach (var item in listaIngredientes)
             {
-                lista.Add(new _PedidoIngrediente { Id = item.Id, Quantidade = item.Quantidade, IdIngrediente = item.IdIngrediente });
+                lista.Add(new PedidoIngrediente(item.IdIngrediente,item.Quantidade));
             }
             return lista;
         }
@@ -60,7 +67,9 @@ namespace AceleraPizza.Service
                 Id = pedido.Id,
                 Tamanho = pedido.Tamanho,
                 Borda = pedido.Borda,
-                ListaIngredientes = pedido.ListaIngredientes,
+                ListaIngredientes = pedido.GetListaPedidoIngrediente(
+                                                                    pedido.Id,
+                                                                    _repositorioPedidoIngrediente.BuscarTodos()),
                 IdCliente = pedido.IdCliente,
                 Total = pedido.Total
             };

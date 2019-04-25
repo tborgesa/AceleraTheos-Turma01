@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseEntidade.cs" />
     <Compile Include="Borda\Borda.cs" />
     <Compile Include="Borda\Enumerador\EBorda.cs" />
     <Compile Include="Borda\Cheddar.cs" />

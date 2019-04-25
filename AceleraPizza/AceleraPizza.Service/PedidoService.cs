@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using AceleraPizza.Dominio.Cliente.Interfaces;
+using AceleraPizza.Dominio.Ingrediente.Interfaces;
 using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
 using AceleraPizza.Dominio.PedidoIngrediente;
@@ -11,11 +13,18 @@ namespace AceleraPizza.Service
     {
         private IPedidoRepositorio _repositorio;
         private IPedidoIngredienteRepositorio _repositorioPedidoIngrediente;
+        private IIngredienteRepositorio _repositorioIngrediente;
+        private IClienteRepositorio _repositorioCliente;
 
-        public PedidoService(IPedidoRepositorio repositorio, IPedidoIngredienteRepositorio repositorioPedidoIngrediente)
+        public PedidoService(IPedidoRepositorio repositorio,
+            IPedidoIngredienteRepositorio repositorioPedidoIngrediente,
+            IIngredienteRepositorio repositorioIngrediente,
+            IClienteRepositorio repositorioCliente)
         {
             _repositorio = repositorio;
             _repositorioPedidoIngrediente = repositorioPedidoIngrediente;
+            _repositorioIngrediente = repositorioIngrediente;
+            _repositorioCliente = repositorioCliente;
         }
 
         public PedidoDtoReturn Inserir(PedidoInserirViewModel pedidoViewModel)
@@ -31,16 +40,36 @@ namespace AceleraPizza.Service
                 return new PedidoDtoReturn(pedido.GetErros());
 
             pedido.GerarId();
+
+            SetValorIngredientes(pedido);
+
+            pedido.DescontoPorIdade(
+                _repositorioCliente.BuscarPorId(pedido.IdCliente).DataNascimento
+                );
+
             _repositorio.Inserir(pedido);
 
+            SetPedidoIngredienteLista(pedido.ListaIngredientes, pedido.Id);
+            return new PedidoDtoReturn(BuscarPorId(pedido.Id));
+        }
+
+        private void SetValorIngredientes(Pedido pedido)
+        {
             foreach (var item in pedido.ListaIngredientes)
             {
+                var ingrediente = _repositorioIngrediente.BuscarPorId(item.IdIngrediente);
+                pedido.Total += ingrediente.Valor * item.Quantidade;
+            }
+        }
+
+        private void SetPedidoIngredienteLista(List<PedidoIngrediente> listaIngredientes, Guid id)
+        {
+            foreach (var item in listaIngredientes)
+            {
                 item.GerarId();
-                item.IdPedido = pedido.Id;
+                item.IdPedido = id;
                 _repositorioPedidoIngrediente.Inserir(item);
             }
-
-            return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
         private List<PedidoIngrediente> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
@@ -48,7 +77,18 @@ namespace AceleraPizza.Service
             var lista = new List<PedidoIngrediente>();
             foreach (var item in listaIngredientes)
             {
-                lista.Add(new PedidoIngrediente(item.IdIngrediente,item.Quantidade));
+                lista.Add(new PedidoIngrediente(item.IdIngrediente, item.Quantidade));
+            }
+            return lista;
+        }
+
+        private List<PedidoIngrediente> GetListaIngredientesAtualizar(PedidoAtualizarViewModel pedidoAtualizarViewModel)
+        {
+            var lista = new List<PedidoIngrediente>();
+            var aux = pedidoAtualizarViewModel.ListaIngredientes;
+            foreach (var item in aux)
+            {
+                lista.Add(new PedidoIngrediente(item.IdIngrediente, item.Quantidade));
             }
             return lista;
         }
@@ -67,9 +107,10 @@ namespace AceleraPizza.Service
                 Id = pedido.Id,
                 Tamanho = pedido.Tamanho,
                 Borda = pedido.Borda,
-                ListaIngredientes = pedido.GetListaPedidoIngrediente(
-                                                                    pedido.Id,
-                                                                    _repositorioPedidoIngrediente.BuscarTodos()),
+                ListaIngredientes =
+                    pedido.GetListaPedidoIngrediente(
+                    pedido.Id,
+                    _repositorioPedidoIngrediente.BuscarTodos()),
                 IdCliente = pedido.IdCliente,
                 Total = pedido.Total
             };
@@ -87,7 +128,10 @@ namespace AceleraPizza.Service
                 {
                     Id = pedido.Id,
                     Tamanho = pedido.Tamanho,
-                    ListaIngredientes = pedido.ListaIngredientes,
+                    ListaIngredientes =
+                        pedido.GetListaPedidoIngrediente(
+                        pedido.Id,
+                        _repositorioPedidoIngrediente.BuscarTodos()),
                     Borda = pedido.Borda,
                     IdCliente = pedido.IdCliente,
                     Total = pedido.Total
@@ -110,8 +154,22 @@ namespace AceleraPizza.Service
                 return new PedidoDtoReturn(erros);
             }
 
+            ExcluiPedidoIngredientes(pedidoAtualizarViewModel.Id);
+
             pedido.AlterarTamanho(pedidoAtualizarViewModel.Tamanho);
             pedido.AlterarBorda(pedidoAtualizarViewModel.Borda);
+            ExcluiPedidoIngredientes(pedidoAtualizarViewModel.Id);
+            SetPedidoIngredienteLista(pedidoAtualizarViewModel.ListaIngredientes, pedidoAtualizarViewModel.Id);
+
+            pedido.SetValor();
+            //Ajuste para dado no lista de ingrediente
+            pedido.ListaIngredientes = pedidoAtualizarViewModel.ListaIngredientes;
+
+            SetValorIngredientes(pedido);
+
+            pedido.DescontoPorIdade(
+    _repositorioCliente.BuscarPorId(pedido.IdCliente).DataNascimento
+    );
             pedido.SetarAlteracao();
 
             if (!pedido.Valido())
@@ -122,9 +180,20 @@ namespace AceleraPizza.Service
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
+
+        private void ExcluiPedidoIngredientes(Guid id)
+        {
+            var lista = _repositorioPedidoIngrediente.BuscarTodos();
+            foreach (var item in lista)
+            {
+                if (item.IdPedido == id) { _repositorioPedidoIngrediente.Excluir(item.Id); }
+            }
+        }
+
         public void Excluir(Guid id)
         {
             _repositorio.Excluir(id);
+            ExcluiPedidoIngredientes(id);
         }
     }
 }

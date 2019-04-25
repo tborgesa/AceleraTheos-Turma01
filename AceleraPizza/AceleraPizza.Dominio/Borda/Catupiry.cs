@@ -2,7 +2,7 @@
 {
     public class Catupiry : Borda
     {
-        public Catupiry() : base("Catupiry", 5)
+        public Catupiry() : base("Catupiry")
         {
 
         }

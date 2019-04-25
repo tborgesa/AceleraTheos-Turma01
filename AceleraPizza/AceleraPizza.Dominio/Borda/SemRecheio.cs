@@ -2,7 +2,7 @@
 {
     public class SemRecheio : Borda
     {
-        public SemRecheio() : base("Sem Recheio", 0)
+        public SemRecheio() : base("Sem Recheio")
         {
 
         }

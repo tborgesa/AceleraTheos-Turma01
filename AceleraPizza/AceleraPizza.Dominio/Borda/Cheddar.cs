@@ -2,7 +2,7 @@
 {
     public class Cheddar : Borda
     {
-        public Cheddar() : base("Cheddar", 4.5)
+        public Cheddar() : base("Cheddar")
         {
 
         }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using AceleraPizza.Dominio.Borda.Enumerador;
 using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngrediente;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
-using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Dominio.Pedido
 {
@@ -20,53 +19,63 @@ namespace AceleraPizza.Dominio.Pedido
             Borda = borda;
             IdCliente = idCliente;
 
-            ValidaTamanho(tamanho);
-            ValidaBorda(borda);
-
+            Validar();
             SetListaIngredientes(listaIngredientes);
             SetValor();
         }
 
-        //public override Guid Id { get; set; }
-
-        //private void Validar()
-        //{
-        //    if (string.IsNullOrWhiteSpace(Nome))
-        //        AdicionarErro("Preencha o nome.");
-
-        //    if (string.IsNullOrWhiteSpace(Endereco))
-        //        AdicionarErro("Preencha o endereço.");
-
-        //    if (!(Telefone.Length >= 8 & Telefone.Length <= 10))
-        //        AdicionarErro("Telefone inválido.");
-
-        //    if (!CpfHelper.CpfValido(Cpf))
-        //        AdicionarErro("CPF inválido.");
-
-        //    if (DataNascimento < new DateTime(1900, 01, 01).Date)
-        //        AdicionarErro("Data Inválida.");
-        //}
-
-        private void ValidaTamanho(ETamanho tamanho)
+        private void Validar()
         {
-            if (!Enum.IsDefined(typeof(ETamanho), tamanho))
-                AdicionarErro("Tamanho Invalida");
-        }
-
-        private void ValidaBorda(EBorda borda)
-        {
-            if (!Enum.IsDefined(typeof(EBorda), borda))
+            if (!Enum.IsDefined(typeof(EBorda), Borda))
                 AdicionarErro("Borda Invalida");
+            if (!Enum.IsDefined(typeof(ETamanho), Tamanho))
+                AdicionarErro("Tamanho Invalida");
+            //TODO: AdicionarErro("Quantidade Invalida");
         }
 
-        public void GetValorTamanho()
+        public void DescontoPorIdade(DateTime birthdate)
         {
-
+            var today = DateTime.Today;
+            var age = today.Year - birthdate.Year;
+            if (birthdate > today.AddYears(-age)) age--;
+            if (age > 60) {
+                Total = Total * 0.95;
+            }
         }
+
+        public double GetValorTamanho(ETamanho tamanho)
+        {
+            switch (tamanho)
+            {
+                case ETamanho.Pequena:
+                    return 10;
+                case ETamanho.Media:
+                    return 15;
+                default:
+                    return 20;
+            }
+        }
+
+
 
         public void SetValor()
         {
             Total = 0;
+            Total += GetValorTamanho(Tamanho);
+            Total += GetValorBorda(Borda);
+        }
+
+        private double GetValorBorda(EBorda borda)
+        {
+            switch (borda)
+            {
+                case EBorda.SemRecheio:
+                    return 0;
+                case EBorda.Catupiry:
+                    return 5;
+                default:
+                    return 4.5;
+            }
         }
 
         public void AlterarTamanho(ETamanho etamanho)
@@ -89,8 +98,8 @@ namespace AceleraPizza.Dominio.Pedido
             }
         }
 
-
-        public List<PedidoIngredienteAlias> GetListaPedidoIngrediente(Guid id, List<PedidoIngredienteAlias> lista) {
+        public List<PedidoIngredienteAlias> GetListaPedidoIngrediente(Guid id, List<PedidoIngredienteAlias> lista)
+        {
             ListaIngredientes = new List<PedidoIngredienteAlias>();
             foreach (var item in lista)
             {
@@ -104,11 +113,15 @@ namespace AceleraPizza.Dominio.Pedido
         }
 
         public override Guid Id { get; set; }
-        public void GetValorBorda() { }
         public ETamanho Tamanho { get; set; }
         public EBorda Borda { get; set; }
         public List<PedidoIngredienteAlias> ListaIngredientes { get; set; }
         public Guid IdCliente { get; set; }
         public double Total { get; set; }
+
+        public void AlterarListaIngrediente(List<PedidoIngredienteAlias> list)
+        {
+            ListaIngredientes = list;
+        }
     }
 }

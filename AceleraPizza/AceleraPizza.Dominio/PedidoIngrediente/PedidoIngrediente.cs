@@ -1,9 +1,18 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente
 {
-    public class PedidoIngrediente : Entidade
+    public class PedidoIngrediente : BaseEntidade
     {
+        public Guid IdIngrediente { get; set; }
+        public Int16 Quantidade { get; set; }
+
+        [JsonIgnore]
+        public override Guid Id { get; set; }
+        [JsonIgnore]
+        public Guid IdPedido { get; set; } 
+
         public PedidoIngrediente() { }
                 
         public PedidoIngrediente(Guid idIngrediente, Int16 quantidade)
@@ -12,9 +21,6 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
             Quantidade = quantidade;
         }
 
-        public override Guid Id { get; set; }
-        public Guid IdPedido { get; set; }
-        public Guid IdIngrediente { get; set; }
-        public Int16 Quantidade { get; set; }
+
     }
 }

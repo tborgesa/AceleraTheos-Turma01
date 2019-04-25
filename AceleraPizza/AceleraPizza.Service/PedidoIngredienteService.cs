@@ -88,7 +88,7 @@ namespace AceleraPizza.Service
 
         public void Excluir(Guid id)
         {
-            _repositorio.Excluir(id);
+                _repositorio.Excluir(id);
         }
     }
 }

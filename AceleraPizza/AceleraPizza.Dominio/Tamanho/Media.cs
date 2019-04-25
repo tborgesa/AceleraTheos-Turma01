@@ -2,7 +2,7 @@
 {
     public class Media : Tamanho
     {
-        public Media() : base("Media", 15)
+        public Media() : base("Media")
         {
 
         }

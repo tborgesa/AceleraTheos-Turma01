@@ -2,7 +2,7 @@
 {
     public class Grande : Tamanho
     {
-        public Grande() : base("Grande", 20)
+        public Grande() : base("Grande")
         {
 
         }

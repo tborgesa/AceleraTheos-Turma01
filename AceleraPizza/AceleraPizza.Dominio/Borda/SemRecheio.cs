@@ -1,8 +1,8 @@
 ﻿namespace AceleraPizza.Dominio.Borda
 {
-    class SemRecheio : Borda
+    public class SemRecheio : Borda
     {
-        public SemRecheio() : base("SemRecheio", 0)
+        public SemRecheio() : base("Sem Recheio")
         {
 
         }

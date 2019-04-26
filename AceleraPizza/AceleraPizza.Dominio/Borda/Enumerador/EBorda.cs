@@ -4,6 +4,6 @@
     {
         SemRecheio = 1,
         Catupiry = 2,
-        Cheddar = 3
+        Cheddar = 3,
     }
 }

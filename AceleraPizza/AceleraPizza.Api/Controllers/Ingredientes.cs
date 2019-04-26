@@ -1,12 +1,27 @@
+<<<<<<< HEAD
+﻿using System.Net;
+=======
 ﻿using AceleraPizza.Dominio.Ingrediente;
 using AceleraPizza.Dominio.Ingrediente.Interfaces;
 using System;
 using System.Net;
+>>>>>>> Castilho
 using System.Net.Http;
 using System.Web.Http;
 
 namespace AceleraPizza.Api.Controllers
 {
+<<<<<<< HEAD
+    [RoutePrefix("ingredientes")]
+    public class IngredientesController : ApiController
+    {
+        [HttpGet]
+        [Route("")]
+        public HttpResponseMessage Get()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, "ingredientes ");
+        }
+=======
     [RoutePrefix("ingrediente")]
     public class IngredienteController : ApiController
     {
@@ -69,5 +84,6 @@ namespace AceleraPizza.Api.Controllers
             return Request.CreateResponse(HttpStatusCode.NoContent);
         }
 
+>>>>>>> Castilho
     }
 }

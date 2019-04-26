@@ -116,14 +116,26 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Config\CustomDirectRouteProvider.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <Compile Include="Controllers\Cliente.cs" />
+    <Compile Include="Controllers\HelloWorldController.cs" />
+    <Compile Include="Controllers\Ingredientes.cs" />
+    <Compile Include="Controllers\Pizza.cs" />
+=======
+>>>>>>> Castilho
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HelloWorldController.cs" />
     <Compile Include="Controllers\Ingredientes.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
     <Compile Include="InjecaoDependencia\UnityDependecyScope.cs" />
+<<<<<<< HEAD
 =======
     <Compile Include="Controllers\HelloWorldController.cs" />
 >>>>>>> parent of 1f330c9... Acelera Pizza 1.01
+=======
+>>>>>>> Castilho
+>>>>>>> Castilho
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

@@ -64,7 +64,6 @@
     <Compile Include="Ingredientes\Itens\PimentaCalabresa.cs" />
     <Compile Include="Ingredientes\Itens\Presunto.cs" />
     <Compile Include="Pedido\Pedido.cs" />
-    <Compile Include="Pizza\Pizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tamanho\Enumerador\ETamanho.cs" />
   </ItemGroup>

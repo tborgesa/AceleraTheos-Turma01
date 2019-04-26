@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
-using Dapper;
 using Dommel;
 using SistemaEscola.Dominio.Funcionario;
 using SistemaEscola.Dominio.Funcionario.Interfaces;

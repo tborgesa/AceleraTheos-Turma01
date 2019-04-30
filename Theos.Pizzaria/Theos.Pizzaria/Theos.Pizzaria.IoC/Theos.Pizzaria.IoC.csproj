@@ -59,6 +59,10 @@
       <Project>{03C53D73-0AA6-4B27-BC7A-F397B8B6CF91}</Project>
       <Name>Theos.Pizzaria.Dominio</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Theos.Pizzaria.Repository\Theos.Pizzaria.Repository.csproj">
+      <Project>{57f7eac8-ec7d-46db-81ce-bd3d6336b883}</Project>
+      <Name>Theos.Pizzaria.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Theos.Pizzaria.Service\Theos.Pizzaria.Service.csproj">
       <Project>{B79729C1-5F22-4765-BC24-FDCB72DC73CB}</Project>
       <Name>Theos.Pizzaria.Service</Name>

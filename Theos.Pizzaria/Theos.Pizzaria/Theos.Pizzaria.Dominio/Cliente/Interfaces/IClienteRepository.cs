@@ -8,6 +8,10 @@ namespace Theos.Pizzaria.Dominio.Cliente.Interfaces
 {
     public interface IClienteRepository
     {
-        string HelloWorldRepository();
+        void Inserir(Cliente cliente);
+        void Atualizar(Cliente cliente);
+        void Excluir(Guid id);
+        Cliente BuscarPorId(Guid id);
+        List<Cliente> BuscarTodos();
     }
 }

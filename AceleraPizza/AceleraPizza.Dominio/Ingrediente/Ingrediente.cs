@@ -1,5 +1,4 @@
-﻿using AceleraPizza.Comum.Helpers;
-using System;
+﻿using System;
 
 namespace AceleraPizza.Dominio.Ingrediente
 {
@@ -11,6 +10,18 @@ namespace AceleraPizza.Dominio.Ingrediente
         {
             Descricao = descricao;
             Valor = valor;
+
+            Validar();
+        }
+
+        private void Validar()
+        {
+            if (string.IsNullOrWhiteSpace(Descricao))
+                AdicionarErro("Preencha o nome do Ingrediente.");
+
+            if (double.IsNegativeInfinity(Valor))
+                    AdicionarErro("Preencha o valor positivo.");
+
         }
 
         public override Guid Id { get; set; }
@@ -18,6 +29,13 @@ namespace AceleraPizza.Dominio.Ingrediente
         public override DateTime? DataAlteracao { get; set; }
 
         public string Descricao { get; set; }
-        public double Valor{ get; set; }
+        public double Valor { get; set; }
+
+        public void AlteraIngrediente(IngredienteAtualizarViewModel ingredienteAtualizarViewModel)
+        {
+            Validar();
+            Descricao = ingredienteAtualizarViewModel.Descricao;
+            Valor = ingredienteAtualizarViewModel.Valor;
+        }
     }
 }

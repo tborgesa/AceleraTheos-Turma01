@@ -58,8 +58,12 @@ namespace AceleraPizza.Service
                 return new IngredienteDtoReturn(erros);
             }
 
+            ingrediente.AlteraIngrediente(ingredienteAtualizarViewModel);
+
             if (!ingrediente.Valido())
                 return new IngredienteDtoReturn(ingrediente.GetErros());
+
+
 
             _repositorio.Atualizar(ingrediente);
 

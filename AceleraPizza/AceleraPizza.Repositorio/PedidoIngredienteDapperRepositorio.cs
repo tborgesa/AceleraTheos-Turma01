@@ -4,6 +4,7 @@ using System.Linq;
 using Dommel;
 using AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
+using Dapper;
 
 namespace AceleraPizza.Repositorio
 {
@@ -23,12 +24,18 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public PedidoIngrediente BuscarPorId(Guid id)
+        public PedidoIngrediente BuscarPorId(Guid idPedido)
         {
             try
             {
                 Conexao.Open();
-                return Conexao.Get<PedidoIngrediente>(id);
+
+                var sql = "SELECT * FROM PEDIDOINGREDIENTE WHERE IDPEDIDO = @IDPEDIDO";
+
+                var paramentros = new DynamicParameters();
+                paramentros.Add("@IDPEDIDO", dbType: System.Data.DbType.Guid, value: idPedido);
+
+                return Conexao.Query<PedidoIngrediente>(sql,paramentros).FirstOrDefault();
             }
             finally
             {

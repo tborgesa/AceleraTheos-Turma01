@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Cliente;
 using AceleraPizza.Dominio.Cliente.Interfaces;
-using System.Configuration;
 
 namespace AceleraPizza.Service
 {
@@ -17,7 +16,6 @@ namespace AceleraPizza.Service
 
         public ClienteDtoReturn Inserir(ClienteInserirViewModel clienteViewModel)
         {
-            //(string nome, string cpf, DateTime dataNascimento, string endereco, string telefone)
             var cliente = new Cliente(
                 clienteViewModel.Nome,
                 clienteViewModel.Cpf,
@@ -84,8 +82,7 @@ namespace AceleraPizza.Service
                 return new ClienteDtoReturn(erros);
             }
 
-            cliente.AlterarEndereco(clienteAtualizarViewModel.Endereco);
-            cliente.AlterarTelefone(clienteAtualizarViewModel.Telefone);
+            cliente.AlterarEndereco(clienteAtualizarViewModel);
             cliente.SetarAlteracao();
 
             if (!cliente.Valido())

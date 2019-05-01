@@ -4,6 +4,7 @@ using AceleraPizza.Dominio.Cliente.Interfaces;
 using AceleraPizza.Dominio.Ingrediente.Interfaces;
 using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
+using AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Service
@@ -39,12 +40,23 @@ namespace AceleraPizza.Service
                 return new PedidoDtoReturn(pedido.GetErros());
 
             pedido.GerarId();
-            pedido.SetValorIngredientes(pedido, _repositorioIngrediente);
-            pedido.DescontoPorIdade(_repositorioCliente, pedido);
-            pedido.SetPedidoIngredienteLista(pedido.ListaIngredientes, pedido.Id, _repositorioPedidoIngrediente);
+            //TODO: Realizar este tipo de manobra quando valor do ingrediente deve ser consultado no caso de INSERT e UPDATE este seria mais correto?
+            pedido.Total += SetValorIngrediente(pedido.ListaIngredientes);
+            pedido.DescontoPorIdade(_repositorioCliente.BuscarPorId(pedido.IdCliente));
+            SetPedidoIngredienteLista(pedido.ListaIngredientes, pedido.Id);
             _repositorio.Inserir(pedido);
 
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
+        }
+
+        private void SetPedidoIngredienteLista(List<PedidoIngrediente> listaIngredientes, Guid id)
+        {
+            foreach (var item in listaIngredientes)
+            {
+                item.GerarId();
+                item.IdPedido = id;
+                _repositorioPedidoIngrediente.Inserir(item);
+            }
         }
 
         public PedidoDto BuscarPorId(Guid id)
@@ -107,14 +119,12 @@ namespace AceleraPizza.Service
             }
 
             ExcluiPedidoIngredientes(pedidoAtualizarViewModel.Id);
-            pedido.AlterarTamanho(pedidoAtualizarViewModel.Tamanho);
-            pedido.AlterarBorda(pedidoAtualizarViewModel.Borda);
-            pedido.SetPedidoIngredienteLista(pedidoAtualizarViewModel.ListaIngredientes, pedidoAtualizarViewModel.Id, _repositorioPedidoIngrediente);
-            pedido.SetValor();
-            pedido.ListaIngredientes = pedidoAtualizarViewModel.ListaIngredientes;
-            pedido.SetValorIngredientes(pedido, _repositorioIngrediente);
-            pedido.DescontoPorIdade(_repositorioCliente, pedido);
-            pedido.SetarAlteracao();
+            pedido.AlterarPedido(
+                pedidoAtualizarViewModel,
+                _repositorioCliente.BuscarPorId(pedido.IdCliente),
+                SetValorIngrediente(pedidoAtualizarViewModel.ListaIngredientes)
+                );
+            SetPedidoIngredienteLista(pedidoAtualizarViewModel.ListaIngredientes, pedidoAtualizarViewModel.Id);
 
             if (!pedido.Valido())
                 return new PedidoDtoReturn(pedido.GetErros());
@@ -122,6 +132,17 @@ namespace AceleraPizza.Service
             _repositorio.Atualizar(pedido);
 
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
+        }
+
+        private double SetValorIngrediente(List<Dominio.PedidoIngrediente.PedidoIngrediente> listaIngredientes)
+        {
+            double totalIngredientes = 0;
+            foreach (var item in listaIngredientes)
+            {
+                var ingrediente = _repositorioIngrediente.BuscarPorId(item.IdIngrediente);
+                totalIngredientes += ingrediente.Valor * item.Quantidade;
+            }
+            return totalIngredientes;
         }
 
         //TODO: Como seria o caso que nao instacia a classe Pedido

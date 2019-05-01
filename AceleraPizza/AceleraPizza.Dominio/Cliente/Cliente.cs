@@ -7,7 +7,6 @@ namespace AceleraPizza.Dominio.Cliente
     {
         public Cliente() { }
 
-        //Sobrepor para não atrapalhar para quando instanciar
         public Cliente(string nome, string cpf, DateTime dataNascimento, string endereco, string telefone)
         {
             Nome = nome;
@@ -24,14 +23,7 @@ namespace AceleraPizza.Dominio.Cliente
             if (string.IsNullOrWhiteSpace(Nome))
                 AdicionarErro("Preencha o nome.");
 
-            if (string.IsNullOrWhiteSpace(Endereco))
-                AdicionarErro("Preencha o endereço.");
-
-            if (string.IsNullOrWhiteSpace(Telefone))
-                AdicionarErro("Preencha o telefone.");
-
-            if (Telefone.Length < 8 | Telefone.Length > 10)
-                AdicionarErro("Telefone inválido.");
+            ValidaAlteracao(this.Endereco, this.Telefone);
 
             if (!CpfHelper.CpfValido(Cpf))
                 AdicionarErro("CPF inválido.");
@@ -40,14 +32,24 @@ namespace AceleraPizza.Dominio.Cliente
                 AdicionarErro("Data Inválida.");
         }
 
-        public void AlterarEndereco(string endereco)
+        private void ValidaAlteracao(string endereco, string telefone)
         {
-            Endereco = endereco;
+            if (string.IsNullOrWhiteSpace(endereco))
+                AdicionarErro("Preencha o endereço.");
+
+            if (string.IsNullOrWhiteSpace(telefone))
+            {
+                AdicionarErro("Preencha o telefone.");
+            }
+            else if (telefone.Length < 8 | telefone.Length > 10){
+                AdicionarErro("Telefone inválido."); }
         }
 
-        public void AlterarTelefone(string telefone)
+        public void AlterarEndereco(ClienteAtualizarViewModel clienteAtualizarViewModel)
         {
-            Telefone = telefone;
+            ValidaAlteracao(clienteAtualizarViewModel.Endereco, clienteAtualizarViewModel.Telefone);
+            Endereco = clienteAtualizarViewModel.Endereco;
+            Telefone = clienteAtualizarViewModel.Telefone;
         }
 
         public override Guid Id { get; set; }

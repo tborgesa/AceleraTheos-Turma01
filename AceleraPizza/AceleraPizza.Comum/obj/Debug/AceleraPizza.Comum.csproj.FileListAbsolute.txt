@@ -17,3 +17,13 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Comum
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.pdb
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csprojAssemblyReference.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\bin\Debug\AceleraPizza.Comum.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\bin\Debug\AceleraPizza.Comum.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csprojAssemblyReference.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csproj.CoreCompileInputs.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csproj.CopyComplete
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.pdb

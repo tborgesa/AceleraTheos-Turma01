@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente
@@ -6,6 +7,7 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
     public class PedidoIngredienteDto
     {
         public Guid Id { get; set; }
+        [JsonIgnore]
         public Guid IdPedido { get; set; }
         public Guid IdIngrediente { get; set; }
         public Int16 Quantidade { get; set; }

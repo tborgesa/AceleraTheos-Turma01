@@ -22,3 +22,15 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Domin
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csproj.CopyComplete
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Dominio.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Dominio.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Comum.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\Newtonsoft.Json.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\AceleraPizza.Comum.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\bin\Debug\Newtonsoft.Json.xml
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csprojAssemblyReference.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.csproj.CopyComplete
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.dll
+C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Dominio\obj\Debug\AceleraPizza.Dominio.pdb

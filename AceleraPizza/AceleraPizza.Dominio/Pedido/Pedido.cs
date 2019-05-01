@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using AceleraPizza.Dominio.Borda.Enumerador;
 using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngrediente;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
-using AceleraPizza.Dominio.Ingrediente.Interfaces;
-using AceleraPizza.Dominio.Cliente.Interfaces;
-using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Dominio.Pedido
 {
@@ -22,8 +19,8 @@ namespace AceleraPizza.Dominio.Pedido
             Borda = borda;
             IdCliente = idCliente;
 
-            Validar();
             SetListaIngredientes(listaIngredientes);
+            Validar();
             SetValor();
         }
 
@@ -33,36 +30,51 @@ namespace AceleraPizza.Dominio.Pedido
                 AdicionarErro("Borda Invalida");
             if (!Enum.IsDefined(typeof(ETamanho), Tamanho))
                 AdicionarErro("Tamanho Invalida");
-            //TODO: AdicionarErro("Quantidade Invalida");
+            foreach (var item in ListaIngredientes)
+            {
+                if (item.Quantidade < 1)
+                    AdicionarErro("Quantidade Invalida. Informe valor acima de 0");
+            }
+            //Validacao de IdIngrediente no Servico
         }
 
-        public void AlterarTamanho(ETamanho etamanho)
+        public void AlterarPedido(PedidoAtualizarViewModel pedidoAtualizarViewModel, Cliente.Cliente cliente, double ValorTotalIngredientes)
         {
-            Tamanho = etamanho;
+            Tamanho = pedidoAtualizarViewModel.Tamanho;
+            Borda = pedidoAtualizarViewModel.Borda;
+            ListaIngredientes = pedidoAtualizarViewModel.ListaIngredientes;
+            Total += ValorTotalIngredientes;
+            SetValor();
+            DescontoPorIdade(cliente);
+            SetarAlteracao();
         }
 
-        public void AlterarBorda(EBorda eborda)
+        //Desconto para Inserir no Servico
+        public void DescontoPorIdade(Cliente.Cliente cliente)
         {
-            Borda = eborda;
-        }
-
-        public void AlterarListaIngrediente(List<PedidoIngredienteAlias> list)
-        {
-            ListaIngredientes = list;
-        }
-
-        public void DescontoPorIdade(IClienteRepositorio repositorioCliente, Pedido pedido)
-        {
-            var birthdate = repositorioCliente.BuscarPorId(pedido.IdCliente).DataNascimento;
+            DateTime dataNascimento = cliente.DataNascimento;
             var today = DateTime.Today;
-            var age = today.Year - birthdate.Year;
-            if (birthdate > today.AddYears(-age)) age--;
-            if (age > 60)
+            var idade = today.Year - (dataNascimento).Year;
+            if (dataNascimento > today.AddYears(-idade)) idade--;
+            if (idade > 60)
             {
                 Total = Total * 0.95;
             }
         }
+        
+        //Instanciando a lista de PedidoIngrediente
+        public void SetListaIngredientes(List<PedidoIngredienteAlias> ingredientes)
+        {
+            ListaIngredientes = new List<PedidoIngredienteAlias>();
+            foreach (var item in ingredientes)
+            {
+                item.Id = Guid.NewGuid();
+                ListaIngredientes.Add(item);
+            }
+        }
 
+        //TODOD: Metodo apos correcao do Service PedidoIngrediente alterar no service de BuscarTodos para BuscarPorID
+        //TDODO: Alterar o metodo GetListaPedi... para tirar a comparacao antes usada para insercao correta ao instanciar a lista de ingredientes.
         public List<PedidoIngredienteAlias> GetListaPedidoIngrediente(Guid id, List<PedidoIngredienteAlias> lista)
         {
             ListaIngredientes = new List<PedidoIngredienteAlias>();
@@ -103,43 +115,11 @@ namespace AceleraPizza.Dominio.Pedido
             }
         }
 
-        public void SetValorIngredientes(Pedido pedido, IIngredienteRepositorio repositorioIngrediente)
-        {
-            foreach (var item in pedido.ListaIngredientes)
-            {
-                var ingrediente = repositorioIngrediente.BuscarPorId(item.IdIngrediente);
-                pedido.Total += ingrediente.Valor * item.Quantidade;
-            }
-        }
-
-        public void SetPedidoIngredienteLista(
-            List<PedidoIngredienteAlias> listaIngredientes,
-            Guid id,
-            IPedidoIngredienteRepositorio repositorioPedidoIngrediente)
-        {
-            foreach (var item in listaIngredientes)
-            {
-                item.GerarId();
-                item.IdPedido = id;
-                repositorioPedidoIngrediente.Inserir(item);
-            }
-        }
-
         public void SetValor()
         {
             Total = 0;
             Total += GetValorTamanho(Tamanho);
             Total += GetValorBorda(Borda);
-        }
-
-        public void SetListaIngredientes(List<PedidoIngredienteAlias> ingredientes)
-        {
-            ListaIngredientes = new List<PedidoIngredienteAlias>();
-            foreach (var item in ingredientes)
-            {
-                item.Id = Guid.NewGuid();
-                ListaIngredientes.Add(item);
-            }
         }
 
         public override Guid Id { get; set; }

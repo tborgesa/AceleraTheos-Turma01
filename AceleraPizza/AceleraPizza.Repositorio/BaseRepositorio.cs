@@ -25,7 +25,6 @@ namespace AceleraPizza.Repositorio
 
             var builder = new SqlConnectionStringBuilder
             {
-                //ApplicationName = "ESCOLA",
                 ApplicationName = "AceleraPizza",
                 DataSource = host,
                 InitialCatalog = database,

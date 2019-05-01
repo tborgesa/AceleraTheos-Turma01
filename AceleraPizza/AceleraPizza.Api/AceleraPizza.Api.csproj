@@ -116,9 +116,10 @@
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Config\CustomDirectRouteProvider.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\HelloWorldController.cs" />
+    <Compile Include="Controllers\VersaoController.cs" />
     <Compile Include="Controllers\Ingredientes.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\PedidoIngredienteController.cs" />
     <Compile Include="InjecaoDependencia\UnityDependecyScope.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

@@ -28,6 +28,13 @@ namespace AceleraPizza.Api.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, pedidoIngredienteDto);
         }
 
+        [HttpGet]
+        [Route("getAll")]
+        public HttpResponseMessage GetAll(Guid id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, _pedidoIngredienteService.BuscarTodos(id));
+        }
+
         [HttpPost]
         [Route("")]
         public HttpResponseMessage Post([FromBody] PedidoIngredienteInserirViewModel viewModel)

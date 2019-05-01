@@ -75,12 +75,12 @@ namespace AceleraPizza.Dominio.Pedido
 
         //TODOD: Metodo apos correcao do Service PedidoIngrediente alterar no service de BuscarTodos para BuscarPorID
         //TDODO: Alterar o metodo GetListaPedi... para tirar a comparacao antes usada para insercao correta ao instanciar a lista de ingredientes.
-        public List<PedidoIngredienteAlias> GetListaPedidoIngrediente(Guid id, List<PedidoIngredienteAlias> lista)
+        public List<PedidoIngredienteAlias> GetListaPedidoIngrediente(List<PedidoIngredienteAlias> lista)
         {
             ListaIngredientes = new List<PedidoIngredienteAlias>();
             foreach (var item in lista)
             {
-                if (item.IdPedido == id)
+                if (item.IdPedido == Id)
                 {
                     ListaIngredientes.Add(item);
                 }

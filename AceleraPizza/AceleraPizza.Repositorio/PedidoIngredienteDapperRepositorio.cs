@@ -24,7 +24,20 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public PedidoIngrediente BuscarPorId(Guid idPedido)
+        public PedidoIngrediente BuscarPorId(Guid id)
+        {
+            try
+            {
+                Conexao.Open();
+                return Conexao.Get<PedidoIngrediente>(id);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        public List<PedidoIngrediente> BuscarTodosIdPedido(Guid idPedido)
         {
             try
             {
@@ -35,20 +48,7 @@ namespace AceleraPizza.Repositorio
                 var paramentros = new DynamicParameters();
                 paramentros.Add("@IDPEDIDO", dbType: System.Data.DbType.Guid, value: idPedido);
 
-                return Conexao.Query<PedidoIngrediente>(sql,paramentros).FirstOrDefault();
-            }
-            finally
-            {
-                Conexao.Close();
-            }
-        }
-
-        public List<PedidoIngrediente> BuscarTodos()
-        {
-            try
-            {
-                Conexao.Open();
-                return Conexao.GetAll<PedidoIngrediente>().ToList();
+                return Conexao.Query<PedidoIngrediente>(sql, paramentros).ToList();
             }
             finally
             {

@@ -46,47 +46,28 @@ namespace AceleraPizza.Service
             };
         }
 
-        public List<PedidoIngredienteSearch> BuscarTodos()
+        public List<PedidoIngredienteSearch> BuscarTodos(Guid id)
         {
-            List<PedidoIngredienteAlias.PedidoIngrediente> pedidoIngredientes = _repositorio.BuscarTodos();
+                List<PedidoIngredienteAlias.PedidoIngrediente> pedidoIngredientes = _repositorio.BuscarTodosIdPedido(id);
+                List<PedidoIngredienteSearch> retorno = new List<PedidoIngredienteSearch>();
 
-            List<PedidoIngredienteSearch> retorno = new List<PedidoIngredienteSearch>();
+                if (pedidoIngredientes == null)
+                    return null;
 
-            foreach (var pedidoIngrediente in pedidoIngredientes)
-            {
-                retorno.Add(new PedidoIngredienteSearch
+                foreach (var pedidoIngrediente in pedidoIngredientes)
                 {
-                    IdIngrediente = pedidoIngrediente.IdIngrediente,
-                    Quantidade = pedidoIngrediente.Quantidade,
-                });
+                    retorno.Add(new PedidoIngredienteSearch
+                    {
+                        Id = pedidoIngrediente.Id,
+                        IdIngrediente = pedidoIngrediente.IdIngrediente,
+                        Quantidade = pedidoIngrediente.Quantidade,
+                    });
+                }
+
+                return retorno;
             }
 
-            return retorno;
-        }
-
-
-        public PedidoIngredienteAlias.PedidoIngredienteDtoReturn Atualizar(PedidoIngredienteAlias.PedidoIngredienteAtualizarViewModel pedidoIngredienteAtualizarViewModel)
-        {
-            var pedidoIngrediente = _repositorio.BuscarPorId(pedidoIngredienteAtualizarViewModel.Id);
-
-            if (pedidoIngrediente == null)
-            {
-                List<string> erros = new List<string>
-                {
-                    "PedidoIngrediente não existe."
-                };
-                return new PedidoIngredienteAlias.PedidoIngredienteDtoReturn(erros);
-            }
-
-            if (!pedidoIngrediente.Valido())
-                return new PedidoIngredienteAlias.PedidoIngredienteDtoReturn(pedidoIngrediente.GetErros());
-
-            _repositorio.Atualizar(pedidoIngrediente);
-
-            return new PedidoIngredienteAlias.PedidoIngredienteDtoReturn(BuscarPorId(pedidoIngrediente.Id));
-        }
-
-        public void Excluir(Guid id)
+            public void Excluir(Guid id)
         {
                 _repositorio.Excluir(id);
         }

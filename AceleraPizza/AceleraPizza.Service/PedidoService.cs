@@ -73,8 +73,7 @@ namespace AceleraPizza.Service
                 Borda = pedido.Borda,
                 ListaIngredientes =
                     pedido.GetListaPedidoIngrediente(
-                    pedido.Id,
-                    _repositorioPedidoIngrediente.BuscarTodos()),
+                    _repositorioPedidoIngrediente.BuscarTodosIdPedido(pedido.Id)),
                 IdCliente = pedido.IdCliente,
                 Total = pedido.Total
             };
@@ -94,8 +93,7 @@ namespace AceleraPizza.Service
                     Tamanho = pedido.Tamanho,
                     ListaIngredientes =
                         pedido.GetListaPedidoIngrediente(
-                        pedido.Id,
-                        _repositorioPedidoIngrediente.BuscarTodos()),
+                        _repositorioPedidoIngrediente.BuscarTodosIdPedido(pedido.Id)),
                     Borda = pedido.Borda,
                     IdCliente = pedido.IdCliente,
                     Total = pedido.Total
@@ -134,7 +132,7 @@ namespace AceleraPizza.Service
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
-        private double SetValorIngrediente(List<Dominio.PedidoIngrediente.PedidoIngrediente> listaIngredientes)
+        private double SetValorIngrediente(List<PedidoIngrediente> listaIngredientes)
         {
             double totalIngredientes = 0;
             foreach (var item in listaIngredientes)
@@ -148,7 +146,7 @@ namespace AceleraPizza.Service
         //TODO: Como seria o caso que nao instacia a classe Pedido
         private void ExcluiPedidoIngredientes(Guid id)
         {
-            var lista = _repositorioPedidoIngrediente.BuscarTodos();
+            var lista = _repositorioPedidoIngrediente.BuscarTodosIdPedido(id);
             foreach (var item in lista)
             {
                 if (item.IdPedido == id) { _repositorioPedidoIngrediente.Excluir(item.Id); }

@@ -95,6 +95,7 @@ namespace AceleraPizza.Service
 
         public void Excluir(Guid id)
         {
+            //todo Validar se cliente não tem pedido.
             _repositorio.Excluir(id);
         }
     }

@@ -9,10 +9,11 @@ namespace AceleraPizza.Dominio.Pedido
 {
     public class PedidoInserirViewModel
     {
-    public ETamanho Tamanho { get; set; }
-    public List<PedidoIngredienteInserirViewModel> ListaIngredientes { get; set; }
-    public EBorda Borda { get; set; }
-    public Guid IdCliente { get; set; }
+        public ETamanho Tamanho { get; set; }
+        //todo Não utilizar Model em classes de ViewModel e Dto
+        public List<PedidoIngredienteAlias> ListaIngredientes { get; set; }
+        public EBorda Borda { get; set; }
+        public Guid IdCliente { get; set; }
 
         public List<PedidoIngredienteAlias> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
         {

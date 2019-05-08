@@ -20,7 +20,5 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
             IdIngrediente = idIngrediente;
             Quantidade = quantidade;
         }
-
-
     }
 }

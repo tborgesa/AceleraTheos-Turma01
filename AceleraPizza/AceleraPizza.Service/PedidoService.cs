@@ -30,11 +30,11 @@ namespace AceleraPizza.Service
         public PedidoDtoReturn Inserir(PedidoInserirViewModel pedidoViewModel)
         {
             var pedido = new Pedido(
-                pedidoViewModel.Tamanho,
-                pedidoViewModel.Borda,
-                pedidoViewModel.GetListaIngredientes(pedidoViewModel.ListaIngredientes),
-                pedidoViewModel.IdCliente
-                );
+pedidoViewModel.Tamanho,
+pedidoViewModel.Borda,
+pedidoViewModel.GetListaIngredientes(pedidoViewModel.ListaIngredientes),
+pedidoViewModel.IdCliente
+);
 
             if (!pedido.Valido())
                 return new PedidoDtoReturn(pedido.GetErros());

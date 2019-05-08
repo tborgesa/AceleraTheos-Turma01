@@ -27,3 +27,4 @@ C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPiz
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csproj.CopyComplete
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.dll
 C:\Users\chrca\Documents\Curso .Net\AceleraTheos-Turma01\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.pdb
+C:\Users\Christian.castilho\Documents\Curso .Net\Acelera-Turma\AceleraPizza\AceleraPizza.Comum\obj\Debug\AceleraPizza.Comum.csprojAssemblyReference.cache

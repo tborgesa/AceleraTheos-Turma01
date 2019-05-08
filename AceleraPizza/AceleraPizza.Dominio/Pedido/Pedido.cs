@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Borda.Enumerador;
+using IngredienteAlias = AceleraPizza.Dominio.Ingrediente.Ingrediente;
 using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngrediente;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
+using System.Linq;
 
 namespace AceleraPizza.Dominio.Pedido
 {
@@ -24,7 +26,7 @@ namespace AceleraPizza.Dominio.Pedido
             SetValor();
         }
 
-        private void Validar()
+        private void Validar(List<IngredienteAlias> ingredientes)
         {
             if (!Enum.IsDefined(typeof(EBorda), Borda))
                 AdicionarErro("Borda Invalida");
@@ -32,6 +34,9 @@ namespace AceleraPizza.Dominio.Pedido
                 AdicionarErro("Tamanho Invalida");
             foreach (var item in ListaIngredientes)
             {
+                if (ingredientes.FirstOrDefault(i => i.Id == item.IdIngrediente) == null)
+                    //todo adiaionar erro
+
                 if (item.Quantidade < 1)
                     AdicionarErro("Quantidade Invalida. Informe valor acima de 0");
             }
@@ -61,7 +66,7 @@ namespace AceleraPizza.Dominio.Pedido
                 Total = Total * 0.95;
             }
         }
-        
+
         //Instanciando a lista de PedidoIngrediente
         public void SetListaIngredientes(List<PedidoIngredienteAlias> ingredientes)
         {

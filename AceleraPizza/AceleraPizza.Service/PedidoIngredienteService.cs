@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PedidoIngredienteViewAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
 using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 using AceleraPizza.Dominio.PedidoIngredienteSearch;
@@ -48,7 +49,7 @@ namespace AceleraPizza.Service
 
         public List<PedidoIngredienteSearch> BuscarTodos(Guid id)
         {
-                List<PedidoIngredienteAlias.PedidoIngrediente> pedidoIngredientes = _repositorio.BuscarTodosIdPedido(id);
+                List<PedidoIngredienteViewAlias> pedidoIngredientes = _repositorio.BuscarTodosIdPedido(id);
                 List<PedidoIngredienteSearch> retorno = new List<PedidoIngredienteSearch>();
 
                 if (pedidoIngredientes == null)

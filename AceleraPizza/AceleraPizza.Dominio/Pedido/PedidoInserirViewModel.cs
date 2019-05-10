@@ -1,21 +1,24 @@
 ﻿using AceleraPizza.Dominio.Borda.Enumerador;
-using AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngrediente;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
 using System;
 using System.Collections.Generic;
+using AceleraPizza.Dominio.Ingrediente;
+using Newtonsoft.Json;
 
 namespace AceleraPizza.Dominio.Pedido
 {
     public class PedidoInserirViewModel
     {
         public ETamanho Tamanho { get; set; }
-        //todo Não utilizar Model em classes de ViewModel e Dto
+        //todo Não utilizar Model em classes de ViewModel e Dto - OK
         public List<PedidoIngredienteAlias> ListaIngredientes { get; set; }
         public EBorda Borda { get; set; }
         public Guid IdCliente { get; set; }
+        [JsonIgnore]
+        public List<IngredienteView> Ingredientes { get; set; }
 
-        public List<PedidoIngredienteAlias> GetListaIngredientes(List<PedidoIngredienteInserirViewModel> listaIngredientes)
+        public List<PedidoIngredienteAlias> GetListaIngredientes(List<PedidoIngredienteAlias> listaIngredientes)
         {
             var lista = new List<PedidoIngredienteAlias>();
             foreach (var item in listaIngredientes)

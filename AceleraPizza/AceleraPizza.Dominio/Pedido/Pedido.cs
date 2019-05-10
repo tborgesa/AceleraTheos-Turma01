@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Borda.Enumerador;
-using IngredienteAlias = AceleraPizza.Dominio.Ingrediente.Ingrediente;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngrediente;
+using IngredienteAlias = AceleraPizza.Dominio.Ingrediente.IngredienteView;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
 using System.Linq;
 
@@ -10,21 +10,27 @@ namespace AceleraPizza.Dominio.Pedido
 {
     public class Pedido : Entidade
     {
-        public Pedido()
-        {
+        public Pedido() { }
 
-        }
-
-        public Pedido(ETamanho tamanho, EBorda borda, List<PedidoIngredienteAlias> listaIngredientes, Guid idCliente)
+        public Pedido(ETamanho tamanho, EBorda borda, List<PedidoIngredienteAlias> listaIngredientes, Guid idCliente, List<IngredienteAlias> ingredientes)
         {
             Tamanho = tamanho;
             Borda = borda;
             IdCliente = idCliente;
+            Ingredientes = ingredientes;
 
             SetListaIngredientes(listaIngredientes);
-            Validar();
+            Validar(ingredientes);
             SetValor();
         }
+
+        public override Guid Id { get; set; }
+        public ETamanho Tamanho { get; set; }
+        public EBorda Borda { get; set; }
+        public List<PedidoIngredienteAlias> ListaIngredientes { get; set; }
+        public Guid IdCliente { get; set; }
+        public double Total { get; set; }
+        public List<IngredienteAlias> Ingredientes { get; set; }
 
         private void Validar(List<IngredienteAlias> ingredientes)
         {
@@ -35,10 +41,11 @@ namespace AceleraPizza.Dominio.Pedido
             foreach (var item in ListaIngredientes)
             {
                 if (ingredientes.FirstOrDefault(i => i.Id == item.IdIngrediente) == null)
-                    //todo adiaionar erro
+                    //todo adiaionar erro - OK
+                    AdicionarErro("Ingrediente não existe!");
 
                 if (item.Quantidade < 1)
-                    AdicionarErro("Quantidade Invalida. Informe valor acima de 0");
+                        AdicionarErro("Quantidade Invalida. Informe valor acima de 0");
             }
             //Validacao de IdIngrediente no Servico
         }
@@ -127,11 +134,5 @@ namespace AceleraPizza.Dominio.Pedido
             Total += GetValorBorda(Borda);
         }
 
-        public override Guid Id { get; set; }
-        public ETamanho Tamanho { get; set; }
-        public EBorda Borda { get; set; }
-        public List<PedidoIngredienteAlias> ListaIngredientes { get; set; }
-        public Guid IdCliente { get; set; }
-        public double Total { get; set; }
     }
 }

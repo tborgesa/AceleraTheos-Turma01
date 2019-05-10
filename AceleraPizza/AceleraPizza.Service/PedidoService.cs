@@ -6,6 +6,8 @@ using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
 using AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+
 
 namespace AceleraPizza.Service
 {
@@ -30,17 +32,18 @@ namespace AceleraPizza.Service
         public PedidoDtoReturn Inserir(PedidoInserirViewModel pedidoViewModel)
         {
             var pedido = new Pedido(
-pedidoViewModel.Tamanho,
-pedidoViewModel.Borda,
-pedidoViewModel.GetListaIngredientes(pedidoViewModel.ListaIngredientes),
-pedidoViewModel.IdCliente
-);
+                pedidoViewModel.Tamanho,
+                pedidoViewModel.Borda,
+                pedidoViewModel.GetListaIngredientes(pedidoViewModel.ListaIngredientes),
+                pedidoViewModel.IdCliente,
+                pedidoViewModel.Ingredientes
+                );
 
             if (!pedido.Valido())
                 return new PedidoDtoReturn(pedido.GetErros());
 
             pedido.GerarId();
-            //TODO: Realizar este tipo de manobra quando valor do ingrediente deve ser consultado no caso de INSERT e UPDATE este seria mais correto?
+            
             pedido.Total += SetValorIngrediente(pedido.ListaIngredientes);
             pedido.DescontoPorIdade(_repositorioCliente.BuscarPorId(pedido.IdCliente));
             SetPedidoIngredienteLista(pedido.ListaIngredientes, pedido.Id);
@@ -49,13 +52,16 @@ pedidoViewModel.IdCliente
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
-        private void SetPedidoIngredienteLista(List<PedidoIngrediente> listaIngredientes, Guid id)
+        private void SetPedidoIngredienteLista(List<PedidoIngredienteAlias> listaIngredientes, Guid id)
         {
+            var aux = new PedidoIngrediente();
+
             foreach (var item in listaIngredientes)
             {
-                item.GerarId();
+                aux.GerarId();
                 item.IdPedido = id;
-                _repositorioPedidoIngrediente.Inserir(item);
+
+                _repositorioPedidoIngrediente.Inserir(aux);
             }
         }
 
@@ -132,7 +138,7 @@ pedidoViewModel.IdCliente
             return new PedidoDtoReturn(BuscarPorId(pedido.Id));
         }
 
-        private double SetValorIngrediente(List<PedidoIngrediente> listaIngredientes)
+        private double SetValorIngrediente(List<PedidoIngredienteAlias> listaIngredientes)
         {
             double totalIngredientes = 0;
             foreach (var item in listaIngredientes)
@@ -143,7 +149,6 @@ pedidoViewModel.IdCliente
             return totalIngredientes;
         }
 
-        //TODO: Como seria o caso que nao instacia a classe Pedido
         private void ExcluiPedidoIngredientes(Guid id)
         {
             var lista = _repositorioPedidoIngrediente.BuscarTodosIdPedido(id);

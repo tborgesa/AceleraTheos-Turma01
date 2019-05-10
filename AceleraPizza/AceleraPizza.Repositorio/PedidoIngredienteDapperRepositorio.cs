@@ -37,7 +37,7 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        public List<PedidoIngrediente> BuscarTodosIdPedido(Guid idPedido)
+        List<PedidoIngredienteView> IPedidoIngredienteRepositorio.BuscarTodosIdPedido(Guid idPedido)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace AceleraPizza.Repositorio
                 var paramentros = new DynamicParameters();
                 paramentros.Add("@IDPEDIDO", dbType: System.Data.DbType.Guid, value: idPedido);
 
-                return Conexao.Query<PedidoIngrediente>(sql, paramentros).ToList();
+                return Conexao.Query<PedidoIngredienteView>(sql, paramentros).ToList();
             }
             finally
             {

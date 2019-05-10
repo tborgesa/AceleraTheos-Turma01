@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente.Interfaces
 {
@@ -8,6 +9,6 @@ namespace AceleraPizza.Dominio.PedidoIngrediente.Interfaces
         void Inserir(PedidoIngrediente PedidoIngrediente);
         void Excluir(Guid id);
         PedidoIngrediente BuscarPorId(Guid id);
-        List<PedidoIngrediente> BuscarTodosIdPedido(Guid id);
+        List<PedidoIngredienteAlias> BuscarTodosIdPedido(Guid id);
     }
 }

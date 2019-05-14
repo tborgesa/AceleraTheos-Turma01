@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace AceleraPizza.Api.Controllers
 {
-    [RoutePrefix("ingrediente")]
+    [RoutePrefix("api/v1/ingrediente")]
     public class IngredienteController : ApiController
     {
         private readonly IIngredienteService _ingredienteService;
@@ -62,10 +62,17 @@ namespace AceleraPizza.Api.Controllers
         [Route("{id}")]
         public HttpResponseMessage Delete(Guid id)
         {
+            var erro = _ingredienteService.Excluir(id);
+
             if (id == null)
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-            _ingredienteService.Excluir(id);
+            if (erro == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id não encontrado.");
+
+            if (erro != null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, erro);
+
             return Request.CreateResponse(HttpStatusCode.NoContent);
         }
 

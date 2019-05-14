@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using PedidoIngredienteViewAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+using PedidoIngredienteViewAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteViewModel;
 using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 using AceleraPizza.Dominio.PedidoIngredienteSearch;

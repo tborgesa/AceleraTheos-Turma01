@@ -37,7 +37,7 @@ namespace AceleraPizza.Repositorio
             }
         }
 
-        List<PedidoIngredienteView> IPedidoIngredienteRepositorio.BuscarTodosIdPedido(Guid idPedido)
+        List<PedidoIngredienteViewModel> IPedidoIngredienteRepositorio.BuscarTodosIdPedido(Guid idPedido)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace AceleraPizza.Repositorio
                 var paramentros = new DynamicParameters();
                 paramentros.Add("@IDPEDIDO", dbType: System.Data.DbType.Guid, value: idPedido);
 
-                return Conexao.Query<PedidoIngredienteView>(sql, paramentros).ToList();
+                return Conexao.Query<PedidoIngredienteViewModel>(sql, paramentros).ToList();
             }
             finally
             {
@@ -75,6 +75,25 @@ namespace AceleraPizza.Repositorio
             {
                 Conexao.Open();
                 Conexao.Delete(new PedidoIngrediente() { Id = id });
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        public bool BuscarPorCliente(Guid id)
+        {
+            try
+            {
+                Conexao.Open();
+
+                var sql = "SELECT count(1) FROM PEDIDOINGREDIENTE WHERE IDINGREDIENTE = @IDINGREDIENTE";
+
+                var paramentros = new DynamicParameters();
+                paramentros.Add("@IDINGREDIENTE", dbType: System.Data.DbType.Guid, value: id);
+
+                return Conexao.Query<int>(sql, paramentros).FirstOrDefault() > 0;
             }
             finally
             {

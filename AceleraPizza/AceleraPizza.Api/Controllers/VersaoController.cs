@@ -11,7 +11,7 @@ namespace AceleraPizza.Api.Controllers
         [Route("")]
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, "1.00");
+            return Request.CreateResponse(HttpStatusCode.OK, "1.02");
         }
     }
 }

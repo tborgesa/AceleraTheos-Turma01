@@ -7,7 +7,7 @@ using AceleraPizza.Dominio.Cliente.Interfaces;
 
 namespace AceleraPizza.Api.Controllers
 {
-    [RoutePrefix("cliente")]
+    [RoutePrefix("api/v1/cliente")]
     public class ClienteController : ApiController
     {
         private readonly IClienteService _clienteService;
@@ -68,10 +68,17 @@ namespace AceleraPizza.Api.Controllers
         [Route("{id}")]
         public HttpResponseMessage Delete(Guid id)
         {
+            var erro = _clienteService.Excluir(id);
+
             if (id == null)
                 return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
 
-            _clienteService.Excluir(id);
+            if (erro == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id não encontrado.");
+      
+            if (erro != null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, erro);
+
             return Request.CreateResponse(HttpStatusCode.NoContent);
         }
 

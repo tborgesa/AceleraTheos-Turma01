@@ -6,7 +6,7 @@ using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
 using AceleraPizza.Dominio.PedidoIngrediente;
 using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteViewModel;
 
 
 namespace AceleraPizza.Service

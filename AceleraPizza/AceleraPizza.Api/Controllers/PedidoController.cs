@@ -7,7 +7,7 @@ using AceleraPizza.Dominio.Pedido.Interfaces;
 
 namespace AceleraPizza.Api.Controllers
 {
-    [RoutePrefix("pedido")]
+    [RoutePrefix("api/v1/pedido")]
     public class PedidoController : ApiController
     {
         private readonly IPedidoService _pedidoService;

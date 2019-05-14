@@ -58,7 +58,7 @@
     <Compile Include="Cliente\Interfaces\IClienteService.cs" />
     <Compile Include="Cliente\Interfaces\IClienteRepositorio.cs" />
     <Compile Include="Entidade.cs" />
-    <Compile Include="Ingrediente\IngredienteView.cs" />
+    <Compile Include="Ingrediente\IngredienteViewModel.cs" />
     <Compile Include="Ingrediente\Interfaces\IIngredienteRepositorio.cs" />
     <Compile Include="Ingrediente\Interfaces\IIngredienteService.cs" />
     <Compile Include="PedidoIngrediente\Interfaces\IPedidoIngredienteRepositorio.cs" />
@@ -72,7 +72,7 @@
     <Compile Include="PedidoIngrediente\PedidoIngredienteInserirViewModel.cs" />
     <Compile Include="Ingrediente\IngredienteInserirViewModel.cs" />
     <Compile Include="PedidoIngrediente\PedidoIngredienteSearch.cs" />
-    <Compile Include="PedidoIngrediente\PedidoIngredienteView.cs" />
+    <Compile Include="PedidoIngrediente\PedidoIngredienteViewModel.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoRepositorio.cs" />
     <Compile Include="Pedido\Interfaces\IPedidoService.cs" />
     <Compile Include="Pedido\Pedido.cs" />

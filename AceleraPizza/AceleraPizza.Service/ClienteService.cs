@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Cliente;
 using AceleraPizza.Dominio.Cliente.Interfaces;
+using AceleraPizza.Dominio.Pedido.Interfaces;
 
 namespace AceleraPizza.Service
 {
     public class ClienteService : IClienteService
     {
         private IClienteRepositorio _repositorio;
+        private IPedidoRepositorio _repositorioPedido;
 
-        public ClienteService(IClienteRepositorio repositorio)
+        public ClienteService(IClienteRepositorio repositorio, IPedidoRepositorio repositorioPedido)
         {
             _repositorio = repositorio;
+            _repositorioPedido = repositorioPedido;
         }
 
         public ClienteDtoReturn Inserir(ClienteInserirViewModel clienteViewModel)
@@ -93,10 +96,15 @@ namespace AceleraPizza.Service
             return new ClienteDtoReturn(BuscarPorId(cliente.Id));
         }
 
-        public void Excluir(Guid id)
+        public string Excluir(Guid id)
         {
             //todo Validar se cliente não tem pedido. - A verificar
-            _repositorio.Excluir(id);
+            if (!_repositorioPedido.BuscarPorCliente(id))
+            {
+                _repositorio.Excluir(id);
+            }
+
+            return "Existe um ou mais pedidos para este Cliente.";
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AceleraPizza.Dominio.Borda.Enumerador;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteViewModel;
 using System;
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Ingrediente;
@@ -16,7 +16,7 @@ namespace AceleraPizza.Dominio.Pedido
         public EBorda Borda { get; set; }
         public Guid IdCliente { get; set; }
         [JsonIgnore]
-        public List<IngredienteView> Ingredientes { get; set; }
+        public List<IngredienteViewModel> Ingredientes { get; set; }
 
         public List<PedidoIngredienteAlias> GetListaIngredientes(List<PedidoIngredienteAlias> listaIngredientes)
         {

@@ -10,5 +10,6 @@ namespace AceleraPizza.Dominio.Pedido.Interfaces
         void Excluir(Guid id);
         Pedido BuscarPorId(Guid id);
         List<Pedido> BuscarTodos();
+        bool BuscarPorCliente(Guid id);
     }
 }

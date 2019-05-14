@@ -3,9 +3,9 @@ using System;
 
 namespace AceleraPizza.Dominio.PedidoIngrediente
 {
-    public class PedidoIngredienteView
+    public class PedidoIngredienteViewModel
     {
-        public PedidoIngredienteView(Guid idIngrediente, short quantidade)
+        public PedidoIngredienteViewModel(Guid idIngrediente, short quantidade)
         {
             IdIngrediente = idIngrediente;
             Quantidade = quantidade;

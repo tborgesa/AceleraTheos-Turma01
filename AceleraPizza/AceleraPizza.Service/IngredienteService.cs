@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Ingrediente;
 using AceleraPizza.Dominio.Ingrediente.Interfaces;
+using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Service
 {
     public class IngredienteService : IIngredienteService
     {
         private IIngredienteRepositorio _repositorio;
+        private IPedidoIngredienteRepositorio _repositorioPedidoIngrediente;
 
-        public IngredienteService(IIngredienteRepositorio repositorio)
+        public IngredienteService(IIngredienteRepositorio repositorio, IPedidoIngredienteRepositorio repositorioPedidoIngrediente)
         {
             _repositorio = repositorio;
+            _repositorioPedidoIngrediente = repositorioPedidoIngrediente;
         }
 
         public IngredienteDtoReturn Inserir(IngredienteInserirViewModel ingredienteViewModel)
@@ -70,9 +73,13 @@ namespace AceleraPizza.Service
             return new IngredienteDtoReturn(BuscarPorId(ingrediente.Id));
         }
 
-        public void Excluir(Guid id)
+        public string Excluir(Guid id)
         {
-            _repositorio.Excluir(id);
+            if (!_repositorioPedidoIngrediente.BuscarPorCliente(id))
+            {
+                _repositorio.Excluir(id);
+            }
+            return "Existe um ou mais pedidos para este Ingrediente.";
         }
     }
 }

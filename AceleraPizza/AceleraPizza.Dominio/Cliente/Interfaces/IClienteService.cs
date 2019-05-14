@@ -9,6 +9,6 @@ namespace AceleraPizza.Dominio.Cliente.Interfaces
         ClienteDto BuscarPorId(Guid id);
         List<ClienteSearch> BuscarTodos();
         ClienteDtoReturn Atualizar(ClienteAtualizarViewModel clienteAtualizarViewModel);
-        void Excluir(Guid id);
+        string Excluir(Guid id);
     } 
 }

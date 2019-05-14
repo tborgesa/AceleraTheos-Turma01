@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using AceleraPizza.Dominio.Borda.Enumerador;
-using IngredienteAlias = AceleraPizza.Dominio.Ingrediente.IngredienteView;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+using IngredienteAlias = AceleraPizza.Dominio.Ingrediente.IngredienteViewModel;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteViewModel;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
 using System.Linq;
 
@@ -92,10 +92,7 @@ namespace AceleraPizza.Dominio.Pedido
             ListaIngredientes = new List<PedidoIngredienteAlias>();
             foreach (var item in lista)
             {
-                if (item.IdPedido == Id)
-                {
                     ListaIngredientes.Add(item);
-                }
             }
 
             return ListaIngredientes;

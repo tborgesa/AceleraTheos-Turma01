@@ -2,9 +2,9 @@
 
 namespace AceleraPizza.Dominio.Ingrediente
 {
-    public class IngredienteView
+    public class IngredienteViewModel
     {
-        public IngredienteView(string descricao, double valor)
+        public IngredienteViewModel(string descricao, double valor)
         {
             Descricao = descricao;
             Valor = valor;

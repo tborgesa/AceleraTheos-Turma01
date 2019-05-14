@@ -7,7 +7,7 @@ using AceleraPizza.Dominio.PedidoIngrediente.Interfaces;
 
 namespace AceleraPizza.Api.Controllers
 {
-    [RoutePrefix("pedidoIngrediente")]
+    [RoutePrefix("api/v1/pedidoIngrediente")]
     public class PedidoIngredienteController : ApiController
     {
         private readonly IPedidoIngredienteService _pedidoIngredienteService;

@@ -1,5 +1,5 @@
 ﻿using AceleraPizza.Dominio.Borda.Enumerador;
-using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteView;
+using PedidoIngredienteAlias = AceleraPizza.Dominio.PedidoIngrediente.PedidoIngredienteViewModel;
 using AceleraPizza.Dominio.Tamanho.Enumerador;
 using System;
 using System.Collections.Generic;

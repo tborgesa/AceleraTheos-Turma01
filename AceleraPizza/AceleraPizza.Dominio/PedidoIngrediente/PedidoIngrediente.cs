@@ -8,7 +8,6 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
         public Guid IdIngrediente { get; set; }
         public Int16 Quantidade { get; set; }
 
-        [JsonIgnore]
         public override Guid Id { get; set; }
         [JsonIgnore]
         public Guid IdPedido { get; set; } 

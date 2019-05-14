@@ -8,6 +8,6 @@ namespace AceleraPizza.Dominio.Ingrediente.Interfaces
         IngredienteDtoReturn Inserir(IngredienteInserirViewModel clienteViewModel);
         IngredienteDto BuscarPorId(Guid id);
         IngredienteDtoReturn Atualizar(IngredienteAtualizarViewModel clienteAtualizarViewModel);
-        void Excluir(Guid id);
+        string Excluir(Guid id);
     }
 }

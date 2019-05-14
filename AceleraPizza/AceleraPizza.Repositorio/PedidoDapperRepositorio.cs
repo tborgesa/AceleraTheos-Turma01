@@ -4,6 +4,7 @@ using System.Linq;
 using Dommel;
 using AceleraPizza.Dominio.Pedido;
 using AceleraPizza.Dominio.Pedido.Interfaces;
+using Dapper;
 
 namespace AceleraPizza.Repositorio
 {
@@ -28,6 +29,25 @@ namespace AceleraPizza.Repositorio
             {
                 Conexao.Open();
                 return Conexao.Get<Pedido>(id);
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
+        bool IPedidoRepositorio.BuscarPorCliente(Guid idCliente)
+        {
+            try
+            {
+                Conexao.Open();
+
+                var sql = "SELECT count(1) FROM PEDIDO WHERE IDCLIENTE = @IDCLIENTE";
+
+                var paramentros = new DynamicParameters();
+                paramentros.Add("@IDCLIENTE", dbType: System.Data.DbType.Guid, value: idCliente);
+
+                return Conexao.Query<int>(sql, paramentros).FirstOrDefault() > 0;
             }
             finally
             {

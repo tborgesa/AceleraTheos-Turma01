@@ -20,6 +20,32 @@ namespace Theos.Pizzaria.Controllers
             _clienteService = clienteService;
         }
 
+        [HttpPut]
+        [Route("")]
+        public HttpResponseMessage Put([FromBody] ClienteAtualizarViewModel viewModel)
+        {
+            if (viewModel == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Json inválido.");
+
+            var clienteDtoReturn = _clienteService.Atualizar(viewModel);
+
+            if (clienteDtoReturn.Erros.Count > 0)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, clienteDtoReturn.Erros);
+
+            return Request.CreateResponse(HttpStatusCode.Created, clienteDtoReturn.Cliente);
+        }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public HttpResponseMessage Delete(Guid id)
+        {
+            if (id == null)
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Id inválido.");
+
+            _clienteService.Excluir(id);
+            return Request.CreateResponse(HttpStatusCode.NoContent);
+        }
+
         [HttpGet]
         [Route("getAll")]
         public HttpResponseMessage GetAll()

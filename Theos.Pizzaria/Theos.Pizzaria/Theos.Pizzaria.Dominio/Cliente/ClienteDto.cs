@@ -13,6 +13,7 @@ namespace Theos.Pizzaria.Dominio.Cliente
         public string CPF { get; set; }
         public string Telefone { get; set; }
         public DateTime DataNascimento { get; set; }
+        public DateTime DataInsercao { get; set; }
     }
 
     public class ClienteDtoReturn

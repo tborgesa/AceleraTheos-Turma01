@@ -24,8 +24,32 @@ namespace Theos.Pizzaria.Dominio.Cliente
             CPF = cpf;
             Telefone = telefone;
             DataNascimento = dataNascimento;
+            ValidarNome();
+            ValidarTelefone();
+            ValidarCPF();
+            ValidarDataNascimento();
         }
 
+        public void Alterar(string nome, string cpf, string telefone, DateTime dataNascimento)
+        {
+            Nome = nome;
+            CPF = cpf;
+            DataNascimento = dataNascimento;
+            Telefone = telefone;
+
+            if (string.IsNullOrEmpty(nome))
+                AdicionarErro("Na alteração o nome é obrigatório.");
+
+            if (string.IsNullOrEmpty(cpf))
+                AdicionarErro("Na alteração o CPF é obrigatório.");
+
+            if (dataNascimento <= DateTime.MinValue)
+                AdicionarErro("Na alteração a data de nascimento é obrigatório.");
+
+            if (string.IsNullOrEmpty(telefone))
+                AdicionarErro("Na alteração o telefone é obrigatório.");
+        }
+        
         public void ValidarNome()
         {
             if (string.IsNullOrWhiteSpace(Nome))

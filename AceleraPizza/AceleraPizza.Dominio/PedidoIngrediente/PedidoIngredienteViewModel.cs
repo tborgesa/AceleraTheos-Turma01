@@ -5,7 +5,9 @@ namespace AceleraPizza.Dominio.PedidoIngrediente
 {
     public class PedidoIngredienteViewModel
     {
-        public PedidoIngredienteViewModel(Guid idIngrediente, short quantidade)
+        public PedidoIngredienteViewModel(){}
+
+        public PedidoIngredienteViewModel(Guid idIngrediente, Int16 quantidade)
         {
             IdIngrediente = idIngrediente;
             Quantidade = quantidade;

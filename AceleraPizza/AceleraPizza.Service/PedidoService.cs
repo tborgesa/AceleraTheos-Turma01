@@ -76,12 +76,31 @@ namespace AceleraPizza.Service
             {
                 Id = pedido.Id,
                 Tamanho = pedido.Tamanho,
-                Borda = pedido.Borda,
                 ListaIngredientes =
-                    pedido.GetListaPedidoIngrediente(
-                    _repositorioPedidoIngrediente.BuscarTodosIdPedido(pedido.Id)),
+                        pedido.GetListaPedidoIngrediente(
+                        _repositorioPedidoIngrediente.BuscarTodosIdPedido(pedido.Id)),
+                Borda = pedido.Borda,
                 IdCliente = pedido.IdCliente,
                 Total = pedido.Total
+            };
+        }
+
+        public PedidoViewModel BuscarPorIdFront(Guid id)
+        {
+            PedidoViewModel pedido = _repositorio.BuscarPorIdFront(id);
+
+            if (pedido == null)
+                return null;
+
+            return new PedidoViewModel
+            {
+                Id = pedido.Id,
+                IdCliente = pedido.IdCliente,
+                Tamanho = pedido.Tamanho,
+                Borda = pedido.Borda,
+                Total = pedido.Total,
+                ListaIngredientes = pedido.ListaIngredientes,
+                NomeCliente = pedido.NomeCliente,
             };
         }
 

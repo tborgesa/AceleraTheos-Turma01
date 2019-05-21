@@ -48,6 +48,25 @@ namespace AceleraPizza.Service
             };
         }
 
+        public List<IngredienteSearch> BuscarTodos()
+        {
+            List<Ingrediente> ingredientes = _repositorio.BuscarTodos();
+
+            List<IngredienteSearch> retorno = new List<IngredienteSearch>();
+
+            foreach (var ingrediente in ingredientes)
+            {
+                retorno.Add(new IngredienteSearch
+                {
+                    Id = ingrediente.Id,
+                    Descricao = ingrediente.Descricao,
+                    Valor = ingrediente.Valor
+                });
+            }
+
+            return retorno;
+        }
+
         public IngredienteDtoReturn Atualizar(IngredienteAtualizarViewModel ingredienteAtualizarViewModel)
         {
             var ingrediente = _repositorio.BuscarPorId(ingredienteAtualizarViewModel.Id);

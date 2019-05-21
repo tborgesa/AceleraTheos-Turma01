@@ -36,6 +36,41 @@ namespace AceleraPizza.Repositorio
             }
         }
 
+        public PedidoViewModel BuscarPorIdFront(Guid id)
+        {
+            try
+            {
+                Conexao.Open();
+
+                var sql = "select" +
+                        "p.IdPedido," +
+                        "p.IdCliente," +
+                        "p.Tamanho," +
+                        "p.Borda," +
+                        "p.Total," +
+                        "i.Descricao," +
+                        "pin.Quantidade," +
+                        "c.Nome " +
+                    "from PEDIDO p " +
+                    "inner join PEDIDOINGREDIENTE pin " +
+                    "on  .IdPedido = pin.IdPedido " +
+                    "inner join CLIENTE c " +
+                    "on p.IdCliente = c.IdCliente " +
+                    "inner join INGREDIENTE i " +
+                    "on pin.IdIngrediente = i.IdIngrediente " +
+                    "where p.IdPedido = @IDPEDIDO ";
+
+                var paramentros = new DynamicParameters();
+                paramentros.Add("@IDPEDIDO", dbType: System.Data.DbType.Guid, value: id);
+
+                return Conexao.Query<PedidoViewModel>(sql, paramentros).FirstOrDefault();
+            }
+            finally
+            {
+                Conexao.Close();
+            }
+        }
+
         bool IPedidoRepositorio.BuscarPorCliente(Guid idCliente)
         {
             try

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace AceleraPizza.Dominio.Ingrediente.Interfaces
 {
@@ -8,5 +9,6 @@ namespace AceleraPizza.Dominio.Ingrediente.Interfaces
         void Atualizar(Ingrediente cliente);
         void Excluir(Guid id);
         Ingrediente BuscarPorId(Guid id);
+        List<Ingrediente> BuscarTodos();
     }
 }

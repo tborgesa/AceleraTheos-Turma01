@@ -1,0 +1,5 @@
+Site com especificação da biblioteca Math:
+
+https://docs.microsoft.com/pt-br/dotnet/api/system.math?redirectedfrom=MSDN&view=netframework-4.7.2
+
+-------------------------------

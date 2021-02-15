@@ -1,0 +1,9 @@
+string menu = @"Exercicios Aula 05 - DateTime
+            
+            ESCOLHA UMA OPÇÃO
+            1. Identificar o primeiro dia do mês de um determinado pagamento.
+            2. Identificar a data do fechamento contábil.
+            3. Identificar a data de pagamento do imposto de uma nota fiscal.
+            4. Calcular a senha do dia.
+            5. Consulta de transação.
+            ";

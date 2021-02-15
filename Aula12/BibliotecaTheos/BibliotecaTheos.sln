@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaTheos.ConsoleApp", "BibliotecaTheos.ConsoleApp\BibliotecaTheos.ConsoleApp.csproj", "{A4D02207-DC0E-4081-8689-58528E3D3456}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - ConsoleApp", "01 - ConsoleApp", "{2A4A6635-4889-4E4B-88C6-F6905181B3B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Dominio", "02 - Dominio", "{CF5D47A6-365D-4A75-ADC5-D26B1B7A5B4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaTheos.Dominio", "BibliotecaTheos.Dominio\BibliotecaTheos.Dominio.csproj", "{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Comum", "03 - Comum", "{BE14EC69-BDEA-48DC-9EFA-C69F6AD279BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaTheos.Comum", "BibliotecaTheos.Comum\BibliotecaTheos.Comum.csproj", "{0FBE45FB-AA78-4820-868D-A9EB828DBF02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4D02207-DC0E-4081-8689-58528E3D3456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D02207-DC0E-4081-8689-58528E3D3456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D02207-DC0E-4081-8689-58528E3D3456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D02207-DC0E-4081-8689-58528E3D3456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8D5C5A-0D9A-4536-A50E-E5A892D73661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBE45FB-AA78-4820-868D-A9EB828DBF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBE45FB-AA78-4820-868D-A9EB828DBF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBE45FB-AA78-4820-868D-A9EB828DBF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBE45FB-AA78-4820-868D-A9EB828DBF02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A4D02207-DC0E-4081-8689-58528E3D3456} = {2A4A6635-4889-4E4B-88C6-F6905181B3B7}
+		{5A8D5C5A-0D9A-4536-A50E-E5A892D73661} = {CF5D47A6-365D-4A75-ADC5-D26B1B7A5B4E}
+		{0FBE45FB-AA78-4820-868D-A9EB828DBF02} = {BE14EC69-BDEA-48DC-9EFA-C69F6AD279BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D1F2730-86B7-459F-8DF9-42A11260F69D}
+	EndGlobalSection
+EndGlobal

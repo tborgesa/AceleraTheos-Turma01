@@ -1,0 +1,9 @@
+* Conceito .Net
+* Criando programa no editor de texto e copilando direto no cmd;
+* Criando programa com Visual Studio
+	* Debuggando código;
+	* Captura de texto [ReadLine() e ReadKey()]
+	* Interpolação de string [WriteLine($"texto {variavel} texto")];
+* Váriaveis
+	* Por Referência (ref num = ref numero) x Por Valor (num = numero);
+	* Capturar número como string (Console.ReadLine()) e conversão para int (Convert.ToInt32());
